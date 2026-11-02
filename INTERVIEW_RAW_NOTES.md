@@ -107,7 +107,7 @@
 - What did the website and blog work involve? Which platform (WordPress? Wix?) Any results (traffic, new patients, reviews)?
 - As Treatment Coordinator: what did you do (presenting treatment plans and costs to patients, closing cases)? Any numbers (case acceptance %, revenue)?
 - Did you redesign any forms, processes, patient flows or internal tools? That counts as UX work.
-- When and why did you leave?
+- When and why did you leave? *(Tami: "I ended up quitting this job." Pick up here next.)*
 
 **Note for positioning:** this chapter isn't a detour. It's operations, project management (an office relocation), patient-facing service design, and a sales/conversion role (treatment coordinator), plus ongoing web work. These are strong transferable skills for product design.
 - *(continued…)*
