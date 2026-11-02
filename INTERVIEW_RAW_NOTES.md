@@ -249,3 +249,10 @@
 - **Did not launch.** Newrez acquired the company and **scrapped the project**: Newrez already had its own investor tool, so continuing wasn't worth it to them. "It was so freaking sad."
 - During the acquisition things went quiet. After the cancellation, Tami moved to other value streams, including the **Israel Bond Center** work with the **Computershare Canada team** (*confirm*), then Newrez work.
 - *Framing for the case study: an unlaunched project is normal and still strong. Show **validated design** (usability-tested with real investors) and **projected impact** (removing the 3–5 day manual turnaround), and end with an honest "what happened and what I learned" section.*
+
+**Q6. How far it got, and investor reactions**
+- **Design: complete through high fidelity.** Tami did **all the UI** (low → mid → high fidelity). Data was being organized on the backend through the data feeds, but **front-end development never started**.
+- ⭐ **Investor reactions in testing:** at every fidelity level they asked **"How can I access this?" / "When is this coming out? I need it now."** Lots of excitement and engagement.
+- ⭐ **Design decision from testing: disaster data.** Disaster info was originally on the **home dashboard** (*confirm: it cluttered it, especially when no disasters were active?*). It was moved to its **own Disaster tab/dashboard and map**, so investors could research **on their own terms** without having it **forced on them**, especially when there were no active disasters.
+- **Most-wanted features:** loan research, the **disaster map** ("a big one"), **delinquency and foreclosure** data.
+- *Case study line: "Investors asked 'when can I have this?' at every fidelity level."*
