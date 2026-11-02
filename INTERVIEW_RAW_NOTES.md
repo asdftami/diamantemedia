@@ -244,3 +244,8 @@
   - *…and more (Tami will send screenshots of all the dashboards).*
 - **Loan research search engine:** planned as the **next phase**. Tami made a **low-fi wireframe**, but the team **pivoted to prioritize the dashboards** and what each should show, so it stayed at low fidelity.
 - *Artifacts to collect: screenshots of every dashboard, low-fi wireframes, usability test notes, loan search wireframe.*
+
+**Q5. Outcome**
+- **Did not launch.** Newrez acquired the company and **scrapped the project**: Newrez already had its own investor tool, so continuing wasn't worth it to them. "It was so freaking sad."
+- During the acquisition things went quiet. After the cancellation, Tami moved to other value streams, including the **Israel Bond Center** work with the **Computershare Canada team** (*confirm*), then Newrez work.
+- *Framing for the case study: an unlaunched project is normal and still strong. Show **validated design** (usability-tested with real investors) and **projected impact** (removing the 3–5 day manual turnaround), and end with an honest "what happened and what I learned" section.*
