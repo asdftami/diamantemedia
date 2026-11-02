@@ -220,3 +220,14 @@
 - The value stream had another project on **data feeds**. Tami wasn't heavily involved but learned from seeing the data.
 - **Learning curve:** her **first finance/mortgage job**. She came from retail, sales and customer service, learned the domain **from the ground up**, and became well-versed.
 - 💬 *Story angle: "the only designer on a 12–15 person team, in an industry I'd never worked in."*
+
+**Q3. Discovery and research process**
+1. **Kickoff with Jeff (PM)** to understand the problem.
+2. **Assumption map**: listed her assumptions as questions, then got answers from Jeff.
+3. **Stakeholder interviews** with the people who received investor requests directly.
+4. **User interviews (indirect)**: Tami wrote interview questions, and stakeholders passed them to investors. Learned how investors used the data and which data points they needed.
+5. **Persona** built from the interview findings.
+6. **Artifact analysis**: studied many of the existing **spreadsheets and PDFs**.
+7. **Dashboarding sessions** (workshops) with the stakeholder, BSA and project managers to turn data points into **graphical dashboard visualizations**.
+8. ⭐ **Key pivot from research:** the plan was **one dashboard**, but research showed investors wanted **multiple dashboard views**, so Tami **added a secondary navigation** for the dashboards.
+- *Artifacts to collect: assumption map, interview questions, persona, dashboard workshop outputs, before/after IA.*
