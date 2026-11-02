@@ -19,4 +19,22 @@
 - **Dad:** became a **manager at a Denny's** on South Padre Island, which kept the family afloat.
 - **Mom:** couldn't be a teacher/professor anymore. She has a **master's in tourism and travel** and worked in hotel and tourism at the **Miramar hotel** on the island. It was later torn down to build twin towers ("Isabella"? name TBD). She worked two jobs for a while, including **McDonald's**, then went full-time there and became a **manager**.
 - **Tami's first job ever: McDonald's**, working alongside her mom, at about **15–16** (legal working age).
-- *(continued…)*
+
+## Chapter 3: School in Texas (age 9 → high school)
+
+- **5th grade** in Port Isabel, placed in **ESL**. She was "kicking ass" because she was already bilingual, and her math was more advanced than her classmates'.
+- Elementary and **middle school (6th–8th) in Port Isabel**.
+- **High school:** a magnet school, **South Texas High School for Health Professions ("Med High")**.
+- **Childhood dream:** a **singer and actress**.
+- In high school, her dad said, "You're going to be a dentist just like daddy, right?" She loved her father deeply and held onto that goal for years.
+- Med High: regular courses plus a **dental class junior year**. **Senior year:** medical rotations in hospitals, dental clinics and orthodontics.
+
+## Chapter 4: College and the dental detour
+
+- **UTPA (University of Texas–Pan American)**, now **UTRGV**: about **1–2 years of pre-dental biology**.
+- Failed biology classes despite studying hard. Science and memorization weren't her strengths. It was a big university and her first taste of adult freedom: partying, not focused on school.
+- Moved to **TSTC (Texas State Technical College), Harlingen, TX** to keep pursuing dental. Got into the **dental hygiene program** by exam.
+- Failed a class and was held back a year, so she had to retake everything, including the exam.
+- Then failed the **clinical rotations** (couldn't find enough patients) and the **periodontal class**.
+- Context: not strong in science, distracted, going through trauma and personal issues in a relationship. 🔒 *[Private: pregnancy loss. Not for public use unless Tami decides otherwise.]*
+- Outcome: the dental path ended. → *(next: what happened after)*
