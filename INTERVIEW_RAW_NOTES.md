@@ -110,4 +110,89 @@
 - When and why did you leave? *(Tami: "I ended up quitting this job." Pick up here next.)*
 
 **Note for positioning:** this chapter isn't a detour. It's operations, project management (an office relocation), patient-facing service design, and a sales/conversion role (treatment coordinator), plus ongoing web work. These are strong transferable skills for product design.
-- *(continued…)*
+
+## Chapter 9: Leaving dental, moving to Colorado (~end of 2022/23?)
+
+- New partner, **Isaiah** (met in Austin, now her **fiancé**).
+- Quit the **Avery Ranch Dental treatment coordinator** job **after Christmas**. She was graduating anyway, and it was always temporary. 🔒 *Private: dispute over the employer asking her to repay an overpayment.*
+- **Finished the UX master's** around this time *(school name and graduation date TBD)*.
+- **Moved from Austin to Colorado** with Isaiah. Out of work for a while.
+
+## Chapter 10: Computershare Loan Services (formerly SLS) → Newrez (~1.5 yrs + a few months)
+
+**Company:** Computershare Loan Services, formerly **SLS (Specialized Loan Servicing)**, Colorado branch (Greenwood Village campus). Computershare is a **global financial services company** (US, Australia, …).
+*(Title, team, and exact dates TBD.)*
+
+**Work at Computershare:**
+- ⭐ **Project Insight**: an **analytics dashboard for internal investors**. Tami already has a lot of documentation. **"That's a big one."** → **Case study.**
+- ⭐ **Israel Bond Center** → **Case study.** *(Tami thinks I already have insights on this. I don't have them in this session, so she needs to share files/notes.)*
+- **Customer portal**: a couple of smaller features.
+- **Pride Month / DEI engagement:** acted as PR/marketing for **LGBTQ+ Pride Month events** on campus. Worked with employees across departments on a **trivia day, questionnaires, giveaways and snacks** to boost morale and awareness of DEI policies.
+
+**Acquisition:** **Newrez LLC** (a large portfolio of loan-servicing companies) bought SLS. Tami worked **a few months under Newrez**, then **375 people were laid off**, Tami included.
+
+**Work at Newrez:**
+- ⭐ **Login experience redesign**: the payment portal had **multiple login portals for different user types and use cases**, and the experience was messy. Tami **reimagined it** and created **alternate login versions**. → *Possible case study or supporting project.*
+- **Internal comms graphic design:** desktop wallpapers and banners.
+- Worked with the **internal cybersecurity team** on **phishing-awareness messaging**.
+- Followed **DEI visual guidelines**: neutral, non-skin-tone characters (blue "alien" figures, Newrez greens). Tami values this too.
+
+## Chapter 11: Unemployment → The Makers Lab (creative business)
+
+- After the layoff: a few months on unemployment.
+- ⭐ **The Makers Lab** (Tami's creative business):
+  - Hosts **epoxy resin workshops** (jewelry, pendants) and crafts.
+  - **YouTube channel "Tami Makes Stuff"**: DIY processes, how-tos, promoting projects and products, engaging her audience.
+  - → *Possible case study.* No big numbers yet ("I never got data points").
+
+## Chapter 12: Substitute teaching
+
+- **Kelly Education → Aurora Public Schools (Colorado):** substitute / **paraeducator in special education**.
+- Hard: inconsistent schedules and locations.
+
+## Chapter 13: Jars Cannabis (current)
+
+- **Retail sales associate → promoted to Lead Sales Budtender → now Floor Lead** (a floor-manager role). *(Has a medical cannabis badge/license. Dates TBD.)*
+- ⭐ **Unpaid UX work she initiated:** **usability audits and heuristic evaluations** of the **Jars e-commerce website** and the **newly launched Jars app**, sent to the company. She wants Jars to see her expertise and is trying to move into their **marketing/digital team**.
+  - *Portfolio note: strong "self-initiated UX audit" case study material if she has the documents. Check what's OK to show publicly.*
+- *Sensitivity note: cannabis is legal retail in Colorado, but some employers are conservative. We can describe it neutrally (e.g. "retail team lead, regulated retail").*
+
+## Chapter 14: Now: AI, Fridays Off, and freelance work
+
+**AI in her workflow:** ChatGPT, **Claude, Claude Code** (builds skills and automations to optimize her life and processes), **Kittl**, **Google Gemini**, **Midjourney** (image and video generation).
+
+⭐ **Fridays Off** ([fridays-off.co](https://fridays-off.co)): a new brand and **e-commerce platform** she and her fiancé Isaiah are building from the ground up "to monetize our lifestyles." → **Super-detailed case study.** *(Tami thinks I already know about it. I don't have that context in this session, so she needs to share details/files.)*
+
+⭐ **Freelance dental websites** → **combine into one case study:**
+1. **Parkfield Family Dental (Austin, TX)**: for a dentist she met through work. **Brand-new logo and full brand from zero**, then a **website using the same design system and guidelines**, made **accessible** and **bilingual**.
+2. **Evolve Dental Partners**: for **Heidi Arndt**, her former CEO at Strive Dental Management (*confirms "Strive" = the DSO*), for her new company. Built in collaboration with Heidi.
+- Has also done work for other DSOs and dental professionals.
+
+**School projects section:**
+- **Femfly**: a female networking platform that has evolved over the years.
+- A **game studio app**.
+- Yoga, games and other projects (to discuss later).
+
+## Goals (in Tami's words)
+
+- **Target roles:** Senior Graphic Designer, **Design Director**, UX/Product Designer, and ideally **a leadership role**: "I want to tell designers what to do… even though I don't mind" doing the work.
+- **Self-assessment:** feels **junior-level** ("still have a lot to learn") but could **lead a team of entry-level designers**.
+- **Superpower:** "I'm really good at **finding problems** and building solutions and tools for solutions." She enjoys spotting flaws, defects and gaps for improvement.
+- **Must-have: remote.** Work from anywhere, record footage, control their lifestyle, set her own schedule, creative freedom. She doesn't want a 5-day on-site job like Jars.
+- **Long term:** work for herself.
+- **The site has two jobs:** (1) land a UX/graphic/creative job, and (2) act as a **landing page for freelance clients**. A friend is already asking her to build a website for someone, and she has no portfolio to show yet.
+
+## 📁 Case study candidates (so far)
+
+| # | Project | Type | Status of materials |
+|---|---|---|---|
+| 1 | **Project Insight** (Computershare) | Product/UX: investor analytics dashboard | Lots already documented |
+| 2 | **Israel Bond Center** (Computershare) | Product/UX | Need files |
+| 3 | **Fridays Off** | Brand + e-commerce, founder story | Live: fridays-off.co |
+| 4 | **Dental websites** (Parkfield Family Dental + Evolve Dental Partners) | Branding + web, freelance | Live sites |
+| — | Newrez login redesign | UX: supporting project | ? |
+| — | Jars website/app audits | UX audit: supporting project | ? |
+| — | The Makers Lab / Tami Makes Stuff | Maker + creator | ? |
+| — | OMG RGV | Early web + editorial leadership | ? |
+| — | School: Femfly, game studio app, yoga, games | Academic | ? |
+| — | Senior BFA work about her dad | Personal / fine art | Tami decides |
