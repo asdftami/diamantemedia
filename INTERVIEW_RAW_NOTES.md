@@ -37,4 +37,13 @@
 - Failed a class and was held back a year, so she had to retake everything, including the exam.
 - Then failed the **clinical rotations** (couldn't find enough patients) and the **periodontal class**.
 - Context: not strong in science, distracted, going through trauma and personal issues in a relationship. 🔒 *[Private: pregnancy loss. Not for public use unless Tami decides otherwise.]*
-- Outcome: the dental path ended. → *(next: what happened after)*
+- Outcome: failed out of the dental hygiene program; the dental path ended.
+
+## Chapter 5: Undecided, loss, and finding art
+
+- After TSTC, went **back to UTPA/UTRGV as an undeclared major**, unsure what to do next.
+- Lived in the **McAllen/Edinburg area** with her brother, uncle, dad and grandma.
+- **Grandma passed away.** At a family gathering around that time, they noticed her dad was sick. The hospital diagnosed **cancer**.
+- Tami **started taking art classes** while figuring out her life, as her dad's health declined.
+- The family went through **two years of cancer** with him. He stayed "very happy and optimistic and just a good man overall."
+- *(continued…)*
