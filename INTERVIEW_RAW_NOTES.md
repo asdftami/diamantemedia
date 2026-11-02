@@ -46,4 +46,44 @@
 - **Grandma passed away.** At a family gathering around that time, they noticed her dad was sick. The hospital diagnosed **cancer**.
 - Tami **started taking art classes** while figuring out her life, as her dad's health declined.
 - The family went through **two years of cancer** with him. He stayed "very happy and optimistic and just a good man overall."
+
+## Chapter 6: Graphic design degree at UTRGV (~2015 → ~2017/18)
+
+**Timeline so far (dates to confirm):** HS grad **2011** → UTPA ~2 yrs (pre-dental) → TSTC ~2 yrs (dental hygiene) → back to UTPA/UTRGV ~**2015** → art classes → advisor matched her credits and interests to a **BFA in Graphic Design**.
+
+- Started doing well in art: **painting, ceramics, graphic design**. "Really falling in love with the creative art."
+- Dad was very ill. Tami traveled between McAllen/Edinburg and South Padre Island/Rancho Viejo (mom's house). Mom needed help, so he went into **hospice**, and Tami watched over him there until he **passed away** (brain cancer, ~2017).
+- He died **before her graduation**. "That really broke me… probably the hardest pain in my life… but I powered through it." She still finished the degree.
+- ⭐ **Senior work was about him:** brain cancer, brain damage, trauma and grief. She **drew brains, wrote pieces about the trauma, and photographed him on his deathbed**. She calls it "really powerful work I will always cherish." This is where she truly fell in love with art: putting her pain on paper.
+  - *Portfolio note: a possible "origin planet" on the timeline. Tami decides what's public.*
+
+### Design work during the BFA
+
+**1. Internship at LUXXE Digital (exact spelling TBD): OMG RGV**
+- Co-launched **OMG RGV**, a digital blog/magazine featuring **hidden gems in the Rio Grande Valley**, with an embedded CSS events calendar.
+- Role: **Editor-in-Chief.** Led a **team of 5 designers** (mostly freshmen and sophomores; Tami was the senior).
+- **Single-handedly built the entire website/blog**, helped design the **brand logo**, drove the content strategy, and reviewed all copy and visuals before publishing.
+- Grew social platforms and drove traffic to the site: **interviews, recording and editing videos**, posting to social.
+- What she learned: **leading small teams.**
+- *Follow-up: dates, traffic/follower numbers, is the site still live, any screenshots?*
+
+**2. Graphic designer at The Monitor (McAllen's local newspaper)**
+- Part of their **in-house digital media / graphic design team**.
+- Refined her graphic design skills in real time on newspaper production.
+- **Video interviews and editing**: learned A-roll/B-roll workflow and editing shortcuts.
+- Design tricks such as **pulling colors from a palette for cohesive branded documents**.
+- *Follow-up: dates, title, what she designed (ads? print pages? digital?), samples?*
+
+🔒 **Private context (not for public use):**
+- After her dad died, she went through a period of heavy partying, including drinking and driving. She was **arrested twice in one year (Feb and Oct, ~2017)**, which led to probation and house arrest in the Valley. The Monitor hired her knowing about the first arrest.
+- A relationship ended badly after graduation: the boyfriend left for a job, leaving Tami and their newly adopted dog; they had been living with her mom in Edinburg.
+- *Note for later: if a background check comes up in hiring, we can prep how to address it honestly. Keep it off the portfolio.*
+
+## Chapter 7: Austin, COVID, and the UX master's (~2019/20 →)
+
+- With probation nearly done, her PO let her **move to Austin** (with monthly check-ins).
+- Motivation for the master's: **afraid of getting stuck at a ~$45K salary**. She found a **two-year Master's in User Experience Design** that "altered the course of my life forever." *(Follow-up: school name, dates, capstone projects.)*
+- **COVID hit.** She couldn't find a design job, so she started **serving at Kerbey Lane Cafe** (Austin, multiple locations) to earn money right away.
+  - She loved the brand, the food and the people: great manager, great coworkers. It was a stopgap on the way to design work.
+  - Worked there **while doing the master's** (the master's was still in progress at this point).
 - *(continued…)*
