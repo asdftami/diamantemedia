@@ -86,4 +86,28 @@
 - **COVID hit.** She couldn't find a design job, so she started **serving at Kerbey Lane Cafe** (Austin, multiple locations) to earn money right away.
   - She loved the brand, the food and the people: great manager, great coworkers. It was a stopgap on the way to design work.
   - Worked there **while doing the master's** (the master's was still in progress at this point).
+
+## Chapter 8: The dental group years in Austin (~2021 → ?)
+
+**Context (2021, COVID):** studying for the UX master's while serving at Kerbey Lane to build her skills. 🔒 *Private: back together with the ex who had left; "a mistake, but necessary at the time."*
+
+**How she got in:** a friend Tami had gotten into dental hygiene back in Harlingen was now a hygienist at a dental clinic in Austin, and got Tami a **front desk job at Rose Dental Group 🌹**.
+
+**Role progression, all under the same parent company (order to confirm):**
+1. **Front desk / office liaison, Rose Dental Group.**
+2. ~**8–9 months later, promoted to Office Manager** of the company's **Dental Support Organization (DSO)** facility (the DSO may be called **"Strive"**; to confirm).
+   - Led the DSO's **move from one building to a new rental unit**: logistics, coordinating with **IT**, setting up everyone's computers, general office management.
+   - **Still handled website updates and blog posts** for the dental practice. ← *design/web work to dig into*
+   - Behind the scenes, the company was preparing to **sell the DSO, rebrand, and lay people off**; Tami didn't know yet.
+3. **The DSO was sold and her role was eliminated.** She was moved to **Avery Ranch Dental** (a sister office under the same umbrella) as **office liaison**.
+4. A few months later, **promoted to Treatment Coordinator**.
+
+**Follow-ups:**
+- Exact titles and dates for each step. Was "office liaison" the same as front desk?
+- What did the website and blog work involve? Which platform (WordPress? Wix?) Any results (traffic, new patients, reviews)?
+- As Treatment Coordinator: what did you do (presenting treatment plans and costs to patients, closing cases)? Any numbers (case acceptance %, revenue)?
+- Did you redesign any forms, processes, patient flows or internal tools? That counts as UX work.
+- When and why did you leave?
+
+**Note for positioning:** this chapter isn't a detour. It's operations, project management (an office relocation), patient-facing service design, and a sales/conversion role (treatment coordinator), plus ongoing web work. These are strong transferable skills for product design.
 - *(continued…)*
