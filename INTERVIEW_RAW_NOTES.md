@@ -196,3 +196,16 @@
 | — | OMG RGV | Early web + editorial leadership | ? |
 | — | School: Femfly, game studio app, yoga, games | Academic | ? |
 | — | Senior BFA work about her dad | Personal / fine art | Tami decides |
+
+---
+
+# Case study deep dives
+
+## ⭐ Project Insight (Computershare Loan Services)
+
+**Q1. The problem before Project Insight**
+- Computershare asked Tami to build a solution for its **internal investors**, who held **many portfolios of loans** in their investment profiles.
+- Investors had to **manually request every data point** from Tami's stakeholders.
+- Stakeholders then spent **3–5 days (up to a week+)** building **spreadsheets and PDFs** with the requested data.
+- The process was **monotonous, repetitive, time-consuming and unintuitive** for investors, with heavy manual work on both sides.
+- 📊 *Metric to use: data turnaround went from 3–5 days to ___ (find out what it became after).*
