@@ -231,3 +231,16 @@
 7. **Dashboarding sessions** (workshops) with the stakeholder, BSA and project managers to turn data points into **graphical dashboard visualizations**.
 8. ⭐ **Key pivot from research:** the plan was **one dashboard**, but research showed investors wanted **multiple dashboard views**, so Tami **added a secondary navigation** for the dashboards.
 - *Artifacts to collect: assumption map, interview questions, persona, dashboard workshop outputs, before/after IA.*
+
+**Q4. From one dashboard to many**
+- **Original plan:** one **at-a-glance snapshot** dashboard with the data points the team *assumed* investors wanted most.
+- ⭐ **Usability testing:** Tami ran **low-fidelity wireframe usability tests with real investors**. They kept asking for **data points the dashboard didn't have**, and the deeper the team dug, the more they found.
+- **Resulting dashboard suite** (behind the secondary nav):
+  - **Main dashboard** (overview)
+  - **HELOC dashboard**
+  - **Delinquency dashboard**
+  - **Active and inactive loans dashboards**
+  - **Disaster dashboard**, with an embedded **FEMA disaster risk map** giving investors **real-time insight** into how disasters affect their loans and portfolios ⭐ (standout feature)
+  - *…and more (Tami will send screenshots of all the dashboards).*
+- **Loan research search engine:** planned as the **next phase**. Tami made a **low-fi wireframe**, but the team **pivoted to prioritize the dashboards** and what each should show, so it stayed at low fidelity.
+- *Artifacts to collect: screenshots of every dashboard, low-fi wireframes, usability test notes, loan search wireframe.*
