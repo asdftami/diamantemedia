@@ -209,3 +209,14 @@
 - Stakeholders then spent **3–5 days (up to a week+)** building **spreadsheets and PDFs** with the requested data.
 - The process was **monotonous, repetitive, time-consuming and unintuitive** for investors, with heavy manual work on both sides.
 - 📊 *Metric to use: data turnaround went from 3–5 days to ___ (find out what it became after).*
+
+**Q2. Team and Tami's role**
+- **Tami: the one and only UX designer** hired for the project.
+- **Jeff, Project Manager**: "amazing" at scheduling and driving the project forward. Paired Tami with the stakeholder.
+- **Stakeholder**: the person investors requested data from. *(Title TBD: Tami will check LinkedIn.)*
+- **BSA (business systems analyst)**: started as an intern, hired permanently to work on this project with Tami. Wrote **SQL queries** to pull the data points investors requested, then organized them into **tables** so Tami could understand and sift through them and **populate the dashboards**.
+- **Swati, main developer**, plus many other engineers.
+- **Team size:** ~**12–15 people** in the **Investor Value Stream**, which built solutions for investors.
+- The value stream had another project on **data feeds**. Tami wasn't heavily involved but learned from seeing the data.
+- **Learning curve:** her **first finance/mortgage job**. She came from retail, sales and customer service, learned the domain **from the ground up**, and became well-versed.
+- 💬 *Story angle: "the only designer on a 12–15 person team, in an industry I'd never worked in."*
