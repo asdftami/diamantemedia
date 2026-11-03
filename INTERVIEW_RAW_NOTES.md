@@ -473,7 +473,7 @@ Saved in `assets/israel-bond-centre/`:
 - ⭐ **Social content: AI-generated product imagery** in the same clean, minimalist, luxurious aesthetic.
   - **Tool:** **Higgsfield** for image generation.
   - **Prompts written by Claude** for **consistency**.
-  - Prompts reference a **motion art database Isaiah built**, which helps the images **not look AI-generated**, and connect to the **Fridays Off style guide / brand references**.
+  - Prompts reference a **motion art database Isaiah built in Notion** (Claude reads it via the Notion connection), which helps the images **not look AI-generated**, and connect to the **Fridays Off style guide / brand references**.
   - → *An **AI creative pipeline**: style guide + reference database → Claude prompts → Higgsfield renders → scheduled in Metricool.* Strong "AI-native designer" story.
 - **Assets to collect:** the full **Instagram grid** once it's built, plus selected clean renders. Show **website + social** together in the case study.
 - *Credit note: say "supplier product photography, curated" on the website side; be open about the AI workflow (transparency is a plus).*
