@@ -439,3 +439,17 @@ Saved in `assets/israel-bond-centre/`:
 - **Why:** to **leave corporate jobs and be self-sufficient**. Build something they can retire on and that funds the remote lifestyle.
 - *Portfolio angle: founder + designer. Brand strategy, e-commerce UX, and growth, all owned end to end.*
 - *Sensitivity note: a cannabis-accessory brand may read differently to conservative employers. Frame it around brand building, e-commerce and luxury positioning. Tami decides how prominent it is.*
+
+**Q2. Roles**
+| Area | Tami | Isaiah |
+|---|---|---|
+| Logistics | | ✅ all |
+| Product research | | ✅ |
+| Copy / brand voice | gave/got feedback | ✅ copy optimization |
+| Logo + brand identity | ✅ together | ✅ together |
+| **Website** | ✅ **built the entire site from the ground up** | feedback, copy fixes, UX optimization insights |
+| Marketing strategy | | ✅ created it |
+| **Marketing execution + design** | ✅ **all launch design assets + execution** | |
+| **Automation** | ✅ building automations to **schedule everything in Metricool** so marketing runs **hands-free for the week** | |
+
+- *Case study angle: designer-founder who owns the full web build, the visual system, and an **automated content engine** (AI + scheduling). Shows systems thinking, not just visuals.*
