@@ -349,3 +349,9 @@ Saved in `assets/project-insight/`:
 **Q2. Users and role**
 - **Two user types:** **bondholders** and **admins** (staff managing accounts).
 - **Tami: the only designer**, working with dev groups, PMs and engineers.
+
+**Q3. What she changed**
+- **Accordions** for the large blocks of loan/bond data → **progressive disclosure** to cut cognitive overload.
+- **Wizards (step-by-step flows)** for **admin processes** → broke complex admin tasks into guided steps.
+- **Checkboxes** for **email and contact preferences** → simpler, clearer preference management.
+- *Still to ask: how she restructured the navigation.*
