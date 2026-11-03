@@ -460,3 +460,10 @@ Saved in `assets/israel-bond-centre/`:
 - ⭐ **Accessibility:** **fully keyboard- and screen-reader accessible**, plus visual accessibility (contrast, etc.).
 - **Design principles:** **clean, minimalist** to avoid **cognitive overload** (same principle as Bond Centre), **luxurious**, and **colors associated with luxury brands**.
 - *Follow-up: brand colors and fonts (hex codes), and how accessibility was tested (tools? WCAG level?).*
+
+**Q4. Launch status**
+- **Site is technically live.** No numbers yet; **no social posts yet**.
+- Soft-launch feedback: shared with a few colleagues, who were **really excited** and **loved the aesthetic, the photography, and the vibe**.
+- **Social launch planned:** tomorrow if the social work is finished, otherwise **next Monday**.
+- *Case study plan: publish now as a "building in public / in progress" case study; add real metrics (traffic, followers, conversion, first sales) after 30–60 days. Tip: set up Shopify analytics + GA4 + Metricool reporting from day one so the numbers exist later.*
+- *Photography: who shot it? (ask)*
