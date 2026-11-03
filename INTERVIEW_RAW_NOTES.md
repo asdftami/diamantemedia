@@ -427,3 +427,15 @@ Saved in `assets/israel-bond-centre/`:
 - Blur the internal username on 11.
 
 **✅ Israel Bond Centre interview complete.** Remaining polish: typos, lorem ipsum, blur username, nav highlight on comm prefs.
+
+## ⭐ Fridays Off (fridays-off.co), co-founded with Isaiah
+
+**Q1. What it is, who it's for, why**
+- A **luxury cannabis lifestyle brand**: smoking accessories + home goods.
+- **Positioning:** *"the Louis Vuitton of smoking"*: beautiful, well-crafted pieces that work well.
+- **Products:** dab rigs, e-rigs, glass, vapes, bongs, pipes, papers, travel bags and cases, occasional hats and stickers. Anything cannabis-adjacent. **No cannabis or nicotine products.**
+- **Audience:** cannabis enthusiasts and hobbyists, dab heads, "potheads," and **cool kids who want a safe cannabis community**.
+- **Business model:** **dropshipping**, aiming for large scale (lots of traffic and sales).
+- **Why:** to **leave corporate jobs and be self-sufficient**. Build something they can retire on and that funds the remote lifestyle.
+- *Portfolio angle: founder + designer. Brand strategy, e-commerce UX, and growth, all owned end to end.*
+- *Sensitivity note: a cannabis-accessory brand may read differently to conservative employers. Frame it around brand building, e-commerce and luxury positioning. Tami decides how prominent it is.*
