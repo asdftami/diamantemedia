@@ -367,3 +367,10 @@ Saved in `assets/project-insight/`:
 - ✅ **The split navigation won**: tasks on the left, **account management at the top right**. The single long left nav was "way too much, busy and confusing."
 - ⭐ **Pagination + accordions:** because there were **so many loans**, accordions were kept **short with pagination**, and users could **expand to see as many as they wanted** (user-controlled density).
 - *Still to ask: did it launch, or was it stopped by the Newrez acquisition?*
+
+**Q6. Outcome**
+- ✅ **Launched and went into production.** Completed.
+- Tami was laid off before post-launch data could be collected, so there are **no user metrics**.
+- **Developers and product owners were very excited** about the upgrade ("facelift").
+- ⭐ *Case study note: this is her **shipped** enterprise product. Pair it with Project Insight (validated, unlaunched) to show both sides.*
+- *Still to ask: images? (before/after, wireframes, flows)*
