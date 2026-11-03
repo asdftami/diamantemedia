@@ -453,3 +453,10 @@ Saved in `assets/israel-bond-centre/`:
 | **Automation** | ✅ building automations to **schedule everything in Metricool** so marketing runs **hands-free for the week** | |
 
 - *Case study angle: designer-founder who owns the full web build, the visual system, and an **automated content engine** (AI + scheduling). Shows systems thinking, not just visuals.*
+
+**Q3. How the website was built**
+- **Platform: Shopify.** Designed manually in the Shopify editor; **"vibe coding" with Claude** (via the Shopify connector) for more complex **CSS/code changes**. → *AI-assisted design-to-code workflow.*
+- ⭐ **Competitive research:** **Louis Vuitton, Pufco, Houseplant, Dr. Dabber**. Studied their platforms and **emulated the best patterns**.
+- ⭐ **Accessibility:** **fully keyboard- and screen-reader accessible**, plus visual accessibility (contrast, etc.).
+- **Design principles:** **clean, minimalist** to avoid **cognitive overload** (same principle as Bond Centre), **luxurious**, and **colors associated with luxury brands**.
+- *Follow-up: brand colors and fonts (hex codes), and how accessibility was tested (tools? WCAG level?).*
