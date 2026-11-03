@@ -336,3 +336,12 @@ Saved in `assets/project-insight/`:
 **Q9. Quick facts**
 - **Usability testing: 5 investors.** *(A solid sample: 5 users is the classic usability-testing benchmark.)*
 - **Dates: December 2022 – February 2024** (Computershare tenure; confirm whether Project Insight itself spans the same range)
+
+## ⭐ Israel Bond Center (Computershare, with the Canada team; confirm)
+
+**Q1. What it was and the problem**
+- A platform for **Israel Bond holders** *(confirm: bondholders managing their holdings? and admins/staff?)*.
+- **Problems with the existing experience:**
+  - **Too many loans and too much data on one screen**, causing **cognitive overload**
+  - **Poor navigation structure**
+  - **Poor admin controls**
