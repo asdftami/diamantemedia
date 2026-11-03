@@ -501,3 +501,4 @@ Saved in `assets/israel-bond-centre/`:
 - **Logo files:** the brand guide and lockups use soft-edged raster/AI-rendered logos; **05 is the clean vector**. Rebuild the lockups from the vector. The mark in 05 also looks slightly navy rather than `#1A1A1A`, so match it to the palette.
 - Add the tagline "unwind & recharge" to the brand guide.
 - Still need: **website screenshots** (homepage, product page).
+- ✅ **Name decision: "Fridays-Off"**: capital F, hyphen, capital O. Reason: the hyphen is a must, and the capitals create the **"F-Off" wink** for merch (shirts, hats). Apply it in the logo wordmark (currently "fridays-Off"), the brand guide (currently "Fridays Off"), the site, and social. The domain stays lowercase (fridays-off.co), which is normal.
