@@ -543,3 +543,8 @@ Saved in `assets/israel-bond-centre/`:
 - He **bought an existing dental practice** (existing patients) but **didn't like its branding or marketing**.
 - **Ask:** a **modernized brand + website** for a modern dental brand.
 - Tami delivered the **brand identity and the website**.
+
+**Parkfield: Q2. Tools**
+- **Website: Squarespace.** **Logo: Adobe Illustrator.**
+- (Earlier note: brand-new logo → website built on the same design system; **accessible** and **bilingual**.)
+- *Proudest design choice: not answered yet.*
