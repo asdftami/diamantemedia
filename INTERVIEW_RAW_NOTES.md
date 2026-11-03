@@ -324,3 +324,11 @@ Saved in `assets/project-insight/`:
 **⚠️ Before publishing:** the hi-fi screens show **Computershare branding** and realistic-looking figures. Check NDA comfort. Options: keep the brand (common for portfolios of cancelled internal tools) or anonymize the logo and data. Persona photos look like stock images, which is fine.
 
 **Open questions:** which prototype (A/B/C) won and why? How many investors were tested? Dates of the project?
+
+**Q8. Prototype A/B/C: what won and why**
+- **A** = the initial design (single dashboard, no secondary nav).
+- After **1–2 usability tests**, investors wanted **more data at a glance**, and A didn't capture it. The team **asked investors directly which data points they wanted**, and those became the **secondary nav** introduced in **B and C**.
+- **B vs C differed only in nav placement:** B had both navs on top (two levels); C had a left sidebar + top tabs.
+- ⭐ **Finding:** users had **no preference about placement**. They only cared that the secondary nav **existed**.
+- ⭐ **Decision:** Tami brought this to the weekly team meeting, and they chose **C (side nav + top tabs) because a component already existed**. That **saved design and dev effort and time**.
+- *Case study angle: a pragmatic, evidence-based decision. "When users had no preference, we let engineering cost decide." Shows business sense and collaboration with dev. A nice lead-in to her "now I'd build a design system" reflection.*
