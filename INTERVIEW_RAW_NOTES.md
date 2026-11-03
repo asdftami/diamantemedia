@@ -572,3 +572,6 @@ Saved in `assets/israel-bond-centre/`:
 - Need the URLs for both sites (Parkfield Family Dental, Austin; Evolve Dental Partners). The network for this session must allow those domains (and web.archive.org), or Tami takes screenshots on her phone or computer.
 
 **✅ Dental interview (first pass) complete.** Open: proudest design choice on Parkfield, translator type, dates.
+- **Parkfield URL:** https://www.parkfieldfamilydental.com (live).
+- **Evolve Dental Partners:** **not live right now**; small LinkedIn presence. Plan: try the **Wayback Machine** for archived versions; otherwise describe it as a smaller supporting item (scope, process, client relationship) without visuals, or fold it into the Parkfield case study as "repeat-client referral."
+- ⏸ Both parkfieldfamilydental.com and web.archive.org are **blocked by this session's network policy**.
