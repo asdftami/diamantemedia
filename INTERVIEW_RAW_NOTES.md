@@ -294,3 +294,33 @@ Saved in `assets/project-insight/`:
 - ⭐ **This is the origin of the FEMA disaster map feature**: a real investor question captured in a workshop. Great "insight → feature" moment for the case study.
 
 *New detail: data was delivered over **FTP**. Add to the "before" story.*
+
+### Project Insight: artifacts received (batch 2, complete set)
+
+**Research and strategy**
+- **08 User flow + sitemap.** Includes the **HMW statement**: *"How might we provide our investors with insight into their portfolios in the clearest, most effective way?"* Scenario: *Mr. Watts, a banker with a Computershare loan portfolio, wants his preferred metrics, UPB and percentages, and to filter and sort by flood zone to see recently affected states.* Flow: login → home dashboard → Main Dashboard / Trending / Disaster Map / Loan Research. Takeaways: changeable filters/categories, **movable chart cards**, a loan-level research tab.
+- **09 "Project Insight Dashboard Flow"**: the full IA with every tab and its drill-down (Delinquency, Bankruptcy, Cashflow, Escrow, HELOC, Active, Inactive, Disaster, plus the disaster map). Shows how complex the system was.
+- **19 Persona: Corey Watts**, 56, Denver, Master's in Finance, iPhone + MacBook Pro. Goals: collect 80%+ of escrow payments, lower collections. Pain points: **has to email to request data**; navigates all over Investor Web; data arrives in **huge documents and spreadsheets that sometimes don't fit in an email**; unclear language on Investor Web; struggles to find data when he returns.
+- **20–21 Storyboards (8 panels):** "Awareness of Need" and "Checking Portfolio Insights to Make Data-Driven Decisions." A new loan is onboarded → investor Anne logs in → searches the loan reference # → sees its impact → asks to onboard more loans. *(Shows the business value: insight drives more loans.)*
+- **22 User journey map: Eduardo Reyes**, 49, Head of Asset Management, Miami. Isolating loans in loss mitigation. Pain: no loss-mitigation view on the main dashboard, buried results. **Opportunities that became features:** a loss-mitigation graph on the main dashboard and a **keyword search bar**.
+
+**Workshops (in-person whiteboard sessions)**
+- **23–29 Whiteboard photos** from the dashboarding sessions: "NOW" (the at-a-glance home dashboard: Active UPB/Count, Delinquency, Disaster, Cashflow, MTD Inactive, Investor Type), and the **page 2 drill-downs** for Delinquency, Cashflow, Escrow, Disaster ("Top 5 states by disaster type", FEMA declared, live tornado/fire/hurricane tracking) and Entries/Exits (boarding, transfer, PIF, charge-off…). Includes sticky notes such as *"Switchable filter? OTS/MBA"* and the natural-disaster question.
+- Also visible: a **complexity scale** (Simple / Medium / Complex → value stream dependency).
+
+**Wireframes and testing**
+- **11–12 Low-fi "Trending Insights"** dashboard, before and after **adding the tab navigation** (Trends, Delinquency, Bankruptcy, Cashflow, Escrow, HELOC, Active, Inactive). ⭐ Visual proof of the one → many dashboards pivot.
+- **13 "Prototypes Tested": A / B / C**. A: no sub-nav. B: horizontal tabs. C: left sidebar + tabs. *(Ask Tami: which won, and why?)*
+- **14 Full low-fi wireframe overview**: Home, Dashboard, Trending, Portfolio History, Disaster Map (many iterations), Loan Research (many iterations), Investor Type, Inactive, Profile.
+
+**High fidelity (final UI)**
+- **10 Main dashboard**: KPI bar (Total Serviced UPB, Loan Count, % Current), filters, UPB/Count/Weighted Avg toggle, date filters, cards for Statistics (MTD → ALL), Investor Type, Delinquency (with **OTS/MBA toggle**), Cashflow, MTD Inactive. Left nav: Dashboard, Disaster Map, Investor Web, Deal Center. Download, print and email actions; "last refreshed."
+- **06 Disaster dashboard**: stacked area chart by disaster type (fire, flood, tornado, tropical storm, other) + a **"FEMA View Disaster Map"** link + a sortable county-level table (disaster name, declaration #, UPB, dates, FIPS).
+- **07 FEMA disaster map**: county-level US risk map with legend, search, zoom and locate.
+
+**Inspiration (NOT Tami's work)**
+- `inspiration/15–18`: reference UI shots (map search, finance dashboard, sales overview, SEO trends). Use only as "mood/inspiration" with credit, never as her own work.
+
+**⚠️ Before publishing:** the hi-fi screens show **Computershare branding** and realistic-looking figures. Check NDA comfort. Options: keep the brand (common for portfolios of cancelled internal tools) or anonymize the logo and data. Persona photos look like stock images, which is fine.
+
+**Open questions:** which prototype (A/B/C) won and why? How many investors were tested? Dates of the project?
