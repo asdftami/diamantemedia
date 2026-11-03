@@ -419,9 +419,11 @@ Saved in `assets/israel-bond-centre/`:
 
 **Questions raised by the files**
 - ~~Timeline question about the April 29, 2024 date~~ (Tami: ignore the date for now.)
-- Mobile Inbox: A or B, and why?
+- ✅ **Mobile Inbox: A won**: separate list and message screens were **more intuitive** (familiar email-app pattern, less clutter on a small screen).
 
 **Polish before publishing**
 - "Decreased" → "Deceased"; "sharesinto"; lorem ipsum on the welcome page; consent placeholder text in step 2.
 - On the comm-prefs screens the left nav highlights "Payments & Transactions"; it should probably highlight a User Preferences item.
 - Blur the internal username on 11.
+
+**✅ Israel Bond Centre interview complete.** Remaining polish: typos, lorem ipsum, blur username, nav highlight on comm prefs.
