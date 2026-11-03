@@ -345,3 +345,7 @@ Saved in `assets/project-insight/`:
   - **Too many loans and too much data on one screen**, causing **cognitive overload**
   - **Poor navigation structure**
   - **Poor admin controls**
+
+**Q2. Users and role**
+- **Two user types:** **bondholders** and **admins** (staff managing accounts).
+- **Tami: the only designer**, working with dev groups, PMs and engineers.
