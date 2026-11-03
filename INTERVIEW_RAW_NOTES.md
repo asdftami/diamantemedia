@@ -332,3 +332,7 @@ Saved in `assets/project-insight/`:
 - ⭐ **Finding:** users had **no preference about placement**. They only cared that the secondary nav **existed**.
 - ⭐ **Decision:** Tami brought this to the weekly team meeting, and they chose **C (side nav + top tabs) because a component already existed**. That **saved design and dev effort and time**.
 - *Case study angle: a pragmatic, evidence-based decision. "When users had no preference, we let engineering cost decide." Shows business sense and collaboration with dev. A nice lead-in to her "now I'd build a design system" reflection.*
+
+**Q9. Quick facts**
+- **Usability testing: 5 investors.** *(A solid sample: 5 users is the classic usability-testing benchmark.)*
+- Project dates: *TBD*
