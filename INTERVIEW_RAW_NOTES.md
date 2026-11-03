@@ -394,3 +394,34 @@ Saved in `assets/israel-bond-centre/`:
 - Other sections reuse the same placeholder description; swap in real form names, or show only the US Holders section expanded.
 
 **Still to collect:** a "before" screenshot of the old app, the admin wizard screens, and nav test variants (if they exist).
+
+**Artifacts batch 2 (Bond Centre 2.0)**
+
+**Before vs after** ⭐
+- **09 BEFORE: old welcome page** (Israel Bonds logo, Jerusalem photo, login card + 4 shortcuts) vs **08 NEW welcome page** (hero, login/register card, 4 task shortcuts; body copy still lorem ipsum).
+- **11 BEFORE: old portfolio page**: a long left nav mixing tasks with Messages and User Preferences; sparse accounts list. ⚠️ Shows Tami's internal login ("AMERICAS\trevinot") and a last-login date (April 29, 2024). **Crop or blur before publishing.**
+- **10 NEW portfolio (winning split nav)**: account tools at top right; accordion per account; bond table with pagination ("5 of 20"); accounts-per-page control; Expand/Collapse All; right panel with **total balance donut, USD/CAD toggle**, market info, BUY; "+ New Bonds."
+- **12 NEW portfolio, single-left-nav variant** (everything stacked on the left). ⭐ **This is the nav A/B test.** 10 won.
+
+**Admin controls** ⭐
+- **06 Admin view:** a form submission marked **"Proposed"** with **Preview / Approve / Reject / Cancel**. This is the admin approval workflow.
+- **07 Bondholder view:** the same form showing a **"Rejected"** status with info icon. Closes the loop between admin and bondholder.
+
+**Communication preferences wizard** ⭐ (the "wizards + checkboxes" Tami described)
+- **16** Table of accounts × (Tax Statements / Bond Statements / Maturity Statements) with **Email / Postal Mail checkboxes**, and an info banner ("this will not change the email in your Bond Centre account").
+- **17 Step 1: Select accounts** (select-all checkboxes), **18 Step 2: Choose preferences** (radio buttons + consent message), **19 Step 3: Summary** ("not complete until you click submit"), **20 Success modal** → Return to Portfolio.
+- Pattern: stepper, Previous/Next, review before submit, clear confirmation.
+
+**Scope** ⭐
+- **13 Desktop flows overview**: Welcome pages, Portfolio, On-Demand Statements, Comm Preferences, Online Support, Banking Details, Address Change, Tax Details (incl. a "2nd flow exits wizard"), Printable Forms, Approvals, FAQ.
+- **15 Mobile wireframes**: Android + iOS sizes for Portfolio, Tax Details, Printable Forms, Comm Preferences, FAQ, Inbox, Online Support, Banking Details, Address Change. → **Responsive design across the whole product.**
+- **14 Mobile Inbox A vs B**: A = message detail and list on separate screens; B = message detail stacked above the list, with search, Read/Unread/Starred filters, attachments. *(Ask: which won?)*
+
+**Questions raised by the files**
+- The old portfolio screenshot is dated **April 29, 2024**, after Feb 2024. Did Bond Centre work continue into the **Newrez** months? Confirm the project timeline.
+- Mobile Inbox: A or B, and why?
+
+**Polish before publishing**
+- "Decreased" → "Deceased"; "sharesinto"; lorem ipsum on the welcome page; consent placeholder text in step 2.
+- On the comm-prefs screens the left nav highlights "Payments & Transactions"; it should probably highlight a User Preferences item.
+- Blur the internal username on 11.
