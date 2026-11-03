@@ -418,7 +418,7 @@ Saved in `assets/israel-bond-centre/`:
 - **14 Mobile Inbox A vs B**: A = message detail and list on separate screens; B = message detail stacked above the list, with search, Read/Unread/Starred filters, attachments. *(Ask: which won?)*
 
 **Questions raised by the files**
-- The old portfolio screenshot is dated **April 29, 2024**, after Feb 2024. Did Bond Centre work continue into the **Newrez** months? Confirm the project timeline.
+- ~~Timeline question about the April 29, 2024 date~~ (Tami: ignore the date for now.)
 - Mobile Inbox: A or B, and why?
 
 **Polish before publishing**
