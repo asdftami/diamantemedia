@@ -374,3 +374,23 @@ Saved in `assets/project-insight/`:
 - **Developers and product owners were very excited** about the upgrade ("facelift").
 - ⭐ *Case study note: this is her **shipped** enterprise product. Pair it with Project Insight (validated, unlaunched) to show both sides.*
 - *Still to ask: images? (before/after, wireframes, flows)*
+
+**Q7. Artifacts: "Bond Centre 2.0" (State of Israel × Computershare)**
+Saved in `assets/israel-bond-centre/`:
+- **01** Printable Forms, all collapsed, with **Select All + Expand All / Collapse All + Edit** (likely the admin/edit mode; confirm).
+- **02** All accordions expanded, with **View Form / Upload / info** per form, plus Cancel / Submit.
+- **03** One section expanded (the default bondholder view).
+- **04** Upload flow: **drag & drop or browse**, inline inside the accordion.
+- **05** Upload success: progress bar, "Uploaded ✓", **Remove File / Submit**.
+
+**What the screens prove:**
+- ✅ **Split nav:** left = tasks (Portfolio, Payments & Transactions, Banking Details, Account Statements, Suppress Maturity Payment). Top right = account (Alerts, Messages, country selector, User Preferences, Help & FAQ, Logout).
+- ✅ **Accordions** chunk five form categories (US holders, international holders, tax forms, DRS, international currency).
+- ✅ **Inline upload**: no page change, clear system status (progress → success), undo via Remove File.
+
+**⚠️ Polish before publishing (copy in the mockups):**
+- "**Decreased** Transfer Package" → should be "**Deceased**"
+- "shares**into**" → "shares into"
+- Other sections reuse the same placeholder description; swap in real form names, or show only the US Holders section expanded.
+
+**Still to collect:** a "before" screenshot of the old app, the admin wizard screens, and nav test variants (if they exist).
