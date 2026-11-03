@@ -478,3 +478,26 @@ Saved in `assets/israel-bond-centre/`:
 - **Assets to collect:** the full **Instagram grid** once it's built, plus selected clean renders. Show **website + social** together in the case study.
 - *Credit note: say "supplier product photography, curated" on the website side; be open about the AI workflow (transparency is a plus).*
 - **Correction:** the scheduling tool is **Blotato**, not Metricool.
+
+**Q6. Brand identity artifacts** (saved in `assets/fridays-off/`)
+- **01 Brand guide:** logo mark + horizontal lockup; palette; fonts.
+  - **Palette:** Cream `#F5F3EF` · Sand/Gold `#D8C3A5` · Espresso `#3B2A20` · Near-black `#1A1A1A`. Warm neutrals, the luxury cue.
+  - **Type:** **Montserrat** (main + bold), **Poppins** (secondary).
+- **02 Van wrap mockup** (AI-rendered): ff monogram pattern + lockup. Shows the brand system applied in the real world.
+- **03–04 Lockups with tagline "unwind & recharge"**, light and dark versions.
+- **05 Clean vector logo mark** (circle + "ff" ligature).
+
+**Contrast check (WCAG), supports the accessibility claim**
+| Pair | Ratio | Result |
+|---|---|---|
+| Near-black on Cream | 15.7:1 | ✅ AAA |
+| Espresso on Cream | 12.3:1 | ✅ AAA |
+| Sand on Near-black | 10.2:1 | ✅ AAA |
+| Espresso on Sand | 8.0:1 | ✅ AAA |
+| **Sand on Cream** | **1.54:1** | ❌ decorative only (dividers, underline): never for text |
+
+**Polish notes (before the case study)**
+- **Name consistency:** "Fridays Off" (guide title) vs. "fridays-Off" (lockups) vs. domain "fridays-off.co". Pick one display style and apply it everywhere.
+- **Logo files:** the brand guide and lockups use soft-edged raster/AI-rendered logos; **05 is the clean vector**. Rebuild the lockups from the vector. The mark in 05 also looks slightly navy rather than `#1A1A1A`, so match it to the palette.
+- Add the tagline "unwind & recharge" to the brand guide.
+- Still need: **website screenshots** (homepage, product page).
