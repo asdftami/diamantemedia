@@ -502,7 +502,26 @@ Saved in `assets/israel-bond-centre/`:
 - Add the tagline "unwind & recharge" to the brand guide.
 - Still need: **website screenshots** (homepage, product page).
 - ✅ **Name decision: "Fridays-Off"**: capital F, hyphen, capital O. Reason: the hyphen is a must, and the capitals create the **"F-Off" wink** for merch (shirts, hats). Apply it in the logo wordmark (currently "fridays-Off"), the brand guide (currently "Fridays Off"), the site, and social. The domain stays lowercase (fridays-off.co), which is normal.
-- ⏸ **Website screenshots pending:** this cloud session's network policy blocks fridays-off.co. Either allow the domain, or Tami uploads screenshots.
+- ⏸ **Website screenshots pending:** this cloud session's network policy blocks fridays-off.co (and Shopify's CDN). Either allow the domain, or Tami uploads screenshots.
+
+### Fridays-Off: store facts (pulled live from Shopify Admin, Nov 3, 2026)
+- **Store:** Fridays-Off · fridays-off.co · Shopify **Basic** plan · USD · MST.
+- **Catalog: 463 products** (405 active), **~48 vendors**, **16 product types**, **50+ collections**.
+- **Brands carried** include **Puffco (43), GRAV (54), MJ Arsenal (66), Hemper (58), Empire Glassworks (27), Blazy Susan (16), NWTN Home (19), Jane West (12), Edie Parker (11), Dr. Dabber (11), Storz & Bickel (6), RAW (9)**, plus PAX, Focus V, RooR, Zippo, etc.
+- **Information architecture (collections):**
+  - **3 top-level shopping groups:** **Smoke (175) · Dab & Vape (158) · Essentials (98)**
+  - **Category collections:** Water Pipes & Bongs (67), Hand Pipes & One-Hitters (58), Vaporizers (40), Bubblers (37), Storage & Stash (31), Rolling Papers & Trays (26), Dab Rigs (23), Grinders (20), Travel Essentials (17), Gravity Bongs & Hookahs (11), Lighters & Torches (10), Ashtrays (9), Lifestyle & Gifts (8), Vape Pens & 510 (6)
+  - **Merchandising:** Top Picks (9), New Arrivals (11), BigFUN! (18)
+  - **Shop-by-brand** collections for every major vendor
+- **Price range sample:** $9.50 (Diner Ashtrays) to $119.99+ (GRAV × LRG Wobble Bubbler); luxury pieces (Puffco, Storz & Bickel) go higher.
+- **Live theme:** "Tinker – header + no-crop (preview)", built on Shopify's **Tinker** theme. Unpublished explorations: Savor, Fabric, Tinker (age-gate draft, photo preview). *Shows iteration: three themes tested, plus an **age gate** draft (compliance).*
+- *Case study angle: "Curated **460+ products from ~48 brands** into a 3-pillar IA (Smoke / Dab & Vape / Essentials) with category, brand, and merchandising entry points."*
+
+**🧹 Store hygiene findings (quick wins before launch)**
+- **Duplicate vendor names:** "Dr Dabber" vs "Dr. Dabber"; "GRAV" vs "Grav". Merge these so brand filters and collections don't split.
+- **Duplicate product types:** "Water Pipes" vs "Water Pipes & Bongs". Merge.
+- **Empty brand collections (0 products):** Stündenglass, Vessel, Zenco, Her Highness NYC, Pulsar. Hide them from navigation or stock them, since empty pages hurt trust.
+- **Rename the live theme** (it still says "(preview)") once final, for tidiness.
 
 ---
 ## ▶️ Resume point (next session)
