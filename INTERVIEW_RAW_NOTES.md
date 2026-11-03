@@ -554,3 +554,10 @@ Saved in `assets/israel-bond-centre/`:
 - Embedded a **site-wide translator** so Spanish-speaking patients can understand and use the whole site.
 - *Story angle: Tami is bilingual herself (immigrated from Monterrey at 9 and learned English in ESL), so she designs for the patients she grew up alongside. Inclusive design rooted in lived experience.*
 - *Ask later: was it an automatic translation widget (e.g. Weglot / Google) or hand-translated key pages?*
+
+**Evolve Dental Partners: Q4. Client and company**
+- **Client: Heidi Arndt**, former **CEO of Strive Dental Management** and a former **dental hygienist**. A **serial entrepreneur** who builds dental businesses and sells them.
+- Her businesses **advocate for hygienists** and **optimize hygiene processes in clinics**, drawing on her own experience of their pain points.
+- **Evolve Dental Partners** is her **new venture** after selling previous companies (same mission as Strive).
+- Tami built her website in collaboration with her. *(Ask later: logo/brand too, or website only? Platform?)*
+- *Story: two former executives from the same company each hired Tami for their next venture. Repeat-client trust.*
