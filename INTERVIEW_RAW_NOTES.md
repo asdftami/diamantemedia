@@ -566,3 +566,9 @@ Saved in `assets/israel-bond-centre/`:
 - **Squarespace.** Heidi **brought her own logo and brand guidelines**; Tami **applied them** and built the **website (portfolio-style)**.
 - It was collaborative: Heidi loved Squarespace and **took over editing** after Tami laid the foundation (some edits made without Tami's sign-off).
 - *Portfolio framing: "Built a brand-compliant, client-editable Squarespace site and handed it off so the founder could update it herself." That's an empowerment win. ⚠️ The live site may no longer match Tami's original design, so use her own screenshots/files rather than the live site.*
+
+**Dental: Q6. Assets**
+- **No screenshots saved** for either site. Plan: capture them from the **live sites**, and check the **Wayback Machine (web.archive.org)** for launch-era versions, especially Evolve, since Heidi has edited it since.
+- Need the URLs for both sites (Parkfield Family Dental, Austin; Evolve Dental Partners). The network for this session must allow those domains (and web.archive.org), or Tami takes screenshots on her phone or computer.
+
+**✅ Dental interview (first pass) complete.** Open: proudest design choice on Parkfield, translator type, dates.
