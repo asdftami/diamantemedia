@@ -256,3 +256,16 @@
 - ⭐ **Design decision from testing: disaster data.** Disaster info was originally on the **home dashboard** (*confirm: it cluttered it, especially when no disasters were active?*). It was moved to its **own Disaster tab/dashboard and map**, so investors could research **on their own terms** without having it **forced on them**, especially when there were no active disasters.
 - **Most-wanted features:** loan research, the **disaster map** ("a big one"), **delinquency and foreclosure** data.
 - *Case study line: "Investors asked 'when can I have this?' at every fidelity level."*
+
+**Q7. Proudest moment, and what she'd do differently**
+- ⭐ **Proudest:** how far she took the **high-fidelity prototypes before AI tools existed** to speed up and optimize the process. "If I had AI for Project Insight it would have been so much better."
+- **Would do differently:**
+  - Establish a **strong design system** from the start
+  - Build **reusable components**
+  - Create **design tokens**
+  - **Document every step** of the process
+  - Build a **more dev-ready foundation** for launch
+- **Growth story:** "I was never taught documentation, so I had to research that and learn it after the fact." She now knows design systems, tokens and documentation.
+- *Case study framing: close with "What I'd do today," covering design system and tokens, documentation, and how she now uses AI (Claude Code, etc.) to move faster. That ties Project Insight to her current skills.*
+
+**✅ Project Insight interview complete.** Still to collect: stakeholder's title (LinkedIn), project dates, dashboard screenshots, wireframes, persona, assumption map, and usability test notes.
