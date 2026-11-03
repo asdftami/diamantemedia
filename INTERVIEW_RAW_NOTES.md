@@ -535,3 +535,11 @@ Saved in `assets/israel-bond-centre/`:
 - ✅ Verified: the vendor list and product type list now have no duplicates. "E-Rig" remains as its own type (possible overlap with "Dab Rigs"; Tami's call).
 - ⛔ **Hiding the 5 empty brand collections was blocked** by the Shopify connector's safety policy (unpublishing isn't allowed through it). **Tami does it manually:** Shopify admin → Products → Collections → open each (Stündenglass, Vessel, Zenco, Her Highness NYC, Pulsar) → Sales channels / Publishing → uncheck **Online Store**. They're not in any menu, but they still show on the /collections list page and can be reached by URL.
 - 🗓 **Weekly read-only store check** scheduled: **Sundays 5:33 PM Mountain**, push notification. ⚠️ It was created **without the Shopify connector** (this session couldn't pass it through), so until Shopify is added to it, the check can't read the store and will say so.
+
+## ⭐ Dental websites (freelance): Parkfield Family Dental + Evolve Dental Partners
+
+**Parkfield Family Dental: Q1. Client and problem**
+- **Client:** the **VP of Operations at Strive Dental Management** (Tami's former colleague at the DSO). *(Earlier notes said "a dentist"; this corrects it.)* He reached out to her after they'd worked together, so **repeat trust → referral work**.
+- He **bought an existing dental practice** (existing patients) but **didn't like its branding or marketing**.
+- **Ask:** a **modernized brand + website** for a modern dental brand.
+- Tami delivered the **brand identity and the website**.
