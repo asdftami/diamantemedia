@@ -548,3 +548,9 @@ Saved in `assets/israel-bond-centre/`:
 - **Website: Squarespace.** **Logo: Adobe Illustrator.**
 - (Earlier note: brand-new logo → website built on the same design system; **accessible** and **bilingual**.)
 - *Proudest design choice: not answered yet.*
+
+**Parkfield: Q3. Bilingual**
+- **English + Spanish.** Austin, TX has a large Latino population that speaks both or mostly Spanish.
+- Embedded a **site-wide translator** so Spanish-speaking patients can understand and use the whole site.
+- *Story angle: Tami is bilingual herself (immigrated from Monterrey at 9 and learned English in ESL), so she designs for the patients she grew up alongside. Inclusive design rooted in lived experience.*
+- *Ask later: was it an automatic translation widget (e.g. Weglot / Google) or hand-translated key pages?*
