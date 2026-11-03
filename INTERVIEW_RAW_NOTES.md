@@ -269,3 +269,28 @@
 - *Case study framing: close with "What I'd do today," covering design system and tokens, documentation, and how she now uses AI (Claude Code, etc.) to move faster. That ties Project Insight to her current skills.*
 
 **✅ Project Insight interview complete.** Still to collect: stakeholder's title (LinkedIn), project dates, dashboard screenshots, wireframes, persona, assumption map, and usability test notes.
+
+### Project Insight: artifacts received (batch 1)
+
+Saved in `assets/project-insight/`:
+
+**01–04: Assumption map (digital whiteboard, Tami's sticky notes)**
+- **Desirability: "Do they want this?"**
+  - Target customers: *our clients whose portfolios we manage.*
+  - Problem: *their data is sent via **FTP in large spreadsheets and PDFs** that are difficult to understand and that they have to **decode**.*
+  - Today's workaround: *they use software to visualize their data; non-tech-savvy clients do it manually.*
+- **Viability: "Should we do this?"**
+  - Acquisition: *referral through the business development team.*
+  - Repeat use: *they'll **log in daily** to check portfolio performance.*
+  - Referral motivation: *"they want to stay out of jail and they want to make money"* → i.e., **regulatory compliance + returns**. *(Rephrase professionally for the case study.)*
+- **Feasibility: "Can we do this?"**
+  - Technical: *data infrastructure.*
+  - Legal/regulatory: *data privacy and security.*
+  - Governance: *how fast a global company adopts new technology.*
+- **Risky assumptions:** *without an aligned roadmap we'll stretch tech resources and communicate poorly*; *building something that doesn't meet their needs.*
+
+**05: Workshop photo (physical sticky note on a whiteboard)**
+- *"Has my portfolio been impacted by natural disasters?"*
+- ⭐ **This is the origin of the FEMA disaster map feature**: a real investor question captured in a workshop. Great "insight → feature" moment for the case study.
+
+*New detail: data was delivered over **FTP**. Add to the "before" story.*
