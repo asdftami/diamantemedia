@@ -502,3 +502,10 @@ Saved in `assets/israel-bond-centre/`:
 - Add the tagline "unwind & recharge" to the brand guide.
 - Still need: **website screenshots** (homepage, product page).
 - ✅ **Name decision: "Fridays-Off"**: capital F, hyphen, capital O. Reason: the hyphen is a must, and the capitals create the **"F-Off" wink** for merch (shirts, hats). Apply it in the logo wordmark (currently "fridays-Off"), the brand guide (currently "Fridays Off"), the site, and social. The domain stays lowercase (fridays-off.co), which is normal.
+- ⏸ **Website screenshots pending:** this cloud session's network policy blocks fridays-off.co. Either allow the domain, or Tami uploads screenshots.
+
+---
+## ▶️ Resume point (next session)
+- Fridays-Off: website screenshots → then Q7 (biggest design decisions on the site / what she'd improve).
+- Then: Dental websites case study (Parkfield Family Dental + Evolve Dental Partners).
+- Then: supporting projects (Newrez login, Jars audits, Makers Lab, OMG RGV, school projects).
