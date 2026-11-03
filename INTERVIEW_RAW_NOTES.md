@@ -362,3 +362,8 @@ Saved in `assets/project-insight/`:
   - **Main navigation on the left** (traditional)
   - **Account settings at the top right**
 - *Follow-up: which won in testing? (Likely the split version.) Any user quotes?*
+
+**Q5. Testing results and more decisions**
+- ✅ **The split navigation won**: tasks on the left, **account management at the top right**. The single long left nav was "way too much, busy and confusing."
+- ⭐ **Pagination + accordions:** because there were **so many loans**, accordions were kept **short with pagination**, and users could **expand to see as many as they wanted** (user-controlled density).
+- *Still to ask: did it launch, or was it stopped by the Newrez acquisition?*
