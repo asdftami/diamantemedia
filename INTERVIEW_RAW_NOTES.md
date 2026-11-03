@@ -450,7 +450,7 @@ Saved in `assets/israel-bond-centre/`:
 | **Website** | ✅ **built the entire site from the ground up** | feedback, copy fixes, UX optimization insights |
 | Marketing strategy | | ✅ created it |
 | **Marketing execution + design** | ✅ **all launch design assets + execution** | |
-| **Automation** | ✅ building automations to **schedule everything in Metricool** so marketing runs **hands-free for the week** | |
+| **Automation** | ✅ building automations to **schedule everything in Blotato** so marketing runs **hands-free for the week** | |
 
 - *Case study angle: designer-founder who owns the full web build, the visual system, and an **automated content engine** (AI + scheduling). Shows systems thinking, not just visuals.*
 
@@ -465,7 +465,7 @@ Saved in `assets/israel-bond-centre/`:
 - **Site is technically live.** No numbers yet; **no social posts yet**.
 - Soft-launch feedback: shared with a few colleagues, who were **really excited** and **loved the aesthetic, the photography, and the vibe**.
 - **Social launch planned:** tomorrow if the social work is finished, otherwise **next Monday**.
-- *Case study plan: publish now as a "building in public / in progress" case study; add real metrics (traffic, followers, conversion, first sales) after 30–60 days. Tip: set up Shopify analytics + GA4 + Metricool reporting from day one so the numbers exist later.*
+- *Case study plan: publish now as a "building in public / in progress" case study; add real metrics (traffic, followers, conversion, first sales) after 30–60 days. Tip: set up Shopify analytics + GA4 + Blotato analytics from day one so the numbers exist later.*
 - *Photography: who shot it? (ask)*
 
 **Q5. Photography and imagery**
@@ -474,6 +474,7 @@ Saved in `assets/israel-bond-centre/`:
   - **Tool:** **Higgsfield** for image generation.
   - **Prompts written by Claude** for **consistency**.
   - Prompts reference a **motion art database Isaiah built in Notion** (Claude reads it via the Notion connection), which helps the images **not look AI-generated**, and connect to the **Fridays Off style guide / brand references**.
-  - → *An **AI creative pipeline**: style guide + reference database → Claude prompts → Higgsfield renders → scheduled in Metricool.* Strong "AI-native designer" story.
+  - → *An **AI creative pipeline**: style guide + reference database → Claude prompts → Higgsfield renders → scheduled in Blotato.* Strong "AI-native designer" story.
 - **Assets to collect:** the full **Instagram grid** once it's built, plus selected clean renders. Show **website + social** together in the case study.
 - *Credit note: say "supplier product photography, curated" on the website side; be open about the AI workflow (transparency is a plus).*
+- **Correction:** the scheduling tool is **Blotato**, not Metricool.
