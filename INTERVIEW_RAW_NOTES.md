@@ -528,3 +528,10 @@ Saved in `assets/israel-bond-centre/`:
 - Fridays-Off: website screenshots → then Q7 (biggest design decisions on the site / what she'd improve).
 - Then: Dental websites case study (Parkfield Family Dental + Evolve Dental Partners).
 - Then: supporting projects (Newrez login, Jars audits, Makers Lab, OMG RGV, school projects).
+
+### Fridays-Off store cleanup (done Nov 3, 2026, approved by Tami)
+- ✅ Vendor "Grav" → **GRAV** and type "Water Pipes" → **Bubblers** on *GRAV Clear Milk Carton Pocket Bubbler* (archived; it's a duplicate listing of the active "Clear Milk Carton Pocket Bubbler – 3.25″", same SKU B1543).
+- ✅ Vendor "Dr Dabber" → **Dr. Dabber** on *Dr Dabber Switch 2* (archived).
+- ✅ Verified: the vendor list and product type list now have no duplicates. "E-Rig" remains as its own type (possible overlap with "Dab Rigs"; Tami's call).
+- ⛔ **Hiding the 5 empty brand collections was blocked** by the Shopify connector's safety policy (unpublishing isn't allowed through it). **Tami does it manually:** Shopify admin → Products → Collections → open each (Stündenglass, Vessel, Zenco, Her Highness NYC, Pulsar) → Sales channels / Publishing → uncheck **Online Store**. They're not in any menu, but they still show on the /collections list page and can be reached by URL.
+- 🗓 **Weekly read-only store check** scheduled: **Sundays 5:33 PM Mountain**, push notification. ⚠️ It was created **without the Shopify connector** (this session couldn't pass it through), so until Shopify is added to it, the check can't read the store and will say so.
