@@ -355,3 +355,10 @@ Saved in `assets/project-insight/`:
 - **Wizards (step-by-step flows)** for **admin processes** → broke complex admin tasks into guided steps.
 - **Checkboxes** for **email and contact preferences** → simpler, clearer preference management.
 - *Still to ask: how she restructured the navigation.*
+
+**Q4. Navigation**
+- The old app was **large, clunky, awkward and not intuitive**.
+- Tami **tested one large nav vs. a split into primary and secondary navs** grouped by need:
+  - **Main navigation on the left** (traditional)
+  - **Account settings at the top right**
+- *Follow-up: which won in testing? (Likely the split version.) Any user quotes?*
