@@ -467,3 +467,13 @@ Saved in `assets/israel-bond-centre/`:
 - **Social launch planned:** tomorrow if the social work is finished, otherwise **next Monday**.
 - *Case study plan: publish now as a "building in public / in progress" case study; add real metrics (traffic, followers, conversion, first sales) after 30–60 days. Tip: set up Shopify analytics + GA4 + Metricool reporting from day one so the numbers exist later.*
 - *Photography: who shot it? (ask)*
+
+**Q5. Photography and imagery**
+- **Website:** product photos are **supplier-provided** (curated to fit the aesthetic).
+- ⭐ **Social content: AI-generated product imagery** in the same clean, minimalist, luxurious aesthetic.
+  - **Tool:** **Higgsfield** for image generation.
+  - **Prompts written by Claude** for **consistency**.
+  - Prompts reference a **motion art database Isaiah built**, which helps the images **not look AI-generated**, and connect to the **Fridays Off style guide / brand references**.
+  - → *An **AI creative pipeline**: style guide + reference database → Claude prompts → Higgsfield renders → scheduled in Metricool.* Strong "AI-native designer" story.
+- **Assets to collect:** the full **Instagram grid** once it's built, plus selected clean renders. Show **website + social** together in the case study.
+- *Credit note: say "supplier product photography, curated" on the website side; be open about the AI workflow (transparency is a plus).*
