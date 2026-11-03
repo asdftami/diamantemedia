@@ -335,4 +335,4 @@ Saved in `assets/project-insight/`:
 
 **Q9. Quick facts**
 - **Usability testing: 5 investors.** *(A solid sample: 5 users is the classic usability-testing benchmark.)*
-- Project dates: *TBD*
+- **Dates: December 2022 – February 2024** (Computershare tenure; confirm whether Project Insight itself spans the same range)
