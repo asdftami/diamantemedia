@@ -38,6 +38,7 @@ def parse(text):
                 k, v = line.split(":", 1)
                 meta[k.strip()] = v.strip().strip('"')
     text = re.sub(r"<!--.*?-->", "", text, flags=re.S)          # drafting notes never ship
+    text = re.sub(r"(?m)^[ \t]*[-*][ \t]*\n", "", text)              # bullets left empty by removed notes
     text = re.sub(r"^# .*\n", "", text.lstrip(), count=1)        # title is rendered in the hero
     text = re.sub(r"^\*\*.*\*\*\s*\n", "", text.lstrip(), count=1)  # subtitle too
     return meta, text
