@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dental Brands &amp; Websites · Tami Trevino</title>
+<meta name="description" content="Two dental executives launched new ventures, and both came back to hire me">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=VT323&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --space-0:#07051a;--space-1:#120c35;
+    --ink:#f7f3ff;--ink-dim:#d6cef0;
+    --pink:#ffb3d9;--lilac:#c9b6ff;--butter:#fff1a6;--sky:#a8d8ff;--tiffany:#81d8d0;
+    --card:#ffffff0d;--line:#ffffff26;--radius:20px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{margin:0;color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.65;
+    background:
+      radial-gradient(1.2px 1.2px at 12% 18%,#ffb3d9 99%,transparent),radial-gradient(1px 1px at 78% 12%,#a8d8ff 99%,transparent),
+      radial-gradient(1.4px 1.4px at 42% 62%,#fff1a6 99%,transparent),radial-gradient(1px 1px at 88% 72%,#81d8d0 99%,transparent),
+      radial-gradient(1px 1px at 22% 82%,#c9b6ff 99%,transparent),radial-gradient(1.2px 1.2px at 64% 34%,#fff 99%,transparent),
+      radial-gradient(1000px 700px at 80% 0%,#2a1b6e66,transparent 60%),
+      linear-gradient(180deg,var(--space-1),var(--space-0) 40%);
+    background-attachment:fixed;background-color:var(--space-0)}
+  a{color:var(--sky)}
+  a:hover{color:var(--butter)}
+  :focus-visible{outline:3px solid var(--butter);outline-offset:3px;border-radius:8px}
+  .skip{position:fixed;left:16px;top:-60px;z-index:50;background:var(--butter);color:#1a1033;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+  .skip:focus{top:16px}
+
+  header.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px clamp(16px,4vw,40px);
+    background:#07051acc;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #ffffff14}
+  .brand{font-weight:700;text-decoration:none;color:var(--ink);white-space:nowrap}
+  .brand span{color:var(--pink)}
+  nav.actions{display:flex;gap:8px;align-items:center}
+  .pill{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #ffffff40;background:#ffffff10;color:var(--ink);text-decoration:none;font-weight:500}
+  .pill:hover{border-color:var(--lilac);color:var(--ink)}
+  .pill.primary{background:var(--pink);color:#2a0d22;border-color:var(--pink);font-weight:700}
+
+  .hero{max-width:1100px;margin:0 auto;padding:clamp(40px,8vw,90px) clamp(16px,5vw,40px) 30px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:30px;align-items:center}
+  .back{font-weight:500;text-decoration:none;color:var(--ink-dim)}
+  .label{display:inline-block;font-family:VT323,monospace;font-size:1.2rem;color:#1a1033;background:var(--tiffany);padding:2px 10px;border-radius:6px;margin:18px 0 10px}
+  .year{font-family:VT323,monospace;font-size:1.4rem;color:var(--butter);letter-spacing:.06em;margin:0}
+  h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;margin:6px 0 14px;letter-spacing:-.01em}
+  .subtitle{font-size:clamp(1.1rem,2vw,1.4rem);color:var(--ink-dim);margin:0 0 10px;max-width:40ch}
+  .role{color:var(--lilac);font-weight:500;margin:0}
+  .planet{width:min(260px,100%);aspect-ratio:1;border-radius:50%;margin:0 auto;position:relative;
+    background:radial-gradient(circle at 32% 28%,#fff8 0,#fff0 22%),radial-gradient(circle at 50% 50%,var(--c1),var(--c2) 70%,#120a2e 100%);
+    box-shadow:0 0 60px var(--glow),inset -24px -30px 60px #0007}
+  .planet::after{content:"";position:absolute;width:118%;height:26%;left:-9%;top:37%;border-radius:50%;border:5px solid var(--ring);transform:rotate(-14deg)}
+  .p-dental{--c1:#d6f6ff;--c2:#3aa0d8;--glow:#a8d8ff66;--ring:#81d8d0aa}
+  .p-insight{--c1:#c9b6ff;--c2:#4b3bc9;--glow:#c9b6ff77;--ring:#ffb3d9aa}
+  .p-bond{--c1:#a8d8ff;--c2:#2b4fb8;--glow:#a8d8ff66;--ring:#fff1a6aa}
+  .p-fridays{--c1:#f5f3ef;--c2:#c7a77c;--glow:#d8c3a566;--ring:#3b2a20aa}
+
+  main.cs{max-width:820px;margin:0 auto;padding:0 clamp(16px,5vw,40px) 60px}
+  main.cs h2{font-size:clamp(1.6rem,3.4vw,2.2rem);margin:56px 0 12px;line-height:1.15}
+  main.cs h2::before{content:"✦ ";color:var(--pink)}
+  main.cs h3{font-size:1.25rem;margin:32px 0 8px;color:var(--butter)}
+  main.cs p,main.cs li{color:var(--ink-dim);font-size:1.06rem}
+  main.cs strong{color:var(--ink)}
+  main.cs hr{border:0;height:1px;background:linear-gradient(90deg,transparent,#ffffff40,transparent);margin:48px 0}
+  blockquote{margin:24px 0;padding:18px 22px;border-radius:16px;background:linear-gradient(135deg,#ffb3d922,#c9b6ff22);border-left:4px solid var(--pink)}
+  blockquote p{margin:0;font-size:1.2rem!important;color:var(--ink)!important}
+  .table-wrap{overflow-x:auto;margin:20px 0;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+  table{border-collapse:collapse;width:100%;min-width:420px}
+  th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid #ffffff14;color:var(--ink-dim)}
+  th{color:var(--ink);font-weight:700;background:#ffffff0a}
+  tr:last-child td{border-bottom:0}
+  code{font-family:VT323,monospace;font-size:1.15em;color:var(--tiffany)}
+  pre{background:#a9c48a;color:#1b2a12;padding:18px;border-radius:16px;overflow-x:auto;box-shadow:inset 0 0 0 3px #0002}
+  pre code{color:inherit;font-size:1.2rem;line-height:1.25}
+  .gallery{display:grid;gap:22px;margin:26px 0}
+  figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px;overflow:hidden}
+  figure img{display:block;max-width:100%;max-height:78vh;width:auto;height:auto;margin:0 auto;border-radius:12px;background:#fff}
+  figcaption{font-size:.92rem;color:var(--ink-dim);padding:10px 6px 2px}
+
+  .pagers{max-width:820px;margin:0 auto;padding:0 clamp(16px,5vw,40px) 80px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .pager{display:grid;gap:4px;padding:18px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);text-decoration:none;color:var(--ink-dim)}
+  .pager strong{color:var(--ink);font-size:1.1rem}
+  .pager:hover{border-color:var(--pink);color:var(--ink-dim)}
+  .pagers .pager:last-child{text-align:right}
+  .cta{max-width:820px;margin:0 auto 40px;padding:28px clamp(16px,5vw,40px);text-align:center}
+  .cta a{margin:6px}
+
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr}
+    .planet{width:160px;order:-1;margin:0}
+    .hide-sm{display:none}
+    .pagers{grid-template-columns:1fr}
+    .pagers .pager:last-child{text-align:left}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to the case study</a>
+<header class="top">
+  <a class="brand" href="../index.html">Tami Trevino <span>✦</span></a>
+  <nav class="actions" aria-label="Quick links">
+    <a class="pill hide-sm" href="../index.html#work">Work</a>
+    <a class="pill hide-sm" href="../resume.pdf">Resume</a>
+    <a class="pill primary" href="../index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" aria-labelledby="cs-title">
+  <div>
+    <a class="back" href="../index.html#work">← Back to the galaxy</a><br>
+    <span class="label">CASE STUDY 01</span>
+    <p class="year">2020–2022 · AUSTIN</p>
+    <h1 id="cs-title">Dental Brands &amp; Websites</h1>
+    <p class="subtitle">Two dental executives launched new ventures, and both came back to hire me</p>
+    <p class="role">Freelance brand &amp; web designer</p>
+  </div>
+  <div class="planet p-dental" aria-hidden="true"></div>
+</section>
+
+<main class="cs" id="content">
+<p>I worked inside a dental support organization (DSO) in Austin, first at the front desk, then as office manager, while also running the practice's website and blog. Two of its leaders went on to start their own businesses. Both called me.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Parkfield Dental</strong></th>
+<th><strong>Evolve Dental Partners</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Client</strong></td>
+<td>The DSO's former VP of Operations, who bought an established practice</td>
+<td>The DSO's former CEO, a hygienist-turned-founder</td>
+</tr>
+<tr>
+<td><strong>I delivered</strong></td>
+<td>Full brand identity + website</td>
+<td>Website built on the client's existing brand</td>
+</tr>
+<tr>
+<td><strong>Tools</strong></td>
+<td>Illustrator, Squarespace</td>
+<td>Squarespace</td>
+</tr>
+<tr>
+<td><strong>Highlights</strong></td>
+<td>Bilingual (English/Spanish) at launch, accessible, cohesive design system</td>
+<td>Brand-compliant build, handed off for the founder to edit herself</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>Parkfield Dental: a modern brand for an established practice</h2>
+<h3>The problem</h3>
+<p>My former VP of Operations bought an Austin dental practice that already had loyal patients, but its <strong>branding and marketing felt dated</strong>. He wanted the practice to look and feel like the modern, caring office it was becoming, without losing the families who already trusted it.</p>
+<h3>What I designed</h3>
+<p><strong>A new identity, built from zero (Illustrator).</strong> A geometric, single-line <strong>tooth mark</strong> paired with a clean, all-caps wordmark: precise like dentistry, open and friendly like family care.</p>
+<p><strong>A website built on the same design system (Squarespace).</strong> Same type, same palette, same calm tone, from the logo all the way to the booking button.</p>
+<ul>
+<li><strong>A warm, human first impression:</strong> <em>"Dental Excellence. Compassionate Care."</em> over a real family moment, with <strong>Book an Appointment</strong> always one tap away</li>
+<li><strong>Custom line icons</strong> for each service (preventive care, implants, cosmetic, technology) that echo the logo's single-line style</li>
+<li><strong>Clear paths for patients:</strong> a single, simple navigation row, plus a "Visit us" section with hours, phone number and map</li>
+<li><strong>Responsive:</strong> designed to work just as well on a phone</li>
+</ul>
+<div class="gallery"><figure><img src="../assets/dental/parkfield/portfolio/p01-logo.webp" alt="Parkfield Dental logo" loading="lazy" decoding="async"><figcaption>Parkfield Dental logo</figcaption></figure>
+<figure><img src="../assets/dental/parkfield/portfolio/p02-hero.webp" alt="Homepage hero" loading="lazy" decoding="async"><figcaption>Homepage hero</figcaption></figure>
+<figure><img src="../assets/dental/parkfield/portfolio/p03-approach-services.webp" alt="Our approach and custom service icons" loading="lazy" decoding="async"><figcaption>Our approach and custom service icons</figcaption></figure>
+<figure><img src="../assets/dental/parkfield/portfolio/p04-testimonial.webp" alt="Patient testimonial" loading="lazy" decoding="async"><figcaption>Patient testimonial</figcaption></figure>
+<figure><img src="../assets/dental/parkfield/portfolio/p05-visit-us.webp" alt="Visit us: hours, phone and map" loading="lazy" decoding="async"><figcaption>Visit us: hours, phone and map</figcaption></figure>
+<figure><img src="../assets/dental/parkfield/portfolio/p06-cta-band.webp" alt="Booking call to action" loading="lazy" decoding="async"><figcaption>Booking call to action</figcaption></figure>
+<figure><img src="../assets/dental/parkfield/portfolio/p07-mobile-hero.webp" alt="Parkfield on mobile" loading="lazy" decoding="async"><figcaption>Parkfield on mobile</figcaption></figure></div>
+<h3>Designed for the whole community</h3>
+<p>Austin has a large Latino community, and many patients speak Spanish at home or only speak Spanish. At launch, I built the site with a <strong>site-wide English/Spanish translator</strong>, so every page (services, insurance, booking) could be read in the patient's own language. I also designed for <strong>accessibility</strong>: readable type, strong contrast, and clear, consistent buttons.</p>
+<p>This one is personal. I moved from Monterrey, Mexico to Texas when I was nine and started school in an ESL class. I know what it feels like when a place isn't built for you. I want the places I design to feel like they are.</p>
+<p><em>Note: the client has updated the live site since launch, and the translator is no longer active. The work shown here is my original design.</em></p>
+<hr />
+<h2>Evolve Dental Partners: building the foundation, then handing over the keys</h2>
+<h3>The client</h3>
+<p>The DSO's former CEO is a <strong>dental hygienist turned serial entrepreneur</strong>. She builds companies that support hygienists and help clinics run hygiene better, then sells them. When she started her next venture, <strong>Evolve Dental Partners</strong>, she asked me to build its website.</p>
+<h3>What I did</h3>
+<ul>
+<li>Took her <strong>existing logo and brand guidelines</strong> and translated them into a clean, credible <strong>Squarespace site</strong></li>
+<li>Structured the site so a busy founder could <strong>update it herself</strong></li>
+<li>Collaborated closely, then <strong>handed it off</strong>. She loved working in Squarespace and took over editing from there.</li>
+</ul>
+<p>The goal wasn't a site she'd depend on me for. It was a site she could run.</p>
+<hr />
+<h2>Results</h2>
+<ul>
+<li><strong>Repeat trust:</strong> two executives from the same company each came back to hire me for their next venture.</li>
+<li><strong>Parkfield</strong> got a brand and website that matched the modern, family-centered practice it was becoming, and served its Spanish-speaking patients at launch.</li>
+<li><strong>Evolve</strong> launched with a brand-compliant site its founder could manage on her own.</li>
+</ul>
+<h2>What I learned</h2>
+<ul>
+<li><strong>A brand is a system, not a logo.</strong> Designing the logo and website together kept everything consistent, down to the icons.</li>
+<li><strong>Inclusive design is a business decision.</strong> Speaking your patients' language is good care and good marketing.</li>
+<li><strong>Plan for the handoff.</strong> Clients will keep editing after launch. Next time I'd deliver a one-page brand and site guide (fonts, colors, image specs, do's and don'ts) so the site stays sharp, and I'd keep my own launch screenshots.</li>
+</ul>
+</main>
+
+<section class="cta" aria-label="Get in touch">
+  <p>Like what you see?</p>
+  <a class="pill primary" href="../index.html#contact">Message me</a>
+  <a class="pill" href="../resume.pdf">Download resume</a>
+</section>
+
+<nav class="pagers" aria-label="More case studies">
+  <a class="pager" href="../index.html#start">← Previous planet<strong>Back to the galaxy</strong></a>
+  <a class="pager" href="project-insight.html">Next planet →<strong>Project Insight</strong></a>
+</nav>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bond Centre 2.0 · Tami Trevino</title>
+<meta name="description" content="Redesigning a cluttered bond portal into a calm, guided experience for bondholders and admins">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=VT323&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --space-0:#07051a;--space-1:#120c35;
+    --ink:#f7f3ff;--ink-dim:#d6cef0;
+    --pink:#ffb3d9;--lilac:#c9b6ff;--butter:#fff1a6;--sky:#a8d8ff;--tiffany:#81d8d0;
+    --card:#ffffff0d;--line:#ffffff26;--radius:20px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{margin:0;color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.65;
+    background:
+      radial-gradient(1.2px 1.2px at 12% 18%,#ffb3d9 99%,transparent),radial-gradient(1px 1px at 78% 12%,#a8d8ff 99%,transparent),
+      radial-gradient(1.4px 1.4px at 42% 62%,#fff1a6 99%,transparent),radial-gradient(1px 1px at 88% 72%,#81d8d0 99%,transparent),
+      radial-gradient(1px 1px at 22% 82%,#c9b6ff 99%,transparent),radial-gradient(1.2px 1.2px at 64% 34%,#fff 99%,transparent),
+      radial-gradient(1000px 700px at 80% 0%,#2a1b6e66,transparent 60%),
+      linear-gradient(180deg,var(--space-1),var(--space-0) 40%);
+    background-attachment:fixed;background-color:var(--space-0)}
+  a{color:var(--sky)}
+  a:hover{color:var(--butter)}
+  :focus-visible{outline:3px solid var(--butter);outline-offset:3px;border-radius:8px}
+  .skip{position:fixed;left:16px;top:-60px;z-index:50;background:var(--butter);color:#1a1033;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+  .skip:focus{top:16px}
+
+  header.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px clamp(16px,4vw,40px);
+    background:#07051acc;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #ffffff14}
+  .brand{font-weight:700;text-decoration:none;color:var(--ink);white-space:nowrap}
+  .brand span{color:var(--pink)}
+  nav.actions{display:flex;gap:8px;align-items:center}
+  .pill{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #ffffff40;background:#ffffff10;color:var(--ink);text-decoration:none;font-weight:500}
+  .pill:hover{border-color:var(--lilac);color:var(--ink)}
+  .pill.primary{background:var(--pink);color:#2a0d22;border-color:var(--pink);font-weight:700}
+
+  .hero{max-width:1100px;margin:0 auto;padding:clamp(40px,8vw,90px) clamp(16px,5vw,40px) 30px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:30px;align-items:center}
+  .back{font-weight:500;text-decoration:none;color:var(--ink-dim)}
+  .label{display:inline-block;font-family:VT323,monospace;font-size:1.2rem;color:#1a1033;background:var(--tiffany);padding:2px 10px;border-radius:6px;margin:18px 0 10px}
+  .year{font-family:VT323,monospace;font-size:1.4rem;color:var(--butter);letter-spacing:.06em;margin:0}
+  h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;margin:6px 0 14px;letter-spacing:-.01em}
+  .subtitle{font-size:clamp(1.1rem,2vw,1.4rem);color:var(--ink-dim);margin:0 0 10px;max-width:40ch}
+  .role{color:var(--lilac);font-weight:500;margin:0}
+  .planet{width:min(260px,100%);aspect-ratio:1;border-radius:50%;margin:0 auto;position:relative;
+    background:radial-gradient(circle at 32% 28%,#fff8 0,#fff0 22%),radial-gradient(circle at 50% 50%,var(--c1),var(--c2) 70%,#120a2e 100%);
+    box-shadow:0 0 60px var(--glow),inset -24px -30px 60px #0007}
+  .planet::after{content:"";position:absolute;width:118%;height:26%;left:-9%;top:37%;border-radius:50%;border:5px solid var(--ring);transform:rotate(-14deg)}
+  .p-dental{--c1:#d6f6ff;--c2:#3aa0d8;--glow:#a8d8ff66;--ring:#81d8d0aa}
+  .p-insight{--c1:#c9b6ff;--c2:#4b3bc9;--glow:#c9b6ff77;--ring:#ffb3d9aa}
+  .p-bond{--c1:#a8d8ff;--c2:#2b4fb8;--glow:#a8d8ff66;--ring:#fff1a6aa}
+  .p-fridays{--c1:#f5f3ef;--c2:#c7a77c;--glow:#d8c3a566;--ring:#3b2a20aa}
+
+  main.cs{max-width:820px;margin:0 auto;padding:0 clamp(16px,5vw,40px) 60px}
+  main.cs h2{font-size:clamp(1.6rem,3.4vw,2.2rem);margin:56px 0 12px;line-height:1.15}
+  main.cs h2::before{content:"✦ ";color:var(--pink)}
+  main.cs h3{font-size:1.25rem;margin:32px 0 8px;color:var(--butter)}
+  main.cs p,main.cs li{color:var(--ink-dim);font-size:1.06rem}
+  main.cs strong{color:var(--ink)}
+  main.cs hr{border:0;height:1px;background:linear-gradient(90deg,transparent,#ffffff40,transparent);margin:48px 0}
+  blockquote{margin:24px 0;padding:18px 22px;border-radius:16px;background:linear-gradient(135deg,#ffb3d922,#c9b6ff22);border-left:4px solid var(--pink)}
+  blockquote p{margin:0;font-size:1.2rem!important;color:var(--ink)!important}
+  .table-wrap{overflow-x:auto;margin:20px 0;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+  table{border-collapse:collapse;width:100%;min-width:420px}
+  th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid #ffffff14;color:var(--ink-dim)}
+  th{color:var(--ink);font-weight:700;background:#ffffff0a}
+  tr:last-child td{border-bottom:0}
+  code{font-family:VT323,monospace;font-size:1.15em;color:var(--tiffany)}
+  pre{background:#a9c48a;color:#1b2a12;padding:18px;border-radius:16px;overflow-x:auto;box-shadow:inset 0 0 0 3px #0002}
+  pre code{color:inherit;font-size:1.2rem;line-height:1.25}
+  .gallery{display:grid;gap:22px;margin:26px 0}
+  figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px;overflow:hidden}
+  figure img{display:block;max-width:100%;max-height:78vh;width:auto;height:auto;margin:0 auto;border-radius:12px;background:#fff}
+  figcaption{font-size:.92rem;color:var(--ink-dim);padding:10px 6px 2px}
+
+  .pagers{max-width:820px;margin:0 auto;padding:0 clamp(16px,5vw,40px) 80px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .pager{display:grid;gap:4px;padding:18px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);text-decoration:none;color:var(--ink-dim)}
+  .pager strong{color:var(--ink);font-size:1.1rem}
+  .pager:hover{border-color:var(--pink);color:var(--ink-dim)}
+  .pagers .pager:last-child{text-align:right}
+  .cta{max-width:820px;margin:0 auto 40px;padding:28px clamp(16px,5vw,40px);text-align:center}
+  .cta a{margin:6px}
+
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr}
+    .planet{width:160px;order:-1;margin:0}
+    .hide-sm{display:none}
+    .pagers{grid-template-columns:1fr}
+    .pagers .pager:last-child{text-align:left}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to the case study</a>
+<header class="top">
+  <a class="brand" href="../index.html">Tami Trevino <span>✦</span></a>
+  <nav class="actions" aria-label="Quick links">
+    <a class="pill hide-sm" href="../index.html#work">Work</a>
+    <a class="pill hide-sm" href="../resume.pdf">Resume</a>
+    <a class="pill primary" href="../index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" aria-labelledby="cs-title">
+  <div>
+    <a class="back" href="../index.html#work">← Back to the galaxy</a><br>
+    <span class="label">CASE STUDY 03</span>
+    <p class="year">2023–2024 · COMPUTERSHARE</p>
+    <h1 id="cs-title">Bond Centre 2.0</h1>
+    <p class="subtitle">Redesigning a cluttered bond portal into a calm, guided experience for bondholders and admins</p>
+    <p class="role">Sole UX/UI Designer</p>
+  </div>
+  <div class="planet p-bond" aria-hidden="true"></div>
+</section>
+
+<main class="cs" id="content">
+<div class="table-wrap"><table>
+
+<tbody>
+<tr>
+<td><strong>My role</strong></td>
+<td>Sole UX/UI designer, from audit to dev-ready designs</td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>Product owners, project managers, development teams</td>
+</tr>
+<tr>
+<td><strong>Users</strong></td>
+<td><strong>Bondholders</strong> managing their Israel Bonds, and <strong>admins</strong> reviewing and approving their requests</td>
+</tr>
+<tr>
+<td><strong>Platforms</strong></td>
+<td>Desktop web + responsive mobile</td>
+</tr>
+<tr>
+<td><strong>Tools</strong></td>
+<td>Figma</td>
+</tr>
+<tr>
+<td><strong>Outcome</strong></td>
+<td><strong>Shipped to production.</strong> Developers and product owners called it the upgrade the platform needed.</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>The problem</h2>
+<p>Bond Centre is where people who own State of Israel Bonds check their portfolio, update their details and submit forms. The existing app felt <strong>large, clunky and hard to use</strong>:</p>
+<ul>
+<li><strong>Cognitive overload:</strong> too many loans and too much data crammed onto one screen</li>
+<li><strong>Navigation that didn't make sense:</strong> one long menu mixing everyday tasks with account settings</li>
+<li><strong>Weak admin controls:</strong> staff had no clear way to review, approve or reject what bondholders submitted</li>
+</ul>
+<div class="gallery"><figure><img src="../assets/israel-bond-centre/09-BEFORE-old-welcome-page.webp" alt="Before: the old welcome page" loading="lazy" decoding="async"><figcaption>Before: the old welcome page</figcaption></figure>
+<figure><img src="../assets/israel-bond-centre/11-BEFORE-old-portfolio-page.webp" alt="Before: the old portfolio page" loading="lazy" decoding="async"><figcaption>Before: the old portfolio page</figcaption></figure></div>
+<hr />
+<h2>Two users, two jobs</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th><strong>Bondholders</strong></th>
+<th><strong>Admins</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>See what they own and what it's worth</td>
+<td>Review submitted forms and documents</td>
+</tr>
+<tr>
+<td>Download statements and tax forms</td>
+<td>Approve or reject requests</td>
+</tr>
+<tr>
+<td>Update banking, address and communication preferences</td>
+<td>Keep bondholders informed of the status</td>
+</tr>
+</tbody>
+</table></div>
+<p>Designing for both meant every flow had two sides: what the bondholder does, and what the admin sees next.</p>
+<hr />
+<h2>1. Navigation: separating <em>doing</em> from <em>managing</em></h2>
+<p>I tested <strong>one long left-hand menu</strong> against a <strong>split navigation</strong>:</p>
+<ul>
+<li><strong>Left:</strong> the tasks you came to do (Portfolio, Payments &amp; Transactions, Banking Details, Account Statements, Suppress Maturity Payment)</li>
+<li><strong>Top right:</strong> everything about <em>you</em> (Alerts, Messages, country, User Preferences, Help &amp; FAQ, Logout)</li>
+</ul>
+<p><strong>The split navigation won.</strong> With everything stacked on the left, people found it busy and confusing. Splitting it follows a pattern people already know from the apps they use every day.</p>
+<div class="gallery"><figure><img src="../assets/israel-bond-centre/12-new-portfolio-single-left-nav-variant.webp" alt="Tested: everything in one left nav" loading="lazy" decoding="async"><figcaption>Tested: everything in one left nav</figcaption></figure>
+<figure><img src="../assets/israel-bond-centre/10-new-portfolio-split-nav.webp" alt="Winner: tasks on the left, account at top right" loading="lazy" decoding="async"><figcaption>Winner: tasks on the left, account at top right</figcaption></figure></div>
+<hr />
+<h2>2. Taming the data: accordions + pagination</h2>
+<p>Some bondholders hold <strong>many bonds across many accounts</strong>. Instead of showing everything at once:</p>
+<ul>
+<li>Each account is an <strong>accordion</strong>, closed until you need it, with <strong>Expand all / Collapse all</strong></li>
+<li>Inside, bonds sit in a <strong>short, paginated table</strong>, and users choose how many rows to see</li>
+<li>A summary panel shows the <strong>total balance</strong> at a glance, with a <strong>USD / CAD</strong> toggle</li>
+</ul>
+<p>The bondholder decides how much information is on screen, not the system.</p>
+<div class="gallery"><figure><img src="../assets/israel-bond-centre/10-new-portfolio-split-nav.webp" alt="New portfolio: accordions, pagination, balance summary" loading="lazy" decoding="async"><figcaption>New portfolio: accordions, pagination, balance summary</figcaption></figure></div>
+<hr />
+<h2>3. Wizards for multi-step tasks</h2>
+<p>Updating communication preferences across several accounts used to be one dense form. I turned it into a <strong>3-step wizard</strong>:</p>
+<ol>
+<li><strong>Select accounts:</strong> checkboxes, with select-all</li>
+<li><strong>Choose preferences:</strong> email or postal mail for tax statements, bond statements and other mail</li>
+<li><strong>Review the summary:</strong> "Your information is not complete until you click Submit"</li>
+</ol>
+<p>…followed by a clear <strong>success confirmation</strong>. A stepper shows where you are, and you can always go back.</p>
+<div class="gallery"><figure><img src="../assets/israel-bond-centre/17-comm-prefs-wizard-step1-select-accounts.webp" alt="Step 1: Select accounts" loading="lazy" decoding="async"><figcaption>Step 1: Select accounts</figcaption></figure>
+<figure><img src="../assets/israel-bond-centre/18-comm-prefs-wizard-step2-preferences.webp" alt="Step 2: Choose preferences" loading="lazy" decoding="async"><figcaption>Step 2: Choose preferences</figcaption></figure>
+<figure><img src="../assets/israel-bond-centre/19-comm-prefs-wizard-step3-summary.webp" alt="Step 3: Review" loading="lazy" decoding="async"><figcaption>Step 3: Review</figcaption></figure>
+<figure><img src="../assets/israel-bond-centre/20-comm-prefs-success-modal.webp" alt="Success" loading="lazy" decoding="async"><figcaption>Success</figcaption></figure></div>
+<hr />
+<h2>4. Forms and uploads without losing your place</h2>
+<p>Printable forms are grouped into accordions: US holders, international holders, tax forms, direct registration, international currency. Bondholders can <strong>view a form and upload the signed copy right inside the section</strong>: drag and drop, a progress bar, an "Uploaded ✓" state, and a <strong>Remove file</strong> option if they picked the wrong one.</p>
+<div class="gallery"><figure><img src="../assets/israel-bond-centre/03-printable-forms-one-expanded.webp" alt="Printable forms" loading="lazy" decoding="async"><figcaption>Printable forms</figcaption></figure>
+<figure><img src="../assets/israel-bond-centre/04-upload-drag-and-drop.webp" alt="Inline upload" loading="lazy" decoding="async"><figcaption>Inline upload</figcaption></figure>
+<figure><img src="../assets/israel-bond-centre/05-upload-success.webp" alt="Upload success" loading="lazy" decoding="async"><figcaption>Upload success</figcaption></figure></div>
+<hr />
+<h2>5. Admin controls that close the loop</h2>
+<p>When a bondholder submits a form, the <strong>admin</strong> sees it marked <strong>Proposed</strong>, with <strong>Preview, Approve, Reject and Cancel</strong> actions. The <strong>bondholder</strong> then sees the result (for example, <strong>Rejected</strong>) right next to the form, with an info icon explaining what happened. No more guessing whether a request went through.</p>
+<div class="gallery"><figure><img src="../assets/israel-bond-centre/06-admin-approve-reject-proposed.webp" alt="Admin view: approve or reject" loading="lazy" decoding="async"><figcaption>Admin view: approve or reject</figcaption></figure>
+<figure><img src="../assets/israel-bond-centre/07-bondholder-rejected-status.webp" alt="Bondholder view: status shown" loading="lazy" decoding="async"><figcaption>Bondholder view: status shown</figcaption></figure></div>
+<hr />
+<h2>6. Designed for every screen</h2>
+<p>I designed the full product for <strong>desktop and mobile</strong> (iOS and Android sizes): portfolio, tax details, printable forms, communication preferences, FAQ, inbox, online support, banking details and address change.</p>
+<p>For the mobile <strong>Inbox</strong>, I compared two layouts:
+- <strong>A:</strong> message list and message detail on separate screens
+- <strong>B:</strong> message detail stacked above the list</p>
+<p><strong>A won:</strong> it was more intuitive, because it works like the email apps people already use.</p>
+<div class="gallery"><figure><img src="../assets/israel-bond-centre/15-mobile-wireframes-overview.webp" alt="Mobile wireframes" loading="lazy" decoding="async"><figcaption>Mobile wireframes</figcaption></figure>
+<figure><img src="../assets/israel-bond-centre/14-mobile-inbox-a-vs-b.webp" alt="Mobile inbox: A vs B" loading="lazy" decoding="async"><figcaption>Mobile inbox: A vs B</figcaption></figure></div>
+<hr />
+<h2>Outcome</h2>
+<p><strong>Bond Centre 2.0 shipped to production.</strong> The development team and product owners were excited about the upgrade: a cleaner, calmer, more organized experience for bondholders, and real controls for admins.</p>
+<p>I was part of a company-wide layoff shortly after launch, so I wasn't able to collect post-launch usage data.</p>
+<hr />
+<h2>What I learned</h2>
+<ul>
+<li><strong>Reduce before you redesign.</strong> Most of the "clutter" problem was solved by deciding <em>what doesn't need to be visible yet</em>: accordions, pagination, wizards.</li>
+<li><strong>Familiar beats clever.</strong> The split navigation and Inbox A won because they match patterns people already trust.</li>
+<li><strong>Every action needs a visible result.</strong> Upload states, wizard summaries and approval statuses turned "Did that work?" into "Done."</li>
+<li><strong>Next time:</strong> I'd set up success metrics <em>before</em> launch (task completion, support tickets, time to submit a form), so the impact is measurable even if I'm not there to see it.</li>
+</ul>
+</main>
+
+<section class="cta" aria-label="Get in touch">
+  <p>Like what you see?</p>
+  <a class="pill primary" href="../index.html#contact">Message me</a>
+  <a class="pill" href="../resume.pdf">Download resume</a>
+</section>
+
+<nav class="pagers" aria-label="More case studies">
+  <a class="pager" href="project-insight.html">← Previous planet<strong>Project Insight</strong></a>
+  <a class="pager" href="fridays-off.html">Next planet →<strong>Fridays-Off</strong></a>
+</nav>
+</body>
+</html>

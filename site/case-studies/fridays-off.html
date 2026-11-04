@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fridays-Off · Tami Trevino</title>
+<meta name="description" content="Building a luxury lifestyle brand and e-commerce store from zero, with an AI-powered content engine">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=VT323&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --space-0:#07051a;--space-1:#120c35;
+    --ink:#f7f3ff;--ink-dim:#d6cef0;
+    --pink:#ffb3d9;--lilac:#c9b6ff;--butter:#fff1a6;--sky:#a8d8ff;--tiffany:#81d8d0;
+    --card:#ffffff0d;--line:#ffffff26;--radius:20px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{margin:0;color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.65;
+    background:
+      radial-gradient(1.2px 1.2px at 12% 18%,#ffb3d9 99%,transparent),radial-gradient(1px 1px at 78% 12%,#a8d8ff 99%,transparent),
+      radial-gradient(1.4px 1.4px at 42% 62%,#fff1a6 99%,transparent),radial-gradient(1px 1px at 88% 72%,#81d8d0 99%,transparent),
+      radial-gradient(1px 1px at 22% 82%,#c9b6ff 99%,transparent),radial-gradient(1.2px 1.2px at 64% 34%,#fff 99%,transparent),
+      radial-gradient(1000px 700px at 80% 0%,#2a1b6e66,transparent 60%),
+      linear-gradient(180deg,var(--space-1),var(--space-0) 40%);
+    background-attachment:fixed;background-color:var(--space-0)}
+  a{color:var(--sky)}
+  a:hover{color:var(--butter)}
+  :focus-visible{outline:3px solid var(--butter);outline-offset:3px;border-radius:8px}
+  .skip{position:fixed;left:16px;top:-60px;z-index:50;background:var(--butter);color:#1a1033;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+  .skip:focus{top:16px}
+
+  header.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px clamp(16px,4vw,40px);
+    background:#07051acc;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #ffffff14}
+  .brand{font-weight:700;text-decoration:none;color:var(--ink);white-space:nowrap}
+  .brand span{color:var(--pink)}
+  nav.actions{display:flex;gap:8px;align-items:center}
+  .pill{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #ffffff40;background:#ffffff10;color:var(--ink);text-decoration:none;font-weight:500}
+  .pill:hover{border-color:var(--lilac);color:var(--ink)}
+  .pill.primary{background:var(--pink);color:#2a0d22;border-color:var(--pink);font-weight:700}
+
+  .hero{max-width:1100px;margin:0 auto;padding:clamp(40px,8vw,90px) clamp(16px,5vw,40px) 30px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:30px;align-items:center}
+  .back{font-weight:500;text-decoration:none;color:var(--ink-dim)}
+  .label{display:inline-block;font-family:VT323,monospace;font-size:1.2rem;color:#1a1033;background:var(--tiffany);padding:2px 10px;border-radius:6px;margin:18px 0 10px}
+  .year{font-family:VT323,monospace;font-size:1.4rem;color:var(--butter);letter-spacing:.06em;margin:0}
+  h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;margin:6px 0 14px;letter-spacing:-.01em}
+  .subtitle{font-size:clamp(1.1rem,2vw,1.4rem);color:var(--ink-dim);margin:0 0 10px;max-width:40ch}
+  .role{color:var(--lilac);font-weight:500;margin:0}
+  .planet{width:min(260px,100%);aspect-ratio:1;border-radius:50%;margin:0 auto;position:relative;
+    background:radial-gradient(circle at 32% 28%,#fff8 0,#fff0 22%),radial-gradient(circle at 50% 50%,var(--c1),var(--c2) 70%,#120a2e 100%);
+    box-shadow:0 0 60px var(--glow),inset -24px -30px 60px #0007}
+  .planet::after{content:"";position:absolute;width:118%;height:26%;left:-9%;top:37%;border-radius:50%;border:5px solid var(--ring);transform:rotate(-14deg)}
+  .p-dental{--c1:#d6f6ff;--c2:#3aa0d8;--glow:#a8d8ff66;--ring:#81d8d0aa}
+  .p-insight{--c1:#c9b6ff;--c2:#4b3bc9;--glow:#c9b6ff77;--ring:#ffb3d9aa}
+  .p-bond{--c1:#a8d8ff;--c2:#2b4fb8;--glow:#a8d8ff66;--ring:#fff1a6aa}
+  .p-fridays{--c1:#f5f3ef;--c2:#c7a77c;--glow:#d8c3a566;--ring:#3b2a20aa}
+
+  main.cs{max-width:820px;margin:0 auto;padding:0 clamp(16px,5vw,40px) 60px}
+  main.cs h2{font-size:clamp(1.6rem,3.4vw,2.2rem);margin:56px 0 12px;line-height:1.15}
+  main.cs h2::before{content:"✦ ";color:var(--pink)}
+  main.cs h3{font-size:1.25rem;margin:32px 0 8px;color:var(--butter)}
+  main.cs p,main.cs li{color:var(--ink-dim);font-size:1.06rem}
+  main.cs strong{color:var(--ink)}
+  main.cs hr{border:0;height:1px;background:linear-gradient(90deg,transparent,#ffffff40,transparent);margin:48px 0}
+  blockquote{margin:24px 0;padding:18px 22px;border-radius:16px;background:linear-gradient(135deg,#ffb3d922,#c9b6ff22);border-left:4px solid var(--pink)}
+  blockquote p{margin:0;font-size:1.2rem!important;color:var(--ink)!important}
+  .table-wrap{overflow-x:auto;margin:20px 0;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+  table{border-collapse:collapse;width:100%;min-width:420px}
+  th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid #ffffff14;color:var(--ink-dim)}
+  th{color:var(--ink);font-weight:700;background:#ffffff0a}
+  tr:last-child td{border-bottom:0}
+  code{font-family:VT323,monospace;font-size:1.15em;color:var(--tiffany)}
+  pre{background:#a9c48a;color:#1b2a12;padding:18px;border-radius:16px;overflow-x:auto;box-shadow:inset 0 0 0 3px #0002}
+  pre code{color:inherit;font-size:1.2rem;line-height:1.25}
+  .gallery{display:grid;gap:22px;margin:26px 0}
+  figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px;overflow:hidden}
+  figure img{display:block;max-width:100%;max-height:78vh;width:auto;height:auto;margin:0 auto;border-radius:12px;background:#fff}
+  figcaption{font-size:.92rem;color:var(--ink-dim);padding:10px 6px 2px}
+
+  .pagers{max-width:820px;margin:0 auto;padding:0 clamp(16px,5vw,40px) 80px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .pager{display:grid;gap:4px;padding:18px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);text-decoration:none;color:var(--ink-dim)}
+  .pager strong{color:var(--ink);font-size:1.1rem}
+  .pager:hover{border-color:var(--pink);color:var(--ink-dim)}
+  .pagers .pager:last-child{text-align:right}
+  .cta{max-width:820px;margin:0 auto 40px;padding:28px clamp(16px,5vw,40px);text-align:center}
+  .cta a{margin:6px}
+
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr}
+    .planet{width:160px;order:-1;margin:0}
+    .hide-sm{display:none}
+    .pagers{grid-template-columns:1fr}
+    .pagers .pager:last-child{text-align:left}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to the case study</a>
+<header class="top">
+  <a class="brand" href="../index.html">Tami Trevino <span>✦</span></a>
+  <nav class="actions" aria-label="Quick links">
+    <a class="pill hide-sm" href="../index.html#work">Work</a>
+    <a class="pill hide-sm" href="../resume.pdf">Resume</a>
+    <a class="pill primary" href="../index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" aria-labelledby="cs-title">
+  <div>
+    <a class="back" href="../index.html#work">← Back to the galaxy</a><br>
+    <span class="label">CASE STUDY 04</span>
+    <p class="year">OCT 2026–NOW · CO-FOUNDER</p>
+    <h1 id="cs-title">Fridays-Off</h1>
+    <p class="subtitle">Building a luxury lifestyle brand and e-commerce store from zero, with an AI-powered content engine</p>
+    <p class="role">Co-founder · Brand, web &amp; marketing design lead</p>
+  </div>
+  <div class="planet p-fridays" aria-hidden="true"></div>
+</section>
+
+<main class="cs" id="content">
+<div class="table-wrap"><table>
+
+<tbody>
+<tr>
+<td><strong>My role</strong></td>
+<td>Co-founder. I designed the brand with my co-founder, then built the entire website and led marketing design and automation.</td>
+</tr>
+<tr>
+<td><strong>Scope</strong></td>
+<td>Brand identity · Shopify store design and build · Information architecture · Accessibility · AI content pipeline</td>
+</tr>
+<tr>
+<td><strong>Tools</strong></td>
+<td>Shopify · Claude + Claude Code · Higgsfield · Notion · Blotato</td>
+</tr>
+<tr>
+<td><strong>Catalog</strong></td>
+<td>460+ products from ~48 brands</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>Live at <strong><a href="https://fridays-off.co">fridays-off.co</a></strong>, social launch in progress</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>The idea</h2>
+<p>Most online shops in this space feel cluttered, loud and cheap. Fridays-Off is the opposite: <strong>a Louis Vuitton-level experience for lifestyle products and home goods.</strong> It's a curated store for well-made, beautiful pieces, for people who care how things look on their shelf as much as how they work.</p>
+<p>For my co-founder and me, it's also personal: a business we're building on our own terms.</p>
+<hr />
+<h2>Who does what</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Me</th>
+<th>My co-founder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brand identity (together)</td>
+<td>Brand identity (together)</td>
+</tr>
+<tr>
+<td><strong>Designed and built the entire website</strong></td>
+<td>Logistics and suppliers</td>
+</tr>
+<tr>
+<td>Accessibility</td>
+<td>Product research</td>
+</tr>
+<tr>
+<td>Launch design assets</td>
+<td>Copy and brand voice</td>
+</tr>
+<tr>
+<td><strong>Marketing execution + automation</strong></td>
+<td>Marketing strategy, UX feedback</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>1. The brand: quiet luxury</h2>
+<p><strong>Research first.</strong> We studied how <strong>Louis Vuitton</strong> and leading premium lifestyle brands present products online, then borrowed the best patterns: lots of whitespace, editorial photography, and calm, confident type.</p>
+<p><strong>The identity</strong>
+- <strong>Mark:</strong> a circle around an "ff" ligature that works as a logo, a stamp and a repeating pattern
+- <strong>Name styling:</strong> <strong>Fridays-Off</strong>, with a capital F and a capital O. The hyphen stays, and on merch, "F-Off" becomes a wink.
+- <strong>Tagline:</strong> <em>unwind &amp; recharge</em>
+- <strong>Type:</strong> Montserrat (main and bold), Poppins (secondary)
+- <strong>Palette:</strong> warm neutrals that read as luxury</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Cream</th>
+<th>Sand</th>
+<th>Espresso</th>
+<th>Near-black</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>#F5F3EF</code></td>
+<td><code>#D8C3A5</code></td>
+<td><code>#3B2A20</code></td>
+<td><code>#1A1A1A</code></td>
+</tr>
+</tbody>
+</table></div>
+<div class="gallery"><figure><img src="../assets/fridays-off/01-brand-guide.webp" alt="Brand guide" loading="lazy" decoding="async"><figcaption>Brand guide</figcaption></figure>
+<figure><img src="../assets/fridays-off/03-logo-lockup-light-tagline.webp" alt="Logo lockups, light and dark" loading="lazy" decoding="async"><figcaption>Logo lockups, light and dark</figcaption></figure>
+<figure><img src="../assets/fridays-off/02-van-mockup-ai.webp" alt="Brand applied: van wrap concept" loading="lazy" decoding="async"><figcaption>Brand applied: van wrap concept</figcaption></figure></div>
+<hr />
+<h2>2. The store: 460+ products that still feel curated</h2>
+<p><strong>Information architecture.</strong> A big catalog can feel like a warehouse. I organized <strong>460+ products from ~48 brands</strong> into <strong>three simple shopping pillars</strong>, each with clear sub-categories, so any product is at most two taps away.</p>
+<p>On top of those: <strong>Shop by Brand</strong>, <strong>New Arrivals</strong>, <strong>Best Sellers</strong>, <strong>Travel Essentials</strong> and <strong>Lifestyle &amp; Gifts</strong>, so people can browse by mood, brand or need.</p>
+<p><strong>The homepage</strong> reads like a magazine, not a catalog: hero → Shop by Category → New Arrivals → our story → Best Sellers → Shop by Brand → Travel Essentials → "The Art of the Ritual" → <strong>Join the Friday List</strong>.</p>
+<p><strong>Product pages</strong> have a large gallery, clear specs, Shop Pay installments, trust tiles, and accordions for details and shipping, so the page stays clean while every answer is one tap away.</p>
+<div class="gallery"><figure><img src="../assets/fridays-off/site/portfolio/f01-hero.webp" alt="Homepage hero: lifestyle photography sets the tone" loading="lazy" decoding="async"><figcaption>Homepage hero: lifestyle photography sets the tone</figcaption></figure>
+<figure><img src="../assets/fridays-off/site/portfolio/f03-mobile-hero.webp" alt="Mobile homepage" loading="lazy" decoding="async"><figcaption>Mobile homepage</figcaption></figure>
+<figure><img src="../assets/fridays-off/site/portfolio/f02-friday-list-signup.webp" alt="Join the Friday List: email signup" loading="lazy" decoding="async"><figcaption>Join the Friday List: email signup</figcaption></figure></div>
+<p><strong>Responsible by design.</strong> An <strong>age verification gate</strong> greets every visitor, and the email signup repeats the age requirement.</p>
+<p><strong>How I built it.</strong> I explored three Shopify themes (Savor, Fabric and Tinker), chose <strong>Tinker</strong>, and customized it in the Shopify editor. For deeper changes I <strong>paired with Claude to write custom CSS and theme code</strong>, which let a team of two ship a custom-feeling store without hiring a developer.</p>
+<hr />
+<h2>3. Accessible, always</h2>
+<p>Accessibility wasn't a final check. It was a requirement from day one.</p>
+<ul>
+<li><strong>Keyboard navigation</strong> and <strong>screen-reader support</strong> across the store</li>
+<li><strong>Minimal layouts</strong> to avoid cognitive overload</li>
+<li><strong>Color contrast checked against WCAG</strong>:</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Pair</th>
+<th>Contrast</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Near-black on cream</td>
+<td>15.7 : 1</td>
+<td>✅ AAA</td>
+</tr>
+<tr>
+<td>Espresso on cream</td>
+<td>12.3 : 1</td>
+<td>✅ AAA</td>
+</tr>
+<tr>
+<td>Sand on near-black</td>
+<td>10.2 : 1</td>
+<td>✅ AAA</td>
+</tr>
+<tr>
+<td>Espresso on sand</td>
+<td>8.0 : 1</td>
+<td>✅ AAA</td>
+</tr>
+<tr>
+<td>Sand on cream</td>
+<td>1.5 : 1</td>
+<td>Decoration only, never text</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>4. The AI content engine</h2>
+<p>A two-person team can't shoot hundreds of lifestyle photos. So I built a <strong>content pipeline</strong> that keeps everything on-brand:</p>
+<pre><code>Brand style guide  +  Notion reference library (curated by my co-founder)
+                  ↓
+        Claude writes consistent image prompts
+                  ↓
+        Higgsfield generates on-brand product imagery
+                  ↓
+        Blotato schedules the week's posts automatically
+</code></pre>
+<p>The Notion library of motion and art references is what keeps the images from looking "AI-generated." Every prompt is anchored to real visual references and to our style guide. The goal is a <strong>hands-free content week</strong>: plan once, and the system publishes.</p>
+<p>On the website we use <strong>curated supplier photography</strong>. On social, we use the AI-generated editorial imagery, so both channels match one visual language.</p>
+<hr />
+<h2>5. Keeping the store healthy</h2>
+<p>Dropshipping hundreds of products from dozens of brands creates mess: duplicate brand names, duplicate categories, empty brand pages. I cleaned up the duplicates and set up an <strong>automated weekly store check</strong> that reports issues before customers ever see them.</p>
+<hr />
+<h2>Status and early feedback</h2>
+<ul>
+<li><strong>The store is live</strong> at fridays-off.co. The social launch is underway.</li>
+<li>In soft-launch previews, people <strong>loved the aesthetic, the photography and the overall vibe</strong>.</li>
+<li></li>
+</ul>
+<hr />
+<h2>What I learned</h2>
+<ul>
+<li><strong>Systems beat hustle.</strong> The brand guide, the IA and the content pipeline do the work of a much bigger team.</li>
+<li><strong>Luxury is mostly restraint:</strong> fewer colors, more whitespace, calmer type.</li>
+<li><strong>AI is a collaborator, not a shortcut.</strong> It's only as good as the references and rules you give it.</li>
+<li><strong>Next:</strong> measure everything from day one, and A/B test the homepage hero and product page layout once traffic comes in.</li>
+</ul>
+</main>
+
+<section class="cta" aria-label="Get in touch">
+  <p>Like what you see?</p>
+  <a class="pill primary" href="../index.html#contact">Message me</a>
+  <a class="pill" href="../resume.pdf">Download resume</a>
+</section>
+
+<nav class="pagers" aria-label="More case studies">
+  <a class="pager" href="bond-centre.html">← Previous planet<strong>Bond Centre 2.0</strong></a>
+  <a class="pager" href="../index.html#start">Next planet →<strong>Back to the galaxy</strong></a>
+</nav>
+</body>
+</html>
