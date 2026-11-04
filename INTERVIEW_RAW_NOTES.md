@@ -648,3 +648,12 @@ Saved in `assets/israel-bond-centre/`:
 **O1.** A digital brand with a **website, Facebook page, and Instagram**. Not live anymore as far as Tami knows; she'll check whether the **Facebook page** still exists.
 - **Dates:** about **2019** (junior/senior year). UTRGV attendance: **2015–2020**, so the **BFA graduation year is likely 2020** *(confirm; earlier notes guessed ~2017/18)*.
 - *Note: if her dad passed ~2017 "before graduation," confirm the timeline: did he pass in 2017 or closer to 2019/2020?*
+
+## 🗓 Education timeline (confirmed by Tami, Nov 4)
+- **2011:** graduated high school, South Texas High School for Health Professions ("Med High").
+- **2012–2013:** UTPA, pre-dental biology.
+- **~2013–2015 (≈3 yrs):** TSTC Harlingen, dental hygiene program.
+- **2015:** back at UTPA/UTRGV → BFA Graphic Design.
+- **BFA graduation: December 2019 or December 2020** *(her message said "December 20, 19 2020"; confirm which)*.
+- **Master's in UX Design:** started **2020**, graduated **December 2022**.
+- ⚠️ Earlier notes guessed the BFA at ~2017/18 and her father's passing at ~2017. Reconcile: father passed **before the BFA graduation**.
