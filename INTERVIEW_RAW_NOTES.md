@@ -634,3 +634,7 @@ Saved in `assets/israel-bond-centre/`:
 - *Portfolio line:* "Self-initiated heuristic evaluations and usability audits of the Jars e-commerce site and new app; **recommendations were implemented** by the digital team."
 - Docs: Tami has documents to send.
 - *Note: use Jars' name only if comfortable; otherwise "a multi-state cannabis retailer."*
+
+## The Makers Lab (epoxy resin workshops) + YouTube "Tami Makes Stuff"
+**M1. Workshops:** **6–9 workshops** hosted; groups of **2–15 people** each (roughly **~50+ participants** total, estimate to confirm).
+- Portfolio line: "Designed and hosted 6+ hands-on resin workshops for groups of up to 15." Shows facilitation, teaching, and event/experience design.
