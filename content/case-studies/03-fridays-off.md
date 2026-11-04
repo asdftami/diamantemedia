@@ -9,7 +9,7 @@ platforms: ["Shopify", "Instagram / social"]
 tools: ["Shopify", "Claude + Claude Code", "Higgsfield", "Notion", "Blotato"]
 status: "Live at fridays-off.co. Social launch in progress."
 live_url: "https://fridays-off.co"
-hero_image: "assets/fridays-off/site/01-desktop-home.png"
+hero_image: "assets/fridays-off/site/portfolio/f01-hero.png"
 ---
 
 <!-- DRAFT v2 (Tami: describe as lifestyle products / home goods only; no smoking or cannabis wording).
@@ -81,9 +81,9 @@ On top of those: **Shop by Brand**, **New Arrivals**, **Best Sellers**, **Travel
 
 **Product pages** have a large gallery, clear specs, Shop Pay installments, trust tiles, and accordions for details and shipping, so the page stays clean while every answer is one tap away.
 
-![Homepage](../../assets/fridays-off/site/01-desktop-home.png)
-![Product page](../../assets/fridays-off/site/03-desktop-product-page.png)
-![Mobile homepage](../../assets/fridays-off/site/06-mobile-home.png)
+![Homepage hero: lifestyle photography sets the tone](../../assets/fridays-off/site/portfolio/f01-hero.png)
+![Mobile homepage](../../assets/fridays-off/site/portfolio/f03-mobile-hero.png)
+![Join the Friday List: email signup](../../assets/fridays-off/site/portfolio/f02-friday-list-signup.png)
 
 **Responsible by design.** An **age verification gate** greets every visitor, and the email signup repeats the age requirement.
 
