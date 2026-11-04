@@ -608,3 +608,12 @@ Saved in `assets/israel-bond-centre/`:
 - *Homepage structure idea:* sticky top-right "Resume" + "Contact"; at the end of the galaxy journey, a fork: **"Hiring? → Resume / Email me"** vs **"Need something built? → Start a project"** (short form: name, email, what you need [Website · Branding/Graphics · Social content · UGC · Other], budget range, timeline).
 
 **✅ Positioning round 1 complete.**
+
+---
+# Supporting projects
+
+## Newrez login redesign
+**S1. Problem**
+- **Too many separate login pages** and **too many clicks** to log in.
+- **3–4 different user types**, each with **its own login button in a different place**, so buttons were **hard to find**.
+- (From earlier: Tami created **alternate login versions** to reimagine a unified experience on the payment portal platform.)
