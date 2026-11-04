@@ -658,3 +658,10 @@ Saved in `assets/israel-bond-centre/`:
 - **Master's in UX Design:** started **2020**, graduated **December 2022**.
 - ⚠️ Earlier notes guessed the BFA at ~2017/18 and her father's passing at ~2017. Reconcile: father passed **before the BFA graduation**.
 - Note: the Master's (started 2020) overlapped with the end of the BFA; Tami finished the BFA a semester early (Dec 2020) and the Master's in Dec 2022.
+
+## ⭐ Femfly (school project → ongoing passion project)
+**F1.** A **female networking and mentorship app**.
+- Started as her **first UX project**: a "really cute" initial prototype with her **first-ever user research**, done with **friends, family, and the women in her life**.
+- **Iterated** on it, then **revisited it again as AI evolved**. It keeps evolving; she's now considering **actually building it**.
+- **Why it matters to her:** *it's something she wishes she'd had in her early 20s*, when **she didn't have anyone to guide her after her dad passed**.
+- *Portfolio potential:* this could be a **5th case study**, an "evolution" story (first prototype → refined → AI-era rethink → build). It shows growth over time and a personal mission, and it fits the galaxy timeline: one planet revisited across eras. Ask for the earliest prototype + the latest version.
