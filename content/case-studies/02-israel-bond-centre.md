@@ -38,7 +38,6 @@ Bond Centre is where people who own State of Israel Bonds check their portfolio,
 - **Navigation that didn't make sense:** one long menu mixing everyday tasks with account settings
 - **Weak admin controls:** staff had no clear way to review, approve or reject what bondholders submitted
 
-![Before: the old welcome page](../../assets/israel-bond-centre/09-BEFORE-old-welcome-page.webp)
 ![Before: the old portfolio page](../../assets/israel-bond-centre/11-BEFORE-old-portfolio-page.png)
 
 ---
@@ -137,6 +136,8 @@ For the mobile **Inbox**, I compared two layouts:
 ## Outcome
 
 **Bond Centre 2.0 shipped to production.** The development team and product owners were excited about the upgrade: a cleaner, calmer, more organized experience for bondholders, and real controls for admins.
+
+![Shipped: the live Bond Centre welcome page in production](../../assets/israel-bond-centre/09-BEFORE-old-welcome-page.webp)
 
 I was part of a company-wide layoff shortly after launch, so I wasn't able to collect post-launch usage data.
 
