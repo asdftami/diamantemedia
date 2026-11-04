@@ -6,7 +6,7 @@ role: "Sole UX/UI Designer"
 team: "Product owners, project managers, development teams"
 industry: "Government bonds · Financial services"
 platforms: ["Desktop web", "Responsive mobile (iOS and Android sizes)"]
-tools: ["Figma"]
+tools: ["Figma", "Airtable", "Azure DevOps"]
 methods: ["Heuristic review", "Information architecture", "Navigation A/B testing", "Wizard and form design", "Responsive design", "Prototyping"]
 status: "Shipped to production"
 hero_image: "assets/israel-bond-centre/10-new-portfolio-split-nav.png"
@@ -25,7 +25,7 @@ hero_image: "assets/israel-bond-centre/10-new-portfolio-split-nav.png"
 | **Team** | Product owners, project managers, development teams |
 | **Users** | **Bondholders** managing their Israel Bonds, and **admins** reviewing and approving their requests |
 | **Platforms** | Desktop web + responsive mobile |
-| **Tools** | Figma <!-- [confirm] --> |
+| **Tools** | Figma · Airtable (user feedback + test findings) · Azure DevOps (prioritizing work with dev teams) <!-- [confirm] Figma + Airtable used on this project too --> |
 | **Outcome** | **Shipped to production.** Developers and product owners called it the upgrade the platform needed. |
 
 ---

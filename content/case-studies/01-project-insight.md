@@ -6,7 +6,7 @@ role: "Sole UX Designer"
 team: "Investor Value Stream: project manager, business systems analyst, stakeholder, 12–15 engineers"
 timeline: "December 2022 – February 2024"
 industry: "Mortgage loan servicing · Finance"
-tools: ["Figma", "FigJam"]
+tools: ["Figma", "FigJam", "Airtable", "Azure DevOps"]
 methods: ["Assumption mapping", "Stakeholder interviews", "User interviews", "Personas", "Journey mapping", "Storyboards", "Co-design workshops", "Usability testing (5 investors)", "Information architecture", "Low → high-fidelity prototyping"]
 status: "Designed and validated through high fidelity. Cancelled after an acquisition, before development."
 hero_image: "assets/project-insight/10-hifi-main-dashboard.png"
@@ -23,7 +23,7 @@ hero_image: "assets/project-insight/10-hifi-main-dashboard.png"
 | **My role** | Sole UX designer, from research through high-fidelity prototypes |
 | **Team** | Project manager, business systems analyst (BSA), business stakeholder, 12–15 engineers |
 | **Timeline** | Dec 2022 – Feb 2024 |
-| **Tools** | Figma (wireframes → hi-fi prototypes), FigJam (assumption maps, flowcharts) |
+| **Tools** | Figma (wireframes → hi-fi prototypes) · FigJam (assumption maps, flowcharts) · Airtable (interview + usability-test research repository) · Azure DevOps (backlog prioritization with the team) |
 | **Users** | Investors who own loan portfolios serviced by Computershare |
 | **Outcome** | Design validated with 5 investors. Every round of testing ended with *"When can I have this?"* |
 
@@ -55,6 +55,8 @@ This was my first role in finance. I came from retail, service and healthcare op
 ## Discovery
 
 **1. Mapping what we didn't know.** I started with an assumption map: who the customers are, what problem they want solved, how they solve it today, and what could make this fail. Then I worked through the answers with my PM.
+
+I kept every interview note and usability-test finding in **Airtable**, so feedback could be tagged, compared across sessions and traced back to design decisions. Prioritized work went into the team's **Azure DevOps** backlog.
 
 **2. Talking to the people closest to the pain.** I interviewed the stakeholder who received investor requests, then wrote interview questions that were passed to investors directly.
 

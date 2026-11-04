@@ -709,3 +709,5 @@ Saved in `assets/fridays-off/site/`: 21+ age gate, desktop Home, Smoke collectio
 - **Best Sellers shows "Sold out" items** (e.g. Staze × MJ Arsenal Stash Jar, Soft Serve Lighter Holder). Swap in in-stock pieces; sold-out best sellers lose sales.
 - **The footer area looks empty** (a tall sand-colored block with only "© 2026 Fridays-Off, Powered by Shopify" and Terms). The footer menus exist in Shopify (Shop, Help, About, Categories) but don't appear in the capture. Check the footer section in the theme editor.
 - The header logo reads "Fridays" + ff mark; make sure it follows the **"Fridays-Off"** naming decision.
+
+**Tools (Computershare, added by Tami Nov 4):** Figma, FigJam (flowcharts, assumption maps), **Airtable** (user interviews + usability-test feedback), **Azure DevOps** ("DevOps") for prioritizing work. *(Confirm: "DevOps" = Azure DevOps.)*
