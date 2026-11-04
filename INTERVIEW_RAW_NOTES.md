@@ -654,6 +654,7 @@ Saved in `assets/israel-bond-centre/`:
 - **2012–2013:** UTPA, pre-dental biology.
 - **~2013–2015 (≈3 yrs):** TSTC Harlingen, dental hygiene program.
 - **2015:** back at UTPA/UTRGV → BFA Graphic Design.
-- **BFA graduation: December 2019 or December 2020** *(her message said "December 20, 19 2020"; confirm which)*.
+- ✅ **BFA Graphic Design, UTRGV: December 2020**, graduated **a semester early**.
 - **Master's in UX Design:** started **2020**, graduated **December 2022**.
 - ⚠️ Earlier notes guessed the BFA at ~2017/18 and her father's passing at ~2017. Reconcile: father passed **before the BFA graduation**.
+- Note: the Master's (started 2020) overlapped with the end of the BFA; Tami finished the BFA a semester early (Dec 2020) and the Master's in Dec 2022.
