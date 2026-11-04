@@ -581,3 +581,11 @@ Saved in `assets/israel-bond-centre/`:
 
 **P1. The reaction she wants:** *"Damn, this is fucking cool and amazing."*
 → The **emotional goal** for the homepage: wow factor, delight, "I've never seen a portfolio like this." (This supports the immersive galactic timeline idea.) Still need the **one-sentence statement** of who she is and what she does.
+
+**P1b. "Tami is the designer who…"** *"…would make the coolest, most aesthetic and intuitive work in any industry."*
+- Key words: **cool · aesthetic · intuitive · any industry**.
+- Evidence for "any industry": mortgage finance (Project Insight), government bonds (Bond Centre), dental (Parkfield, Evolve), luxury e-commerce (Fridays-Off), local media (OMG RGV, The Monitor), crafts/maker (Makers Lab), cannabis retail UX audits (Jars).
+- Draft headline directions (to refine later):
+  - "Beautiful, intuitive design for any world."
+  - "I design cool things that make sense, in any industry."
+  - Galaxy tie-in: "Every industry is a new planet. I make each one beautiful and easy to navigate."
