@@ -665,3 +665,15 @@ Saved in `assets/israel-bond-centre/`:
 - **Iterated** on it, then **revisited it again as AI evolved**. It keeps evolving; she's now considering **actually building it**.
 - **Why it matters to her:** *it's something she wishes she'd had in her early 20s*, when **she didn't have anyone to guide her after her dad passed**.
 - *Portfolio potential:* this could be a **5th case study**, an "evolution" story (first prototype → refined → AI-era rethink → build). It shows growth over time and a personal mission, and it fits the galaxy timeline: one planet revisited across eras. Ask for the earliest prototype + the latest version.
+- ✅ **Decision:** Femfly goes in **"Personal & School Projects,"** not a main case study.
+- Other school/personal projects to cover **later**: **"Canielle"** (spelling to confirm), a **yoga flow studio** app, a **game studio** app. Not discussing them now.
+
+# 🚀 Launch scope (Tami's decision, Nov 4)
+**Launch v1 ASAP with only the 4 main case studies:**
+1. Project Insight (Computershare)
+2. Israel Bond Centre (Computershare)
+3. Fridays-Off (founder: brand + Shopify + AI content pipeline)
+4. Dental websites (Parkfield Family Dental + Evolve Dental Partners)
+
+**v1 also needs:** homepage (galaxy timeline, accessible), About (story), Resume (PDF + "email me for a tailored one"), Contact / Start a project.
+**Phase 2 (after launch):** Personal & School Projects (Femfly, Canielle, yoga flow studio, game studio), the supporting projects (Newrez login, Jars audits, Makers Lab / YouTube, OMG RGV), and Fridays-Off metrics after 30–60 days.
