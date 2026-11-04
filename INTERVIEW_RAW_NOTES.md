@@ -601,3 +601,10 @@ Saved in `assets/israel-bond-centre/`:
 - **Last role: $113K** (Computershare / Newrez UX Designer).
 - Stated floor: **$60K**.
 - *Recommendation:* anchor on the **last salary**, not the floor. Target **~$105K–$130K** for remote Product Designer / Senior roles. Treat $60K as a walk-away for exceptional cases only (e.g. contract-to-hire, a strong design-lead title, or equity). Never share the floor with recruiters; if asked, give a target range based on the $113K.
+
+**P5. Calls to action (two paths)**
+- **Hiring managers (primary):** view or download a **general resume**, OR **email Tami** to request a tailored resume for a specific role ("Tell me about the role and I'll send a tailored resume").
+- **Clients (secondary):** **contact Tami** for help building **websites, graphics/branding, social media content, UGC**.
+- *Homepage structure idea:* sticky top-right "Resume" + "Contact"; at the end of the galaxy journey, a fork: **"Hiring? → Resume / Email me"** vs **"Need something built? → Start a project"** (short form: name, email, what you need [Website · Branding/Graphics · Social content · UGC · Other], budget range, timeline).
+
+**✅ Positioning round 1 complete.**
