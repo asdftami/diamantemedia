@@ -724,3 +724,4 @@ Saved in `assets/fridays-off/site/`: 21+ age gate, desktop Home, Smoke collectio
 - **Signature pastels** (from her office): **pink, purple, yellow, blue**. Use them for the bright stars and accents.
 - **Y2K nostalgia:** Nokia phones, brick phones, Tamagotchis. Tie these in as UI.
 - **Motion must be optional (Tami):** visible Motion on/off toggle + respects the device's "reduce motion" setting. ✅ Built into the homepage prototype (`site/index.html`).
+- **Homepage v2 (Tami, Nov 4):** mint → **Tiffany blue `#81D8D0`**; pillar "Cool" → **"Innovative"** (pillars: Innovative · Aesthetic · Intuitive · Accessible); the **Tamagotchi is the spaceship** (journey navigator with a pixel pet, year/planet LCD, ▲ ● ▼ buttons, a rocket flame during warp); the **brick phone** is the contact card ("1 new message"). Custom universe/planet art can be generated later (Higgsfield). Focus now: **timeline + case studies**.
