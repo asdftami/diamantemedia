@@ -728,3 +728,4 @@ Saved in `assets/fridays-off/site/`: 21+ age gate, desktop Home, Smoke collectio
 - **Timeline addition (Tami):** **Jars**, about a year after Computershare, overlapping with the Makers Lab and Fridays-Off → stop "2025–NOW · JARS": retail team → promoted floor lead; self-initiated usability audits + heuristic evaluations of the e-commerce site and app; recommendations implemented. (Kept the word "cannabis" off the homepage copy; confirm preference.)
 - Jars dates confirmed: **July 2025 – present**.
 - Dates (Tami): **The Makers Lab started in 2024, right after Computershare/Newrez**, during unemployment. **Fridays-Off started October 2026.**
+- **Nov 4:** Master's = **Maryland Institute College of Art (MICA), Baltimore**, Dec 2022. Secondary-role dates are left blank on purpose. **No public email**: use a spam-protected contact form. "Canielle" was a transcription error; removed.

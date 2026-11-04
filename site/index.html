@@ -91,7 +91,7 @@
   .p-next{--c1:#fff1a6;--c2:#ffb3d9;--glow:#fff1a677;--ring:#c9b6ffaa;--moon:#a8d8ff}
 
   /* Y2K: Tamagotchi spaceship = journey navigator */
-  .ship{position:fixed;z-index:20;left:clamp(12px,2vw,28px);bottom:clamp(18px,3vw,40px);width:168px;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+  .ship{position:fixed;z-index:20;right:clamp(16px,2.5vw,36px);bottom:clamp(18px,3vw,40px);width:168px;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
   .ship-body{position:relative;padding:22px 16px 18px;border-radius:50% 50% 46% 46%/58% 58% 42% 42%;
     background:radial-gradient(circle at 30% 22%,#fff9,transparent 32%),linear-gradient(160deg,var(--pink),var(--lilac) 70%,#9b86ff);
     box-shadow:0 0 40px #ffb3d955,0 12px 30px #0009;animation:bob 4s ease-in-out infinite}
@@ -119,6 +119,19 @@
   .phone .pad span{height:22px;border-radius:10px;background:#c9b6ff}
   .phone .pad span:nth-child(3n+2){background:var(--pink)}
 
+  /* contact form */
+  .msg{margin-top:26px;padding:20px;border-radius:var(--radius);background:#ffffff0d;border:1px solid #ffffff26;max-width:520px;display:grid;gap:12px}
+  .msg h3{margin:0;font-size:1.2rem}
+  .field{display:grid;gap:6px;border:0;padding:0;margin:0}
+  .field label,.field legend{font-weight:500;font-size:.95rem}
+  .field input,.field textarea{font:inherit;color:var(--ink);background:#0b0826;border:1.5px solid #ffffff40;border-radius:12px;padding:12px;min-height:44px}
+  .field input:focus,.field textarea:focus{border-color:var(--butter)}
+  .opt{display:flex;gap:8px;align-items:center;font-weight:400;min-height:32px}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .form-status{margin:0;color:var(--butter)}
+  .msg .land{justify-self:start;border:0;font:inherit;font-weight:700;cursor:pointer}
+  .msg fieldset.field{gap:2px}
+
   /* motion off */
   .no-motion .planet,.no-motion .moon,.no-motion .ship-body{animation:none}
   .no-motion .ship.boost{transform:none} .no-motion .ship.boost .flame{opacity:0}
@@ -130,7 +143,7 @@
     .stop:nth-of-type(even) .planet-wrap{order:0}
     .planet-wrap{max-width:260px}
     .stop{padding-top:96px;padding-bottom:170px}
-    .ship{width:auto;right:12px;bottom:12px}
+    .ship{width:auto;left:12px;right:12px;bottom:12px}
     .ship-body{display:flex;align-items:center;gap:10px;border-radius:30px;padding:8px 10px}
     .ship-body::before,.ship-body::after,.antenna{display:none}
     .lcd{flex:1;display:flex;align-items:center;gap:10px;text-align:left}
@@ -297,12 +310,28 @@
       <div>
         <p class="year">NEXT STOP · YOUR TEAM?</p>
         <h2 id="h-contact">Let's build the next world.</h2>
-        <p><strong>Hiring?</strong> Grab my resume, or email me about the role and I'll send a version tailored to it.<br><strong>Need something built?</strong> Websites, branding, social content, UGC: tell me about it.</p>
+        <p><strong>Hiring?</strong> Grab my resume, or message me about the role and I'll send a version tailored to it.<br><strong>Need something built?</strong> Websites, branding, social content, UGC: tell me about it.</p>
         <div class="cta-row">
           <a class="land" href="resume.pdf">Download resume</a>
-          <a class="pill primary" href="mailto:hello@example.com?subject=Let's%20work%20together">Email me</a> <!-- TODO: real email -->
-          <a class="pill" href="#start-project">Start a project</a>
+          <a class="pill primary" href="#message">Message me</a>
         </div>
+        <!-- Spam-protected contact form: no public email address.
+             TODO: set action to a form service (e.g. Formspree / Web3Forms) and add its human-verification widget
+             (e.g. Cloudflare Turnstile or hCaptcha site key). The honeypot field below silently catches bots. -->
+        <form class="msg" id="message" action="" method="POST" novalidate>
+          <h3>Send me a message</h3>
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">Your email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <fieldset class="field"><legend>I'm reaching out about</legend>
+            <label class="opt"><input type="radio" name="topic" value="hiring" checked> A job opening</label>
+            <label class="opt"><input type="radio" name="topic" value="project"> A project (website, branding, social, UGC)</label>
+          </fieldset>
+          <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4" required></textarea></div>
+          <div class="hp" aria-hidden="true"><label for="f-web">Leave this empty</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
+          <div class="captcha" id="captcha"><!-- human-verification widget renders here --></div>
+          <button class="land" type="submit">Send message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
       </div>
       <div aria-hidden="true">
         <div class="phone"><div class="lcd">✉ 1 NEW MESSAGE<br><br>Let's build the<br>next world :)</div><div class="pad"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
@@ -403,6 +432,14 @@
     if (e.target.closest('input,textarea,select')) return;
     if (e.key === 'PageDown' || (e.key === 'ArrowDown' && e.altKey)) { e.preventDefault(); go(1); }
     if (e.key === 'PageUp' || (e.key === 'ArrowUp' && e.altKey)) { e.preventDefault(); go(-1); }
+  });
+
+  // ---- contact form: honeypot + basic validation (service + human check to be connected)
+  const form = document.getElementById('message'), status = document.getElementById('formStatus');
+  form.addEventListener('submit', e => {
+    if (form.website.value) { e.preventDefault(); return; }               // bot filled the honeypot
+    if (!form.checkValidity()) { e.preventDefault(); status.textContent = 'Please fill in your name, a valid email and a message.'; form.querySelector(':invalid').focus(); return; }
+    if (!form.getAttribute('action')) { e.preventDefault(); status.textContent = 'Thanks! The form is being connected. Please check back soon.'; }
   });
 
   addEventListener('resize', resize);

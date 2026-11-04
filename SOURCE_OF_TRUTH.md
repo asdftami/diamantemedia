@@ -1,7 +1,7 @@
 # Tami Trevino: Career Context (Single Source of Truth)
 
 > Everything the resume, LinkedIn, portfolio and cover letters pull from. Public-safe: private details stay in `INTERVIEW_RAW_NOTES.md` and are **not** included here.
-> Last updated: November 4, 2026 · Items marked **[confirm]** still need a check.
+> Last updated: November 4, 2026
 
 ---
 
@@ -62,10 +62,10 @@
 - YouTube channel **Tami Makes Stuff**: DIY processes and how-tos. ~180 subscribers; top Short **~6.8K views**, top long-form **~1.5K views**
 
 ### Kelly Education (Aurora Public Schools): Substitute Paraeducator, Special Education
-**2024–2025 [confirm dates]** · Colorado
+Colorado
 
 ### Newrez: UX Designer *(after Newrez acquired SLS/Computershare Loan Services)*
-**~Feb 2024 – mid 2024 [confirm]** · Remote/Colorado
+Remote/Colorado
 - **Login redesign:** consolidated 3–4 separate login pages and buttons into **one login with a user-type picker**, **cutting clicks from 4 to 2 (−50%)**. Flowcharts → hi-fi, A/B-test-ready mockups. *(Not launched: the role was eliminated in a 375-person layoff.)*
 - Internal communications design (wallpapers, banners), phishing-awareness visuals with the cybersecurity team, following DEI visual guidelines
 
@@ -78,21 +78,20 @@
 - Led **Pride Month** engagement events (trivia, giveaways) with cross-department colleagues
 
 ### Freelance Brand & Web Designer: Dental
-**~2021–2022 [confirm]** · Austin, TX
+Austin, TX
 - ⭐ **Parkfield Dental**: full **brand identity (Illustrator)** + **Squarespace** website on one design system for a newly acquired practice; custom line icons; **English/Spanish translator at launch**; accessible. Client: the DSO's former VP of Operations.
 - **Evolve Dental Partners**: Squarespace site built on the founder's brand guidelines, handed off for self-editing. Client: the DSO's former CEO.
 - **Story:** two executives from the same company each hired her for their next venture.
 
 ### Dental group (Rose Dental Group / Strive Dental Management / Avery Ranch Dental)
-**~2021 – Dec 2022 [confirm]** · Austin, TX
+Austin, TX
 - Front desk / office liaison → **promoted to Office Manager** of the dental support organization (~8–9 months in): led the move to a new facility, coordinated IT and equipment setup, and maintained the **website and blog**
 - After the DSO was sold: office liaison at Avery Ranch Dental → **promoted to Treatment Coordinator** (presenting treatment plans and costs to patients)
 
 ### Kerbey Lane Cafe: Server
-**~2020–2021** · Austin, TX · Worked through COVID while starting her Master's
+Austin, TX · Worked through COVID while starting her Master's
 
 ### The Monitor (McAllen, TX newspaper): Graphic Designer, in-house digital media team
-**~2019–2020 [confirm]**
 - Production graphic design; video interviews and editing (A-roll/B-roll); brand-cohesive document design
 
 ### LUXXE Digital: Intern → Editor-in-Chief, OMG RGV
@@ -114,7 +113,7 @@
 | 3 | Fridays-Off | Founder: brand + Shopify + AI pipeline | Live | `content/case-studies/03-fridays-off.md` |
 | 4 | Dental Brands & Websites | Freelance brand + web | Live (client-edited) / handed off | `content/case-studies/04-dental-websites.md` |
 
-**Phase 2 (personal & school):** Femfly (women's networking & mentorship app, her first research project, evolving with AI), Canielle [confirm spelling], yoga flow studio app, game studio app.
+**Phase 2 (personal & school):** Femfly (women's networking & mentorship app, her first research project, evolving with AI), yoga flow studio app, game studio app.
 **Supporting pieces:** Newrez login, Jars audits, Makers Lab / YouTube, OMG RGV.
 
 ---
@@ -136,7 +135,7 @@
 
 ## 6. Education
 
-- **Master's in User Experience Design**, completed **Dec 2022** · school **[confirm name]**
+- **Master's in User Experience Design**, **Maryland Institute College of Art (MICA)**, Baltimore, completed **Dec 2022**
 - **BFA, Graphic Design**, University of Texas Rio Grande Valley, **Dec 2020** (finished a semester early)
 - South Texas High School for Health Professions ("Med High"), 2011, including a dental class and clinical rotations
 - *Earlier coursework: UTPA (biology, 2012–13), TSTC (dental hygiene, ~2013–15)*
@@ -164,10 +163,11 @@
 
 ---
 
-## 9. Open items [confirm]
+## 9. Contact policy
 
-- Master's degree school name
-- Exact dates: dental group, freelance dental, The Monitor, Newrez, Kelly Education
-- Contact email for the site and resume
+- **No public email address** anywhere (spam). Visitors reach Tami through a **spam-protected contact form** (human verification + honeypot); she replies from her own email.
+- Exact dates for the older/secondary roles are intentionally left off (they're not on LinkedIn or the portfolio).
+
+## 10. Open items
+
 - LinkedIn PDF → compare against this file
-- Spelling: "Canielle"
