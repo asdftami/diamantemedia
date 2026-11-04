@@ -25,7 +25,7 @@ hero_image: "assets/israel-bond-centre/10-new-portfolio-split-nav.png"
 | **Team** | Product owners, project managers, development teams |
 | **Users** | **Bondholders** managing their Israel Bonds, and **admins** reviewing and approving their requests |
 | **Platforms** | Desktop web + responsive mobile |
-| **Tools** | Figma <!-- [confirm] --> |
+| **Tools** | Figma |
 | **Outcome** | **Shipped to production.** Developers and product owners called it the upgrade the platform needed. |
 
 ---
