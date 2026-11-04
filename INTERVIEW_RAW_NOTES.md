@@ -711,3 +711,4 @@ Saved in `assets/fridays-off/site/`: 21+ age gate, desktop Home, Smoke collectio
 - The header logo reads "Fridays" + ff mark; make sure it follows the **"Fridays-Off"** naming decision.
 
 **Tools (Project Insight only, per Tami, Nov 4):** Figma, FigJam (flowcharts, assumption maps), **Airtable** (user interviews + usability-test feedback), **Azure DevOps** ("DevOps") for prioritizing work. (confirmed: Azure DevOps). Bond Centre: Figma (confirmed).
+- ✅ **Wording rule (Tami, Nov 4):** in public portfolio copy, describe Fridays-Off only as **lifestyle products / home goods**. No "smoking," "cannabis," or product-type terms (bongs, dab rigs, vapes). Note: the live-site screenshots still show category names (Smoke, Dab & Vape) and glass products. Pick or crop screenshots that fit this framing (brand guide, homepage hero, lifestyle sections) before publishing.

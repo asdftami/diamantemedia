@@ -4,7 +4,7 @@ subtitle: "Building a luxury lifestyle brand and e-commerce store from zero, wit
 company: "Fridays-Off (co-founded)"
 role: "Co-founder · Brand, web & marketing design lead"
 team: "Two co-founders: me (brand, website, marketing execution, automation) + my co-founder (logistics, product research, copy, marketing strategy)"
-industry: "Luxury lifestyle e-commerce (21+ smoking accessories & home goods)"
+industry: "Luxury lifestyle e-commerce (lifestyle products & home goods)"
 platforms: ["Shopify", "Instagram / social"]
 tools: ["Shopify", "Claude + Claude Code", "Higgsfield", "Notion", "Blotato"]
 status: "Live at fridays-off.co. Social launch in progress."
@@ -12,7 +12,8 @@ live_url: "https://fridays-off.co"
 hero_image: "assets/fridays-off/site/01-desktop-home.png"
 ---
 
-<!-- DRAFT v1: written from Tami's interview notes + live Shopify data (Nov 3–4, 2026).
+<!-- DRAFT v2 (Tami: describe as lifestyle products / home goods only; no smoking or cannabis wording).
+     DRAFT v1: written from Tami's interview notes + live Shopify data (Nov 3–4, 2026).
      [metrics] sections get real numbers 30–60 days after the social launch. -->
 
 # Fridays-Off
@@ -31,7 +32,7 @@ hero_image: "assets/fridays-off/site/01-desktop-home.png"
 
 ## The idea
 
-Most smoking-accessory shops look like gas-station counters or dorm rooms. Fridays-Off is the opposite: **"the Louis Vuitton of smoking."** It's a curated store for well-made, beautiful glass, vaporizers and home goods, for enthusiasts who care how things look on their shelf as much as how they work. It sells **no cannabis or nicotine**, only accessories and lifestyle pieces.
+Most online shops in this space feel cluttered, loud and cheap. Fridays-Off is the opposite: **a Louis Vuitton-level experience for lifestyle products and home goods.** It's a curated store for well-made, beautiful pieces, for people who care how things look on their shelf as much as how they work.
 
 For my co-founder and me, it's also something personal: a business we're building so we can leave corporate jobs and work on our own terms.
 
@@ -51,7 +52,7 @@ For my co-founder and me, it's also something personal: a business we're buildin
 
 ## 1. The brand: quiet luxury
 
-**Research first.** We studied how **Louis Vuitton, Puffco, Houseplant and Dr. Dabber** present premium products online, then borrowed the best patterns: lots of whitespace, editorial photography, and calm, confident type.
+**Research first.** We studied how **Louis Vuitton** and leading premium lifestyle brands present products online, then borrowed the best patterns: lots of whitespace, editorial photography, and calm, confident type.
 
 **The identity**
 - **Mark:** a circle around an "ff" ligature that works as a logo, a stamp and a repeating pattern
@@ -72,15 +73,11 @@ For my co-founder and me, it's also something personal: a business we're buildin
 
 ## 2. The store: 460+ products that still feel curated
 
-**Information architecture.** A big catalog can feel like a warehouse. I organized **460+ products from ~48 brands** (including Puffco, GRAV, MJ Arsenal, Storz & Bickel, Edie Parker and Jane West) into **three simple pillars**:
-
-| **Smoke** | **Dab & Vape** | **Essentials** |
-|---|---|---|
-| Water pipes & bongs, bubblers, hand pipes, gravity bongs | Dab rigs, e-rig accessories, vaporizers, vape pens | Papers & trays, grinders, storage, ashtrays, lighters |
+**Information architecture.** A big catalog can feel like a warehouse. I organized **460+ products from ~48 brands** into **three simple shopping pillars**, each with clear sub-categories, so any product is at most two taps away.
 
 On top of those: **Shop by Brand**, **New Arrivals**, **Best Sellers**, **Travel Essentials** and **Lifestyle & Gifts**, so people can browse by mood, brand or need.
 
-**The homepage** reads like a magazine, not a catalog: hero ("Elevate Every Session") → Shop by Category → New Arrivals → our story → Best Sellers → Shop by Brand → Travel Essentials → "The Art of the Ritual" → **Join the Friday List**.
+**The homepage** reads like a magazine, not a catalog: hero → Shop by Category → New Arrivals → our story → Best Sellers → Shop by Brand → Travel Essentials → "The Art of the Ritual" → **Join the Friday List**.
 
 **Product pages** have a large gallery, clear specs, Shop Pay installments, trust tiles, and accordions for details and shipping, so the page stays clean while every answer is one tap away.
 
@@ -88,9 +85,7 @@ On top of those: **Shop by Brand**, **New Arrivals**, **Best Sellers**, **Travel
 ![Product page](../../assets/fridays-off/site/03-desktop-product-page.png)
 ![Mobile homepage](../../assets/fridays-off/site/06-mobile-home.png)
 
-**Responsible by design.** A **21+ age gate** greets every visitor, and the email signup repeats it ("21+ only").
-
-![21+ age gate](../../assets/fridays-off/site/00-age-gate.png)
+**Responsible by design.** An **age verification gate** greets every visitor, and the email signup repeats the age requirement.
 
 **How I built it.** I explored three Shopify themes (Savor, Fabric and Tinker), chose **Tinker**, and customized it in the Shopify editor. For deeper changes I **paired with Claude to write custom CSS and theme code**, which let a team of two ship a custom-feeling store without hiring a developer.
 
