@@ -643,3 +643,8 @@ Saved in `assets/israel-bond-centre/`:
 - **180 subscribers** (small, growing).
 - Top views: **~1.5K on a long-form video**, **~6.8K on a Short** *(interpreted as best-performing videos; confirm)*.
 - Portfolio framing: lead with the **6.8K-view Short** and the content skills (filming, editing, A/B-roll learned at The Monitor, hooks). Keep subscriber counts out of the headline; use them in the creator section only.
+
+## OMG RGV (LUXXE Digital internship)
+**O1.** A digital brand with a **website, Facebook page, and Instagram**. Not live anymore as far as Tami knows; she'll check whether the **Facebook page** still exists.
+- **Dates:** about **2019** (junior/senior year). UTRGV attendance: **2015–2020**, so the **BFA graduation year is likely 2020** *(confirm; earlier notes guessed ~2017/18)*.
+- *Note: if her dad passed ~2017 "before graduation," confirm the timeline: did he pass in 2017 or closer to 2019/2020?*
