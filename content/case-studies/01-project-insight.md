@@ -69,7 +69,8 @@ I kept every interview note and usability-test finding in **Airtable**, so feedb
 
 **5. Telling the story.** Two storyboards showed the experience we were building toward. A new loan is onboarded, the investor checks how it affects their portfolio, and the insight leads them to onboard more loans.
 
-![Storyboard: Checking portfolio insights](../../assets/project-insight/21-storyboard-data-driven-decisions.png)
+![Storyboard, panels 1–4: Awareness of need](../../assets/project-insight/20-storyboard-awareness-of-need.png)
+![Storyboard, panels 5–8: Checking portfolio insights to make data-driven decisions](../../assets/project-insight/21-storyboard-data-driven-decisions.png)
 
 ---
 

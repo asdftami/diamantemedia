@@ -26,6 +26,7 @@ I worked inside a dental support organization (DSO) in Austin, first at the fron
 | **I delivered** | Full brand identity + website | Website built on the client's existing brand |
 | **Tools** | Illustrator, Squarespace | Squarespace |
 | **Highlights** | Bilingual (English/Spanish) at launch, accessible, cohesive design system | Brand-compliant build, handed off for the founder to edit herself |
+| **Status** | Live at **[parkfieldfamilydental.com](https://www.parkfieldfamilydental.com)** | Handed off; site currently offline |
 
 ---
 
@@ -53,7 +54,7 @@ My former VP of Operations bought an Austin dental practice that already had loy
 ![Parkfield on mobile](../../assets/dental/parkfield/portfolio/p07-mobile-hero.png)
 
 ### Designed for the whole community
-Austin has a large Latino community, and many patients speak Spanish at home or only speak Spanish. At launch, I built the site with a **site-wide English/Spanish translator**, so every page (services, insurance, booking) could be read in the patient's own language. I also designed for **accessibility**: readable type, strong contrast, and clear, consistent buttons.
+Austin has a large Latino community, and many patients only speak Spanish. At launch, I built the site with a **site-wide English/Spanish translator**, so every page (services, insurance, booking) could be read in the patient's own language. I also designed for **accessibility**: readable type, strong contrast, and clear, consistent buttons.
 
 This one is personal. I moved from Monterrey, Mexico to Texas when I was nine and started school in an ESL class. I know what it feels like when a place isn't built for you. I want the places I design to feel like they are.
 
