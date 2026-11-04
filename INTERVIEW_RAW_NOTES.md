@@ -625,3 +625,4 @@ Saved in `assets/israel-bond-centre/`:
 - *Portfolio use: a compact "mini case study" card (problem → flow → hi-fi). Before/after flowcharts showing fewer clicks would be the hero visual. Ask Tami for the flowcharts + mockups and a rough click count (before vs. after).*
 
 **S3. Metric:** clicks to log in **4 → 2 (−50%)** (Tami's estimate from the designed flow). *Asked whether she still has the flowcharts/screens: no answer yet.*
+- Assets: **unsure**; Tami will look. Fallback: recreate a simple before/after login flow diagram (labeled "recreated for portfolio"), no proprietary screens.
