@@ -593,3 +593,6 @@ Saved in `assets/israel-bond-centre/`:
 
 **P2. Primary audience: hiring managers first**, freelance clients second.
 - Homepage hierarchy: fast path to case studies and resume → then "Work with me" for clients.
+
+**P3. Target titles:** Product Designer · Design Director · UX Design Director.
+- *Recommendation:* lead with **"Product Designer"** on the site and resume; it's the widest door for remote roles. Show **leadership signals** throughout (led a team of 5 at OMG RGV, sole designer driving workshops with 12–15 people, promoted repeatedly, ran stakeholder sessions, founder) to make Senior/Lead the next step and Director the trajectory. Director roles usually require several years of managing designers, so apply for **Product Designer / Senior Product Designer**, plus **Lead** roles at smaller companies, now.
