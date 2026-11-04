@@ -638,3 +638,8 @@ Saved in `assets/israel-bond-centre/`:
 ## The Makers Lab (epoxy resin workshops) + YouTube "Tami Makes Stuff"
 **M1. Workshops:** **6–9 workshops** hosted; groups of **2–15 people** each (roughly **~50+ participants** total, estimate to confirm).
 - Portfolio line: "Designed and hosted 6+ hands-on resin workshops for groups of up to 15." Shows facilitation, teaching, and event/experience design.
+
+**M2. YouTube "Tami Makes Stuff"**
+- **180 subscribers** (small, growing).
+- Top views: **~1.5K on a long-form video**, **~6.8K on a Short** *(interpreted as best-performing videos; confirm)*.
+- Portfolio framing: lead with the **6.8K-view Short** and the content skills (filming, editing, A/B-roll learned at The Monitor, hooks). Keep subscriber counts out of the headline; use them in the creator section only.
