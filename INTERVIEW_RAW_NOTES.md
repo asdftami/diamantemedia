@@ -596,3 +596,8 @@ Saved in `assets/israel-bond-centre/`:
 
 **P3. Target titles:** Product Designer · Design Director · UX Design Director.
 - *Recommendation:* lead with **"Product Designer"** on the site and resume; it's the widest door for remote roles. Show **leadership signals** throughout (led a team of 5 at OMG RGV, sole designer driving workshops with 12–15 people, promoted repeatedly, ran stakeholder sessions, founder) to make Senior/Lead the next step and Director the trajectory. Director roles usually require several years of managing designers, so apply for **Product Designer / Senior Product Designer**, plus **Lead** roles at smaller companies, now.
+
+**P4. Compensation** 🔒 *(private: never on the site)*
+- **Last role: $113K** (Computershare / Newrez UX Designer).
+- Stated floor: **$60K**.
+- *Recommendation:* anchor on the **last salary**, not the floor. Target **~$105K–$130K** for remote Product Designer / Senior roles. Treat $60K as a walk-away for exceptional cases only (e.g. contract-to-hire, a strong design-lead title, or equity). Never share the floor with recruiters; if asked, give a target range based on the $113K.
