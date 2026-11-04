@@ -589,3 +589,7 @@ Saved in `assets/israel-bond-centre/`:
   - "Beautiful, intuitive design for any world."
   - "I design cool things that make sense, in any industry."
   - Galaxy tie-in: "Every industry is a new planet. I make each one beautiful and easy to navigate."
+- ➕ **"And accessible. Always accessible. That's the forefront."** → Core pillars: **Cool · Aesthetic · Intuitive · Accessible**. Accessibility is non-negotiable and leads. (Evidence: Fridays-Off keyboard/screen-reader + contrast; Parkfield bilingual + accessible; Bond Centre cognitive-load reduction. The portfolio site itself must meet WCAG 2.2 AA, including the immersive galaxy: reduced-motion mode, keyboard navigation of planets, a screen-reader-friendly timeline.)
+
+**P2. Primary audience: hiring managers first**, freelance clients second.
+- Homepage hierarchy: fast path to case studies and resume → then "Work with me" for clients.
