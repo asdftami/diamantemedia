@@ -1,144 +1,173 @@
-# Tami Trevino — Single Source of Truth
+# Tami Trevino: Career Context (Single Source of Truth)
 
-> One master file holding every fact about my career. The resume, portfolio, LinkedIn, freelance offer pages and case studies all pull from it. Nothing goes on the site or the resume unless it's written here first.
-
-**How to fill this out:** Answer in plain, messy words. Voice notes turned into text are fine. Give real numbers wherever you have them, and write "don't know" if you don't. We'll polish it later; for now the goal is raw material.
-
----
-
-## 1. Positioning: who I am in one breath
-
-1. If a hiring manager remembers only **one sentence** about you, what should it be?
-2. Pick your **primary title** for the job search: Product Designer, UX Designer, Web Designer, or something else? Which one do you want on your next offer letter?
-3. Pick your **freelance title**. It can be different from the job title (for example, "web + content studio for small brands").
-4. What is the thread that connects designer, maker, YouTuber, UGC creator and entrepreneur? (For example: "I build things people actually use, in pixels and in the physical world.")
-5. Which 3 words do you want people to use when they describe you?
-6. What do you do **better than 90% of designers** at your level?
-7. What do you **not** want to be hired for anymore?
-
-## 2. The target: what "winning" looks like
-
-8. Target roles, in priority order (for example: Senior Product Designer, Product Designer II, Web Designer, Design Engineer…).
-9. Target salary range and minimum acceptable salary.
-10. Remote, hybrid or on-site? Which cities?
-11. Dream companies (name 5–10) and dream industries (fintech, creator economy, consumer apps, e-commerce, entertainment…).
-12. Company stage you prefer: startup, scale-up or big tech?
-13. Freelance: who is your ideal client? (Industry, size, budget, location.)
-14. Freelance services you want to sell, ranked: websites, social media management, branding, UGC, content strategy, product/UX consulting, other?
-15. Freelance pricing today and the pricing you want (per project, retainer or hourly).
-16. Which do you want the homepage to prioritize: **job offers or freelance leads**? Or should it split visitors into two paths?
-
-## 3. Career timeline (1993 → 2026): the raw story
-
-*This becomes both the resume's work history and the "galactic timeline."*
-
-17. Born in 1993? Confirm that the timeline starts at your birth. If not, what does 1993 represent?
-18. List every **chapter** of your life that shaped you as a creator (childhood, school, first job, first design gig, starting YouTube, business launches, moves, pivots). Give a year range for each.
-19. For each chapter: what did you **make**, what did you **learn**, and what **changed**?
-20. When was the first moment you knew you were a designer or creator?
-21. What were the biggest turning points or pivots, and why did they happen?
-22. Any setbacks or failures that taught you something you now use at work?
-23. Where are you right now (2026), and what's the next chapter you're traveling toward?
-
-## 4. Work history: one block per job or client
-
-*Copy this block for every role (full-time, contract, freelance, your own businesses).*
-
-```
-Company / client:
-Your title:
-Dates (month/year – month/year):
-Type: full-time / contract / freelance / own business
-What the company does (1 line):
-Team you were on + who you reported to:
-Team size (designers, engineers, PMs):
-Products / platforms you worked on:
-Your main responsibilities:
-Biggest wins (with numbers if possible):
-Tools used:
-Anything you started or led that didn't exist before:
-Can I show this work publicly? (yes / NDA / partially)
-Reference contact (name, title, email):
-```
-
-## 5. Bodies of work: your 3–4 hero projects
-
-*These become the "planets." For each project, answer everything below.*
-
-**Picking them**
-24. List **every** project you'd consider, then mark your top 3–4.
-25. Which project best proves you can do **product design** (research → flows → UI → shipped → results)?
-26. Which best proves **web design and development**?
-27. Which best proves **content, social or UGC** results?
-28. Which best shows the **maker/DIY/hands-on** side that makes you different?
-
-**For each hero project**
-29. Project name, company or client, dates.
-30. **The problem:** what was broken, missing or needed, and for whom?
-31. **Why it mattered** to the business (revenue, retention, conversion, cost, brand)?
-32. **Your role**, exactly: what you personally owned vs. what the team did.
-33. Constraints: timeline, budget, technical limits, stakeholders.
-34. **Process:** research (interviews, surveys, analytics, competitive audits), ideation, wireframes, prototypes, testing, iterations.
-35. Key decisions you made and **why**, including the options you rejected.
-36. What did you test, and what did users say or do that changed the design?
-37. **The outcome, in numbers:** conversions, sign-ups, revenue, engagement, time saved, views, followers, ratings, sales.
-38. What shipped? Is it live? Link?
-39. What would you do differently now?
-40. Testimonials or quotes from a client, boss or user?
-41. What assets exist: Figma files, before/after screenshots, prototypes, videos, sketches, photos of the process, analytics screenshots?
-
-## 6. Skills and tools
-
-42. Design tools (Figma, Adobe CC, Framer, Webflow, Canva, Spline, Blender…), and your level in each: expert / comfortable / learning.
-43. Code: HTML/CSS, JS, React, Shopify Liquid, WordPress? How far can you take a build on your own?
-44. Content tools: Premiere, CapCut, Final Cut, DaVinci, Lightroom, After Effects…
-45. Maker skills: woodworking, 3D printing, Cricut, laser cutting, sewing, electronics, other?
-46. AI tools you use in your workflow, and how.
-47. Research and strategy skills: user interviews, usability testing, A/B testing, analytics (GA4, Hotjar, Mixpanel), SEO.
-48. Soft skills you're known for: leading workshops, presenting to execs, mentoring, client management.
-49. Certifications, courses, bootcamps or degrees (school, program, year).
-
-## 7. Creator and entrepreneur proof
-
-50. YouTube: channel name, subscribers, total views, top 3 videos and their numbers, upload history.
-51. Other platforms (IG, TikTok, Pinterest…): handles, followers, best-performing posts, engagement rates.
-52. UGC: brands you've created for, deliverables, results (ad performance, views, ROAS if known).
-53. Businesses you've started: name, what it sells, dates, revenue or customer numbers, status today.
-54. Products you've physically made or sold (Etsy, Shopify, markets)?
-55. Press, features, awards, speaking, collabs, viral moments?
-
-## 8. Personality and brand
-
-56. Describe your vibe in 3 words. What do you want people to **feel** when they land on the site?
-57. Is the intergalactic theme a metaphor for something specific? (Exploring? Being "out of this world"? Many worlds/skills?)
-58. Colors, fonts and aesthetics you love. Any you hate?
-59. 3–5 portfolio sites or websites you love, and what you love about each.
-60. Do you want your face, voice or video on the site? (Intro video, voice narration, a photo of you?)
-61. Is there a name or nickname you go by professionally? Is "Diamante Media" your brand?
-62. Fun facts or personal details you're happy to share (hobbies, background, where you're from, languages).
-63. Are there things you **don't** want on the site (age, personal history, certain clients)?
-
-## 9. Practical and technical
-
-64. Do you own a domain? Which one(s)?
-65. Do you prefer to build it in code (fully custom, best for the immersive idea), Framer, Webflow or Wix? Do you need to edit content yourself without code?
-66. Launch deadline? Are you actively applying now?
-67. Contact preferences: email, Calendly link, contact form, LinkedIn, phone?
-68. Do you want a downloadable resume PDF on the site?
-69. Do you have analytics in mind? (Knowing who visited the site helps with the job hunt.)
-70. Any accessibility or performance must-haves? (Recruiters often open portfolios on a phone or a slow laptop.)
+> Everything the resume, LinkedIn, portfolio and cover letters pull from. Public-safe: private details stay in `INTERVIEW_RAW_NOTES.md` and are **not** included here.
+> Last updated: November 4, 2026 · Items marked **[confirm]** still need a check.
 
 ---
 
-## Resume ⇄ Portfolio mapping (filled in after the answers)
+## 1. Snapshot
 
-| Source of truth section | Resume | Portfolio |
-|---|---|---|
-| 1. Positioning | Summary line | Homepage hero |
-| 2. Target | Which bullets to emphasize | CTAs and audience paths |
-| 3. Timeline | — | Galactic timeline |
-| 4. Work history | Experience section | Timeline stops + About |
-| 5. Hero projects | Top 2–3 bullets per role | Planets → case studies |
-| 6. Skills | Skills section | Tool belt / capabilities |
-| 7. Creator proof | "Additional" section | Creator planet + social proof |
-| 8. Brand | Visual style of the resume | Whole site art direction |
+**Name:** Tami Trevino · **Based in:** Colorado (US) · **Work style:** Remote
+**Languages:** English, Spanish (bilingual since childhood)
+
+**Headline (draft):** Product Designer · UX, Brand & Web · Designing beautiful, intuitive, accessible experiences in any industry
+
+**One-line positioning:**
+*Every industry is a new world. I make each one beautiful, intuitive and accessible.*
+
+**Pillars:** Innovative · Aesthetic · Intuitive · **Accessible** (accessibility leads)
+
+**Superpower (her words):** "I'm really good at finding problems and building solutions and tools for solutions." She spots flaws, gaps and friction others miss, then fixes them.
+
+**Industries designed for:** mortgage finance · government bonds · dental/healthcare · luxury lifestyle e-commerce · local media · crafts/maker · regulated retail
+
+---
+
+## 2. What she's looking for
+
+| | |
+|---|---|
+| **Primary title** | Product Designer |
+| **Also open to** | Senior Product Designer · UX Designer · Senior Graphic Designer · Design Lead (smaller companies) |
+| **Direction** | Design leadership → Design Director / UX Design Director |
+| **Must-have** | **Fully remote** |
+| **Leadership** | Ready to lead entry-level and mid-level designers |
+| **Freelance (secondary)** | Websites · branding & graphics · social media content · UGC |
+| **Long term** | Running her own business |
+
+---
+
+## 3. Work history (newest first)
+
+### Fridays-Off: Co-founder · Brand, Web & Marketing Design Lead
+**Oct 2026 – present** · Remote · fridays-off.co
+- Co-founded a luxury **lifestyle and home goods** e-commerce brand ("a Louis Vuitton-level experience")
+- Co-designed the brand identity: "ff" monogram, **Fridays-Off** name styling, palette (cream `#F5F3EF`, sand `#D8C3A5`, espresso `#3B2A20`, near-black `#1A1A1A`), Montserrat + Poppins, tagline "unwind & recharge"
+- **Designed and built the entire Shopify store**: explored 3 themes, customized Tinker, and paired with **Claude** for custom CSS/theme code
+- Organized **460+ products from ~48 brands** into a 3-pillar information architecture plus brand, new-arrival, best-seller and travel collections
+- **Accessibility from day one:** keyboard + screen-reader support; palette contrast verified up to **15.7:1 (WCAG AAA)**
+- Built an **AI content pipeline**: style guide + Notion reference library → Claude-written prompts → **Higgsfield** imagery → **Blotato** scheduling
+- Set up an automated weekly store-health check (duplicates, empty collections)
+- Co-founder handles logistics, product research, copy and marketing strategy; Tami owns web, brand execution, marketing design and automation
+
+### Jars: Retail Associate → Lead Sales Associate → Floor Lead
+**July 2025 – present** · Colorado
+- Promoted twice, to floor lead (floor-manager responsibilities)
+- **Self-initiated UX work:** usability audits and heuristic evaluations of the company's **e-commerce website and newly launched app**. **The digital team implemented her recommendations.**
+- *(Public framing: "Jars" / "a multi-state retailer.")*
+
+### The Makers Lab: Founder
+**2024 – present** · Colorado
+- Designs and hosts hands-on **epoxy resin workshops** (jewelry, pendants, crafts): **6–9 workshops**, groups of **2–15**
+- YouTube channel **Tami Makes Stuff**: DIY processes and how-tos. ~180 subscribers; top Short **~6.8K views**, top long-form **~1.5K views**
+
+### Kelly Education (Aurora Public Schools): Substitute Paraeducator, Special Education
+**2024–2025 [confirm dates]** · Colorado
+
+### Newrez: UX Designer *(after Newrez acquired SLS/Computershare Loan Services)*
+**~Feb 2024 – mid 2024 [confirm]** · Remote/Colorado
+- **Login redesign:** consolidated 3–4 separate login pages and buttons into **one login with a user-type picker**, **cutting clicks from 4 to 2 (−50%)**. Flowcharts → hi-fi, A/B-test-ready mockups. *(Not launched: the role was eliminated in a 375-person layoff.)*
+- Internal communications design (wallpapers, banners), phishing-awareness visuals with the cybersecurity team, following DEI visual guidelines
+
+### Computershare Loan Services (formerly SLS): UX Designer
+**Dec 2022 – Feb 2024** · Greenwood Village, CO
+- **Sole UX designer** on the Investor Value Stream (12–15 people: PM, BSA, stakeholder, engineers)
+- ⭐ **Project Insight**: self-serve investor analytics dashboards replacing a **3–5 day** manual spreadsheet/PDF request process. Assumption mapping, stakeholder + investor interviews, persona, journey map, storyboards, co-design whiteboard workshops, low → high fidelity, **usability testing with 5 investors**, 3 prototype variants. Dashboard suite: Main, Investor Type, Delinquency, Cashflow, HELOC, Active, Inactive, Disaster (embedded **FEMA disaster map**). Investors at every fidelity: *"When is this coming out? I need it now."* Cancelled after the Newrez acquisition. Tools: Figma, FigJam, Airtable (research repository), Azure DevOps.
+- ⭐ **Bond Centre 2.0 (State of Israel Bonds)**: redesigned a cluttered bondholder/admin portal: split navigation (A/B tested, the split won), accordions + pagination, 3-step wizards, inline uploads, admin approve/reject flow, full responsive mobile set (Inbox A/B tested). **Shipped to production.** Tool: Figma.
+- Customer portal features
+- Led **Pride Month** engagement events (trivia, giveaways) with cross-department colleagues
+
+### Freelance Brand & Web Designer: Dental
+**~2021–2022 [confirm]** · Austin, TX
+- ⭐ **Parkfield Dental**: full **brand identity (Illustrator)** + **Squarespace** website on one design system for a newly acquired practice; custom line icons; **English/Spanish translator at launch**; accessible. Client: the DSO's former VP of Operations.
+- **Evolve Dental Partners**: Squarespace site built on the founder's brand guidelines, handed off for self-editing. Client: the DSO's former CEO.
+- **Story:** two executives from the same company each hired her for their next venture.
+
+### Dental group (Rose Dental Group / Strive Dental Management / Avery Ranch Dental)
+**~2021 – Dec 2022 [confirm]** · Austin, TX
+- Front desk / office liaison → **promoted to Office Manager** of the dental support organization (~8–9 months in): led the move to a new facility, coordinated IT and equipment setup, and maintained the **website and blog**
+- After the DSO was sold: office liaison at Avery Ranch Dental → **promoted to Treatment Coordinator** (presenting treatment plans and costs to patients)
+
+### Kerbey Lane Cafe: Server
+**~2020–2021** · Austin, TX · Worked through COVID while starting her Master's
+
+### The Monitor (McAllen, TX newspaper): Graphic Designer, in-house digital media team
+**~2019–2020 [confirm]**
+- Production graphic design; video interviews and editing (A-roll/B-roll); brand-cohesive document design
+
+### LUXXE Digital: Intern → Editor-in-Chief, OMG RGV
+**~2019** · Rio Grande Valley, TX
+- Co-launched **OMG RGV**, a digital magazine featuring Rio Grande Valley hidden gems
+- **Led a team of 5 designers**; **single-handedly built the website/blog** (with an embedded events calendar); helped design the logo; reviewed all copy and visuals; grew the social channels with interviews and edited video
+
+### Earlier
+- **McDonald's**, crew (first job, age ~15–16), working alongside her mom, who was a manager there
+
+---
+
+## 4. Case studies (portfolio v1)
+
+| # | Project | Type | Status | File |
+|---|---|---|---|---|
+| 1 | Project Insight | Product/UX, data viz, research | Validated through hi-fi; cancelled by the acquisition | `content/case-studies/01-project-insight.md` |
+| 2 | Bond Centre 2.0 | Redesign, IA, navigation testing, responsive | **Shipped** | `content/case-studies/02-israel-bond-centre.md` |
+| 3 | Fridays-Off | Founder: brand + Shopify + AI pipeline | Live | `content/case-studies/03-fridays-off.md` |
+| 4 | Dental Brands & Websites | Freelance brand + web | Live (client-edited) / handed off | `content/case-studies/04-dental-websites.md` |
+
+**Phase 2 (personal & school):** Femfly (women's networking & mentorship app, her first research project, evolving with AI), Canielle [confirm spelling], yoga flow studio app, game studio app.
+**Supporting pieces:** Newrez login, Jars audits, Makers Lab / YouTube, OMG RGV.
+
+---
+
+## 5. Skills and tools
+
+**UX & product:** user interviews · stakeholder interviews · assumption mapping · personas · journey maps · storyboards · co-design workshops · usability testing · heuristic evaluation · information architecture · user flows · wireframing · prototyping · A/B test design · data visualization · responsive design · accessibility (WCAG)
+
+**Visual & brand:** brand identity · logo design · design systems · typography · color · editorial layout · social content · video editing
+
+**Web:** Shopify · Squarespace · WordPress-era blog work · HTML/CSS with AI pairing
+
+**Tools:** Figma · FigJam · Adobe Illustrator · Airtable · Azure DevOps · Shopify · Squarespace · Notion · Blotato
+**AI:** Claude & Claude Code (skills, automations, code pairing) · ChatGPT · Google Gemini · Midjourney · Higgsfield · Kittl
+
+**Leadership:** led a team of 5 (OMG RGV) · sole designer driving cross-functional workshops · promoted repeatedly (office manager, treatment coordinator, floor lead) · workshop facilitation (groups of up to 15)
+
+---
+
+## 6. Education
+
+- **Master's in User Experience Design**, completed **Dec 2022** · school **[confirm name]**
+- **BFA, Graphic Design**, University of Texas Rio Grande Valley, **Dec 2020** (finished a semester early)
+- South Texas High School for Health Professions ("Med High"), 2011, including a dental class and clinical rotations
+- *Earlier coursework: UTPA (biology, 2012–13), TSTC (dental hygiene, ~2013–15)*
+
+---
+
+## 7. Story (public version)
+
+- Born **May 1993 in Monterrey, México**; grew up in her grandmother's bilingual school, where her mom taught and her dad (a dentist) coached
+- Moved to **South Padre Island, Texas at 9**; started fifth grade in **ESL**. She knows what it feels like when a place isn't built for you, and designs so people feel like it is.
+- Grew up expecting to be a dentist like her dad, then found **art and graphic design**
+- Her dad passed away before she graduated; her senior thesis work about him is where she truly fell in love with art *(personal; she decides whether to share)*
+- Worried about getting stuck early in her design career, she earned a **Master's in UX Design** while working full time, and turned it into a UX career
+
+---
+
+## 8. Portfolio art direction
+
+- **Concept:** an intergalactic journey from **1993 → 2026**. Each chapter is a planet; case studies are planets you "land on."
+- **Look:** dark purple-blue galaxy; signature pastels **pink `#FFB3D9` · lilac `#C9B6FF` · butter `#FFF1A6` · sky `#A8D8FF` · Tiffany blue `#81D8D0`**
+- **Motion:** warp-speed star streaks between planets. **Motion toggle + reduced-motion support** are required.
+- **Y2K:** the **Tamagotchi is the spaceship** (journey navigator); a **brick phone** is the contact card; pixel/LCD type (VT323) + Space Grotesk
+- **Primary audience:** hiring managers first (fast path to work + resume), freelance clients second ("Start a project")
+- Prototype: `site/index.html`
+
+---
+
+## 9. Open items [confirm]
+
+- Master's degree school name
+- Exact dates: dental group, freelance dental, The Monitor, Newrez, Kelly Education
+- Contact email for the site and resume
+- LinkedIn PDF → compare against this file
+- Spelling: "Canielle"
