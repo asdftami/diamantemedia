@@ -677,3 +677,18 @@ Saved in `assets/israel-bond-centre/`:
 
 **v1 also needs:** homepage (galaxy timeline, accessible), About (story), Resume (PDF + "email me for a tailored one"), Contact / Start a project.
 **Phase 2 (after launch):** Personal & School Projects (Femfly, Canielle, yoga flow studio, game studio), the supporting projects (Newrez login, Jars audits, Makers Lab / YouTube, OMG RGV), and Fridays-Off metrics after 30–60 days.
+
+### Parkfield Family Dental: live site captured (Nov 4, 2026)
+Saved in `assets/dental/parkfield/`: full-page desktop screenshots of Home, Services, Insurance, Meet Us, Reviews, Financing Options, Contact, plus the mobile homepage.
+
+**What's on the live site**
+- Logo: geometric tooth-outline mark + "PARKFIELD DENTAL" wordmark (Tami's Illustrator logo).
+- Hero: "Dental Excellence. Compassionate Care." over a warm family photo, with a green **Book an Appointment** CTA (repeated in the header).
+- Homepage flow: Our Approach → **Our Services** (custom line icons: Preventive, Implants, Cosmetic, Advanced Technology) → Invisalign banner → patient testimonial → "a safe space to relax" (office photo) → **Visit us** (address, hours, phone, Google map) → "Schedule your appointment" CTA band → footer.
+- Palette: bright dental blue + deep navy, green CTAs, warm off-white background; geometric sans-serif type.
+- Nav: Home, Services, Insurance, Meet Us, Reviews, Financing Options, Pay Your Invoice, Contact, Call Us.
+- Responsive: the mobile layout collapses into a hamburger menu.
+
+**⚠️ To check with Tami**
+- **No Spanish translator was found** on the live homepage (no Weglot/Google Translate code, no language toggle). Was it removed later, or was it on specific pages? The case study shouldn't claim it's live unless confirmed. Phrase it as "designed with a site-wide English/Spanish translator at launch" if that's what she built.
+- Some homepage photos (e.g. the Invisalign banner) may be vendor or stock assets. Credit them accordingly.
