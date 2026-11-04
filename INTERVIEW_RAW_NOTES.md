@@ -623,3 +623,5 @@ Saved in `assets/israel-bond-centre/`:
 - Process: **flowcharts** mapping current vs. proposed login paths → **high-fidelity mockups**, **A/B-test ready**.
 - **Not launched:** the 375-person layoff came shortly after.
 - *Portfolio use: a compact "mini case study" card (problem → flow → hi-fi). Before/after flowcharts showing fewer clicks would be the hero visual. Ask Tami for the flowcharts + mockups and a rough click count (before vs. after).*
+
+**S3. Metric:** clicks to log in **4 → 2 (−50%)** (Tami's estimate from the designed flow). *Asked whether she still has the flowcharts/screens: no answer yet.*
