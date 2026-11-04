@@ -575,3 +575,9 @@ Saved in `assets/israel-bond-centre/`:
 - **Parkfield URL:** https://www.parkfieldfamilydental.com (live).
 - **Evolve Dental Partners:** **not live right now**; small LinkedIn presence. Plan: try the **Wayback Machine** for archived versions; otherwise describe it as a smaller supporting item (scope, process, client relationship) without visuals, or fold it into the Parkfield case study as "repeat-client referral."
 - ⏸ Both parkfieldfamilydental.com and web.archive.org are **blocked by this session's network policy**.
+
+---
+# Positioning
+
+**P1. The reaction she wants:** *"Damn, this is fucking cool and amazing."*
+→ The **emotional goal** for the homepage: wow factor, delight, "I've never seen a portfolio like this." (This supports the immersive galactic timeline idea.) Still need the **one-sentence statement** of who she is and what she does.
