@@ -626,3 +626,11 @@ Saved in `assets/israel-bond-centre/`:
 
 **S3. Metric:** clicks to log in **4 → 2 (−50%)** (Tami's estimate from the designed flow). *Asked whether she still has the flowcharts/screens: no answer yet.*
 - Assets: **unsure**; Tami will look. Fallback: recreate a simple before/after login flow diagram (labeled "recreated for portfolio"), no proprietary screens.
+
+## Jars Cannabis: website and app UX audits (self-initiated)
+**J1. Outcome**
+- ⭐ **Jars implemented the changes** Tami recommended and **thanked her** later.
+- **Not compensated** for the UX work, but she **was promoted** (to sales floor manager / floor lead). *(Don't claim the promotion was for the audits unless that's confirmed; present them side by side.)*
+- *Portfolio line:* "Self-initiated heuristic evaluations and usability audits of the Jars e-commerce site and new app; **recommendations were implemented** by the digital team."
+- Docs: Tami has documents to send.
+- *Note: use Jars' name only if comfortable; otherwise "a multi-state cannabis retailer."*
