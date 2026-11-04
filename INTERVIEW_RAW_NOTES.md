@@ -692,3 +692,20 @@ Saved in `assets/dental/parkfield/`: full-page desktop screenshots of Home, Serv
 **⚠️ To check with Tami**
 - **No Spanish translator was found** on the live homepage (no Weglot/Google Translate code, no language toggle). Was it removed later, or was it on specific pages? The case study shouldn't claim it's live unless confirmed. Phrase it as "designed with a site-wide English/Spanish translator at launch" if that's what she built.
 - Some homepage photos (e.g. the Invisalign banner) may be vendor or stock assets. Credit them accordingly.
+
+### Fridays-Off: live site captured (Nov 4, 2026)
+Saved in `assets/fridays-off/site/`: 21+ age gate, desktop Home, Smoke collection, a product page, Brands, About, and the mobile homepage.
+
+**What's on the live site**
+- **21+ age gate** ("Are you 21 or older?" / Yes, I am 21+ / Leave): a compliance UX feature.
+- Announcement bar: "Free shipping on orders $100+ — premium glass & accessories delivered to your door."
+- Header: Menu + search on the left, centered **"Fridays + ff" logo**, account + cart on the right.
+- Hero: **"Elevate Every Session"**, "Premium glass and accessories for those who never compromise," CTA "Shop New Arrivals."
+- Homepage flow: Shop by Category (Smoke / Dab & Vape / Essentials / Lifestyle & Gifts) → New Arrivals carousel → "Welcome to Fridays-Off" story block ("Meet the Curators") → Best Sellers → **Shop by Brand** carousel → Travel Essentials feature → "The Art of the Ritual" editorial → **"Join the Friday List"** email signup ("No spam, just good pieces. 21+ only").
+- Product page: large gallery, price, quantity, Add to cart, **Shop Pay installments**, rich description + spec bullets, trust tiles (Made with care / Great value / Elegant design / Quality materials), Details and Shipping accordions, "Shop the full collection."
+- Visuals match the brand guide: cream background, sand buttons and announcement bar, espresso-brown CTAs, Montserrat type, generous whitespace.
+
+**🧹 Quick polish spotted**
+- **Best Sellers shows "Sold out" items** (e.g. Staze × MJ Arsenal Stash Jar, Soft Serve Lighter Holder). Swap in in-stock pieces; sold-out best sellers lose sales.
+- **The footer area looks empty** (a tall sand-colored block with only "© 2026 Fridays-Off, Powered by Shopify" and Terms). The footer menus exist in Shopify (Shop, Help, About, Categories) but don't appear in the capture. Check the footer section in the theme editor.
+- The header logo reads "Fridays" + ff mark; make sure it follows the **"Fridays-Off"** naming decision.
