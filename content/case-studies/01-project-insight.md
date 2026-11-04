@@ -6,12 +6,13 @@ role: "Sole UX Designer"
 team: "Investor Value Stream: project manager, business systems analyst, stakeholder, 12–15 engineers"
 timeline: "December 2022 – February 2024"
 industry: "Mortgage loan servicing · Finance"
+tools: ["Figma", "FigJam"]
 methods: ["Assumption mapping", "Stakeholder interviews", "User interviews", "Personas", "Journey mapping", "Storyboards", "Co-design workshops", "Usability testing (5 investors)", "Information architecture", "Low → high-fidelity prototyping"]
 status: "Designed and validated through high fidelity. Cancelled after an acquisition, before development."
 hero_image: "assets/project-insight/10-hifi-main-dashboard.png"
 ---
 
-<!-- DRAFT v1: written from Tami's interview notes. Items marked [confirm] need a quick check before publishing. -->
+<!-- DRAFT v2: confirmed by Tami on Nov 4, 2026: no colleague names, placeholder data, tools Figma + FigJam. -->
 
 # Project Insight
 
@@ -22,6 +23,7 @@ hero_image: "assets/project-insight/10-hifi-main-dashboard.png"
 | **My role** | Sole UX designer, from research through high-fidelity prototypes |
 | **Team** | Project manager, business systems analyst (BSA), business stakeholder, 12–15 engineers |
 | **Timeline** | Dec 2022 – Feb 2024 |
+| **Tools** | Figma (wireframes → hi-fi prototypes), FigJam (assumption maps, flowcharts) |
 | **Users** | Investors who own loan portfolios serviced by Computershare |
 | **Outcome** | Design validated with 5 investors. Every round of testing ended with *"When can I have this?"* |
 
@@ -141,4 +143,4 @@ The goal was to replace a **3–5 day manual request process** with **self-serve
 
 ---
 
-*Data shown in these screens is illustrative.* <!-- [confirm] whether figures are placeholders; blur/replace before publishing if real -->
+*All figures shown in these screens are placeholder data.*
