@@ -712,3 +712,6 @@ Saved in `assets/fridays-off/site/`: 21+ age gate, desktop Home, Smoke collectio
 
 **Tools (Project Insight only, per Tami, Nov 4):** Figma, FigJam (flowcharts, assumption maps), **Airtable** (user interviews + usability-test feedback), **Azure DevOps** ("DevOps") for prioritizing work. (confirmed: Azure DevOps). Bond Centre: Figma (confirmed).
 - ✅ **Wording rule (Tami, Nov 4):** in public portfolio copy, describe Fridays-Off only as **lifestyle products / home goods**. No "smoking," "cannabis," or product-type terms (bongs, dab rigs, vapes). Note: the live-site screenshots still show category names (Smoke, Dab & Vape) and glass products. Pick or crop screenshots that fit this framing (brand guide, homepage hero, lifestyle sections) before publishing.
+- ✅ Co-founder stays unnamed ("my co-founder"). ✅ Soften the motivation to "a business we're building on our own terms."
+
+**Parkfield: confirmed (Nov 4):** the **English/Spanish translator was live at launch** and has since been removed (likely the subscription lapsed). The client later **added more navigation items and some low-resolution (pixelated) images**; Tami had nothing to do with those. → In the case study, show **her launch design**, describe the translator as "at launch," and avoid using screenshots of sections the client changed (or crop them).

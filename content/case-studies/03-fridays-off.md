@@ -34,7 +34,7 @@ hero_image: "assets/fridays-off/site/01-desktop-home.png"
 
 Most online shops in this space feel cluttered, loud and cheap. Fridays-Off is the opposite: **a Louis Vuitton-level experience for lifestyle products and home goods.** It's a curated store for well-made, beautiful pieces, for people who care how things look on their shelf as much as how they work.
 
-For my co-founder and me, it's also something personal: a business we're building so we can leave corporate jobs and work on our own terms.
+For my co-founder and me, it's also personal: a business we're building on our own terms.
 
 ---
 
