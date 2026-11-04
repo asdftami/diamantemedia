@@ -11,8 +11,8 @@ hero_image: "assets/dental/parkfield/desktop-home-full.png"
 ---
 
 <!-- DRAFT v1: written from Tami's interview notes + live-site capture (Nov 4, 2026).
-     The client changed Parkfield after launch (extra nav items, some low-resolution photos, translator removed).
-     Only show Tami's original work: crop screenshots to the hero/logo, services icons, and layouts she built. [confirm] which sections are hers. -->
+     Client changes after launch (per Tami): a second row of nav items, the pixelated waiting-room photo, parts of the contact page, translator removed.
+     Portfolio crops in assets/dental/parkfield/portfolio/ show only Tami's original work (desktop hero cropped below the nav; the mobile view has her single hamburger menu). -->
 
 # Dental Brands & Websites
 
@@ -41,12 +41,16 @@ My former VP of Operations bought an Austin dental practice that already had loy
 
 - **A warm, human first impression:** *"Dental Excellence. Compassionate Care."* over a real family moment, with **Book an Appointment** always one tap away
 - **Custom line icons** for each service (preventive care, implants, cosmetic, technology) that echo the logo's single-line style
-- **Clear paths for patients:** services, insurance, meet the team, reviews, contact, and a "Visit us" section with hours, phone number and map
+- **Clear paths for patients:** a single, simple navigation row, plus a "Visit us" section with hours, phone number and map
 - **Responsive:** designed to work just as well on a phone
 
-![Parkfield Dental homepage hero](../../assets/dental/parkfield/desktop-home-full.png)
-<!-- crop to hero + "Our Services" icons; avoid client-added sections -->
-![Parkfield on mobile](../../assets/dental/parkfield/mobile-home-full.png)
+![Parkfield Dental logo](../../assets/dental/parkfield/portfolio/p01-logo.png)
+![Homepage hero](../../assets/dental/parkfield/portfolio/p02-hero.png)
+![Our approach and custom service icons](../../assets/dental/parkfield/portfolio/p03-approach-services.png)
+![Patient testimonial](../../assets/dental/parkfield/portfolio/p04-testimonial.png)
+![Visit us: hours, phone and map](../../assets/dental/parkfield/portfolio/p05-visit-us.png)
+![Booking call to action](../../assets/dental/parkfield/portfolio/p06-cta-band.png)
+![Parkfield on mobile](../../assets/dental/parkfield/portfolio/p07-mobile-hero.png)
 
 ### Designed for the whole community
 Austin has a large Latino community, and many patients speak Spanish at home or only speak Spanish. At launch, I built the site with a **site-wide English/Spanish translator**, so every page (services, insurance, booking) could be read in the patient's own language. I also designed for **accessibility**: readable type, strong contrast, and clear, consistent buttons.
