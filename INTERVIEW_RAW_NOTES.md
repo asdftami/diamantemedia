@@ -617,3 +617,9 @@ Saved in `assets/israel-bond-centre/`:
 - **Too many separate login pages** and **too many clicks** to log in.
 - **3–4 different user types**, each with **its own login button in a different place**, so buttons were **hard to find**.
 - (From earlier: Tami created **alternate login versions** to reimagine a unified experience on the payment portal platform.)
+
+**S2. Solution and outcome**
+- **One unified login page** where users **pick their user type**, replacing 3–4 scattered login pages and buttons.
+- Process: **flowcharts** mapping current vs. proposed login paths → **high-fidelity mockups**, **A/B-test ready**.
+- **Not launched:** the 375-person layoff came shortly after.
+- *Portfolio use: a compact "mini case study" card (problem → flow → hi-fi). Before/after flowcharts showing fewer clicks would be the hero visual. Ask Tami for the flowcharts + mockups and a rough click count (before vs. after).*
