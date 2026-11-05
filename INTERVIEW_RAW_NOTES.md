@@ -731,3 +731,5 @@ Saved in `assets/fridays-off/site/`: 21+ age gate, desktop Home, Smoke collectio
 - **Nov 4:** Master's = **Maryland Institute College of Art (MICA), Baltimore**, Dec 2022. Secondary-role dates are left blank on purpose. **No public email**: use a spam-protected contact form. "Canielle" was a transcription error; removed.
 - **Bond Centre (Nov 4):** the Jerusalem welcome-page screenshot (09) is the **shipped/live** version, not a before. Moved it to Outcome. No true 'before' screenshots exist in the uploads. The public login is at www-us.computershare.com/BondCentre/public/Login.aspx (blocked in this session, as is web.archive.org). Screenshot 11 (portfolio, dated Apr 29 2024) is likely also the shipped version: ask Tami.
 - ⏳ **PENDING (Tami, Nov 5):** no real 'before' for Bond Centre exists. Later: recreate a simple, clearly labeled mock of the old experience.
+- **Bond Centre "before" (Tami):** recreate as **hi-fi mockups with fake info**.
+- **About page (Tami, Nov 5):** About gets **its own planet**. Base it on her earlier **Tami Makes Stuff about page** with **two photos in bubbles that flip back and forth**. She'll send the HTML file tonight.
