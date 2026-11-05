@@ -736,3 +736,16 @@ Saved in `assets/fridays-off/site/`: 21+ age gate, desktop Home, Smoke collectio
 
 # ✍️ Voice rule (Tami, Nov 5)
 Tami talks casually; **everything written for her must read as a polished professional.** Never use words like "fake," "lol," or slang in public copy. Preferred terms: "representative data," "sample data," "anonymized," "recreated for confidentiality," "concept," "illustrative."
+
+# 🧠 Working style (Tami, Nov 5)
+**One thing at a time, always.** Tami has ADHD and gets cognitive overload. Ask one question per message, give one task at a time, keep messages short, and avoid long lists or multiple decisions at once.
+
+# 📋 Portfolio fix queue (from recruiter tips), in order
+1. Impact card at the top of each case study
+2. Faster path to work: nav "Work · About · Resume · Contact" + "Selected work" strip
+3. Keyword chips in the hero
+4. Captions: one sentence, one number, one takeaway
+5. Copy-email button + LinkedIn (needs Tami's decision on which email)
+6. Clean visuals (recreate sticky note/whiteboards as diagrams)
+7. Learnings cards + mobile first-frame fix
+Also pending: Google Drive upload of SOURCE_OF_TRUTH, About planet (Tami's HTML), Bond Centre mockups, headline choice.
