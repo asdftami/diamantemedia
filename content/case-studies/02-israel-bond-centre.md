@@ -19,6 +19,11 @@ hero_image: "assets/israel-bond-centre/10-new-portfolio-split-nav.png"
 
 **Redesigning a cluttered bond portal into a calm, guided experience for bondholders and admins.**
 
+<div class="impact" markdown="0">
+<p class="impact-label">Impact</p>
+<p>Redesigned a cluttered bond portal for bondholders and admins and <strong>shipped it to production</strong>. The <strong>split navigation won in A/B testing</strong>, and multi-step tasks became guided <strong>3-step wizards</strong>.</p>
+</div>
+
 | | |
 |---|---|
 | **My role** | Sole UX/UI designer, from audit to dev-ready designs |
@@ -26,7 +31,6 @@ hero_image: "assets/israel-bond-centre/10-new-portfolio-split-nav.png"
 | **Users** | **Bondholders** managing their Israel Bonds, and **admins** reviewing and approving their requests |
 | **Platforms** | Desktop web + responsive mobile |
 | **Tools** | Figma |
-| **Outcome** | **Shipped to production.** Developers and product owners called it the upgrade the platform needed. |
 
 ---
 
