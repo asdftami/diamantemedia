@@ -146,4 +146,4 @@ The goal was to replace a **3–5 day manual request process** with **self-serve
 
 ---
 
-*All figures shown in these screens are placeholder data.*
+*Data shown is representative; client information has been anonymized to protect confidentiality.*
