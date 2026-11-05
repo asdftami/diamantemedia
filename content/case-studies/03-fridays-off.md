@@ -9,7 +9,7 @@ platforms: ["Shopify", "Instagram / social"]
 tools: ["Shopify", "Claude + Claude Code", "Higgsfield", "Notion", "Blotato"]
 status: "Live at fridays-off.co. Social launch in progress."
 live_url: "https://fridays-off.co"
-hero_image: "assets/fridays-off/site/portfolio/f01-hero.png"
+hero_image: "assets/fridays-off/site/portfolio/f00-mockup-laptop-page.webp"
 ---
 
 <!-- DRAFT v2 (Tami: describe as lifestyle products / home goods only; no smoking or cannabis wording).
@@ -24,6 +24,9 @@ hero_image: "assets/fridays-off/site/portfolio/f01-hero.png"
 <p class="impact-label">Impact</p>
 <p>Co-founded and built a luxury lifestyle brand from zero: a <strong>460+ product</strong> store from <strong>~48 brands</strong>, designed to be <strong>fully keyboard- and screen-reader accessible</strong> with <strong>WCAG AAA</strong> color contrast, plus an <strong>AI content pipeline</strong> that keeps a two-person team publishing every week.</p>
 </div>
+
+![Fridays-Off on desktop: lifestyle-first homepage design](../../assets/fridays-off/site/portfolio/f00-mockup-laptop-page.webp)
+
 
 | | |
 |---|---|
