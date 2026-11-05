@@ -18,6 +18,11 @@ hero_image: "assets/project-insight/10-hifi-main-dashboard.png"
 
 **Turning a week of spreadsheet requests into a self-serve investor dashboard.**
 
+<div class="impact" markdown="0">
+<p class="impact-label">Impact</p>
+<p>Designed self-serve investor dashboards to replace a <strong>3–5 day</strong> manual data-request process. Validated with <strong>5 investors</strong>, who asked <em>“When can I have this?”</em> at every fidelity.</p>
+</div>
+
 | | |
 |---|---|
 | **My role** | Sole UX designer, from research through high-fidelity prototypes |
@@ -25,7 +30,6 @@ hero_image: "assets/project-insight/10-hifi-main-dashboard.png"
 | **Timeline** | Dec 2022 – Feb 2024 |
 | **Tools** | Figma (wireframes → hi-fi prototypes) · FigJam (assumption maps, flowcharts) · Airtable (interview + usability-test research repository) · Azure DevOps (backlog prioritization with the team) |
 | **Users** | Investors who own loan portfolios serviced by Computershare |
-| **Outcome** | Design validated with 5 investors. Every round of testing ended with *"When can I have this?"* |
 
 ---
 
