@@ -45,6 +45,10 @@
   .pill:hover{border-color:var(--lilac);background:#ffffff1c}
   .pill.primary{background:var(--pink);color:#2a0d22;border-color:var(--pink);font-weight:700}
   .pill[aria-pressed="false"] .dot{background:#888}
+  .icon-btn{width:44px;height:44px;border-radius:50%;border:1.5px solid #ffffff40;background:#ffffff10;color:var(--tiffany);font-size:1.1rem;cursor:pointer;display:inline-grid;place-items:center;backdrop-filter:blur(6px)}
+  .icon-btn:hover{border-color:var(--lilac)}
+  .icon-btn[aria-pressed="false"]{color:#8a84a6}
+  .icon-btn[aria-pressed="false"] span[aria-hidden]{text-decoration:line-through}
   .dot{width:10px;height:10px;border-radius:50%;background:var(--tiffany);display:inline-block}
 
   /* journey */
@@ -166,10 +170,11 @@
 <header class="top">
   <a class="brand" href="#start">Tami Trevino <span>✦</span></a>
   <nav class="actions" aria-label="Quick links">
-    <button class="pill" id="motionToggle" aria-pressed="true" type="button"><span class="dot" aria-hidden="true"></span><span>Motion</span><span class="sr-only" id="motionState">on</span></button>
-    <a class="pill hide-sm" href="#work">Work</a>
+    <a class="pill" href="#work">Work</a>
+    <a class="pill hide-sm" href="#origin">About</a>
     <a class="pill hide-sm" href="resume.pdf">Resume</a>
     <a class="pill primary" href="#contact">Contact</a>
+    <button class="icon-btn" id="motionToggle" aria-pressed="true" type="button" title="Motion on/off"><span aria-hidden="true">✦</span><span class="sr-only">Motion <span id="motionState">on</span></span></button>
   </nav>
 </header>
 
