@@ -20,6 +20,11 @@ hero_image: "assets/fridays-off/site/portfolio/f01-hero.png"
 
 **Building a luxury lifestyle brand and e-commerce store from zero, with an AI-powered content engine.**
 
+<div class="impact" markdown="0">
+<p class="impact-label">Impact</p>
+<p>Co-founded and built a luxury lifestyle brand from zero: a <strong>460+ product</strong> store from <strong>~48 brands</strong>, designed to be <strong>fully keyboard- and screen-reader accessible</strong> with <strong>WCAG AAA</strong> color contrast, plus an <strong>AI content pipeline</strong> that keeps a two-person team publishing every week.</p>
+</div>
+
 | | |
 |---|---|
 | **My role** | Co-founder. I designed the brand with my co-founder, then built the entire website and led marketing design and automation. |
