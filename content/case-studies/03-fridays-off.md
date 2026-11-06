@@ -68,10 +68,6 @@ We designed the brand together. Then:
 - **Type:** Montserrat + Poppins
 - **Palette:** four warm neutrals
 
-| Cream | Sand | Espresso | Near-black |
-|---|---|---|---|
-| `#F5F3EF` | `#D8C3A5` | `#3B2A20` | `#1A1A1A` |
-
 <div class="pair wide trio" markdown="1">
 ![Four colors, two typefaces, one monogram.](../../assets/fridays-off/01-brand-guide.png)
 ![The mark works on light and dark.](../../assets/fridays-off/03-logo-lockup-light-tagline.jpg)
@@ -106,7 +102,15 @@ Accessibility was a requirement from day one, not a final check.
 
 - **Keyboard navigation** and **screen-reader support** across the store
 - **Minimal layouts** to avoid cognitive overload
-- **Every text color pairing passes WCAG AAA** (up to **15.7:1**). Sand on cream is used only for decoration, never text.
+- **Color contrast checked against WCAG:**
+
+| Pair | Contrast | Result |
+|---|---|---|
+| Near-black on cream | 15.7 : 1 | ✅ AAA |
+| Espresso on cream | 12.3 : 1 | ✅ AAA |
+| Sand on near-black | 10.2 : 1 | ✅ AAA |
+| Espresso on sand | 8.0 : 1 | ✅ AAA |
+| Sand on cream | 1.5 : 1 | Decoration only, never text |
 
 ---
 
