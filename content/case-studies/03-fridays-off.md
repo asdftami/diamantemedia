@@ -30,11 +30,10 @@ hero_image: "assets/fridays-off/site/portfolio/f00-mockup-laptop-page.webp"
 
 | | |
 |---|---|
-| **My role** | Co-founder. I designed the brand with my co-founder, then built the entire website and led marketing design and automation. |
-| **Scope** | Brand identity · Shopify store design and build · Information architecture · Accessibility · AI content pipeline |
+| **My role** | Co-founder · brand, web and marketing design lead |
+| **Scope** | Brand · Shopify design + build · IA · Accessibility · AI pipeline |
 | **Tools** | Shopify · Claude + Claude Code · Higgsfield · Notion · Blotato |
-| **Catalog** | 460+ products from ~48 brands |
-| **Status** | Live at **[fridays-off.co](https://fridays-off.co)**, social launch in progress |
+| **Status** | Live at **[fridays-off.co](https://fridays-off.co)** |
 
 ---
 
