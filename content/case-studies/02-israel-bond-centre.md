@@ -148,7 +148,6 @@ I was part of a company-wide layoff shortly after launch, so I wasn't able to co
 
 ## What I learned
 
-- **Reduce before you redesign.** Most of the "clutter" problem was solved by deciding *what doesn't need to be visible yet*: accordions, pagination, wizards.
-- **Familiar beats clever.** The split navigation and Inbox A won because they match patterns people already trust.
-- **Every action needs a visible result.** Upload states, wizard summaries and approval statuses turned "Did that work?" into "Done."
-- **Next time:** I'd set up success metrics *before* launch (task completion, support tickets, time to submit a form), so the impact is measurable even if I'm not there to see it.
+- **Research turns unknowns into solutions.** I didn't start with every answer. Researching proven patterns led me to the accordions and wizards that solved the clutter.
+- **Component libraries raise the bar.** Building with Figma component libraries helped me reach a polished, consistent look quickly.
+- **Next time: a real handoff.** I'd deliver clear handoff documentation (specs, states and interaction notes) instead of leaving developers to work out how to build my designs.
