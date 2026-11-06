@@ -6,7 +6,7 @@ timeline: "Sep 2025 – Apr 2026"
 status: "Three audits delivered; the live site changed to match several recommendations"
 ---
 
-<!-- DRAFT v1 (Nov 6, 2026) from Tami's three PDF decks. Framing: "self-initiated" (Tami). Learnings: ask Tami. Never use: Audit 3 HR-portal pages, clock-in codes, headshot/work email. -->
+<!-- DRAFT v1 (Nov 6, 2026) from Tami's three PDF decks. Framing: "self-initiated" (Tami). Never use: Audit 3 HR-portal pages, clock-in codes, headshot/work email. -->
 
 # Jars UX Audits
 
@@ -83,3 +83,10 @@ My re-check showed **6 of 8 brands** now findable, a visible scrollbar and the c
 ![Button states: show the tap, prevent double orders.](../../assets/jars/j08-button-states.png)
 ![Three themes behind 10 findings.](../../assets/jars/j09-summary.png)
 </div>
+
+---
+
+## What I learned
+
+- **Real-world use finds real problems.** Jars launched its website and app without an in-house UX designer. Frustrated customers showed us what was broken: features that didn't work, and online inventory that didn't match the store.
+- **User testing is crucial.** It shows how a product actually works for people, surfaces their pain points and leads to the right solutions.
