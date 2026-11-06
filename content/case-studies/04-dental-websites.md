@@ -40,14 +40,14 @@ I worked my way from front desk to office manager at an Austin dental group and 
 The VP of Operations bought an established practice with loyal patients but **dated branding**. He wanted it to feel modern and caring without losing the families who already trusted it.
 
 ### What I designed
-**A new logo and visual identity, built from zero (Illustrator).** A geometric, single-line **tooth mark** paired with a clean, all-caps wordmark: precise like dentistry, open and friendly like family care.
+**Logo and visual identity, built from zero (Illustrator):** a single-line tooth mark and clean wordmark, precise like dentistry, friendly like family care.
 
-**A website built on the same design system (Squarespace).** Same type, same palette, same calm tone, from the logo all the way to the booking button.
+**Website on the same system (Squarespace):**
 
-- **A warm, human first impression:** *"Dental Excellence. Compassionate Care."* over a real family moment, with **Book an Appointment** always one tap away
-- **Custom line icons** for each service (preventive care, implants, cosmetic, technology) that echo the logo's single-line style
-- **Clear paths for patients:** a single, simple navigation row, plus a "Visit us" section with hours, phone number and map
-- **Responsive:** designed to work just as well on a phone
+- **Book an Appointment** always one tap away
+- **Custom line icons** that echo the logo
+- **One simple navigation row**, plus hours, phone and map in one place
+- **Responsive** for phones
 
 ![A single-line tooth mark: precise like dentistry, friendly like family care.](../../assets/dental/parkfield/portfolio/p01-logo.png)
 ![A real family moment and one clear action: Book an Appointment, always one tap away.](../../assets/dental/parkfield/portfolio/p02-hero.png)
