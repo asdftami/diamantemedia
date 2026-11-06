@@ -568,18 +568,23 @@
   addEventListener('resize', placeInd);
 
   // ---- which stop are we on? update the Nokia LCD and kick the warp
+  // The current stop is the one crossing a line 40% down the screen. This works for stops of any height
+  // (a fixed visibility threshold failed on tall stops, like UTRGV with its gallery, so Down got stuck).
   let current = 0;
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      const i = stops.indexOf(e.target);
-      if (i !== current) { current = i; target = 1; boost(); }
-      lcdYear.textContent = e.target.dataset.year; lcdName.textContent = e.target.dataset.name;
-      document.getElementById('ship').classList.toggle('docked', i === 0 || i === stops.length - 1); // out of the way on the welcome and contact screens
-      setNav(i >= 4 && i < stops.length - 1 ? 'work' : null);
-    });
-  }, { threshold: .55 });
-  stops.forEach(s => io.observe(s));
+  function update() {
+    const line = innerHeight * 0.4;
+    let i = 0;
+    stops.forEach((s, k) => { if (s.getBoundingClientRect().top <= line) i = k; });
+    if (i !== current) { current = i; target = 1; boost(); }
+    const st = stops[i];
+    lcdYear.textContent = st.dataset.year; lcdName.textContent = st.dataset.name;
+    document.getElementById('ship').classList.toggle('docked', i === 0 || i === stops.length - 1); // out of the way on the welcome and contact screens
+    setNav(i >= 4 && i < stops.length - 1 ? 'work' : null);
+  }
+  let ticking = false;
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; update(); }); } }, { passive: true });
+  addEventListener('resize', update);
+  update();
 
   const go = d => { const i = Math.max(0, Math.min(stops.length - 1, current + d)); stops[i].scrollIntoView({ behavior: motion ? 'smooth' : 'auto' }); const h = stops[i].querySelector('h1,h2'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); } };
   const ship = document.getElementById('ship'), pet = document.getElementById('pet');
