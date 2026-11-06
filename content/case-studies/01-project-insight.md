@@ -25,10 +25,10 @@ hero_image: "assets/project-insight/10-hifi-main-dashboard.png"
 
 | | |
 |---|---|
-| **My role** | Sole UX designer, from research through high-fidelity prototypes |
-| **Team** | Project manager, business systems analyst (BSA), business stakeholder, 12–15 engineers |
+| **My role** | Sole UX designer, research → high-fidelity prototypes |
+| **Team** | Project manager, business systems analyst, stakeholder, 12–15 engineers |
 | **Timeline** | Dec 2022 – Feb 2024 |
-| **Tools** | Figma (wireframes → hi-fi prototypes) · FigJam (assumption maps, flowcharts) · Airtable (interview + usability-test research repository) · Azure DevOps (backlog prioritization with the team) |
+| **Tools** | Figma · FigJam · Airtable · Azure DevOps |
 | **Users** | Investors who own loan portfolios serviced by Computershare |
 
 ---
