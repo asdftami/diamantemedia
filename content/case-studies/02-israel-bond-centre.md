@@ -36,12 +36,11 @@ hero_image: "assets/israel-bond-centre/10-new-portfolio-split-nav.png"
 
 ## The problem
 
-Bond Centre is where people who own State of Israel Bonds check their portfolio, update their details and submit forms. The existing app felt **large, clunky and hard to use**:
+Bond Centre is where State of Israel Bond owners check their portfolio, update details and submit forms. The old app was **clunky and hard to use**:
 
-- **Cognitive overload:** too many loans and too much data crammed onto one screen
-- **Navigation that didn't make sense:** one long menu mixing everyday tasks with account settings
-- **Weak admin controls:** staff had no clear way to review, approve or reject what bondholders submitted
-
+- **Cognitive overload:** too much data on one screen
+- **Confusing navigation:** one long menu mixing everyday tasks with account settings
+- **Weak admin controls:** no clear way to approve or reject submissions
 
 ---
 
