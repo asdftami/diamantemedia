@@ -96,19 +96,20 @@ Then I mapped every tab, chart and drill-down.
 
 ## Testing: one dashboard wasn't enough
 
-My first concept (**Prototype A**) was a single at-a-glance dashboard built around the data points we *assumed* mattered most.
+My first concept (**Prototype A**) was one at-a-glance dashboard built on the data we *assumed* mattered most.
 
-After 1–2 rounds of low-fidelity usability testing with **real investors (5 in total)**, the pattern was clear: they wanted **more data at a glance**, including data points we didn't have on the screen at all. So we asked them directly what they needed, and those answers became a **secondary navigation** of focused dashboards.
+After 1–2 rounds of low-fidelity testing with **5 investors**, the pattern was clear: they wanted **more data at a glance**, including data we didn't show. We asked what they needed, and their answers became a **secondary navigation** of focused dashboards.
 
-![5 investors tested 3 versions. They had no preference on where the navigation sat, so we reused an existing component and saved dev time.](../../assets/project-insight/13-prototypes-tested-abc.png)
+**Prototypes B and C** differed only in where that navigation sat: two rows of top tabs, or a side nav plus top tabs.
 
-**Prototypes B and C** differed only in where that navigation lived: two rows of tabs on top, or a side nav plus top tabs.
+**Finding:** investors had **no preference**. They only cared that the navigation was there.
 
-**Finding:** investors had **no preference about placement**. They only cared that the navigation was there.
+**Decision:** we went with the version we **already had a component for** (side nav + top tabs), which saved design and development time.
 
-**Decision:** I brought this to our weekly meeting, and we went with the version we **already had a component for** (side nav + top tabs). When users don't care, engineering effort should decide, and this choice saved design and development time.
-
-![Testing showed one dashboard wasn't enough, so the design grew into a tabbed set of focused dashboards.](../../assets/project-insight/12-lofi-trending-with-tabs.png)
+<div class="pair wide" markdown="1">
+![Prototypes A, B and C, tested with 5 investors.](../../assets/project-insight/13-prototypes-tested-abc.png)
+![One dashboard wasn't enough, so it grew into a tabbed set.](../../assets/project-insight/12-lofi-trending-with-tabs.png)
+</div>
 
 ---
 
