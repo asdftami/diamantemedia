@@ -1,18 +1,20 @@
 /* Spinning painterly planets (see planets.js) */
 .planet3{position:relative;display:block;width:100%;aspect-ratio:1;max-width:100%}
-.planet3 .p3-ball{position:absolute;inset:12%;border-radius:50%;overflow:hidden;z-index:2;box-shadow:0 0 60px var(--glow),0 0 120px var(--glow)}
-.planet3 .p3-tex{position:absolute;inset:0 auto 0 0;width:400%;background-size:50% 100%;background-repeat:repeat-x;animation:p3spin var(--spin,60s) linear infinite}
+.planet3 .p3-ball{position:absolute;inset:var(--size,12%);border-radius:50%;overflow:hidden;z-index:2;box-shadow:0 0 60px var(--glow),0 0 120px var(--glow)}
+.planet3 .p3-ball.halo{box-shadow:0 0 0 3px color-mix(in srgb,var(--halo) 45%,transparent),0 0 30px var(--halo),0 0 90px var(--glow),0 0 160px var(--glow)}
+.planet3 .p3-tilt{position:absolute;inset:-25%;transform:rotate(var(--axis,0deg))}
+.planet3 .p3-tex{position:absolute;inset:0 auto 0 0;width:300%;background-size:50% 100%;background-repeat:repeat-x;animation:p3spin var(--spin,60s) linear infinite}
 .planet3 .p3-shade{position:absolute;inset:0;border-radius:50%;
   background:radial-gradient(circle at 34% 30%,#ffffff55 0,#ffffff00 32%),radial-gradient(circle at 50% 50%,transparent 52%,#0000002e 72%,#000000a0 100%),radial-gradient(circle at 78% 78%,#00000066,transparent 55%);
   box-shadow:inset -10px -14px 40px #0008,inset 6px 6px 22px #ffffff38}
-.planet3 .p3-ring{position:absolute;left:-6%;right:-6%;top:41%;height:18%;border-radius:50%;border:clamp(3px,1.4vw,8px) solid var(--ring);opacity:.85;transform:rotate(var(--tilt,-14deg));box-shadow:0 0 18px var(--ring)}
+.planet3 .p3-ring{position:absolute;left:calc(-6% + var(--rin,0%));right:calc(-6% + var(--rin,0%));top:41%;height:18%;border-radius:50%;border:var(--rw,6px) solid var(--ring);opacity:var(--ro,.85);transform:rotate(var(--tilt,-14deg));box-shadow:0 0 18px var(--ring)}
+.planet3 .p3-ring.double{border-style:double}
+.planet3 .p3-ring.band{left:-14%;right:-14%;top:36%;height:28%;box-shadow:0 0 30px var(--ring),inset 0 0 20px var(--ring)}
 .planet3 .p3-ring.back{z-index:1}
 .planet3 .p3-ring.front{z-index:3;clip-path:inset(50% 0 0 0)}
-.planet3 .p3-orbit{position:absolute;inset:-2%;border-radius:50%;z-index:4;animation:p3orbit 22s linear infinite}
-.planet3 .p3-orbit.alt{inset:-10%;animation-duration:34s;animation-direction:reverse}
-.planet3 .p3-orbit.alt .p3-moon{width:8%;top:auto;bottom:6%}
-.planet3 .p3-moon{position:absolute;top:8%;left:50%;width:11%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,var(--moon) 55%,#0006);box-shadow:0 0 14px var(--moon)}
+.planet3 .p3-orbit{position:absolute;inset:var(--orb,-2%);border-radius:50%;z-index:4;transform:rotate(var(--at,0deg));animation:p3orbit var(--od,22s) linear infinite}
+.planet3 .p3-moon{position:absolute;top:0;left:50%;width:var(--ms,10%);aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 35% 30%,#fff,var(--moon) 55%,#0006);box-shadow:0 0 14px var(--moon)}
 @keyframes p3spin{to{transform:translateX(-50%)}}
-@keyframes p3orbit{to{transform:rotate(360deg)}}
+@keyframes p3orbit{from{transform:rotate(var(--at,0deg))}to{transform:rotate(calc(var(--at,0deg) + 360deg))}}
 .no-motion .planet3 .p3-tex,.no-motion .planet3 .p3-orbit{animation:none}
 @media (prefers-reduced-motion: reduce){.planet3 .p3-tex,.planet3 .p3-orbit{animation:none}}
