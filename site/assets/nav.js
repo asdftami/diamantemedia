@@ -16,6 +16,13 @@
   };
 
   const css = `
+  .switch{position:relative;display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 4px;border:0;background:none;color:#d6cef0;font:inherit;font-size:.92rem;font-weight:500;cursor:pointer;white-space:nowrap;transition:color .2s}
+  .switch::after{content:"";position:absolute;left:0;right:0;top:50%;height:44px;transform:translateY(-50%)}
+  .switch:hover{color:#f7f3ff}.switch:hover .track{box-shadow:0 0 0 3px #81d8d044}
+  .switch .track{width:34px;height:20px;border-radius:999px;background:#81d8d0;position:relative;transition:background .2s}
+  .switch .knob{position:absolute;top:2px;left:16px;width:16px;height:16px;border-radius:50%;background:#fff;transition:left .2s}
+  .switch[aria-pressed="false"] .track{background:#5d5878}.switch[aria-pressed="false"] .knob{left:2px}
+  @media (max-width:820px){.switch .state-txt{display:none}.switch .track{width:30px;height:18px}.switch .knob{width:14px;height:14px}.switch[aria-pressed="true"] .knob{left:14px}}
   .ico{display:inline-grid;width:1.05em;height:1.05em;margin-right:.4em;vertical-align:-.15em}
   .ico svg{width:100%;height:100%}
   .dock{display:none}
@@ -36,7 +43,25 @@
   }`;
   const st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
+  function motionSwitch() {
+    if (document.getElementById('motionToggle')) return;            // the homepage has its own
+    const nav = document.querySelector('header.top nav.actions'); if (!nav) return;
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+    let on; try { const v = localStorage.getItem('tt-motion'); on = v === null ? !reduce.matches : v === 'on'; } catch (e) { on = !reduce.matches; }
+    const b = document.createElement('button');
+    b.className = 'switch'; b.id = 'motionToggle'; b.type = 'button';
+    b.innerHTML = '<span class="track" aria-hidden="true"><span class="knob"></span></span><span>Animation<span class="state-txt"> <span class="st"></span></span></span>';
+    const apply = () => {
+      document.documentElement.classList.toggle('no-motion', !on);
+      b.setAttribute('aria-pressed', on); b.querySelector('.st').textContent = on ? 'on' : 'off';
+      document.dispatchEvent(new CustomEvent('tt-motion', { detail: on }));
+    };
+    b.addEventListener('click', () => { on = !on; try { localStorage.setItem('tt-motion', on ? 'on' : 'off'); } catch (e) {} apply(); });
+    nav.appendChild(b); apply();
+  }
+
   function start() {
+    motionSwitch();
     const links = [...document.querySelectorAll('header.top [data-ico]')];
     if (!links.length) return;
     links.forEach(a => {

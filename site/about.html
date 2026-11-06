@@ -83,7 +83,12 @@
   .flip:hover .back,.flip.flipped .back{transform:rotateY(0)}
   .hint{position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);z-index:3;white-space:nowrap;font-family:VT323,monospace;font-size:1.05rem;letter-spacing:.12em;padding:3px 12px;border-radius:999px;background:#1a1033;color:var(--butter);border:1px solid #ffffff30;transition:opacity .3s}
   .flip:hover .hint,.flip.flipped .hint{opacity:0}
-  .no-motion .bar i{animation:none}  /* the flip is triggered by the visitor, so it still turns with Animation off */
+  .no-motion .bar i{animation:none}
+  /* Animation off: no spin and no hover; a click swaps the photos instantly, and the hint stays on both sides */
+  .no-motion .face{transition:none}
+  .no-motion .front,.no-motion .back,.no-motion .flip:hover .front,.no-motion .flip:hover .back,.no-motion .flip.flipped .front,.no-motion .flip.flipped .back{transform:none}
+  .no-motion .back{visibility:hidden}.no-motion .flip.flipped .back{visibility:visible}.no-motion .flip.flipped .front{visibility:hidden}
+  .no-motion .flip:hover .hint,.no-motion .flip.flipped .hint{opacity:1}
   @media (prefers-reduced-motion: reduce){.face{transition:opacity .3s}.front,.back,.flip:hover .front,.flip:hover .back,.flip.flipped .front,.flip.flipped .back{transform:none}.back{opacity:0}.flip:hover .back,.flip.flipped .back{opacity:1}.bar i{animation:none}}
 
   /* who I am */
@@ -209,7 +214,12 @@
   // touch and keyboard: tap or press to flip
   const flip = document.getElementById('flip');
   flip.addEventListener('click', () => { const on = flip.classList.toggle('flipped'); flip.setAttribute('aria-pressed', on); });
-  if (matchMedia('(hover: none)').matches) flip.querySelector('.hint').textContent = 'TAP ME';
+  const hint = flip.querySelector('.hint');
+  const setHint = () => {
+    const still = document.documentElement.classList.contains('no-motion') || matchMedia('(prefers-reduced-motion: reduce)').matches;
+    hint.textContent = matchMedia('(hover: none)').matches ? 'TAP ME' : still ? 'CLICK ME' : 'HOVER ME';
+  };
+  setHint(); document.addEventListener('tt-motion', setHint);
 </script>
 <script src="assets/planets.js"></script>
 <script src="assets/cursor.js"></script>
