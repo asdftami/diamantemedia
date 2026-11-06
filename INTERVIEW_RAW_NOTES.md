@@ -764,3 +764,12 @@ Context (Tami): self-initiated audits done while working the retail floor. The c
 - **Scope:** 3 audits, 4 platforms (website, online menu, mobile app, internal staff portal), ~25+ findings.
 - **Evidence of impact:** before/after slides show the live site changed in line with her recommendations (decks don't state the team credited her).
 - ⚠️ **Do not publish:** Audit 3 pp2, 14–19 (HR portal with her name, employee number, pay, 401k, HR contact); p20 internal codes; her headshot/work email (Audit 2 pp3, 18; Audit 3 p24). Audit 1 pp7–9 have leftover template footers; Audit 1 p12 text mismatch.
+
+
+---
+
+## Links added (Nov 7, 2026)
+- The Monitor (graphic designer, in-house media team): https://myrgv.com/category/publications/the-monitor/
+- OMG RGV interviews (YouTube): https://www.youtube.com/channel/UCzMvjvTz2uzrQExGYtOVKNg · on X: https://x.com/OmgRgv/status/1314725741414830080 · Facebook page no longer live.
+- Context (Tami): OMG RGV was an internship project; she led the magazine. After graduation the internship leader (founder of the digital agency) disbanded it and started a new company. 🔒 Keep that backstory private.
+- Socials: LinkedIn linkedin.com/in/tamitrevino · YouTube @tamimakesstuff · Instagram @TAMIMAKESSTUFF · TikTok @asdftami

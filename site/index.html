@@ -67,6 +67,10 @@
   .pass:hover .stub,.pass:focus-visible .stub{background:var(--pink)}
   .pass:hover .dest i,.pass:focus-visible .dest i{transform:translateX(6px)}
   a.inline{color:var(--sky);text-decoration-thickness:1.5px;text-underline-offset:3px;transition:color .2s}a.inline:hover{color:var(--pink)}
+  .mini-links{display:flex;flex-wrap:wrap;gap:8px;margin:-6px 0 18px}
+  .mini-links a{position:relative;display:inline-flex;align-items:center;height:34px;padding:0 12px;border-radius:999px;border:1px solid #a8d8ff55;color:var(--sky);text-decoration:none;font-size:.88rem;font-weight:500;transition:border-color .2s,color .2s,background .2s}
+  .mini-links a::after{content:"";position:absolute;left:0;right:0;top:50%;height:44px;transform:translateY(-50%)}
+  .mini-links a:hover{border-color:var(--pink);color:var(--pink);background:#ffb3d914}
   .readtime{font-size:.9rem;color:var(--ink-dim);white-space:nowrap}
   .pill[aria-pressed="false"] .dot{background:#888}
   .switch{position:relative;display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 4px;border:0;background:none;color:var(--ink-dim);font:inherit;font-size:.92rem;font-weight:500;cursor:pointer;white-space:nowrap;transition:color .2s}
@@ -311,7 +315,8 @@
       <div>
         <p class="year">2015–2020 · UTRGV</p>
         <h2 id="h-art">Finding design</h2>
-        <p>I traded pre-dental for graphic design and earned my BFA a semester early. I led 5 designers as editor-in-chief of OMG RGV and designed for The Monitor's media team.</p>
+        <p>I traded pre-dental for graphic design and earned my BFA a semester early. I led 5 designers as editor-in-chief of <a class="inline" href="https://www.youtube.com/channel/UCzMvjvTz2uzrQExGYtOVKNg" target="_blank" rel="noopener">OMG RGV<span class="sr-only"> (opens in a new tab)</span></a> and designed for <a class="inline" href="https://myrgv.com/category/publications/the-monitor/" target="_blank" rel="noopener">The Monitor<span class="sr-only"> (opens in a new tab)</span></a>'s media team.</p>
+        <p class="mini-links"><a href="https://www.youtube.com/channel/UCzMvjvTz2uzrQExGYtOVKNg" target="_blank" rel="noopener">▶ OMG RGV interviews ↗<span class="sr-only"> (opens in a new tab)</span></a><a href="https://x.com/OmgRgv/status/1314725741414830080" target="_blank" rel="noopener">OMG RGV on X ↗<span class="sr-only"> (opens in a new tab)</span></a><a href="https://myrgv.com/category/publications/the-monitor/" target="_blank" rel="noopener">The Monitor ↗<span class="sr-only"> (opens in a new tab)</span></a></p>
         <ul class="tags" aria-label="Skills from this era"><li>Graphic Design</li><li>Editorial Leadership</li><li>Web Build</li><li>Video Editing</li></ul>
       </div>
       <div class="planet-wrap" aria-hidden="true"><span class="planet3" data-p="rose" style="--spin:70s"></span><span class="stk floppy" style="left:2%;bottom:8%"></span></div>
