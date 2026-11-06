@@ -86,18 +86,20 @@ The bondholder decides how much is on screen, not the system.
 
 ## 3. Wizards for multi-step tasks
 
-Updating communication preferences across several accounts used to be one dense form. I turned it into a **3-step wizard**:
+Updating communication preferences across accounts used to be one dense form. I turned it into a **3-step wizard** with a stepper and a back button:
 
-1. **Select accounts:** checkboxes, with select-all
-2. **Choose preferences:** email or postal mail for tax statements, bond statements and other mail
-3. **Review the summary:** "Your information is not complete until you click Submit"
+1. **Select accounts**, with select-all
+2. **Choose preferences:** email or postal mail for each statement type
+3. **Review and submit**
 
-…followed by a clear **success confirmation**. A stepper shows where you are, and you can always go back.
+…then a clear **success confirmation**.
 
-![Step 1: choose which accounts to update, all at once or one by one.](../../assets/israel-bond-centre/17-comm-prefs-wizard-step1-select-accounts.png)
-![Step 2: pick email or postal mail for each type of statement.](../../assets/israel-bond-centre/18-comm-prefs-wizard-step2-preferences.png)
-![Step 3: review everything before submitting, so nothing changes by accident.](../../assets/israel-bond-centre/19-comm-prefs-wizard-step3-summary.png)
-![A clear confirmation closes the loop: no guessing whether it worked.](../../assets/israel-bond-centre/20-comm-prefs-success-modal.png)
+<div class="pair wide" markdown="1">
+![Step 1: select accounts.](../../assets/israel-bond-centre/17-comm-prefs-wizard-step1-select-accounts.png)
+![Step 2: email or mail, per statement.](../../assets/israel-bond-centre/18-comm-prefs-wizard-step2-preferences.png)
+![Step 3: review before submitting.](../../assets/israel-bond-centre/19-comm-prefs-wizard-step3-summary.png)
+![Confirmation: no guessing whether it worked.](../../assets/israel-bond-centre/20-comm-prefs-success-modal.png)
+</div>
 
 ---
 
