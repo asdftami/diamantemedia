@@ -141,11 +141,11 @@ For the mobile **Inbox**, I compared separate list and message screens (**A**) a
 
 ## Outcome
 
-**Bond Centre 2.0 shipped to production.** The development team and product owners were excited about the upgrade: a cleaner, calmer, more organized experience for bondholders, and real controls for admins.
+Product owners and developers were excited about the upgrade: calmer for bondholders, with real controls for admins.
 
-![Shipped: the Bond Centre welcome page live in production.](../../assets/israel-bond-centre/09-BEFORE-old-welcome-page.webp)
+![Live in production: the Bond Centre welcome page.](../../assets/israel-bond-centre/09-BEFORE-old-welcome-page.webp)
 
-I was part of a company-wide layoff shortly after launch, so I wasn't able to collect post-launch usage data.
+A company-wide layoff shortly after launch meant I couldn't collect usage data.
 
 ---
 
