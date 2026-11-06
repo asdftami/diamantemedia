@@ -226,9 +226,10 @@
 <script src="assets/cursor.js"></script>
 <script src="assets/contact.js"></script>
 <script>
-  document.querySelectorAll('a[href="about.html"]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); history.replaceState(null, '', 'about.html'); scrollTo({ top: 0, behavior: 'smooth' }); }));
+  document.querySelectorAll('a[href="about.html"], a[href="/about"], a[href="about"]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); history.replaceState(null, '', 'about.html'); scrollTo({ top: 0, behavior: 'smooth' }); }));
   // the menu shows where you are: About up top, Contact once the contact section is on screen
-  const aboutLink = document.querySelector('header.top a[href="about.html"]'), contactLink = document.querySelector('header.top a[href="#contact"]');
+  const aboutLink = document.querySelector('header.top [data-ico="about"]'), contactLink = document.querySelector('header.top [data-ico="contact"]');
+  if (aboutLink && contactLink)
   new IntersectionObserver(([e]) => {
     if (e.isIntersecting) { contactLink.setAttribute('aria-current', 'location'); aboutLink.removeAttribute('aria-current'); }
     else { aboutLink.setAttribute('aria-current', 'page'); contactLink.removeAttribute('aria-current'); }

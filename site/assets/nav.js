@@ -132,7 +132,8 @@
     dock.addEventListener('click', e => {
       const a = e.target.closest('a'); if (!a) return;
       const url = new URL(a.href, location.href);
-      if (url.pathname !== location.pathname) return;                 // another page: normal navigation
+      const norm = x => x.replace(/\.html$/, '').replace(/\/index$/, '/');
+      if (norm(url.pathname) !== norm(location.pathname)) return;     // another page: normal navigation
       const id = url.hash.slice(1) || url.searchParams.get('to'), target = id && document.getElementById(id);
       if (id && !target) return;
       e.preventDefault();
