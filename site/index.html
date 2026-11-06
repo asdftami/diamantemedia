@@ -363,8 +363,10 @@
         <p><strong>Hiring?</strong> Grab my resume, or message me about the role and I'll send a version tailored to it.<br><strong>Need something built?</strong> Websites, branding, social content, UGC: tell me about it.</p>
         <div class="cta-row">
           <a class="land" href="resume.pdf">Download resume</a>
-          <a class="pill primary" href="#message">Message me</a>
+          <button class="pill primary" id="copyEmail" type="button" data-u="hello" data-d="tamitrevino.com">Copy email ⧉</button>
+          <a class="pill" href="#message">Message me</a>
         </div>
+        <p class="form-status" id="copyStatus" role="status" aria-live="polite"></p>
         <!-- Spam-protected contact form: no public email address.
              TODO: set action to a form service (e.g. Formspree / Web3Forms) and add its human-verification widget
              (e.g. Cloudflare Turnstile or hCaptcha site key). The honeypot field below silently catches bots. -->
@@ -525,6 +527,15 @@
     if (form.website.value) { e.preventDefault(); return; }               // bot filled the honeypot
     if (!form.checkValidity()) { e.preventDefault(); status.textContent = 'Please fill in your name, a valid email and a message.'; form.querySelector(':invalid').focus(); return; }
     if (!form.getAttribute('action')) { e.preventDefault(); status.textContent = 'Thanks! The form is being connected. Please check back soon.'; }
+  });
+
+  // ---- copy-email: address is assembled only on click, so scrapers never see it in the page
+  const ce = document.getElementById('copyEmail'), cs = document.getElementById('copyStatus');
+  ce.addEventListener('click', async () => {
+    const addr = ce.dataset.u + '@' + ce.dataset.d;
+    try { await navigator.clipboard.writeText(addr); cs.textContent = 'Copied ' + addr + ' to your clipboard.'; ce.textContent = 'Copied ✓'; }
+    catch (e) { cs.textContent = 'Email: ' + addr; }
+    setTimeout(() => { ce.textContent = 'Copy email ⧉'; }, 2500);
   });
 
   addEventListener('resize', resize);
