@@ -79,7 +79,7 @@ Remote/Colorado
 
 ### Freelance Brand & Web Designer: Dental
 Austin, TX
-- ⭐ **Parkfield Dental**: full **brand identity (Illustrator)** + **Squarespace** website on one design system for a newly acquired practice; custom line icons; **English/Spanish translator at launch**; accessible. Client: the DSO's former VP of Operations.
+- ⭐ **Parkfield Dental**: **logo + complete visual identity system (Illustrator)**, built into a **Squarespace** website for a newly acquired practice; custom line icons; **English/Spanish translator at launch**; accessible. Client: the DSO's former VP of Operations.
 - **Evolve Dental Partners**: Squarespace site built on the founder's brand guidelines, handed off for self-editing. Client: the DSO's former CEO.
 - **Story:** two executives from the same company each hired her for their next venture.
 

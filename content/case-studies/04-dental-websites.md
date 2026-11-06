@@ -20,7 +20,7 @@ hero_image: "assets/dental/parkfield/desktop-home-full.png"
 
 <div class="impact" markdown="0">
 <p class="impact-label">Impact</p>
-<p><strong>Two executives</strong> from the same company each hired me for their next venture. For <strong>Parkfield Dental</strong>, I created a <strong>full brand identity and website</strong> on one design system, <strong>bilingual (English/Spanish) at launch</strong> and built for accessibility. For <strong>Evolve Dental Partners</strong>, I built a <strong>brand-compliant website</strong> and handed it off so the founder could manage it herself.</p>
+<p><strong>Two executives</strong> from the same company each hired me for their next venture. For <strong>Parkfield Dental</strong>, I created a <strong>logo and complete visual identity system, built into the website</strong>, <strong>bilingual (English/Spanish) at launch</strong> and built for accessibility. For <strong>Evolve Dental Partners</strong>, I built a <strong>brand-compliant website</strong> and handed it off so the founder could manage it herself.</p>
 </div>
 
 I worked inside a dental support organization (DSO) in Austin, first at the front desk, then as office manager, while also running the practice's website and blog. Two of its leaders went on to start their own businesses. Both called me.
@@ -28,7 +28,7 @@ I worked inside a dental support organization (DSO) in Austin, first at the fron
 | | **Parkfield Dental** | **Evolve Dental Partners** |
 |---|---|---|
 | **Client** | The DSO's former VP of Operations, who bought an established practice | The DSO's former CEO, a hygienist-turned-founder |
-| **I delivered** | Full brand identity + website | Website built on the client's existing brand |
+| **I delivered** | Logo + complete visual identity system, built into the website | Website built on the client's existing brand |
 | **Tools** | Illustrator, Squarespace | Squarespace |
 | **Highlights** | Bilingual (English/Spanish) at launch, accessible, cohesive design system | Brand-compliant build, handed off for the founder to edit herself |
 | **Status** | Live at **[parkfieldfamilydental.com](https://www.parkfieldfamilydental.com)** | Handed off; site currently offline |
@@ -41,7 +41,7 @@ I worked inside a dental support organization (DSO) in Austin, first at the fron
 My former VP of Operations bought an Austin dental practice that already had loyal patients, but its **branding and marketing felt dated**. He wanted the practice to look and feel like the modern, caring office it was becoming, without losing the families who already trusted it.
 
 ### What I designed
-**A new identity, built from zero (Illustrator).** A geometric, single-line **tooth mark** paired with a clean, all-caps wordmark: precise like dentistry, open and friendly like family care.
+**A new logo and visual identity, built from zero (Illustrator).** A geometric, single-line **tooth mark** paired with a clean, all-caps wordmark: precise like dentistry, open and friendly like family care.
 
 **A website built on the same design system (Squarespace).** Same type, same palette, same calm tone, from the logo all the way to the booking button.
 
@@ -91,6 +91,6 @@ The goal wasn't a site she'd depend on me for. It was a site she could run.
 
 ## What I learned
 
-- **A brand is a system, not a logo.** Designing the logo and website together kept everything consistent, down to the icons.
-- **Inclusive design is a business decision.** Speaking your patients' language is good care and good marketing.
-- **Plan for the handoff.** Clients will keep editing after launch. Next time I'd deliver a one-page brand and site guide (fonts, colors, image specs, do's and don'ts) so the site stays sharp, and I'd keep my own launch screenshots.
+- **Professionalism keeps the work strong.** Every client relationship is different. I learned to keep feedback objective and decisions focused on the business goals, so the work stayed polished no matter the dynamic.
+- **Empower the client, then let go.** With a little guidance, a founder can confidently run her own site. I learned to hand off fully and let her make it her own once my part was done.
+- **A logo is only as strong as the system behind it.** I turned one mark into a complete visual identity, with fonts, colors, icons and branded buttons, so every page felt unmistakably like Parkfield.
