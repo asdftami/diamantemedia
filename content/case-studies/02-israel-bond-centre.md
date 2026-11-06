@@ -42,7 +42,6 @@ Bond Centre is where people who own State of Israel Bonds check their portfolio,
 - **Navigation that didn't make sense:** one long menu mixing everyday tasks with account settings
 - **Weak admin controls:** staff had no clear way to review, approve or reject what bondholders submitted
 
-![Before: the old portfolio page](../../assets/israel-bond-centre/11-BEFORE-old-portfolio-page.png)
 
 ---
 
@@ -67,8 +66,8 @@ I tested **one long left-hand menu** against a **split navigation**:
 
 **The split navigation won.** With everything stacked on the left, people found it busy and confusing. Splitting it follows a pattern people already know from the apps they use every day.
 
-![Tested: everything in one left nav](../../assets/israel-bond-centre/12-new-portfolio-single-left-nav-variant.png)
-![Winner: tasks on the left, account at top right](../../assets/israel-bond-centre/10-new-portfolio-split-nav.png)
+![Version A: every link stacked on the left. Users found it busy and confusing.](../../assets/israel-bond-centre/12-new-portfolio-single-left-nav-variant.png)
+![Version B won: tasks on the left, account settings at the top right, a pattern people already know.](../../assets/israel-bond-centre/10-new-portfolio-split-nav.png)
 
 ---
 
@@ -82,7 +81,7 @@ Some bondholders hold **many bonds across many accounts**. Instead of showing ev
 
 The bondholder decides how much information is on screen, not the system.
 
-![New portfolio: accordions, pagination, balance summary](../../assets/israel-bond-centre/10-new-portfolio-split-nav.png)
+![Accordions and pagination let bondholders with many accounts see only what they need, with the total balance always in view.](../../assets/israel-bond-centre/10-new-portfolio-split-nav.png)
 
 ---
 
@@ -96,10 +95,10 @@ Updating communication preferences across several accounts used to be one dense 
 
 …followed by a clear **success confirmation**. A stepper shows where you are, and you can always go back.
 
-![Step 1: Select accounts](../../assets/israel-bond-centre/17-comm-prefs-wizard-step1-select-accounts.png)
-![Step 2: Choose preferences](../../assets/israel-bond-centre/18-comm-prefs-wizard-step2-preferences.png)
-![Step 3: Review](../../assets/israel-bond-centre/19-comm-prefs-wizard-step3-summary.png)
-![Success](../../assets/israel-bond-centre/20-comm-prefs-success-modal.png)
+![Step 1: choose which accounts to update, all at once or one by one.](../../assets/israel-bond-centre/17-comm-prefs-wizard-step1-select-accounts.png)
+![Step 2: pick email or postal mail for each type of statement.](../../assets/israel-bond-centre/18-comm-prefs-wizard-step2-preferences.png)
+![Step 3: review everything before submitting, so nothing changes by accident.](../../assets/israel-bond-centre/19-comm-prefs-wizard-step3-summary.png)
+![A clear confirmation closes the loop: no guessing whether it worked.](../../assets/israel-bond-centre/20-comm-prefs-success-modal.png)
 
 ---
 
