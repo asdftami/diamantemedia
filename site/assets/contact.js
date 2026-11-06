@@ -81,13 +81,25 @@
   if (st) st.addEventListener('click', () => { sound = !sound; try { localStorage.setItem('tt-sound', sound ? 'on' : 'off'); } catch (e) {} showSound(); });
   showSound();
 
+  // Phones only allow sound after a completed tap: unlock the audio on the first touchend/click/keydown.
+  const AC = window.AudioContext || window.webkitAudioContext;
+  function unlock() {
+    if (!AC) return;
+    try {
+      ctx = ctx || new AC();
+      if (ctx.state !== 'running') ctx.resume();
+      const b = ctx.createBuffer(1, 1, 22050), s = ctx.createBufferSource(); s.buffer = b; s.connect(ctx.destination); s.start(0);
+    } catch (e) {}
+  }
+  ['touchend', 'click', 'keydown'].forEach(t => addEventListener(t, unlock, { passive: true }));
   function beep(freq = 1180) {
     if (!sound) return;
     try {
-      ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+      ctx = ctx || new AC();
+      if (ctx.state !== 'running') ctx.resume();
       const o = ctx.createOscillator(), g = ctx.createGain(), t = ctx.currentTime;
       o.type = 'square'; o.frequency.value = freq;
-      g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.05, t + 0.005); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.08);
+      g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.09, t + 0.005); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.08);
       o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + 0.09);
     } catch (e) {}
   }
