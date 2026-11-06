@@ -94,9 +94,9 @@ We designed the brand together. Then:
 ![The Friday List builds a community.](../../assets/fridays-off/site/portfolio/f02-friday-list-signup.png)
 </div>
 
-**Responsible by design.** An **age verification gate** greets every visitor, and the email signup repeats the age requirement.
+**Responsible by design.** An **age verification gate** greets every visitor.
 
-**How I built it.** I explored three Shopify themes (Savor, Fabric and Tinker), chose **Tinker**, and customized it in the Shopify editor. For deeper changes I **paired with Claude to write custom CSS and theme code**, which let a team of two ship a custom-feeling store without hiring a developer.
+**How I built it.** I compared three Shopify themes, chose **Tinker** and customized it. For deeper changes, I **paired with Claude on custom CSS and theme code**, so a team of two shipped a custom store without hiring a developer.
 
 ---
 
