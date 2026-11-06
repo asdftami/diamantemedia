@@ -47,12 +47,7 @@ Computershare services mortgage loans for investors. To check on a portfolio, in
 
 ## My role
 
-This was my first role in finance. I came from retail, service and healthcare operations, so I learned mortgage servicing from scratch: UPB, delinquency buckets, loss mitigation, escrow, HELOCs. I was the **only designer** on a 12–15 person team. I worked closely with:
-
-- **The project manager**, who ran the schedule and kept us moving
-- **The business stakeholder** who fielded investor requests
-- **A business systems analyst** who wrote SQL queries to pull the real data points into tables I could design from
-- **The lead developer and engineering team**
+This was my first role in finance, so I learned mortgage servicing from scratch: UPB, delinquency buckets, loss mitigation, escrow and HELOCs. Our business systems analyst wrote SQL queries to pull the real data I designed from.
 
 ---
 
