@@ -151,6 +151,6 @@ A company-wide layoff shortly after launch meant I couldn't collect usage data.
 
 ## What I learned
 
-- **Research turns unknowns into solutions.** I didn't start with every answer. Researching proven patterns led me to the accordions and wizards that solved the clutter.
-- **Component libraries raise the bar.** Building with Figma component libraries helped me reach a polished, consistent look quickly.
-- **Next time: a real handoff.** I'd deliver clear handoff documentation (specs, states and interaction notes) instead of leaving developers to work out how to build my designs.
+- **Research turns unknowns into solutions.** Proven patterns led me to the accordions and wizards that solved the clutter.
+- **Component libraries raise the bar.** Figma libraries got me to a polished, consistent look fast.
+- **Next time: a real handoff.** Specs, states and interaction notes, so developers don't have to guess.
