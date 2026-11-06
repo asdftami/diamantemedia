@@ -23,14 +23,13 @@ hero_image: "assets/dental/parkfield/desktop-home-full.png"
 <p><strong>Two executives</strong> from the same company each hired me for their next venture. <strong>Parkfield Dental:</strong> logo, complete visual identity system, and a bilingual (English/Spanish), accessible website. <strong>Evolve Dental Partners:</strong> a brand-compliant website the founder manages herself.</p>
 </div>
 
-I worked inside a dental support organization (DSO) in Austin, first at the front desk, then as office manager, while also running the practice's website and blog. Two of its leaders went on to start their own businesses. Both called me.
+I worked my way from front desk to office manager at an Austin dental group and ran its website and blog. When two of its leaders started their own businesses, both called me.
 
 | | **Parkfield Dental** | **Evolve Dental Partners** |
 |---|---|---|
-| **Client** | The DSO's former VP of Operations, who bought an established practice | The DSO's former CEO, a hygienist-turned-founder |
+| **Client** | The group's former VP of Operations, who bought an established practice | The group's former CEO, a hygienist-turned-founder |
 | **I delivered** | Logo + complete visual identity system, built into the website | Website built on the client's existing brand |
 | **Tools** | Illustrator, Squarespace | Squarespace |
-| **Highlights** | Bilingual (English/Spanish) at launch, accessible, cohesive design system | Brand-compliant build, handed off for the founder to edit herself |
 | **Status** | Live at **[parkfieldfamilydental.com](https://www.parkfieldfamilydental.com)** | Handed off; site currently offline |
 
 ---
