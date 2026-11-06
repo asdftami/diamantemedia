@@ -83,3 +83,4 @@ The goal: a site she could run without me.
 - **Professionalism keeps the work strong.** I keep feedback objective and decisions tied to business goals, whatever the dynamic.
 - **Empower the client, then let go.** With a little guidance, a founder can run her own site.
 - **A logo is only as strong as the system behind it.** Fonts, colors, icons and buttons made every page unmistakably Parkfield.
+- **Design for who walks in the door.** Many patients only spoke Spanish, so a bilingual site came first.
