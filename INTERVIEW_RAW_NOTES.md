@@ -775,3 +775,5 @@ Context (Tami): self-initiated audits done while working the retail floor. The c
 - Socials: LinkedIn linkedin.com/in/tamitrevino · YouTube @tamimakesstuff · Instagram @TAMIMAKESSTUFF · TikTok @asdftami
 
 - UTRGV portfolio (tamitrevinoo.wordpress.com): reviewed Nov 7, 2026. Decision: don't link it (WordPress ads, dated About, mixed quality). Pulled DOUX (cover + Rise + Sound Style Spirit, with Jovanna Mireles), FIUX 2018 poster, Honey Bees infographic, wave sculpture into a "From my BFA" gallery on the UTRGV stop. Originals in assets/utrgv/.
+- Cadravo (cadravo.com), ~2019, junior year: team of 3 (Tami, a developer, a copywriter). Tami co-designed the logo with the founder/CEO, created the hero banner and the custom graphics for the site's pop-up banner, sourced icons from Vecteezy, and ran social media, building the audience from zero. Site still live; Microsoft Partner. Shown as a one-line mention on the UTRGV stop.
+- Bond Centre: 09-BEFORE-old-welcome-page is the OLD welcome page (Tami, Nov 7). The new one is 08; its lorem ipsum paragraph was cropped out for the portfolio (08b).

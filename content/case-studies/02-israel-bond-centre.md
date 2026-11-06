@@ -143,7 +143,7 @@ For the mobile **Inbox**, I compared separate list and message screens (**A**) a
 
 Product owners and developers were excited about the upgrade: calmer for bondholders, with real controls for admins.
 
-![Live in production: the Bond Centre welcome page.](../../assets/israel-bond-centre/09-BEFORE-old-welcome-page.webp)
+![Live in production: the new Bond Centre welcome and login page.](../../assets/israel-bond-centre/08b-new-welcome-login-page-clean.png)
 
 A company-wide layoff shortly after launch meant I couldn't collect usage data.
 
