@@ -59,10 +59,10 @@ This was my first role in finance, so I learned mortgage servicing from scratch:
 
 **3. Reading the artifacts.** I studied the spreadsheets and PDFs investors received to learn what they actually asked for.
 
-**4. Making the user real.** I built a persona, *Corey Watts*, a 56-year-old banker with a loan portfolio. His pain points: he had to email for every data point, he navigated all over the old Investor Web to find things, and the long spreadsheets he received had to be decoded and rebuilt into his own dashboards. I mapped a second user's journey: a head of asset management trying to isolate the loans in loss mitigation.
+**4. Making the user real.** I started with a **proto-persona**, *Corey Watts*, a 56-year-old banker built from our assumption map. After the interviews, I built a research-based persona, *Eduardo Reyes*, a head of asset management, and mapped his journey.
 
-![Corey had to email for every data point, wait 3–5 days, then decode long spreadsheets and build his own dashboards to make sense of it.](../../assets/project-insight/19-persona-corey-watts.png)
-![Mapping a head of asset management's journey showed where investors got stuck: loss-mitigation data was buried and hard to find.](../../assets/project-insight/22-journey-map-eduardo-reyes.png)
+![Proto-persona: Corey emailed for every data point, searched the old Investor Web, then decoded long spreadsheets into his own dashboards.](../../assets/project-insight/19-persona-corey-watts.png)
+![Eduardo's journey showed where investors got stuck: loss-mitigation data was buried and hard to find.](../../assets/project-insight/22-journey-map-eduardo-reyes.png)
 
 **5. Telling the story.** Two storyboards showed the experience we were building toward. A new loan is onboarded, the investor checks how it affects their portfolio, and the insight leads them to onboard more loans.
 
