@@ -37,6 +37,7 @@
   footer.site a .ico{margin:0;width:18px;height:18px}
   footer.site a:hover{border-color:#ffb3d9;background:#ffb3d91f;transform:translateY(-2px)}
   footer.site a:focus-visible{outline:3px solid #fff1a6;outline-offset:3px}
+  footer.site .legal{margin:0}footer.site .legal a{height:auto;padding:4px 6px;border:0;background:none;color:#a8d8ff;text-decoration:underline;text-underline-offset:3px}footer.site .legal a:hover{color:#ffb3d9;background:none;transform:none}
   footer.site .copy{margin:0;font-size:.85rem;color:#b8afd8}
   .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   html.no-motion footer.site a:hover{transform:none}
@@ -67,10 +68,12 @@
   ];
   function footer() {
     if (document.querySelector('footer.site')) return;
+    const ROOT = (location.pathname.includes('/case-studies/') ? '../' : '');
     const f = document.createElement('footer'); f.className = 'site';
     f.innerHTML = '<p class="sig">Tami Trevino <span aria-hidden="true">✦</span> Product designer · maker</p>' +
       '<nav aria-label="Social media"><ul>' + SOCIAL.map(([n, u, svg]) =>
         '<li><a href="' + u + '" target="_blank" rel="noopener"><span class="ico">' + svg + '</span>' + n + '<span class="sr-only"> (opens in a new tab)</span></a></li>').join('') + '</ul></nav>' +
+      '<p class="legal"><a href="' + ROOT + 'privacy.html">Privacy</a></p>' +
       '<p class="copy">© 2026 Tami Trevino · Designed and built with care, and with accessibility first.</p>';
     document.body.appendChild(f);
   }
