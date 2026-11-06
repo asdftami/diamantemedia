@@ -82,17 +82,17 @@ We designed the brand together. Then:
 
 ## 2. The store: 460+ products that still feel curated
 
-**Information architecture.** A big catalog can feel like a warehouse. I organized **460+ products from ~48 brands** into **three simple shopping pillars**, each with clear sub-categories, so any product is at most two taps away.
+**Information architecture.** I organized 460+ products into **three shopping pillars** with sub-categories, so any product is at most two taps away. **Shop by Brand, New Arrivals, Best Sellers, Travel Essentials** and **Lifestyle & Gifts** let people browse by mood, brand or need.
 
-On top of those: **Shop by Brand**, **New Arrivals**, **Best Sellers**, **Travel Essentials** and **Lifestyle & Gifts**, so people can browse by mood, brand or need.
+**The homepage** reads like a magazine, not a catalog, and ends with **Join the Friday List**.
 
-**The homepage** reads like a magazine, not a catalog: hero → Shop by Category → New Arrivals → our story → Best Sellers → Shop by Brand → Travel Essentials → "The Art of the Ritual" → **Join the Friday List**.
+**Product pages** stay clean: a large gallery, clear specs, Shop Pay installments, and accordions for details and shipping.
 
-**Product pages** have a large gallery, clear specs, Shop Pay installments, trust tiles, and accordions for details and shipping, so the page stays clean while every answer is one tap away.
-
-![The hero leads with lifestyle, not product, so the store feels like a home, not a warehouse.](../../assets/fridays-off/site/portfolio/f01-hero.png)
-![Designed mobile-first, where most shoppers browse.](../../assets/fridays-off/site/portfolio/f03-mobile-hero.png)
-![The Friday List turns first-time visitors into a community, with no spam, just good pieces.](../../assets/fridays-off/site/portfolio/f02-friday-list-signup.png)
+<div class="pair wide trio" markdown="1">
+![Leads with lifestyle, not product.](../../assets/fridays-off/site/portfolio/f01-hero.png)
+![Designed mobile-first.](../../assets/fridays-off/site/portfolio/f03-mobile-hero.png)
+![The Friday List builds a community.](../../assets/fridays-off/site/portfolio/f02-friday-list-signup.png)
+</div>
 
 **Responsible by design.** An **age verification gate** greets every visitor, and the email signup repeats the age requirement.
 
