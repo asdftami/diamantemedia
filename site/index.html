@@ -212,6 +212,28 @@
   .no-motion .stk{animation:none}
   @media (prefers-reduced-motion: reduce){.stk{animation:none}}
   @media (max-width:820px){.stk.spark,.stk.heart{display:none}.stk.floppy{width:50px;height:50px}}
+  /* "From my BFA" mini gallery on the UTRGV stop */
+  .bfa{margin:4px 0 18px;max-width:560px}
+  .bfa-h{font-family:VT323,monospace;font-size:1.1rem;letter-spacing:.12em;color:var(--butter);margin:0 0 8px}
+  .bfa-row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+  .bfa-thumb{display:grid;gap:3px;width:100%;padding:6px 6px 8px;border-radius:14px;border:1px solid #ffffff26;background:#ffffff0d;color:var(--ink);text-align:left;font:inherit;cursor:zoom-in;transition:transform .2s,border-color .2s,background .2s}
+  .bfa-thumb img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:9px;background:#fff;display:block}
+  .bfa-thumb:hover,.bfa-thumb:focus-visible{border-color:var(--pink);background:#ffb3d914;transform:translateY(-3px)}
+  .bfa-t{font-size:.82rem;font-weight:700;line-height:1.2}
+  .bfa-s{font-size:.72rem;color:var(--ink-dim);line-height:1.2}
+  .no-motion .bfa-thumb:hover{transform:none}
+  @media (max-width:820px){.bfa-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  dialog.zoom{max-width:min(96vw,1400px);max-height:96vh;padding:12px;border:1px solid #ffffff30;border-radius:18px;background:#0d0a26;color:var(--ink)}
+  dialog.zoom::backdrop{background:#040310d9}
+  .zoom-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+  .zoom-count{font-family:VT323,monospace;font-size:1.3rem;color:var(--butter);letter-spacing:.08em}
+  .zoom-stage{display:flex;align-items:center;gap:10px}
+  dialog.zoom img{display:block;min-width:0;max-width:calc(96vw - 140px);max-height:76vh;margin:0 auto;border-radius:10px;background:#fff}
+  dialog.zoom button{min-height:44px;padding:0 16px;border-radius:999px;border:0;background:var(--butter);color:#1a1033;font:inherit;font-weight:700;cursor:pointer}
+  dialog.zoom button:hover{background:var(--pink)}
+  .zoom-nav{flex:0 0 44px;width:44px;padding:0!important;font-size:1.3rem!important}
+  .zoom-cap{margin:10px auto 0;max-width:70ch;color:var(--ink-dim);text-align:center}
+  @media (max-width:640px){dialog.zoom img{max-width:calc(96vw - 40px)}.zoom-stage{flex-wrap:wrap;justify-content:center}.zoom-stage img{order:-1;flex-basis:100%}}
   /* motion off */
   .no-motion .planet,.no-motion .moon,.no-motion .ship-body{animation:none}
   .no-motion .ship.boost{transform:none} .no-motion .ship.boost .flame{opacity:0}
@@ -317,6 +339,8 @@
         <h2 id="h-art">Finding design</h2>
         <p>I traded pre-dental for graphic design and earned my BFA a semester early. I led 5 designers as editor-in-chief of <a class="inline" href="https://www.youtube.com/channel/UCzMvjvTz2uzrQExGYtOVKNg" target="_blank" rel="noopener">OMG! RGV<span class="sr-only"> (opens in a new tab)</span></a> and designed for <a class="inline" href="https://myrgv.com/category/publications/the-monitor/" target="_blank" rel="noopener">The Monitor<span class="sr-only"> (opens in a new tab)</span></a>'s media team.</p>
         <p class="mini-links"><a href="https://www.youtube.com/channel/UCzMvjvTz2uzrQExGYtOVKNg" target="_blank" rel="noopener">▶ OMG! RGV interviews ↗<span class="sr-only"> (opens in a new tab)</span></a><a href="https://x.com/OmgRgv/status/1314725741414830080" target="_blank" rel="noopener">OMG! RGV on X ↗<span class="sr-only"> (opens in a new tab)</span></a><a href="https://myrgv.com/category/publications/the-monitor/" target="_blank" rel="noopener">The Monitor ↗<span class="sr-only"> (opens in a new tab)</span></a></p>
+        <div class="bfa" aria-labelledby="bfa-h"><p class="bfa-h" id="bfa-h">FROM MY BFA</p><ul class="bfa-row"><li><button type="button" class="bfa-thumb" data-i="0"><img src="assets/utrgv/doux-cover-thumb.webp" alt="" loading="lazy"><span class="bfa-t">DOUX Magazine</span><span class="bfa-s">3 spreads · with Jovanna Mireles</span></button></li><li><button type="button" class="bfa-thumb" data-i="3"><img src="assets/utrgv/fiux-2018-poster-thumb.webp" alt="" loading="lazy"><span class="bfa-t">FIUX 2018 poster</span><span class="bfa-s">Call for entries</span></button></li><li><button type="button" class="bfa-thumb" data-i="4"><img src="assets/utrgv/honey-bees-infographic-thumb.webp" alt="" loading="lazy"><span class="bfa-t">Honey Bees infographic</span><span class="bfa-s">Data visualization</span></button></li><li><button type="button" class="bfa-thumb" data-i="5"><img src="assets/utrgv/wave-sculpture-thumb.webp" alt="" loading="lazy"><span class="bfa-t">Wave sculpture</span><span class="bfa-s">Studio art</span></button></li></ul></div>
+        <script type="application/json" id="bfa-data">[{"src": "assets/utrgv/doux-cover.webp", "alt": "DOUX Magazine: front and back cover of a 22-page editorial magazine"}, {"src": "assets/utrgv/doux-rise.webp", "alt": "DOUX Magazine spread: \"Rise,\" a feature on a rising model-singer, with oversized type over a portrait"}, {"src": "assets/utrgv/doux-sound-style-spirit.webp", "alt": "DOUX Magazine spread: \"Sound Style Spirit,\" broken-grid type mixed with music photography"}, {"src": "assets/utrgv/fiux-2018-poster.webp", "alt": "FIUX 2018 call-for-entries poster: bold geometric shards in pink and aqua"}, {"src": "assets/utrgv/honey-bees-infographic.webp", "alt": "\"Do you know Honey Bees?\" infographic: a low-poly bee with honey production charts by country"}, {"src": "assets/utrgv/wave-sculpture.webp", "alt": "Blue and white wave sculpture, hand-built for a studio art class"}]</script>
         <ul class="tags" aria-label="Skills from this era"><li>Graphic Design</li><li>Editorial Leadership</li><li>Web Build</li><li>Video Editing</li></ul>
       </div>
       <div class="planet-wrap" aria-hidden="true"><span class="planet3" data-p="rose" style="--spin:70s"></span><span class="stk floppy" style="left:2%;bottom:8%"></span></div>
@@ -571,6 +595,29 @@
   resize(); applyMotion();
 })();
 
+</script>
+<dialog class="zoom" aria-labelledby="zoomCap">
+  <div class="zoom-top"><span class="zoom-count" id="zoomCount" aria-live="polite"></span><button type="button" class="zoom-close">Close ✕</button></div>
+  <div class="zoom-stage"><button type="button" class="zoom-nav prev" aria-label="Previous image">←</button><img alt=""><button type="button" class="zoom-nav next" aria-label="Next image">→</button></div>
+  <p class="zoom-cap" id="zoomCap"></p>
+</dialog>
+<script>
+(() => {
+  const data = JSON.parse(document.getElementById('bfa-data').textContent);
+  const d = document.querySelector('dialog.zoom'), big = d.querySelector('img'), cap = d.querySelector('#zoomCap'), count = d.querySelector('#zoomCount');
+  let cur = 0, opener = null;
+  const show = i => { cur = (i + data.length) % data.length; big.src = data[cur].src; big.alt = data[cur].alt; cap.textContent = data[cur].alt; count.textContent = (cur + 1) + ' / ' + data.length; };
+  document.querySelectorAll('.bfa-thumb').forEach(b => {
+    b.setAttribute('aria-label', 'Enlarge: ' + data[+b.dataset.i].alt);
+    b.addEventListener('click', () => { opener = b; show(+b.dataset.i); d.showModal(); d.querySelector('.zoom-nav.next').focus(); });
+  });
+  d.querySelector('.prev').addEventListener('click', () => show(cur - 1));
+  d.querySelector('.next').addEventListener('click', () => show(cur + 1));
+  d.querySelector('.zoom-close').addEventListener('click', () => d.close());
+  d.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { e.preventDefault(); show(cur + 1); } if (e.key === 'ArrowLeft') { e.preventDefault(); show(cur - 1); } });
+  d.addEventListener('click', e => { if (e.target === d) d.close(); });
+  d.addEventListener('close', () => opener && opener.focus());
+})();
 </script>
 <script src="assets/planets.js"></script>
 <script src="assets/cursor.js"></script>

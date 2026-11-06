@@ -773,3 +773,5 @@ Context (Tami): self-initiated audits done while working the retail floor. The c
 - OMG! RGV interviews (YouTube): https://www.youtube.com/channel/UCzMvjvTz2uzrQExGYtOVKNg · on X: https://x.com/OmgRgv/status/1314725741414830080 · Facebook page no longer live.
 - Context (Tami): OMG! RGV was an internship project; she led the magazine. After graduation the internship leader (founder of the digital agency) disbanded it and started a new company. 🔒 Keep that backstory private.
 - Socials: LinkedIn linkedin.com/in/tamitrevino · YouTube @tamimakesstuff · Instagram @TAMIMAKESSTUFF · TikTok @asdftami
+
+- UTRGV portfolio (tamitrevinoo.wordpress.com): reviewed Nov 7, 2026. Decision: don't link it (WordPress ads, dated About, mixed quality). Pulled DOUX (cover + Rise + Sound Style Spirit, with Jovanna Mireles), FIUX 2018 poster, Honey Bees infographic, wave sculpture into a "From my BFA" gallery on the UTRGV stop. Originals in assets/utrgv/.
