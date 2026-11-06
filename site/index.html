@@ -128,9 +128,9 @@
   .p-next{--c1:#fff1a6;--c2:#ffb3d9;--glow:#fff1a677;--ring:#c9b6ffaa;--moon:#a8d8ff}
 
   /* Y2K: Tamagotchi spaceship = journey navigator */
-  .ship{position:fixed;z-index:20;right:clamp(16px,2.5vw,36px);bottom:clamp(18px,3vw,40px);width:178px;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+  .ship{position:fixed;z-index:20;right:clamp(16px,2.5vw,36px);bottom:clamp(18px,3vw,40px);width:186px;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
   /* virtual-pet egg: glitter galaxy shell, gold starburst bezel */
-  .ship-body{position:relative;padding:30px 20px 16px;border-radius:50% 50% 47% 47%/58% 58% 42% 42%;
+  .ship-body{position:relative;padding:30px 24px 16px;border-radius:50% 50% 47% 47%/58% 58% 42% 42%;
     background:
       radial-gradient(circle at 30% 18%,#ffffff55,transparent 28%),
       radial-gradient(1.2px 1.2px at 18% 30%,#fff1a6 99%,transparent),radial-gradient(1px 1px at 72% 22%,#fff 99%,transparent),
@@ -144,8 +144,9 @@
     border:1.5px solid #ffffff38;box-shadow:inset 0 3px 0 #ffffff30,inset 0 -10px 24px #0005,0 0 40px #9b86ff55,0 12px 30px #0009;animation:bob 4s ease-in-out infinite}
   .deco{position:absolute;inset:0;pointer-events:none;color:#ffd86b;text-shadow:0 0 6px #ffd86b88}
   .deco i{position:absolute;font-style:normal;line-height:1}
-  .deco i:nth-child(1){left:13px;top:46%;font-size:1.1rem}
-  .deco i:nth-child(2){right:16px;top:18%;font-size:.8rem}
+  .deco i:nth-child(1){left:7px;top:43%;font-size:1.55rem}
+  .eggmark{display:block;text-align:center;font-family:VT323,monospace;font-size:.95rem;letter-spacing:.3em;color:#ffd86b;text-shadow:0 0 6px #ffd86b66;margin:-14px 0 6px}
+  .deco i:nth-child(2){right:22px;top:12%;font-size:.8rem}
   .deco i:nth-child(3){right:30px;bottom:14px;font-size:.75rem}
   .bezel{padding:8px;background:linear-gradient(145deg,#ffe48a,#d9a93a 60%,#f5cf62);clip-path:polygon(8% 0,22% 5%,36% 0,50% 5%,64% 0,78% 5%,92% 0,100% 10%,95% 26%,100% 42%,95% 58%,100% 74%,95% 90%,100% 100%,78% 95%,64% 100%,50% 95%,36% 100%,22% 95%,8% 100%,0 90%,5% 74%,0 58%,5% 42%,0 26%,5% 10%);filter:drop-shadow(0 2px 0 #0003)}
   .bezel .lcd{border-radius:4px;padding:4px 6px}
@@ -271,7 +272,7 @@
     .stop{padding-top:96px;padding-bottom:170px}
     .ship{width:auto;left:12px;right:12px;bottom:12px}
     .ship-body{display:flex;align-items:center;gap:10px;border-radius:30px;padding:8px 10px}
-    .antenna,.deco,.lcd .icons{display:none}
+    .antenna,.deco,.eggmark,.lcd .icons{display:none}
     .bezel{flex:1;clip-path:none;padding:3px;border-radius:16px}
     .keys .key:nth-child(2){margin-top:0}
     .lcd{flex:1;display:flex;align-items:center;gap:10px;text-align:left}
@@ -492,12 +493,13 @@
   <div class="ship-body">
     <div class="antenna" aria-hidden="true"></div>
     <span class="deco" aria-hidden="true"><i>☾</i><i>✦</i><i>★</i></span>
+    <span class="eggmark" aria-hidden="true">✦ TT ✦</span>
     <div class="bezel">
       <div class="lcd" aria-live="polite"><div class="icons" aria-hidden="true"><span>♥</span><span>✦</span><span>★</span><span>✉</span></div><div class="pet" id="pet" aria-hidden="true">(^ᴗ^)</div><div><div class="big" id="lcdYear">1993→2026</div><div id="lcdName">WELCOME</div></div><div class="icons" aria-hidden="true"><span>☺</span><span>♪</span><span>☾</span><span>⌂</span></div></div>
     </div>
     <div class="keys">
       <button class="key" id="prevBtn" type="button" aria-label="Previous stop">▲</button>
-      <button class="key" id="homeBtn" type="button" aria-label="Back to the start">●</button>
+      <button class="key" id="homeBtn" type="button" aria-label="Back to the top">⌂</button>
       <button class="key" id="nextBtn" type="button" aria-label="Next stop">▼</button>
     </div>
   </div>
