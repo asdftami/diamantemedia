@@ -76,7 +76,7 @@ Remote/Colorado
 ### Computershare Loan Services (formerly SLS): UX Designer
 **Dec 2022 – Feb 2024** · Greenwood Village, CO
 - **Sole UX designer** on the Investor Value Stream (12–15 people: PM, BSA, stakeholder, engineers)
-- ⭐ **Project Insight**: self-serve investor analytics dashboards replacing a **3–5 day** manual spreadsheet/PDF request process. Assumption mapping, stakeholder + investor interviews, proto-persona → research-based persona, journey map, storyboards, co-design whiteboard workshops, low → high fidelity, **usability testing with 5 investors**, 3 prototype variants. Dashboard suite: Main, Investor Type, Delinquency, Cashflow, HELOC, Active, Inactive, Disaster (embedded **FEMA disaster map**). Investors at every fidelity: *"When is this coming out? I need it now."* Cancelled after the Newrez acquisition. Tools: Figma, FigJam, Airtable (research repository), Azure DevOps.
+- ⭐ **Project Insight**: self-serve investor analytics dashboards replacing a **3–5 day** manual spreadsheet/PDF request process. Assumption mapping, stakeholder + investor interviews, proto-persona (from the assumption map) → research-based persona built from a real investor, journey map, storyboards, co-design whiteboard workshops, low → high fidelity, **usability testing with 5 investors**, 3 prototype variants. Dashboard suite: Main, Investor Type, Delinquency, Cashflow, HELOC, Active, Inactive, Disaster (embedded **FEMA disaster map**). Investors at every fidelity: *"When is this coming out? I need it now."* Cancelled after the Newrez acquisition. Tools: Figma, FigJam, Airtable (research repository), Azure DevOps.
 - ⭐ **Bond Centre 2.0 (State of Israel Bonds)**: redesigned a cluttered bondholder/admin portal: split navigation (A/B tested, the split won), accordions + pagination, 3-step wizards, inline uploads, admin approve/reject flow, full responsive mobile set (Inbox A/B tested). **Shipped to production.** Tool: Figma.
 - Customer portal features
 - Led **Pride Month** engagement events (trivia, giveaways) with cross-department colleagues
@@ -165,6 +165,8 @@ Austin, TX · Worked through COVID while starting her Master's
 - **Primary audience:** hiring managers first (fast path to work + resume), freelance clients second ("Start a project")
 - Homepage: "Selected work" mini-planets in the first screen; nav = Work · About · Resume · Contact + labeled Animation switch
 - Every case study opens with an **Impact** card and ends with **What I learned** cards in Tami's own words
+- **Voice:** concise. Feedback from hiring managers was that her work read as too verbose, so every page was cut 25–40% (Nov 6, 2026). No repeated points between Impact card, text and captions.
+- **Images:** process images sit small and side by side in matching frames; every image has "Click to enlarge"
 - Prototype: `site/index.html` · private preview: https://claude.ai/artifact/DCJRauUisN1iyz65DFo4qd
 
 ---
