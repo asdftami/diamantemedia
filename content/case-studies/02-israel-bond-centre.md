@@ -74,15 +74,13 @@ I tested **one long left menu** against a **split navigation**:
 
 ## 2. Taming the data: accordions + pagination
 
-Some bondholders hold **many bonds across many accounts**. Instead of showing everything at once:
+Some bondholders hold **many bonds across many accounts**, so:
 
-- Each account is an **accordion**, closed until you need it, with **Expand all / Collapse all**
-- Inside, bonds sit in a **short, paginated table**, and users choose how many rows to see
-- A summary panel shows the **total balance** at a glance, with a **USD / CAD** toggle
+- Each account is an **accordion**, with **Expand all / Collapse all**
+- Bonds sit in a **short, paginated table**, and users choose how many rows to see
+- A summary panel shows the **total balance**, with a **USD / CAD** toggle
 
-The bondholder decides how much information is on screen, not the system.
-
-![Accordions and pagination let bondholders with many accounts see only what they need, with the total balance always in view.](../../assets/israel-bond-centre/10-new-portfolio-split-nav.png)
+The bondholder decides how much is on screen, not the system.
 
 ---
 
