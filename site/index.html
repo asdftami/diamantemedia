@@ -154,12 +154,33 @@
   .ship:hover .ship-body,.ship:focus-within .ship-body{animation-play-state:paused} /* steady target for clicks */
   @keyframes bob{50%{transform:translateY(-6px)}}
 
-  /* Y2K: brick-phone contact card */
-  .phone{width:min(230px,70%);margin:0 auto;padding:22px 18px 26px;border-radius:34px 34px 28px 28px;background:linear-gradient(165deg,#3b3f6b,#1d1f45);border:2px solid #ffffff22;box-shadow:0 0 50px #c9b6ff44}
-  .phone .lcd{text-align:left;font-size:1.15rem;min-height:110px;padding:10px}
-  .phone .pad{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
-  .phone .pad span{height:22px;border-radius:10px;background:#c9b6ff}
-  .phone .pad span:nth-child(3n+2){background:var(--pink)}
+  /* Y2K: candybar phone contact card (wide top, tapered bottom) */
+  .phone{position:relative;width:min(250px,78%);margin:0 auto;padding:26px 26px 34px;filter:drop-shadow(0 0 40px #c9b6ff40)}
+  .phone .shell{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+  .phone > *:not(.shell){position:relative;z-index:1}
+  .phone .ear{width:44px;height:5px;margin:0 auto 10px;border-radius:5px;background:#0d0b26;box-shadow:inset 0 1px 0 #0008,0 1px 0 #ffffff1a}
+  .phone .mark{display:block;text-align:center;font-family:VT323,monospace;font-size:.95rem;letter-spacing:.3em;color:#c9b6ffbb;margin:-2px 0 8px}
+  .phone .screen{background:var(--lcd-bg);color:var(--lcd-ink);font-family:VT323,monospace;border-radius:12px 12px 16px 16px;padding:7px 10px 6px;box-shadow:inset 0 0 0 3px #0003,inset 0 6px 12px #0002,0 0 0 4px #14122f}
+  .phone .status{display:flex;justify-content:space-between;align-items:flex-end;font-size:.9rem;line-height:1}
+  .phone .bars{display:flex;gap:2px;align-items:flex-end}
+  .phone .bars i{display:block;width:3px;background:var(--lcd-ink)}
+  .phone .bars i:nth-child(1){height:4px}.phone .bars i:nth-child(2){height:7px}.phone .bars i:nth-child(3){height:10px}.phone .bars i:nth-child(4){height:13px}
+  .phone .batt{width:18px;height:9px;border:1.5px solid var(--lcd-ink);border-radius:2px;position:relative;padding:1px}
+  .phone .batt::before{content:"";display:block;height:100%;width:75%;background:var(--lcd-ink)}
+  .phone .batt::after{content:"";position:absolute;right:-4px;top:2px;width:2px;height:3px;background:var(--lcd-ink)}
+  .phone .sms{font-size:1.2rem;line-height:1.05;margin:8px 0 6px;min-height:76px}
+  .phone .soft{display:flex;justify-content:space-between;font-size:.95rem;border-top:1.5px solid #1b2a1240;padding-top:3px}
+  .phone .navrow{display:grid;grid-template-columns:1fr 1.3fr 1fr;align-items:center;gap:10px;margin:16px 4px 12px}
+  .phone .sk{height:12px;border-radius:12px 12px 6px 6px;background:#c9b6ff;box-shadow:inset 0 -3px #0002}
+  .phone .sk.r{border-radius:12px 12px 6px 6px}
+  .phone .navi{height:30px;border-radius:50% / 60%;background:linear-gradient(180deg,#ffd0e6,var(--pink));box-shadow:inset 0 -4px #0002,0 2px 0 #0004;display:grid;place-items:center;color:#5a1d3f;font-size:.7rem}
+  .phone .keys{display:grid;gap:7px}
+  .phone .krow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .phone .krow:nth-child(2){padding:0 4px}.phone .krow:nth-child(3){padding:0 10px}.phone .krow:nth-child(4){padding:0 18px}
+  .phone .k{display:flex;align-items:baseline;justify-content:center;gap:4px;height:26px;border-radius:13px 13px 11px 11px;background:linear-gradient(180deg,#ddd2ff,#c9b6ff);box-shadow:inset 0 -3px #0002,0 1px 0 #0005;color:#1a1033;font-weight:700;line-height:26px}
+  .phone .k b{font-size:.95rem}
+  .phone .k small{font-size:.5rem;letter-spacing:.06em;font-weight:700;opacity:.7}
+  .phone .krow .k:nth-child(2){background:linear-gradient(180deg,#ffd0e6,var(--pink))}
 
   /* contact form */
   .msg{margin-top:26px;padding:20px;border-radius:var(--radius);background:#ffffff0d;border:1px solid #ffffff26;max-width:520px;display:grid;gap:12px}
@@ -425,7 +446,7 @@
         </form>
       </div>
       <div aria-hidden="true">
-        <div class="phone"><div class="lcd">✉ 1 NEW MESSAGE<br><br>Let's build the<br>next world :)</div><div class="pad"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+        <div class="phone"><svg class="shell" viewBox="0 0 250 520" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="ph" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#43477a"/><stop offset=".55" stop-color="#262857"/><stop offset="1" stop-color="#191a40"/></linearGradient></defs><path d="M46 4 H204 C234 4 246 22 246 54 V200 C246 290 232 400 214 474 C208 502 192 516 168 516 H82 C58 516 42 502 36 474 C18 400 4 290 4 200 V54 C4 22 16 4 46 4 Z" fill="url(#ph)" stroke="#ffffff30" stroke-width="2"/><path d="M30 20 C60 10 190 10 220 20" stroke="#ffffff22" stroke-width="3" fill="none" stroke-linecap="round"/></svg><div class="ear"></div><span class="mark">✦ TT ✦</span><div class="screen"><div class="status"><span class="bars"><i></i><i></i><i></i><i></i></span><span>12:00</span><span class="batt"></span></div><div class="sms">✉ 1 NEW MESSAGE<br>Let's build the<br>next world :)</div><div class="soft"><span>Reply</span><span>Menu</span></div></div><div class="navrow"><span class="sk"></span><span class="navi">▲▼</span><span class="sk r"></span></div><div class="keys"><div class="krow"><span class="k"><b>1</b><small>o_o</small></span><span class="k"><b>2</b><small>ABC</small></span><span class="k"><b>3</b><small>DEF</small></span></div><div class="krow"><span class="k"><b>4</b><small>GHI</small></span><span class="k"><b>5</b><small>JKL</small></span><span class="k"><b>6</b><small>MNO</small></span></div><div class="krow"><span class="k"><b>7</b><small>PQRS</small></span><span class="k"><b>8</b><small>TUV</small></span><span class="k"><b>9</b><small>WXYZ</small></span></div><div class="krow"><span class="k"><b>*</b><small>+</small></span><span class="k"><b>0</b><small>␣</small></span><span class="k"><b>#</b><small>⇧</small></span></div></div></div>
       </div>
     </div>
   </section>
