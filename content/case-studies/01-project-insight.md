@@ -134,14 +134,12 @@ After 1–2 rounds of low-fidelity testing with **5 investors**, the pattern was
 
 ## Outcome
 
-At every fidelity level, low, mid and high, investors reacted the same way:
+At every fidelity, investors reacted the same way:
 
 > *"How can I access this?"*
 > *"When is this coming out? I need it now."*
 
-The designs were complete and validated, and the data team was already organizing the backend feeds. Then **Newrez acquired the company**. Newrez already had its own investor tool, so Project Insight was cancelled before development started.
-
-The goal was to replace a **3–5 day manual request process** with **self-serve, on-demand insight**. The research and testing showed investors wanted exactly that.
+The designs were validated, and the data team was preparing the backend, when **Newrez acquired the company**. Newrez already had an investor tool, so Project Insight was cancelled before development.
 
 ---
 
