@@ -28,6 +28,11 @@ PAGES = [
     {"src": "03-fridays-off.md", "slug": "fridays-off", "num": "04", "planet": "p-fridays", "year": "OCT 2026–NOW · CO-FOUNDER"},
 ]
 
+# Extra pages that live on a timeline stop but not in the numbered series.
+EXTRAS = [
+    {"src": "05-jars-ux-audits.md", "slug": "jars-ux-audits", "label": "UX AUDITS", "planet": "p-jars", "year": "SEP 2025–APR 2026 · JARS"},
+]
+
 
 def parse(text):
     meta = {}
@@ -83,7 +88,9 @@ TEMPLATE = (ROOT / "tools" / "case_study_template.html").read_text()
 
 def build():
     OUT.mkdir(parents=True, exist_ok=True)
-    for i, page in enumerate(PAGES):
+    for page in PAGES:
+        page.setdefault("label", "CASE STUDY " + page["num"])
+    for i, page in enumerate(PAGES + EXTRAS):
         meta, text = parse((SRC / page["src"]).read_text())
         body = markdown.markdown(text, extensions=["tables", "fenced_code", "sane_lists", "md_in_html"])
         body = figures(body)
@@ -91,10 +98,15 @@ def build():
         body = re.sub(r"(<h2[^>]*>What I(?:'|&rsquo;|’)?(?:d do differently today| learned)</h2>\s*)<ul>(.*?)</ul>",
                       r'\1<ol class="learnings">\2</ol>', body, flags=re.S)   # learnings as numbered cards
         body = body.replace("<table>", '<div class="table-wrap"><table>').replace("</table>", "</table></div>")
-        prev_p = PAGES[i - 1] if i > 0 else None
-        next_p = PAGES[i + 1] if i < len(PAGES) - 1 else None
+        if page in EXTRAS:
+            prev_p = next_p = None
+        else:
+            prev_p = PAGES[i - 1] if i > 0 else None
+            next_p = PAGES[i + 1] if i < len(PAGES) - 1 else None
 
         def link(p, label):
+            if not p and page in EXTRAS and "Next" in label:
+                return '<a class="pager" href="../index.html#work">Next →<strong>See the case studies</strong></a>'
             if not p:
                 return f'<a class="pager" href="../index.html#start">{label}<strong>Back to the galaxy</strong></a>'
             t, _ = parse((SRC / p["src"]).read_text())
@@ -104,7 +116,7 @@ def build():
                .replace("{{TITLE}}", html.escape(meta.get("title", "")))
                .replace("{{SUBTITLE}}", html.escape(meta.get("subtitle", "")))
                .replace("{{ROLE}}", html.escape(meta.get("role", "")))
-               .replace("{{NUM}}", page["num"])
+               .replace("{{LABEL}}", page["label"])
                .replace("{{YEAR}}", page["year"])
                .replace("{{PLANET}}", page["planet"])
                .replace("{{BODY}}", body)
