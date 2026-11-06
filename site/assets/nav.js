@@ -29,17 +29,18 @@
   @media (max-width:820px){
     header.top [data-ico]{display:none!important}
     header.top .spy .ind{display:none}
-    .dock{position:fixed;z-index:30;left:max(10px,env(safe-area-inset-left,0px));right:max(10px,env(safe-area-inset-right,0px));bottom:calc(10px + env(safe-area-inset-bottom,0px));
-      display:flex;gap:4px;padding:6px;border-radius:22px;background:linear-gradient(180deg,#ffffffeb,#e7defce0);box-shadow:0 12px 28px #000b,inset 0 0 0 2px #fff;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+    .dock{position:fixed;z-index:30;left:0;right:0;bottom:0;
+      display:flex;gap:4px;padding:6px max(8px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px));
+      border-radius:20px 20px 0 0;background:linear-gradient(180deg,#ffffff,#ece5fd);box-shadow:0 -8px 24px #0009,inset 0 2px 0 #fff}
     .dock a,.dock button{position:relative;flex:1;display:grid;justify-items:center;align-content:center;gap:2px;min-height:52px;padding:4px 0;border:0;border-radius:15px;background:none;color:#3a2a6e;font:700 .72rem "Space Grotesk",system-ui,sans-serif;text-decoration:none;cursor:pointer;transition:background .2s,transform .15s}
     .dock .ico{width:22px;height:22px;margin:0}
     .dock a:active,.dock button:active{transform:scale(.94)}
     .dock a[aria-current]{background:#3a2a6e;color:#fff}
-    .dock a[aria-current]::after{content:"";position:absolute;bottom:-5px;left:50%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#ffb3d9;box-shadow:0 0 8px #ffb3d9}
+    .dock a[aria-current]::after{content:"";position:absolute;bottom:4px;left:50%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#ffb3d9;box-shadow:0 0 8px #ffb3d9}
     .dock a.dock-cta{background:#ffb3d9;color:#2a0d22}
     .dock a.dock-cta[aria-current]{background:#3a2a6e;color:#fff}
     .dock .sep{flex:0 0 1px;align-self:stretch;margin:8px 2px;background:#3a2a6e33}
-    body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+    body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
   }`;
   const st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
