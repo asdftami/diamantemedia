@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Y2K Desktop Sample</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/planets.css">
+<style>
+  :root{--space-0:#07051a;--space-1:#120c35;--ink:#f7f3ff;--ink-dim:#d6cef0;--pink:#ffb3d9;--lilac:#c9b6ff;--butter:#fff1a6;--sky:#a8d8ff;--tiffany:#81d8d0;--win-ink:#3a2a6e}
+  *{box-sizing:border-box}
+  body{margin:0;color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif;background:radial-gradient(900px 600px at 20% 10%,#ff8fb833,transparent 60%),radial-gradient(900px 700px at 85% 80%,#9b6bff33,transparent 60%),linear-gradient(180deg,var(--space-1),var(--space-0));min-height:100vh;padding:32px max(16px,env(safe-area-inset-left,0px)) 60px}
+  .wrap{max-width:1120px;margin:0 auto;display:grid;gap:18px}
+  h1{margin:0;font-size:1.6rem}.note{margin:0 0 10px;color:var(--ink-dim)}
+  .label{font-family:VT323,monospace;font-size:1.2rem;letter-spacing:.1em;color:var(--butter);margin:22px 0 6px}
+
+  /* holographic OS window */
+  .win{position:relative;border-radius:18px;padding:3px;background:linear-gradient(135deg,#ffd1ec,#d9c9ff 35%,#c4f3ec 65%,#cfe6ff);box-shadow:0 0 0 2px #ffffff66 inset,0 24px 60px #0009,0 0 40px #c9b6ff44}
+  .win-bar{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:15px 15px 0 0;background:linear-gradient(180deg,#ffffffcc,#ffffff66);color:var(--win-ink)}
+  .win-bar h2{margin:0;font-size:1.25rem;font-weight:700;display:flex;align-items:center;gap:8px}
+  .win-bar .ctl{margin-left:auto;display:flex;gap:6px}
+  .win-bar .ctl span{width:26px;height:22px;border-radius:6px;display:grid;place-items:center;font-size:.8rem;font-weight:700;background:linear-gradient(180deg,#fff,#e7defc);color:#6b5bb5;box-shadow:inset 0 -2px #0001,0 0 0 1px #c9b6ff}
+  .win-body{position:relative;border-radius:0 0 15px 15px;padding:22px;background:
+      radial-gradient(1px 1px at 20% 30%,#fff 99%,transparent),radial-gradient(1.4px 1.4px at 70% 20%,#fff 99%,transparent),radial-gradient(1px 1px at 85% 70%,#fff 99%,transparent),
+      linear-gradient(135deg,#ffc3e3cc,#d9c9ffcc 40%,#c4f3eccc 75%,#cfe6ffcc);
+    box-shadow:inset 0 0 0 1px #ffffff99}
+  .icons{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+  .icons a{display:grid;justify-items:center;gap:6px;padding:14px 8px;border-radius:14px;text-decoration:none;color:var(--win-ink);text-align:center;transition:background .2s,transform .2s,box-shadow .2s}
+  .icons a:hover,.icons a:focus-visible{background:#ffffff8c;transform:translateY(-4px);box-shadow:0 10px 24px #6b5bb533,0 0 0 2px #fff inset}
+  .icons .planet3{width:92px}
+  .icons strong{font-size:1rem}
+  .icons small{font-size:.82rem;color:#5b4b8f}
+  .tag{font-family:VT323,monospace;font-size:1rem;letter-spacing:.06em;padding:1px 8px;border-radius:6px;background:#3a2a6e;color:var(--butter)}
+
+  /* stickers */
+  .stickers{display:flex;flex-wrap:wrap;gap:22px;align-items:center}
+  .floppy{width:72px;height:72px;border-radius:8px;background:linear-gradient(160deg,#d9c9ff,#a99be6);position:relative;transform:rotate(-10deg);box-shadow:0 10px 20px #0007,inset 0 0 0 2px #ffffff88}
+  .floppy::before{content:"";position:absolute;left:18px;right:12px;top:0;height:22px;background:#e9e4ff;border-radius:0 0 4px 4px;box-shadow:inset 22px 0 0 -14px #6b5bb5}
+  .floppy::after{content:"TT ✦";position:absolute;left:10px;right:10px;bottom:8px;height:28px;border-radius:4px;background:#fff;color:#6b5bb5;font:700 .8rem VT323,monospace;display:grid;place-items:center;letter-spacing:.1em}
+  .mail{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;background:#fffdfa;color:#3a2a6e;font-weight:700;box-shadow:0 10px 24px #0007,inset 0 0 0 2px #c9b6ff;position:relative;transform:rotate(2deg)}
+  .mail::after{content:"";position:absolute;left:28px;bottom:-12px;border:8px solid transparent;border-top-color:#fffdfa}
+  .mail b{font-size:1.6rem}
+  .heart{font-size:3rem;color:#ff8fc8;text-shadow:0 0 18px #ff8fc8aa,3px 3px 0 #c45a8a;transform:rotate(-8deg)}
+  .spark{font-size:2rem;color:#fff;text-shadow:0 0 12px #fff}
+  .dock{display:flex;width:max-content;max-width:100%;gap:10px;align-items:center;padding:10px 16px;border-radius:20px;background:linear-gradient(180deg,#ffffffd9,#e7defcc4);box-shadow:0 14px 30px #0008,inset 0 0 0 2px #fff;color:#3a2a6e}
+  .dock span{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;background:linear-gradient(180deg,#fff,#efe9ff);box-shadow:inset 0 -3px #0001,0 0 0 1px #d9c9ff;transition:transform .2s}
+  .dock span:hover{transform:translateY(-6px) scale(1.1)}
+  .dock .clock{width:auto;padding:0 12px;font:1.5rem VT323,monospace}
+  @media (max-width:760px){.icons{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Y2K desktop: a sample</h1>
+  <p class="note">Your AI desktop translated into the galaxy site. Nothing on the real site changes until you pick what you like.</p>
+
+  <p class="label">A · SELECTED WORK AS A HOLOGRAPHIC WINDOW</p>
+  <section class="win" aria-labelledby="w-title">
+    <div class="win-bar"><h2 id="w-title">📁 Selected Work</h2><span class="tag">4 PLANETS</span><span class="ctl" aria-hidden="true"><span>–</span><span>□</span><span>✕</span></span></div>
+    <div class="win-body">
+      <ul class="icons">
+        <li><a href="#"><span class="planet3" data-p="lavender" style="--spin:27s" aria-hidden="true"></span><strong>Project Insight</strong><small>Investor Dashboards · Fintech</small></a></li>
+        <li><a href="#"><span class="planet3" data-p="sky" style="--spin:32s" aria-hidden="true"></span><strong>Bond Centre 2.0</strong><small>Portal Redesign · Shipped</small></a></li>
+        <li><a href="#"><span class="planet3" data-p="sand" style="--spin:37s" aria-hidden="true"></span><strong>Fridays-Off</strong><small>Brand + E-Commerce · Founder</small></a></li>
+        <li><a href="#"><span class="planet3" data-p="mint" style="--spin:25s" aria-hidden="true"></span><strong>Dental Brands</strong><small>Brand + Web · Healthcare</small></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="label">B · STICKERS SCATTERED IN SPACE (FLOPPY, "YOU'VE GOT MAIL" BY CONTACT, PIXEL HEART)</p>
+  <div class="stickers" aria-hidden="true">
+    <span class="floppy"></span>
+    <span class="mail"><b>✉</b>You've got mail!</span>
+    <span class="heart">♥</span><span class="spark">✦</span>
+  </div>
+
+  <p class="label">C · A DOCK FOR THE PHONE NAV (REPLACES THE BAR AT THE BOTTOM ON MOBILE)</p>
+  <div class="dock" aria-hidden="true"><span>🪐</span><span>👩🏻‍💻</span><span>📄</span><span>✉</span><span class="clock">11:11 PM</span></div>
+</div>
+<script src="assets/planets.js"></script>
+<script src="assets/cursor.js"></script>
+<script>document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener('click',e=>e.preventDefault()))</script>
+</body>
+</html>
