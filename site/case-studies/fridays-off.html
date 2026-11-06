@@ -79,10 +79,13 @@
   .impact p{margin:0;font-size:clamp(1.12rem,1.8vw,1.3rem)!important;line-height:1.55;color:var(--ink)!important}
   main.cs .impact strong{color:var(--butter)}
   .pair .gallery{grid-template-columns:1fr 1fr;max-width:520px;margin-left:auto;margin-right:auto;gap:14px}
-  .pair figure img{max-height:220px}
+  .pair figure{display:flex;flex-direction:column}
+  .pair .zoom-hint{margin-top:auto;align-self:flex-start}
+  .pair figcaption{padding-bottom:6px}
+  .pair figure img{width:100%;height:220px;max-height:none;object-fit:contain;object-position:center}
   .pair figcaption{font-size:.85rem}
   .pair.wide .gallery{max-width:none}
-  .pair.wide figure img{max-height:300px}
+  .pair.wide figure img{height:auto;aspect-ratio:16/10}
   figure img{cursor:zoom-in}
   .zoom-hint{display:inline-block;margin:8px 6px 0;font-size:.8rem;font-weight:700;color:var(--tiffany);cursor:zoom-in}
   dialog.zoom{max-width:96vw;max-height:94vh;padding:0;border:0;border-radius:16px;background:#0d0a26}
