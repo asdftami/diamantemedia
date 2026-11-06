@@ -105,11 +105,13 @@ Updating communication preferences across accounts used to be one dense form. I 
 
 ## 4. Forms and uploads without losing your place
 
-Printable forms are grouped into accordions: US holders, international holders, tax forms, direct registration, international currency. Bondholders can **view a form and upload the signed copy right inside the section**: drag and drop, a progress bar, an "Uploaded ✓" state, and a **Remove file** option if they picked the wrong one.
+Printable forms sit in five accordions (US, international, tax, direct registration and international currency). Bondholders **upload the signed copy right inside the section**: drag and drop, a progress bar, an "Uploaded ✓" state and **Remove file**.
 
-![Five form categories in tidy accordions, so bondholders open only the one they need.](../../assets/israel-bond-centre/03-printable-forms-one-expanded.png)
-![Upload a signed form right where you found it: no new page, no lost place.](../../assets/israel-bond-centre/04-upload-drag-and-drop.png)
-![Clear progress and an "Uploaded ✓" state, plus a way to remove the wrong file.](../../assets/israel-bond-centre/05-upload-success.png)
+<div class="pair wide trio" markdown="1">
+![Five form groups; open only what you need.](../../assets/israel-bond-centre/03-printable-forms-one-expanded.png)
+![Upload right where you found the form.](../../assets/israel-bond-centre/04-upload-drag-and-drop.png)
+![Clear progress, plus a way to remove the wrong file.](../../assets/israel-bond-centre/05-upload-success.png)
+</div>
 
 ---
 

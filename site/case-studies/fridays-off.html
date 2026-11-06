@@ -86,6 +86,8 @@
   .pair figcaption{font-size:.85rem}
   .pair.wide .gallery{max-width:none}
   .pair.wide figure img{height:auto;aspect-ratio:16/10}
+  .pair.trio .gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+  @media (max-width:640px){.pair.trio .gallery{grid-template-columns:1fr 1fr}}
   figure img{cursor:zoom-in}
   .zoom-hint{display:inline-block;margin:8px 6px 0;font-size:.8rem;font-weight:700;color:var(--tiffany);cursor:zoom-in}
   dialog.zoom{max-width:96vw;max-height:94vh;padding:0;border:0;border-radius:16px;background:#0d0a26}
