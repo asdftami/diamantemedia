@@ -47,9 +47,10 @@ For my co-founder and me, it's personal: a business built on our own terms.
 
 ## Who does what
 
+We designed the brand together. Then:
+
 | Me | My co-founder |
 |---|---|
-| Brand identity (together) | Brand identity (together) |
 | **Designed and built the entire website** | Logistics and suppliers |
 | Accessibility | Product research |
 | Launch design assets | Copy and brand voice |
