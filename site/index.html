@@ -208,7 +208,7 @@
   <nav class="actions" aria-label="Quick links">
     <a class="pill" href="#work">Work</a>
     <a class="pill hide-sm" href="#origin">About</a>
-    <a class="pill hide-sm" href="resume.pdf">Resume</a>
+    <a class="pill hide-sm" href="#message" data-resume>Resume</a>
     <a class="pill primary" href="#contact">Contact</a>
     <button class="switch" id="motionToggle" aria-pressed="true" type="button"><span class="track" aria-hidden="true"><span class="knob"></span></span><span>Animation<span class="state-txt"> <span id="motionState">on</span></span></span></button>
   </nav>
@@ -360,9 +360,9 @@
       <div>
         <p class="year">NEXT STOP · YOUR TEAM?</p>
         <h2 id="h-contact">Let's build the next world.</h2>
-        <p><strong>Hiring?</strong> Grab my resume, or message me about the role and I'll send a version tailored to it.<br><strong>Need something built?</strong> Websites, branding, social content, UGC: tell me about it.</p>
+        <p><strong>Hiring?</strong> Request my resume and tell me about the role. I'll send a version tailored to it.<br><strong>Need something built?</strong> Websites, branding, social content, UGC: tell me about it.</p>
         <div class="cta-row">
-          <a class="land" href="resume.pdf">Download resume</a>
+          <a class="land" href="#message" data-resume>Request my resume</a>
           <button class="pill primary" id="copyEmail" type="button" data-u="tami.trevino" data-d="proton.me">Copy email ⧉</button>
           <a class="pill" href="https://www.linkedin.com/in/tamitrevino" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in a new tab)</span></a>
           <a class="pill" href="#message">Message me</a>
@@ -538,6 +538,14 @@
     catch (e) { cs.textContent = 'Email: ' + addr; }
     setTimeout(() => { ce.textContent = 'Copy email ⧉'; }, 2500);
   });
+
+  // ---- "Request my resume": open the form pre-filled for a resume request
+  document.querySelectorAll('[data-resume]').forEach(a => a.addEventListener('click', () => {
+    const f = document.getElementById('message');
+    f.querySelector('input[value="hiring"]').checked = true;
+    if (!f.message.value) f.message.value = "Hi Tami, I'd love a copy of your resume. The role: ";
+    setTimeout(() => f.querySelector('#f-name').focus({ preventScroll: true }), 400);
+  }));
 
   addEventListener('resize', resize);
   reduce.addEventListener?.('change', ev => { try { if (localStorage.getItem('tt-motion') !== null) return; } catch (e) {} motion = !ev.matches; applyMotion(); });
