@@ -4,9 +4,14 @@
    Header links opt in with data-ico="work|about|contact". */
 (function () {
   // Every page opens at the top (consistent, predictable). Links that name a section (#contact) land on it.
+  // Cross-page links say where to land with ?to=section (a leftover #hash is ignored, so pages never open mid-way by accident).
   try { history.scrollRestoration = 'manual'; } catch (e) {}
-  const toTop = () => { if (!location.hash) scrollTo(0, 0); };
-  toTop(); addEventListener('load', toTop); addEventListener('pageshow', e => { if (e.persisted) toTop(); });
+  const land = () => {
+    const to = new URLSearchParams(location.search).get('to'), el = to && document.getElementById(to);
+    if (el) el.scrollIntoView(); else scrollTo(0, 0);
+  };
+  if (location.hash) { try { history.replaceState(null, '', location.pathname.split('/').pop() + location.search); } catch (e) { try { history.replaceState(null, '', location.href.split('#')[0]); } catch (e2) {} } }
+  land(); addEventListener('load', () => { land(); setTimeout(land, 60); }); addEventListener('pageshow', e => { if (e.persisted) land(); });
 
   const ICONS = {
     work: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6.2" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="12" cy="12" rx="11" ry="3.6" fill="none" stroke="currentColor" stroke-width="1.6" transform="rotate(-18 12 12)"/></svg>',
@@ -98,12 +103,12 @@
       const a = e.target.closest('a'); if (!a) return;
       const url = new URL(a.href, location.href);
       if (url.pathname !== location.pathname) return;                 // another page: normal navigation
-      const target = url.hash && document.querySelector(url.hash);
-      if (url.hash && !target) return;
+      const id = url.hash.slice(1) || url.searchParams.get('to'), target = id && document.getElementById(id);
+      if (id && !target) return;
       e.preventDefault();
       const smooth = document.documentElement.classList.contains('no-motion') ? 'auto' : 'smooth';
       if (target) target.scrollIntoView({ behavior: smooth }); else scrollTo({ top: 0, behavior: smooth });
-      history.replaceState(null, '', url.hash || location.pathname.split('/').pop());
+      try { history.replaceState(null, '', location.pathname.split('/').pop()); } catch (e) {}
       const twin = pairs.find(([, d]) => d === a);
       if (twin) { pairs.forEach(([h]) => h.removeAttribute('aria-current')); twin[0].setAttribute('aria-current', 'location'); }
     });

@@ -106,9 +106,9 @@ def build():
 
         def link(p, label):
             if not p and page in EXTRAS and "Next" in label:
-                return '<a class="pager" href="../index.html#work">Next →<strong>See the case studies</strong></a>'
+                return '<a class="pager" href="../index.html?to=work">Next →<strong>See the case studies</strong></a>'
             if not p:
-                return f'<a class="pager" href="../index.html#start">{label}<strong>Back to the galaxy</strong></a>'
+                return f'<a class="pager" href="../index.html?to=start">{label}<strong>Back to the galaxy</strong></a>'
             t, _ = parse((SRC / p["src"]).read_text())
             return f'<a class="pager" href="{p["slug"]}.html">{label}<strong>{html.escape(t.get("title", ""))}</strong></a>'
 
