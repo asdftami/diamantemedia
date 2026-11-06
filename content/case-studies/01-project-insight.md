@@ -115,17 +115,20 @@ After 1–2 rounds of low-fidelity testing with **5 investors**, the pattern was
 
 ## Design decisions
 
-**A suite of focused dashboards instead of one crowded screen.** Main dashboard, Investor Type, Delinquency, Cashflow, HELOC, Active, Inactive and Disaster, each with drill-downs.
+**Focused dashboards, not one crowded screen.** Main, Investor Type, Delinquency, Cashflow, HELOC, Active, Inactive and Disaster, each with drill-downs.
 
-**Disasters on their own terms.** Disaster data started on the home dashboard, but when nothing was happening it was just noise. I moved it into its own **Disaster** tab with an embedded **FEMA disaster risk map**, so investors could research when they needed to, without it being forced on them.
+**Disasters on their own terms.** On the home dashboard, disaster data was noise when nothing was happening. I gave it its own tab with an embedded **FEMA disaster risk map**, ready when investors need it.
 
-**Built for how investors actually work.** A UPB / Count / Weighted-average toggle, year, quarter, month and date filters, column editing, plus download, print and email for the people who still need to share a file.
+**Built for how investors work.** A UPB / Count / Weighted-average toggle, date filters, column editing, plus download, print and email.
 
-![The main dashboard: portfolio health at a glance, with filters, exports and a one-click switch between UPB, count and weighted average.](../../assets/project-insight/10-hifi-main-dashboard.png)
-![Disaster data got its own tab, so investors can dig in when it matters without clutter when it doesn't.](../../assets/project-insight/06-hifi-disaster-dashboard.png)
-![A real investor question, answered: county-level FEMA disaster risk mapped against the portfolio.](../../assets/project-insight/07-hifi-fema-disaster-map.webp)
+![The main dashboard: portfolio health at a glance.](../../assets/project-insight/10-hifi-main-dashboard.png)
 
-**What we didn't build (yet).** A loan-level research search engine came up in research. I wireframed it, but we chose to put our effort into getting the dashboards right first.
+<div class="pair wide" markdown="1">
+![Disaster data gets its own tab.](../../assets/project-insight/06-hifi-disaster-dashboard.png)
+![County-level FEMA risk, mapped against the portfolio.](../../assets/project-insight/07-hifi-fema-disaster-map.webp)
+</div>
+
+**What we didn't build (yet).** I wireframed a loan-level search engine, but we focused on getting the dashboards right first.
 
 ---
 
