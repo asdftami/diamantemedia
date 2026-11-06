@@ -172,6 +172,8 @@
   .stop > *{min-width:0}
   .stop{overflow-x:clip}
   #start{padding-top:92px;padding-bottom:40px;align-content:center}
+  #start.win-closed{min-height:0;padding-bottom:12px}
+  #start.win-closed + .stop{padding-top:48px;align-items:start}
   #start h1{font-size:clamp(2.4rem,5.2vw,4.3rem)}
   #start .planet-wrap{max-width:360px}
   #start .pillars{margin-bottom:20px}
@@ -663,8 +665,8 @@
     bMin.setAttribute('aria-expanded', !min); bMin.setAttribute('aria-label', min ? 'Restore Selected Work' : 'Minimize Selected Work'); bMin.textContent = min ? '+' : '–';
   });
   bMax.addEventListener('click', () => { win.classList.remove('min'); bMin.setAttribute('aria-expanded', true); bMin.textContent = '–'; setMax(!win.classList.contains('max')); bMax.focus(); });
-  bClose.addEventListener('click', () => { setMax(false); win.hidden = true; reopen.hidden = false; reopen.focus(); });
-  reopen.addEventListener('click', () => { win.hidden = false; reopen.hidden = true; win.classList.remove('min'); bMin.setAttribute('aria-expanded', true); bMin.textContent = '–'; bClose.focus(); });
+  bClose.addEventListener('click', () => { setMax(false); win.hidden = true; document.getElementById('start').classList.add('win-closed'); reopen.hidden = false; reopen.focus(); });
+  reopen.addEventListener('click', () => { win.hidden = false; document.getElementById('start').classList.remove('win-closed'); reopen.hidden = true; win.classList.remove('min'); bMin.setAttribute('aria-expanded', true); bMin.textContent = '–'; bClose.focus(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && win.classList.contains('max')) { setMax(false); bMax.focus(); } });
 })();
 </script>
