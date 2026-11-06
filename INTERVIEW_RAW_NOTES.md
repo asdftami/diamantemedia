@@ -750,4 +750,4 @@ Tami talks casually; **everything written for her must read as a polished profes
 7. Learnings cards + mobile first-frame fix
 Also pending: Google Drive upload of SOURCE_OF_TRUTH, About planet (Tami's HTML), Bond Centre mockups, headline choice.
 - Hero eyebrow: '6+ years in design' (counted from 2020 BFA; phrase as 'in design', not 'in product design').
-- **Portfolio email:** hello@tamitrevino.com (domain tamitrevino.com owned on GoDaddy; needs email activation/forwarding). Copy-email button assembles the address only on click (anti-scraping). LinkedIn button pending (need URL).
+- **Portfolio email (Copy button):** tami.trevino@proton.me (Tami, Nov 6). Later: forward hello@tamitrevino.com (GoDaddy) to it. LinkedIn button pending (need URL).
