@@ -66,6 +66,24 @@
   .pm-dock span{flex:1;display:grid;justify-items:center;gap:1px;padding:5px 0;border-radius:12px;font-size:1.15rem;color:#3a2a6e}
   .pm-dock span.on{background:#3a2a6e;color:#fff}
   .pm-dock i{font-style:normal;font-size:.62rem;font-weight:700}
+  .desks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+  .desks figure{margin:0}.desks figcaption{margin-top:10px;color:var(--ink-dim);font-size:.92rem}
+  .desk{position:relative;height:300px;border-radius:12px;overflow:hidden;border:1px solid #ffffff30;background:linear-gradient(180deg,#1a1045,#07051a);box-shadow:0 20px 50px #000a}
+  .dk-top{display:flex;align-items:center;gap:6px;padding:7px 10px;background:#2a2350;font-size:.7rem;color:var(--ink-dim)}
+  .dk-top i{width:9px;height:9px;border-radius:50%;background:#ff8fb8}.dk-top i:nth-child(2){background:#fff1a6}.dk-top i:nth-child(3){background:#81d8d0}
+  .dk-top span{margin-left:10px;padding:2px 10px;border-radius:6px;background:#ffffff14}
+  .dk-head{display:flex;align-items:center;gap:12px;padding:10px 14px;font-size:.78rem;border-bottom:1px solid #ffffff14}
+  .dk-head b{margin-right:auto}
+  .dk-body{padding:26px 22px}.dk-h{margin:6px 0;font-size:1.5rem;font-weight:700}
+  .dk-pet{position:absolute;right:14px;bottom:14px;width:64px;height:76px;border-radius:50% 50% 46% 46%/58% 58% 42% 42%;background:linear-gradient(165deg,#5b4bd6,#24186b);border:1px solid #ffffff38;display:grid;place-items:center;text-align:center;font:.85rem/1 VT323,monospace;color:#1b2a12;padding:14px 10px}
+  .dk-pet{background:linear-gradient(165deg,#5b4bd6,#24186b);color:#a9c48a}
+  .dk-dock{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);display:flex;align-items:flex-end;gap:4px;padding:5px 8px;border-radius:16px;background:linear-gradient(180deg,#ffffffe6,#e7defcd9);box-shadow:0 10px 24px #000a,inset 0 0 0 2px #fff}
+  .dk-dock span{display:grid;justify-items:center;padding:4px 7px;border-radius:10px;font-size:1rem;color:#3a2a6e;transition:transform .2s}
+  .dk-dock span:hover{transform:translateY(-6px) scale(1.25)}
+  .dk-dock span.on{background:#3a2a6e;color:#fff}
+  .dk-dock i{font-style:normal;font-size:.55rem;font-weight:700}
+  .dk-dock em{width:1px;align-self:stretch;margin:4px 3px;background:#3a2a6e33}
+  @media (max-width:760px){.desks{grid-template-columns:1fr}}
   @media (max-width:760px){.icons{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
@@ -111,6 +129,28 @@
         <div class="pm-dock"><span class="on">🪐<i>Work</i></span><span>☺<i>About</i></span><span>📄<i>Resume</i></span><span>✉<i>Contact</i></span><span>▼<i>Next</i></span></div>
       </div>
       <figcaption>Dock idea: one glossy bar at the thumb, labeled icons, the current page lit up. The pet navigator would live only on desktop.</figcaption>
+    </figure>
+  </div>
+
+  <p class="label">D · THE DOCK ON DESKTOP (PREVIEW ONLY): TWO OPTIONS</p>
+  <div class="desks">
+    <figure>
+      <div class="desk">
+        <div class="dk-top"><i></i><i></i><i></i><span>tamitrevino.com</span></div>
+        <div class="dk-head"><b>Tami Trevino ✦</b><span>Work</span><span>About</span><span>Resume</span><span class="pm-pink">Contact ↗</span></div>
+        <div class="dk-body"><p class="pm-eyebrow">PRODUCT DESIGNER · UX</p><p class="dk-h">Every industry is a new world.</p></div>
+        <div class="dk-pet">(^ᴗ^)<br>1993</div>
+      </div>
+      <figcaption><b>Option 1 (recommended):</b> desktop keeps today's top bar and the Tamagotchi; the dock appears on phones only. Each screen gets the pattern people expect there.</figcaption>
+    </figure>
+    <figure>
+      <div class="desk">
+        <div class="dk-top"><i></i><i></i><i></i><span>tamitrevino.com</span></div>
+        <div class="dk-head"><b>Tami Trevino ✦</b><span class="pm-clock" style="margin-left:auto">11:11 PM</span></div>
+        <div class="dk-body"><p class="pm-eyebrow">PRODUCT DESIGNER · UX</p><p class="dk-h">Every industry is a new world.</p></div>
+        <div class="dk-dock"><span class="on">🪐<i>Work</i></span><span>☺<i>About</i></span><span>📄<i>Resume</i></span><span>✉<i>Contact</i></span><em></em><span>▲<i>Back</i></span><span>⌂<i>Top</i></span><span>▼<i>Next</i></span></div>
+      </div>
+      <figcaption><b>Option 2:</b> one floating dock at the bottom on every screen size, like a computer's app dock. Icons grow on hover, and the Tamagotchi's ▲ ⌂ ▼ move into the dock, so the pet would retire.</figcaption>
     </figure>
   </div>
 </div>
