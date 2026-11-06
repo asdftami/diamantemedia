@@ -69,6 +69,7 @@
   .p-dental{--c1:#d6f6ff;--c2:#3aa0d8;--glow:#a8d8ff66;--ring:#81d8d0aa}
   .p-insight{--c1:#c9b6ff;--c2:#4b3bc9;--glow:#c9b6ff77;--ring:#ffb3d9aa}
   .p-bond{--c1:#a8d8ff;--c2:#2b4fb8;--glow:#a8d8ff66;--ring:#fff1a6aa}
+  .hero3{width:min(300px,100%);margin:0 auto}
   .p-jars{--c1:#fff1a6;--c2:#9b6bff;--glow:#c9b6ff66;--ring:#81d8d0aa}
   .p-fridays{--c1:#f5f3ef;--c2:#c7a77c;--glow:#d8c3a566;--ring:#3b2a20aa}
 
@@ -141,11 +142,13 @@
     .spy a{padding:0 10px}
     .hero{grid-template-columns:1fr}
     .planet{width:160px;order:-1;margin:0}
+    .hero3{width:190px;order:-1;margin:0}
     .hide-sm,.spy a.hide-sm{display:none}
     .pagers{grid-template-columns:1fr}
     .pagers .pager:last-child{text-align:left}
   }
 </style>
+<link rel="stylesheet" href="../assets/planets.css">
 </head>
 <body>
 <a class="skip" href="#content">Skip to the case study</a>
@@ -166,7 +169,7 @@
     <p class="subtitle">{{SUBTITLE}}</p>
     <p class="role">{{ROLE}}</p>
   </div>
-  <div class="planet {{PLANET}}" aria-hidden="true"></div>
+  <span class="planet3 hero3" data-p="{{PRESET}}" style="--spin:60s" aria-hidden="true"></span>
 </section>
 
 <main class="cs" id="content">
@@ -197,5 +200,6 @@ document.querySelectorAll('main.cs figure img').forEach(img=>{
 d.querySelector('button').addEventListener('click',()=>d.close());
 d.addEventListener('click',e=>{if(e.target===d)d.close()});})();
 </script>
+<script src="../assets/planets.js"></script>
 </body>
 </html>

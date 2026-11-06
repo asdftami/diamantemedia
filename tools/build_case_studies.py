@@ -22,15 +22,15 @@ MAX_W = 1600
 
 # Same order and numbering as the homepage journey.
 PAGES = [
-    {"src": "04-dental-websites.md", "slug": "dental", "num": "01", "planet": "p-dental", "year": "2020–2022 · AUSTIN"},
-    {"src": "01-project-insight.md", "slug": "project-insight", "num": "02", "planet": "p-insight", "year": "2022–2024 · COMPUTERSHARE"},
-    {"src": "02-israel-bond-centre.md", "slug": "bond-centre", "num": "03", "planet": "p-bond", "year": "2023–2024 · COMPUTERSHARE"},
-    {"src": "03-fridays-off.md", "slug": "fridays-off", "num": "04", "planet": "p-fridays", "year": "OCT 2026–NOW · CO-FOUNDER"},
+    {"src": "04-dental-websites.md", "slug": "dental", "num": "01", "planet": "p-dental", "preset": "mint", "year": "2020–2022 · AUSTIN"},
+    {"src": "01-project-insight.md", "slug": "project-insight", "num": "02", "planet": "p-insight", "preset": "lavender", "year": "2022–2024 · COMPUTERSHARE"},
+    {"src": "02-israel-bond-centre.md", "slug": "bond-centre", "num": "03", "planet": "p-bond", "preset": "sky", "year": "2023–2024 · COMPUTERSHARE"},
+    {"src": "03-fridays-off.md", "slug": "fridays-off", "num": "04", "planet": "p-fridays", "preset": "sand", "year": "OCT 2026–NOW · CO-FOUNDER"},
 ]
 
 # Extra pages that live on a timeline stop but not in the numbered series.
 EXTRAS = [
-    {"src": "05-jars-ux-audits.md", "slug": "jars-ux-audits", "label": "UX AUDITS", "planet": "p-jars", "year": "SEP 2025–APR 2026 · JARS"},
+    {"src": "05-jars-ux-audits.md", "slug": "jars-ux-audits", "label": "UX AUDITS", "planet": "p-jars", "preset": "nebula", "year": "SEP 2025–APR 2026 · JARS"},
 ]
 
 
@@ -119,6 +119,7 @@ def build():
                .replace("{{LABEL}}", page["label"])
                .replace("{{YEAR}}", page["year"])
                .replace("{{PLANET}}", page["planet"])
+               .replace("{{PRESET}}", page["preset"])
                .replace("{{BODY}}", body)
                .replace("{{PREV}}", link(prev_p, "← Previous planet"))
                .replace("{{NEXT}}", link(next_p, "Next planet →")))
