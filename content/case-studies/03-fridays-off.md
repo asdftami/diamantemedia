@@ -116,7 +116,7 @@ Accessibility was a requirement from day one, not a final check.
 
 ## 4. The AI content engine
 
-A two-person team can't shoot hundreds of lifestyle photos. So I built a **content pipeline** that keeps everything on-brand:
+A two-person team can't shoot hundreds of lifestyle photos, so I built an on-brand **content pipeline**:
 
 ```
 Brand style guide  +  Notion reference library (curated by my co-founder)
@@ -128,9 +128,9 @@ Brand style guide  +  Notion reference library (curated by my co-founder)
         Blotato schedules the week's posts automatically
 ```
 
-The Notion library of motion and art references is what keeps the images from looking "AI-generated." Every prompt is anchored to real visual references and to our style guide. The goal is a **hands-free content week**: plan once, and the system publishes.
+Every prompt is anchored to our style guide and a Notion library of real references, so the images don't look AI-generated. The goal: a **hands-free content week**.
 
-On the website we use **curated supplier photography**. On social, we use the AI-generated editorial imagery, so both channels match one visual language.
+The website uses **curated supplier photography**; social uses AI editorial imagery, in one visual language.
 
 <!-- Add: 6–9 tile Instagram grid screenshot once posted -->
 
