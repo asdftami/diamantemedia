@@ -145,6 +145,8 @@ The designs were validated, and the data team was preparing the backend, when **
 
 ## What I learned
 
+- **Test early, even in low fidelity.** Investors asked for more data at a glance, which turned one dashboard into a focused suite.
+- **When users don't care, let effort decide.** Reusing an existing nav component saved design and dev time.
 - **Start with a design system.** Tokens, reusable components and documented decisions make the handoff dev-ready from day one.
 - **Use AI to move faster.** I reached high fidelity before AI design tools existed. Today I'd use AI for synthesis, variations and prototyping, and spend the saved time with users.
 
