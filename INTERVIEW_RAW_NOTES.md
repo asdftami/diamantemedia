@@ -778,3 +778,4 @@ Context (Tami): self-initiated audits done while working the retail floor. The c
 - Cadravo (cadravo.com), ~2019, junior year: team of 3 (Tami, a developer, a copywriter). Tami co-designed the logo with the founder/CEO, created the hero banner and the custom graphics for the site's pop-up banner, sourced icons from Vecteezy, and ran social media, building the audience from zero. Site still live; Microsoft Partner. Shown as a one-line mention on the UTRGV stop.
 - Bond Centre: 09-BEFORE-old-welcome-page is the OLD welcome page (Tami, Nov 7). The new one is 08; its lorem ipsum paragraph was cropped out for the portfolio (08b).
 - FIUX 2018 poster: collaboration with Lauren Morris (credit shown).
+- ⚠️ Standing rule (Tami, Nov 7, 2026): ALWAYS be concise. Short answers, one thing at a time, no long lists.
