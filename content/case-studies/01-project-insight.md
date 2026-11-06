@@ -64,10 +64,10 @@ This was my first role in finance, so I learned mortgage servicing from scratch:
 ![Proto-persona: Corey emailed for every data point, searched the old Investor Web, then decoded long spreadsheets into his own dashboards.](../../assets/project-insight/19-persona-corey-watts.png)
 ![Eduardo's journey showed where investors got stuck: loss-mitigation data was buried and hard to find.](../../assets/project-insight/22-journey-map-eduardo-reyes.png)
 
-**5. Telling the story.** Two storyboards showed the experience we were building toward. A new loan is onboarded, the investor checks how it affects their portfolio, and the insight leads them to onboard more loans.
+**5. Telling the story.** Two storyboards showed the experience we were building toward.
 
 ![Panels 1–4: a new loan is added, and the investor logs in to see its impact.](../../assets/project-insight/20-storyboard-awareness-of-need.png)
-![Panels 5–8: clear insight leads the investor to onboard more loans. That's the business case.](../../assets/project-insight/21-storyboard-data-driven-decisions.png)
+![Panels 5–8: clear insight leads to more loans. That's the business case.](../../assets/project-insight/21-storyboard-data-driven-decisions.png)
 
 ---
 
