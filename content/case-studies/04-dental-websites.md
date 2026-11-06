@@ -20,7 +20,7 @@ hero_image: "assets/dental/parkfield/desktop-home-full.png"
 
 <div class="impact" markdown="0">
 <p class="impact-label">Impact</p>
-<p><strong>Two executives</strong> from the same company each hired me for their next venture. For <strong>Parkfield Dental</strong>, I created a <strong>logo and complete visual identity system, built into the website</strong>, <strong>bilingual (English/Spanish) at launch</strong> and built for accessibility. For <strong>Evolve Dental Partners</strong>, I built a <strong>brand-compliant website</strong> and handed it off so the founder could manage it herself.</p>
+<p><strong>Two executives</strong> from the same company each hired me for their next venture. <strong>Parkfield Dental:</strong> logo, complete visual identity system, and a bilingual (English/Spanish), accessible website. <strong>Evolve Dental Partners:</strong> a brand-compliant website the founder manages herself.</p>
 </div>
 
 I worked inside a dental support organization (DSO) in Austin, first at the front desk, then as office manager, while also running the practice's website and blog. Two of its leaders went on to start their own businesses. Both called me.
