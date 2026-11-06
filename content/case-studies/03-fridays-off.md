@@ -102,19 +102,11 @@ We designed the brand together. Then:
 
 ## 3. Accessible, always
 
-Accessibility wasn't a final check. It was a requirement from day one.
+Accessibility was a requirement from day one, not a final check.
 
 - **Keyboard navigation** and **screen-reader support** across the store
 - **Minimal layouts** to avoid cognitive overload
-- **Color contrast checked against WCAG**:
-
-| Pair | Contrast | Result |
-|---|---|---|
-| Near-black on cream | 15.7 : 1 | ✅ AAA |
-| Espresso on cream | 12.3 : 1 | ✅ AAA |
-| Sand on near-black | 10.2 : 1 | ✅ AAA |
-| Espresso on sand | 8.0 : 1 | ✅ AAA |
-| Sand on cream | 1.5 : 1 | Decoration only, never text |
+- **Every text color pairing passes WCAG AAA** (up to **15.7:1**). Sand on cream is used only for decoration, never text.
 
 ---
 
