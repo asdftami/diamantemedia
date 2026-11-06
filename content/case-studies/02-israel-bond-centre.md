@@ -128,16 +128,14 @@ Admins see each submission marked **Proposed**, with **Preview, Approve, Reject 
 
 ## 6. Designed for every screen
 
-I designed the full product for **desktop and mobile** (iOS and Android sizes): portfolio, tax details, printable forms, communication preferences, FAQ, inbox, online support, banking details and address change.
+I designed every screen for **desktop and mobile** (iOS and Android sizes).
 
-For the mobile **Inbox**, I compared two layouts:
-- **A:** message list and message detail on separate screens
-- **B:** message detail stacked above the list
+For the mobile **Inbox**, I compared separate list and message screens (**A**) against the message stacked above the list (**B**). **A won**, because it works like the email apps people already use.
 
-**A won:** it was more intuitive, because it works like the email apps people already use.
-
-![The full product, designed for iOS and Android: portfolio, forms, tax details, inbox and more.](../../assets/israel-bond-centre/15-mobile-wireframes-overview.png)
-![Version A won: separate list and message screens felt more intuitive, like the email apps people already use.](../../assets/israel-bond-centre/14-mobile-inbox-a-vs-b.png)
+<div class="pair wide" markdown="1">
+![The full product, designed for iOS and Android.](../../assets/israel-bond-centre/15-mobile-wireframes-overview.png)
+![Inbox: Version A won.](../../assets/israel-bond-centre/14-mobile-inbox-a-vs-b.png)
+</div>
 
 ---
 
