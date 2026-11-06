@@ -117,10 +117,12 @@ Printable forms sit in five accordions (US, international, tax, direct registrat
 
 ## 5. Admin controls that close the loop
 
-When a bondholder submits a form, the **admin** sees it marked **Proposed**, with **Preview, Approve, Reject and Cancel** actions. The **bondholder** then sees the result (for example, **Rejected**) right next to the form, with an info icon explaining what happened. No more guessing whether a request went through.
+Admins see each submission marked **Proposed**, with **Preview, Approve, Reject and Cancel**. Bondholders see the result (for example, **Rejected**) right next to their form, with an info icon explaining why.
 
-![Admins review each submission and approve or reject it in one place.](../../assets/israel-bond-centre/06-admin-approve-reject-proposed.png)
-![Bondholders see the decision right next to their form, closing the loop between both users.](../../assets/israel-bond-centre/07-bondholder-rejected-status.png)
+<div class="pair wide" markdown="1">
+![Admins approve or reject in one place.](../../assets/israel-bond-centre/06-admin-approve-reject-proposed.png)
+![Bondholders see the decision next to their form.](../../assets/israel-bond-centre/07-bondholder-rejected-status.png)
+</div>
 
 ---
 
