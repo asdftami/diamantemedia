@@ -26,10 +26,10 @@ hero_image: "assets/israel-bond-centre/10-new-portfolio-split-nav.png"
 
 | | |
 |---|---|
-| **My role** | Sole UX/UI designer, from audit to dev-ready designs |
-| **Team** | Product owners, project managers, development teams |
-| **Users** | **Bondholders** managing their Israel Bonds, and **admins** reviewing and approving their requests |
-| **Platforms** | Desktop web + responsive mobile |
+| **My role** | Sole UX/UI designer, audit → dev-ready designs |
+| **Team** | Product owners, project managers, developers |
+| **Users** | Bondholders and admins |
+| **Platforms** | Desktop + responsive mobile |
 | **Tools** | Figma |
 
 ---
