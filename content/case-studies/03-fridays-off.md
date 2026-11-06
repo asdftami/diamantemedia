@@ -155,7 +155,7 @@ Dropshipping hundreds of products from dozens of brands creates mess: duplicate 
 
 ## What I learned
 
-- **Systems beat hustle.** The brand guide, the IA and the content pipeline do the work of a much bigger team.
-- **Luxury is mostly restraint:** fewer colors, more whitespace, calmer type.
-- **AI is a collaborator, not a shortcut.** It's only as good as the references and rules you give it.
-- **Next:** measure everything from day one, and A/B test the homepage hero and product page layout once traffic comes in.
+- **Great brands borrow wisely.** Studying luxury and high-end brands taught me how to find inspiration and translate it into our own identity.
+- **One source of truth keeps a remote team in sync.** My co-founder and I each work with our own AI agents in Claude, but we pull from and update the same Notion library, so our work never drifts apart.
+- **AI and automation multiply a small team.** I built Claude skills and automations, created stunning AI product renders in Higgsfield, and automated content creation and scheduling through Blotato.
+- **E-commerce is part design, part systems.** Connecting dropshipping suppliers in Shopify and rewriting existing product copy in our brand voice taught me how product data, inventory, copy and design have to work together.
