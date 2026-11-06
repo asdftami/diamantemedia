@@ -545,7 +545,7 @@
       if (i !== current) { current = i; target = 1; boost(); }
       lcdYear.textContent = e.target.dataset.year; lcdName.textContent = e.target.dataset.name;
       document.getElementById('ship').classList.toggle('docked', i === 0 || i === stops.length - 1); // out of the way on the welcome and contact screens
-      setNav(i <= 3 ? null : i < stops.length - 1 ? 'work' : 'contact');
+      setNav(i >= 4 && i < stops.length - 1 ? 'work' : null);
     });
   }, { threshold: .55 });
   stops.forEach(s => io.observe(s));

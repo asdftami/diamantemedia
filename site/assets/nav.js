@@ -39,8 +39,6 @@
     .dock a:active,.dock button:active{transform:scale(.94)}
     .dock a[aria-current]{background:#3a2a6e;color:#fff}
     .dock a[aria-current]::after{content:"";position:absolute;bottom:4px;left:50%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#ffb3d9;box-shadow:0 0 8px #ffb3d9}
-    .dock a.dock-cta{background:#ffb3d9;color:#2a0d22}
-    .dock a.dock-cta[aria-current]{background:#3a2a6e;color:#fff}
     .dock .sep{flex:0 0 1px;align-self:stretch;margin:8px 2px;background:#3a2a6e33}
     body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
   }`;
@@ -97,6 +95,19 @@
     };
     dock.querySelectorAll('.step').forEach(b => b.addEventListener('click', () => step(+b.dataset.dir)));
     document.body.appendChild(dock);
+    dock.addEventListener('click', e => {
+      const a = e.target.closest('a'); if (!a) return;
+      const url = new URL(a.href, location.href);
+      if (url.pathname !== location.pathname) return;                 // another page: normal navigation
+      const target = url.hash && document.querySelector(url.hash);
+      if (url.hash && !target) return;
+      e.preventDefault();
+      const smooth = document.documentElement.classList.contains('no-motion') ? 'auto' : 'smooth';
+      if (target) target.scrollIntoView({ behavior: smooth }); else scrollTo({ top: 0, behavior: smooth });
+      history.replaceState(null, '', url.hash || location.pathname.split('/').pop());
+      const twin = pairs.find(([, d]) => d === a);
+      if (twin) { pairs.forEach(([h]) => h.removeAttribute('aria-current')); twin[0].setAttribute('aria-current', 'location'); }
+    });
     // keep the "you are here" highlight identical in both places
     const sync = () => pairs.forEach(([a, d]) => a.hasAttribute('aria-current') ? d.setAttribute('aria-current', a.getAttribute('aria-current')) : d.removeAttribute('aria-current'));
     sync();
