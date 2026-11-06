@@ -185,10 +185,12 @@
           
         </div>
         <p class="form-status" id="copyStatus" role="status" aria-live="polite"></p>
-        <!-- Spam-protected contact form: no public email address.
-             TODO: set action to a form service (e.g. Formspree / Web3Forms) and add its human-verification widget
-             (e.g. Cloudflare Turnstile or hCaptcha site key). The honeypot field below silently catches bots. -->
-        <form class="msg" id="message" action="" method="POST" novalidate>
+        <!-- Contact form: Web3Forms delivers to Tami's inbox. The access key is public by design; spam is blocked by two honeypots. -->
+        <form class="msg" id="message" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="3e8da501-5e52-45e1-b5c3-0fa888d7d62a">
+          <input type="hidden" name="subject" value="New message from tamitrevino.com">
+          <input type="hidden" name="from_name" value="Portfolio contact form">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <h3>Send me a message</h3>
           <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name"><p class="err" id="e-name"></p></div>
           <div class="field"><label for="f-email">Your email</label><input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email"><p class="err" id="e-email"></p></div>

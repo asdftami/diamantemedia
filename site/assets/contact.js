@@ -14,7 +14,19 @@
   form.addEventListener('submit', e => {
     if (form.website.value) { e.preventDefault(); return; }               // bot filled the honeypot
     if (!checkAll()) { e.preventDefault(); const n = form.querySelectorAll('[aria-invalid="true"]').length; status.textContent = n === 1 ? 'One field needs a fix.' : n + ' fields need a fix.'; form.querySelector('[aria-invalid="true"]').focus(); return; }
-    if (!form.getAttribute('action')) { e.preventDefault(); status.textContent = 'Thanks! The form is being connected. Please check back soon.'; }
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]'); btn.disabled = true; btn.textContent = 'Sending…';
+    status.textContent = 'Sending your message…';
+    const data = Object.fromEntries(new FormData(form));
+    data.topic = form.topic.value === 'project' ? 'A project' : 'A job opening';
+    fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) })
+      .then(r => r.json()).then(r => {
+        if (!r.success) throw new Error(r.message || 'failed');
+        status.textContent = 'Message sent! Thank you. I\'ll get back to you soon.';
+        form.reset(); form.dispatchEvent(new CustomEvent('tt-sent'));
+      })
+      .catch(() => { status.textContent = 'Sorry, your message didn\'t send. Please try again, or use Copy email above.'; form.dispatchEvent(new CustomEvent('tt-failed')); })
+      .finally(() => { btn.disabled = false; btn.textContent = 'Send message'; });
   });
 
   // ---- copy-email: address is assembled only on click, so scrapers never see it in the page
@@ -60,9 +72,10 @@
     form.addEventListener('submit', () => {
       if (!form.checkValidity() || form.website.value) return;
       sms.classList.remove('live');
-      if (!form.getAttribute('action')) { sms.innerHTML = '✉ SAVED<br>Sending opens<br>soon. Thanks!'; sl.textContent = 'Back'; sr.textContent = 'OK'; return; }
       sms.innerHTML = '✉ SENDING<span class="caret"></span>'; sl.textContent = ''; sr.textContent = '';
     });
+    form.addEventListener('tt-sent', () => { sms.classList.remove('live'); sms.innerHTML = '✓ MESSAGE SENT<br>Talk soon :)'; sl.textContent = ''; sr.textContent = 'OK'; });
+    form.addEventListener('tt-failed', () => { sms.classList.remove('live'); sms.innerHTML = '✕ NOT SENT<br>Please try<br>again'; sl.textContent = 'Back'; sr.textContent = 'Retry'; });
   })();
 
 /* The phone keypad works like a classic T9 phone (multi-tap): tap 2 once for a, twice for b...
