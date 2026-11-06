@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computershare | Project Insight Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --magenta: #9B1F6E;
+    --deep-purple: #2D0A45;
+    --violet: #6B2FA0;
+    --pink: #E8629A;
+    --amber: #F5A04A;
+    --text-heading: #1A1A1A;
+    --text-body: #555555;
+    --surface: #F4F4F4;
+    --white: #FFFFFF;
+    --grad-hero: linear-gradient(135deg, #2D0A45, #6B2FA0, #9B1F6E);
+    --grad-footer: linear-gradient(135deg, #4A1060, #9B1F6E, #C4387A);
+    --grad-stat: linear-gradient(90deg, #9B1F6E, #E8629A, #F5A04A);
+    --grad-accent: linear-gradient(90deg, #F5A04A, #E8629A, #9B1F6E);
+    --sidebar-w: 88px;
+    --topnav-h: 56px;
+    --font: 'Source Sans Pro', system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font);
+    background: var(--surface);
+    color: var(--text-body);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    width: var(--sidebar-w);
+    background: var(--deep-purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    z-index: 1000;
+    flex-shrink: 0;
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+  .sidebar-logo {
+    width: 100%;
+    padding: 14px 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.15);
+  }
+  .sidebar-logo svg { width: 32px; height: 32px; }
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 8px;
+    flex: 1;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 6px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s;
+    gap: 5px;
+    text-decoration: none;
+  }
+  .nav-item:hover { background: rgba(255,255,255,0.08); }
+  .nav-item.active { background: rgba(255,255,255,0.12); }
+  .nav-item.active::left {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--amber);
+  }
+  .nav-item.active::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--amber), var(--pink));
+    border-radius: 0 2px 2px 0;
+  }
+  .nav-item svg { width: 20px; height: 20px; color: rgba(255,255,255,0.8); }
+  .nav-item.active svg { color: #fff; }
+  .nav-label {
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .nav-item.active .nav-label { color: #fff; }
+
+  /* ── MAIN AREA ── */
+  .main {
+    margin-left: var(--sidebar-w);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ── TOP NAV ── */
+  .topnav {
+    background: var(--deep-purple);
+    height: 48px;
+    display: flex;
+    align-items: stretch;
+    padding: 0 20px 0 16px;
+    gap: 0;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 50;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid rgba(255,255,255,0.12);
+    flex-shrink: 0;
+  }
+  .brand-c {
+    width: 28px; height: 28px;
+    background: var(--magenta);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 14px; color: #fff;
+  }
+  .brand-name { font-size: 14px; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
+  .brand-sub { font-size: 11px; color: rgba(255,255,255,0.45); font-weight: 400; margin-left: 2px; }
+
+  .tab-nav {
+    display: flex;
+    gap: 0;
+    flex: 1;
+    height: 100%;
+    align-items: stretch;
+  }
+  .tab {
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.18s;
+    white-space: nowrap;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+  }
+  .tab:hover {
+    color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.05);
+  }
+  .tab.active {
+    color: #fff;
+    font-weight: 700;
+    border-bottom-color: var(--amber);
+    background: rgba(255,255,255,0.08);
+  }
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0; right: 0;
+    height: 3px;
+    background: var(--amber);
+    border-radius: 3px 3px 0 0;
+  }
+
+  .topnav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+  }
+  .icon-btn {
+    width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.7);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .icon-btn:hover { background: rgba(255,255,255,0.12); color: #fff; }
+  .icon-btn svg { width: 16px; height: 16px; }
+  .refresh-text { font-size: 10px; color: rgba(255,255,255,0.5); white-space: nowrap; }
+  .user-pill {
+    display: flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 4px 10px 4px 6px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .user-pill:hover { background: rgba(255,255,255,0.18); }
+  .user-avatar {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--grad-stat);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 700; color: #fff;
+  }
+  .user-name { font-size: 11px; color: rgba(255,255,255,0.9); font-weight: 600; }
+
+  /* ── KPI BAR ── */
+  .kpi-bar {
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 48px;
+    gap: 0;
+    flex-shrink: 0;
+  }
+  .kpi-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px 0 0;
+    border-right: 1px solid #eee;
+    margin-right: 20px;
+  }
+  .kpi-item:last-of-type { border-right: none; }
+  .kpi-label { font-size: 10px; font-weight: 600; color: var(--text-body); text-transform: uppercase; letter-spacing: 0.06em; }
+  .kpi-value {
+    font-size: 16px; font-weight: 700;
+    color: var(--magenta);
+  }
+  .kpi-trend { font-size: 11px; color: var(--magenta); font-weight: 600; display: flex; align-items: center; gap: 2px; }
+  .kpi-trend.down { color: var(--pink); }
+
+  .metric-toggle {
+    margin-left: auto;
+    display: flex;
+    background: var(--surface);
+    border-radius: 20px;
+    padding: 3px;
+    gap: 2px;
+  }
+  .metric-btn {
+    padding: 4px 14px;
+    border-radius: 16px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-body);
+    cursor: pointer;
+    transition: all 0.18s;
+    background: transparent;
+    border: none;
+    letter-spacing: 0.04em;
+  }
+  .metric-btn.active {
+    background: #fff;
+    color: var(--magenta);
+    box-shadow: 0 1px 4px rgba(155,31,110,0.15);
+  }
+
+  /* ── CONTROL BAR ── */
+  .control-bar {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1.5px solid var(--magenta);
+    background: transparent;
+    color: var(--magenta);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.18s;
+    font-family: var(--font);
+  }
+  .filter-btn:hover { background: var(--magenta); color: #fff; }
+  .filter-btn svg { width: 13px; height: 13px; }
+  .filter-badge {
+    background: var(--pink);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 1px 5px;
+  }
+
+  .time-selector {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-heading);
+    cursor: pointer;
+    transition: border-color 0.15s;
+    position: relative;
+    font-family: var(--font);
+  }
+  .time-selector:hover { border-color: var(--violet); }
+  .time-selector svg { width: 13px; height: 13px; color: var(--magenta); }
+  .time-selector .label { font-size: 9px; color: var(--text-body); text-transform: uppercase; letter-spacing: 0.05em; }
+  .time-selector .val { font-size: 12px; font-weight: 600; }
+  .time-selector .chevron { width: 10px; height: 10px; color: var(--text-body); margin-left: 4px; }
+
+  /* ── DROPDOWN ── */
+  .dropdown-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+  }
+  .dropdown-overlay.open { display: block; }
+  .dropdown-panel {
+    position: absolute;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(45,10,69,0.18);
+    border: 1px solid #ede;
+    padding: 14px;
+    width: 220px;
+    z-index: 201;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+  }
+  .dropdown-panel h4 { font-size: 12px; font-weight: 700; color: var(--deep-purple); margin-bottom: 8px; }
+  .dp-search {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+  }
+  .dp-search input {
+    border: none;
+    background: transparent;
+    font-size: 11px;
+    color: var(--text-heading);
+    outline: none;
+    width: 100%;
+    font-family: var(--font);
+  }
+  .dp-search svg { width: 12px; height: 12px; color: var(--text-body); flex-shrink: 0; }
+  .dp-list { max-height: 180px; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
+  .dp-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 5px 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.12s;
+    font-size: 12px; color: var(--text-heading);
+  }
+  .dp-item:hover { background: var(--surface); }
+  .dp-item input[type="checkbox"] { accent-color: var(--magenta); width: 13px; height: 13px; }
+  .dp-item.checked { font-weight: 600; color: var(--magenta); }
+  .dp-actions { display: flex; gap: 8px; margin-top: 10px; }
+  .dp-apply {
+    flex: 1;
+    padding: 7px;
+    background: var(--grad-hero);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: var(--font);
+    letter-spacing: 0.04em;
+  }
+  .dp-reset {
+    padding: 7px 12px;
+    background: transparent;
+    color: var(--magenta);
+    border: none;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font);
+  }
+
+  /* ── FILTER BACKDROP ── */
+  .filter-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(45,10,69,0.22);
+    z-index: 498;
+    backdrop-filter: blur(1px);
+    cursor: pointer;
+  }
+  .filter-backdrop.open { display: block; }
+
+  /* ── FILTER PANEL ── */
+  .filter-panel {
+    position: fixed;
+    top: 0;
+    left: var(--sidebar-w);
+    bottom: 0;
+    width: 260px;
+    background: #fff;
+    box-shadow: 4px 0 24px rgba(45,10,69,0.2);
+    z-index: 499;
+    transform: translateX(-110%);
+    transition: transform 0.28s cubic-bezier(0.4,0,0.2,1),
+                visibility 0s linear 0.28s;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+  }
+  .filter-panel.open {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.28s cubic-bezier(0.4,0,0.2,1),
+                visibility 0s linear 0s;
+  }
+  .fp-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 16px 12px;
+    border-bottom: 1px solid #eee;
+    background: var(--grad-hero);
+  }
+  .fp-title { font-size: 14px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }
+  .fp-title svg { width: 14px; height: 14px; }
+  .fp-close {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    transition: background 0.15s;
+  }
+  .fp-close:hover { background: rgba(255,255,255,0.25); }
+  .fp-close svg { width: 12px; height: 12px; }
+  .fp-search {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .fp-search-inner {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 7px 10px;
+  }
+  .fp-search-inner input {
+    border: none; background: transparent;
+    font-size: 12px; color: var(--text-heading);
+    outline: none; width: 100%;
+    font-family: var(--font);
+  }
+  .fp-search-inner svg { width: 13px; height: 13px; color: var(--text-body); }
+  .fp-body { flex: 1; overflow-y: auto; padding: 8px 0; }
+  .fp-section {
+    border-bottom: 1px solid #f5f5f5;
+  }
+  .fp-section-header {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background 0.12s;
+    font-size: 13px; font-weight: 600; color: var(--text-heading);
+  }
+  .fp-section-header:hover { background: var(--surface); }
+  .fp-section-header .plus {
+    width: 18px; height: 18px;
+    border-radius: 4px;
+    border: 1.5px solid #ddd;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: var(--text-body);
+    flex-shrink: 0;
+    transition: all 0.15s;
+  }
+  .fp-section-header.active .plus {
+    background: var(--magenta);
+    border-color: var(--magenta);
+    color: #fff;
+  }
+  .fp-section-header .applied-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--pink);
+    margin-left: auto;
+  }
+  .fp-section-body {
+    display: none;
+    padding: 4px 16px 10px 42px;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .fp-section-body.open { display: flex; }
+  .fp-check {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 12px; color: var(--text-body);
+    cursor: pointer;
+  }
+  .fp-check input { accent-color: var(--magenta); }
+  .fp-footer {
+    padding: 12px 16px;
+    border-top: 1px solid #eee;
+    display: flex; gap: 8px;
+  }
+  .fp-apply {
+    flex: 1;
+    padding: 9px;
+    background: var(--grad-hero);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: var(--font);
+    letter-spacing: 0.04em;
+  }
+  .fp-reset {
+    padding: 9px 16px;
+    background: transparent;
+    color: var(--magenta);
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font);
+  }
+
+  /* ── PAGE CONTENT ── */
+  .page-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 20px;
+    background: var(--surface);
+  }
+
+  /* ── CARDS ── */
+  .card-grid {
+    display: grid;
+    gap: 14px;
+  }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(280px, auto); }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); grid-auto-rows: minmax(300px, auto); }
+  .grid-2-1 { grid-template-columns: 2fr 1fr; }
+  .grid-1-2 { grid-template-columns: 1fr 2fr; }
+  .col-span-2 { grid-column: span 2; }
+  .col-span-3 { grid-column: span 3; }
+
+  .card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px;
+    border: 0.5px solid #ebe8f0;
+    box-shadow: 0 2px 8px rgba(45,10,69,0.05);
+    transition: box-shadow 0.2s;
+    overflow: hidden;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover { box-shadow: 0 4px 16px rgba(45,10,69,0.09); }
+  .card-grid { align-items: stretch; }
+  .card-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--magenta);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+  }
+  .card-title-left { display: flex; align-items: center; gap: 6px; }
+  .card-arrow {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--surface);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s;
+    flex-shrink: 0;
+  }
+  .card-arrow:hover { background: #ede8f5; }
+  .card-arrow svg { width: 11px; height: 11px; color: var(--magenta); }
+  .card-legend {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+  }
+  .legend-item { display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--text-body); }
+  .legend-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+
+  /* ── STAT CARD (dashboard home) ── */
+  .stat-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px;
+    border: 0.5px solid #ebe8f0;
+    box-shadow: 0 2px 8px rgba(45,10,69,0.05);
+    overflow: hidden;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .stat-tabs {
+    display: flex;
+    background: var(--surface);
+    border-radius: 20px;
+    padding: 3px;
+    gap: 2px;
+    margin-bottom: 12px;
+    flex-shrink: 0;
+  }
+  .stat-tab {
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-body);
+    cursor: pointer;
+    transition: all 0.15s;
+    letter-spacing: 0.04em;
+    border: none;
+    background: transparent;
+    font-family: var(--font);
+  }
+  .stat-tab.active {
+    background: #fff;
+    color: var(--magenta);
+    box-shadow: 0 1px 4px rgba(155,31,110,0.12);
+  }
+  .stat-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 7px 0;
+    border-bottom: 1px solid #f5f0f8;
+    cursor: pointer;
+    transition: background 0.1s;
+    border-radius: 6px;
+    padding-left: 6px;
+  }
+  .stat-row:last-child { border-bottom: none; }
+  .stat-row:hover { background: #fdf8fc; }
+  .stat-name { font-size: 12px; font-weight: 600; color: var(--text-heading); display: flex; align-items: center; gap: 6px; }
+  .stat-icon { width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .stat-icon.up { background: #FEF3E2; }
+  .stat-icon.down { background: #FDE8F0; }
+  .stat-icon svg { width: 10px; height: 10px; }
+  .stat-pct { font-size: 13px; font-weight: 700; color: var(--text-heading); }
+
+  /* ── CHART SVG ── */
+  .chart-area {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    flex: 1;
+    min-height: 140px;
+  }
+  svg.chart {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+  }
+  /* Catch-all: no SVG inside a card should bleed out */
+  .card svg, .stat-card svg {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  /* Donut charts center within their flex chart-area */
+  .donut-center {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .donut-center svg {
+    position: static !important;
+    width: auto !important;
+    height: 100% !important;
+    max-height: 160px;
+  }
+  .data-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  .data-table th {
+    font-size: 10px; font-weight: 700; color: var(--text-body);
+    text-transform: uppercase; letter-spacing: 0.05em;
+    padding: 6px 8px; border-bottom: 1.5px solid #eee;
+    text-align: left; white-space: nowrap;
+  }
+  .data-table td { padding: 7px 8px; border-bottom: 1px solid #f5f5f5; color: var(--text-heading); }
+  .data-table tr:hover td { background: #fdf8fc; }
+  .data-table .num { text-align: right; font-weight: 600; }
+  .data-table a { color: var(--violet); text-decoration: none; }
+  .data-table a:hover { text-decoration: underline; }
+  .dr-badge { font-size: 9px; color: var(--text-body); }
+
+  /* ── HEATMAP ── */
+  .heatmap-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  .heatmap-table th { font-size: 10px; font-weight: 700; color: var(--text-body); padding: 5px 8px; text-align: center; }
+  .heatmap-table th:first-child { text-align: left; }
+  .heatmap-table td { padding: 6px 8px; text-align: center; font-weight: 600; border-radius: 4px; }
+  .heatmap-table td:first-child { text-align: left; font-weight: 600; color: var(--text-heading); }
+  .hm-active { background: linear-gradient(135deg, rgba(155,31,110,0.12), rgba(232,98,154,0.08)); color: var(--magenta) !important; }
+  .hm-highlight { background: rgba(245,160,74,0.15); color: #B8660A !important; }
+  .hm-total { background: var(--surface); font-weight: 700 !important; }
+
+  /* ── CASHFLOW TABLE ── */
+  .cf-table { width: 100%; font-size: 12px; }
+  .cf-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #f5f5f5; }
+  .cf-row:last-child { border-bottom: none; }
+  .cf-label { color: var(--text-body); }
+  .cf-val { font-weight: 700; color: var(--text-heading); }
+
+  /* ── INFO ICON ── */
+  .info-icon {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid #ddd;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 9px; color: var(--text-body);
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  /* ── MAP VIEW ── */
+  .map-view {
+    display: none;
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+  }
+  .map-view.active { display: flex; }
+  .map-container {
+    flex: 1;
+    background: linear-gradient(135deg, #e8e4f0 0%, #dcd5e8 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .map-svg-area { width: 100%; height: 100%; }
+  .map-controls {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .map-ctrl-btn {
+    width: 36px; height: 36px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e0d8e8;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(45,10,69,0.1);
+    transition: all 0.15s;
+    color: var(--deep-purple);
+  }
+  .map-ctrl-btn:hover { background: var(--surface); box-shadow: 0 4px 12px rgba(45,10,69,0.15); }
+  .map-ctrl-btn svg { width: 16px; height: 16px; }
+  .map-ctrl-sep { height: 8px; }
+  .map-top-bar {
+    position: absolute;
+    top: 16px; left: 16px;
+    display: flex; gap: 10px;
+    align-items: center;
+  }
+  .legend-btn {
+    display: flex; align-items: center; gap: 6px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e0d8e8;
+    padding: 7px 12px;
+    font-size: 12px; font-weight: 600;
+    color: var(--deep-purple);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(45,10,69,0.08);
+  }
+  .map-search {
+    display: flex; align-items: center; gap: 6px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e0d8e8;
+    padding: 7px 12px;
+    box-shadow: 0 2px 8px rgba(45,10,69,0.08);
+  }
+  .map-search input {
+    border: none; background: transparent;
+    font-size: 12px; color: var(--text-heading);
+    outline: none; font-family: var(--font);
+    width: 180px;
+  }
+  .map-search svg { width: 13px; height: 13px; color: var(--text-body); }
+  .map-tooltip {
+    position: absolute;
+    background: rgba(45,10,69,0.92);
+    color: #fff;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 11px;
+    line-height: 1.7;
+    box-shadow: 0 8px 24px rgba(45,10,69,0.25);
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+    min-width: 180px;
+  }
+  .map-tooltip strong { font-weight: 700; font-size: 12px; }
+  .map-insight-panel {
+    width: 420px;
+    background: rgba(45,10,69,0.94);
+    backdrop-filter: blur(12px);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .mip-header {
+    padding: 16px 18px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .mip-title { font-size: 16px; font-weight: 700; color: #fff; }
+  .mip-close {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+  }
+  .mip-close svg { width: 12px; height: 12px; }
+  .mip-meta { font-size: 11px; color: rgba(255,255,255,0.6); display: flex; gap: 12px; margin-top: 6px; flex-wrap: wrap; }
+  .mip-body { flex: 1; overflow-y: auto; padding: 14px 18px; }
+  .mip-chart-area { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 12px; margin-bottom: 14px; }
+  .mip-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  .mip-table th { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.05em; padding: 5px 6px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .mip-table td { padding: 6px 6px; color: rgba(255,255,255,0.85); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .mip-table a { color: var(--pink); text-decoration: none; }
+  .mip-table .county-row td { background: rgba(155,31,110,0.2); font-weight: 700; color: #fff; }
+
+  /* ── TABS CONTENT ── */
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  .map-tab-content { display: none; flex: 1; overflow: hidden; }
+  .map-tab-content.active { display: flex; }
+
+  /* ── DONUT ── */
+  .donut-wrap { display: flex; align-items: center; gap: 12px; }
+  .donut-legend-v { display: flex; flex-direction: column; gap: 6px; }
+  .donut-legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-body); }
+  .donut-legend-rect { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+
+  /* ── FEMA badge ── */
+  .fema-badge {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 8px;
+    padding: 6px 10px;
+    display: flex; align-items: center; gap: 6px;
+    font-size: 11px; font-weight: 700; color: #003087;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+
+  /* ── FOOTER ── */
+  .dash-footer {
+    background: var(--grad-footer);
+    padding: 10px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .dash-footer .brand-name { color: rgba(255,255,255,0.9); font-size: 12px; font-weight: 600; }
+  .footer-links { display: flex; gap: 16px; }
+  .footer-link { font-size: 11px; color: rgba(255,255,255,0.65); cursor: pointer; transition: color 0.15s; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; }
+  .footer-link:hover { color: #fff; }
+  .footer-link.active { color: #fff; }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #ddd; border-radius: 10px; }
+  ::-webkit-scrollbar-thumb:hover { background: #c5b; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .tab-content.active, .map-tab-content.active { animation: fadeIn 0.2s ease; }
+
+  /* OTS toggle */
+  .toggle-switch {
+    display: flex; align-items: center; gap: 6px;
+    background: var(--surface);
+    border-radius: 20px;
+    padding: 2px 8px 2px 4px;
+    font-size: 10px; font-weight: 600; color: var(--text-body);
+    cursor: pointer;
+  }
+  .toggle-track {
+    width: 28px; height: 14px;
+    border-radius: 7px;
+    background: var(--grad-accent);
+    position: relative;
+    flex-shrink: 0;
+  }
+  .toggle-thumb {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 2px; right: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ SIDEBAR ═══════════════ -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <svg viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="16" r="14" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <text x="16" y="21" text-anchor="middle" font-family="Source Sans Pro,sans-serif" font-weight="700" font-size="14" fill="white">C</text>
+    </svg>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-item active" onclick="switchSection('dashboard')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      <span class="nav-label">Dashboard</span>
+    </div>
+    <div class="nav-item" onclick="switchSection('map')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 1 8 8c0 5.4-8 14-8 14S4 15.4 4 10a8 8 0 0 1 8-8z"/></svg>
+      <span class="nav-label">Disaster Map</span>
+    </div>
+    <div class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span class="nav-label">Investor Web</span>
+    </div>
+    <div class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      <span class="nav-label">Deal Center</span>
+    </div>
+  </nav>
+</aside>
+
+<!-- ═══════════════ FILTER BACKDROP ═══════════════ -->
+<div class="filter-backdrop" id="filterBackdrop" onclick="closeFilter()"></div>
+
+<!-- ═══════════════ FILTER PANEL ═══════════════ -->
+<div class="filter-panel" id="filterPanel">
+  <div class="fp-header">
+    <span class="fp-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+      Filters
+    </span>
+    <button class="fp-close" onclick="closeFilter()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="fp-search">
+    <div class="fp-search-inner">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" placeholder="Search category or state…">
+    </div>
+  </div>
+  <div class="fp-body" id="filterBody">
+    <!-- dynamically populated -->
+  </div>
+  <div class="fp-footer">
+    <button class="fp-apply">APPLY</button>
+    <button class="fp-reset">RESET</button>
+  </div>
+</div>
+
+<!-- ═══════════════ MAIN ═══════════════ -->
+<div class="main" id="mainArea">
+
+  <!-- TOP NAV -->
+  <div class="topnav" id="topNav">
+    <div class="brand">
+      <div class="brand-c">C</div>
+      <span class="brand-name">Computershare</span>
+      <span class="brand-sub">Dashboard</span>
+    </div>
+    <div class="tab-nav" id="tabNav">
+      <div class="tab active" onclick="switchTab('home')">Dashboard</div>
+      <div class="tab" onclick="switchTab('investor')">Investor Type</div>
+      <div class="tab" onclick="switchTab('delinquency')">Delinquency</div>
+      <div class="tab" onclick="switchTab('cashflow')">Cashflow</div>
+      <div class="tab" onclick="switchTab('heloc')">HELOC</div>
+      <div class="tab" onclick="switchTab('active')">Active</div>
+      <div class="tab" onclick="switchTab('inactive')">Inactive</div>
+      <div class="tab" onclick="switchTab('disaster')">Disaster</div>
+    </div>
+    <div class="topnav-right">
+      <div class="icon-btn" title="Download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+      <div class="icon-btn" title="Print"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
+      <div class="icon-btn" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+      <span class="refresh-text">Last refreshed 11:43am</span>
+      <div class="user-pill">
+        <div class="user-avatar">CW</div>
+        <span class="user-name">Corey Watts</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" width="10" height="10"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPI BAR -->
+  <div class="kpi-bar" id="kpiBar">
+    <div class="kpi-item">
+      <div>
+        <div class="kpi-label">Total Serviced UPB</div>
+        <div class="kpi-value">$1,000,000.00</div>
+      </div>
+      <div class="kpi-trend">▲ $1M</div>
+    </div>
+    <div class="kpi-item">
+      <div>
+        <div class="kpi-label">Total Loan Count</div>
+        <div class="kpi-value">5,000</div>
+      </div>
+      <div class="kpi-trend">▲ 5,000</div>
+    </div>
+    <div class="kpi-item">
+      <div>
+        <div class="kpi-label">Percent Current</div>
+        <div class="kpi-value">80%</div>
+      </div>
+      <div class="kpi-trend">▲ 80%</div>
+    </div>
+    <div class="metric-toggle" style="margin-left:auto">
+      <button class="metric-btn active" onclick="setMetric(this)">UPB</button>
+      <button class="metric-btn" onclick="setMetric(this)">COUNT</button>
+      <button class="metric-btn" onclick="setMetric(this)">WT. AVG</button>
+    </div>
+  </div>
+
+  <!-- CONTROL BAR -->
+  <div class="control-bar" id="controlBar">
+    <button class="filter-btn" onclick="openFilter()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+      FILTER: NONE
+    </button>
+
+    <!-- Year -->
+    <div class="time-selector" style="position:relative" onclick="toggleDropdown('ddYear',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <div><div class="label">YEAR</div><div class="val">2024</div></div>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      <div class="dropdown-panel" id="ddYear" style="display:none" onclick="event.stopPropagation()">
+        <h4>Year Search</h4>
+        <div class="dp-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input placeholder="Search years, use commas"></div>
+        <div class="dp-list">
+          <label class="dp-item checked"><input type="checkbox" checked> 2024</label>
+          <label class="dp-item"><input type="checkbox"> 2023</label>
+          <label class="dp-item"><input type="checkbox"> 2022</label>
+          <label class="dp-item"><input type="checkbox"> 2021</label>
+          <label class="dp-item"><input type="checkbox"> 2020</label>
+          <label class="dp-item"><input type="checkbox"> 2019</label>
+          <label class="dp-item"><input type="checkbox"> 2018</label>
+        </div>
+        <div class="dp-actions"><button class="dp-apply">APPLY</button><button class="dp-reset">RESET</button></div>
+      </div>
+    </div>
+
+    <!-- Quarter -->
+    <div class="time-selector" style="position:relative" onclick="toggleDropdown('ddQtr',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <div><div class="label">QUARTER</div><div class="val">Q1</div></div>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      <div class="dropdown-panel" id="ddQtr" style="display:none" onclick="event.stopPropagation()">
+        <h4>Quarter Search</h4>
+        <div class="dp-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input placeholder="Search quarters, use commas"></div>
+        <div class="dp-list">
+          <label class="dp-item checked"><input type="checkbox" checked> Q1 2024</label>
+          <label class="dp-item"><input type="checkbox"> Q4 2023</label>
+          <label class="dp-item"><input type="checkbox"> Q3 2023</label>
+          <label class="dp-item"><input type="checkbox"> Q2 2023</label>
+          <label class="dp-item"><input type="checkbox"> Q1 2023</label>
+        </div>
+        <div class="dp-actions"><button class="dp-apply">APPLY</button><button class="dp-reset">RESET</button></div>
+      </div>
+    </div>
+
+    <!-- Month -->
+    <div class="time-selector" style="position:relative" onclick="toggleDropdown('ddMonth',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <div><div class="label">MONTH</div><div class="val">JANUARY</div></div>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      <div class="dropdown-panel" id="ddMonth" style="display:none" onclick="event.stopPropagation()">
+        <h4>Month Search</h4>
+        <div class="dp-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input placeholder="Search months, use commas"></div>
+        <div class="dp-list">
+          <label class="dp-item"><input type="checkbox"> View last 1 month</label>
+          <label class="dp-item"><input type="checkbox"> View last 3 months</label>
+          <label class="dp-item"><input type="checkbox"> View last 6 months</label>
+          <label class="dp-item"><input type="checkbox"> View last 12 months</label>
+          <label class="dp-item checked"><input type="checkbox" checked> January</label>
+          <label class="dp-item"><input type="checkbox"> February</label>
+          <label class="dp-item"><input type="checkbox"> March</label>
+          <label class="dp-item"><input type="checkbox"> April</label>
+          <label class="dp-item"><input type="checkbox"> May</label>
+          <label class="dp-item"><input type="checkbox"> June</label>
+          <label class="dp-item"><input type="checkbox"> July</label>
+          <label class="dp-item"><input type="checkbox"> August</label>
+          <label class="dp-item"><input type="checkbox"> September</label>
+          <label class="dp-item"><input type="checkbox"> October</label>
+          <label class="dp-item"><input type="checkbox"> November</label>
+          <label class="dp-item"><input type="checkbox"> December</label>
+        </div>
+        <div class="dp-actions"><button class="dp-apply">APPLY</button><button class="dp-reset">RESET</button></div>
+      </div>
+    </div>
+
+    <!-- Date -->
+    <div class="time-selector" style="position:relative" onclick="toggleDropdown('ddDate',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <div><div class="label">DATE</div><div class="val">01/01/2024</div></div>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      <div class="dropdown-panel" id="ddDate" style="display:none" onclick="event.stopPropagation()">
+        <h4>Date Search</h4>
+        <div class="dp-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input placeholder="Search dates, use commas"></div>
+        <div class="dp-list">
+          <label class="dp-item checked"><input type="checkbox" checked> 01/01/2024</label>
+          <label class="dp-item"><input type="checkbox"> 12/31/2023</label>
+          <label class="dp-item"><input type="checkbox"> 12/30/2023</label>
+          <label class="dp-item"><input type="checkbox"> 12/29/2023</label>
+          <label class="dp-item"><input type="checkbox"> 12/28/2023</label>
+          <label class="dp-item"><input type="checkbox"> 12/27/2023</label>
+        </div>
+        <div class="dp-actions"><button class="dp-apply">APPLY</button><button class="dp-reset">RESET</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ TAB CONTENTS ════ -->
+
+  <!-- HOME TAB -->
+  <div class="tab-content active" id="tab-home">
+    <div class="page-content">
+      <div class="card-grid grid-3" style="margin-bottom:14px">
+        <!-- Statistics -->
+        <div class="stat-card">
+          <div class="card-title" style="margin-bottom:8px">Statistics</div>
+          <div class="stat-tabs">
+            <button class="stat-tab active" onclick="setStatTab(this)">MTD</button>
+            <button class="stat-tab" onclick="setStatTab(this)">1M</button>
+            <button class="stat-tab" onclick="setStatTab(this)">3M</button>
+            <button class="stat-tab" onclick="setStatTab(this)">6M</button>
+            <button class="stat-tab" onclick="setStatTab(this)">1Y</button>
+            <button class="stat-tab" onclick="setStatTab(this)">ALL</button>
+          </div>
+          <div class="stat-row"><span class="stat-name"><span class="stat-icon down"><svg viewBox="0 0 24 24" fill="#E8629A" width="10" height="10"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>Bankruptcy</span><span class="stat-pct">55% <span class="info-icon">i</span></span></div>
+          <div class="stat-row"><span class="stat-name"><span class="stat-icon up"><svg viewBox="0 0 24 24" fill="#F5A04A" width="10" height="10"><path d="M12 19V5M5 12l7-7 7 7"/></svg></span>Foreclosure</span><span class="stat-pct">12% <span class="info-icon">i</span></span></div>
+          <div class="stat-row"><span class="stat-name"><span class="stat-icon down"><svg viewBox="0 0 24 24" fill="#E8629A" width="10" height="10"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>Forbearance</span><span class="stat-pct">64% <span class="info-icon">i</span></span></div>
+          <div class="stat-row"><span class="stat-name"><span class="stat-icon up"><svg viewBox="0 0 24 24" fill="#F5A04A" width="10" height="10"><path d="M12 19V5M5 12l7-7 7 7"/></svg></span>Delinquencies</span><span class="stat-pct">29% <span class="info-icon">i</span></span></div>
+          <div class="stat-row"><span class="stat-name"><span class="stat-icon down"><svg viewBox="0 0 24 24" fill="#E8629A" width="10" height="10"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>Escrow</span><span class="stat-pct">68% <span class="info-icon">i</span></span></div>
+          <div class="stat-row"><span class="stat-name"><span class="stat-icon up"><svg viewBox="0 0 24 24" fill="#F5A04A" width="10" height="10"><path d="M12 19V5M5 12l7-7 7 7"/></svg></span>HELOC</span><span class="stat-pct">78% <span class="info-icon">i</span></span></div>
+        </div>
+
+        <!-- Investor Type -->
+        <div class="card">
+          <div class="card-title"><span class="card-title-left">Investor Type</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>GNMA</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>FNMA</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>FHLMC</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>FHA</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>OTHER</div>
+          </div>
+          <div class="chart-area">
+            <svg class="chart" viewBox="0 0 300 120" preserveAspectRatio="xMidYMid meet">
+              <defs><linearGradient id="barG1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2D0A45"/><stop offset="100%" stop-color="#6B2FA0"/></linearGradient></defs>
+              <!-- bars -->
+              <rect x="10" y="20" width="30" height="85" rx="3" fill="#2D0A45" opacity="0.9"/>
+              <rect x="52" y="35" width="30" height="70" rx="3" fill="#6B2FA0" opacity="0.9"/>
+              <rect x="94" y="50" width="30" height="55" rx="3" fill="#9B1F6E" opacity="0.9"/>
+              <rect x="136" y="55" width="30" height="50" rx="3" fill="#E8629A" opacity="0.9"/>
+              <rect x="178" y="62" width="30" height="43" rx="3" fill="#F5A04A" opacity="0.9"/>
+              <text x="25" y="15" text-anchor="middle" font-size="8" fill="#555" font-family="Source Sans Pro">1.30k</text>
+              <text x="67" y="30" text-anchor="middle" font-size="8" fill="#555" font-family="Source Sans Pro">1.23k</text>
+              <text x="109" y="45" text-anchor="middle" font-size="8" fill="#555" font-family="Source Sans Pro">1.01k</text>
+              <text x="151" y="50" text-anchor="middle" font-size="8" fill="#555" font-family="Source Sans Pro">1.30k</text>
+              <text x="193" y="57" text-anchor="middle" font-size="8" fill="#555" font-family="Source Sans Pro">1.19k</text>
+              <!-- y axis -->
+              <line x1="5" y1="105" x2="290" y2="105" stroke="#eee" stroke-width="1"/>
+              <text x="2" y="108" font-size="7" fill="#aaa" font-family="Source Sans Pro">0</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Delinquency -->
+        <div class="card">
+          <div class="card-title">
+            <span class="card-title-left">Delinquency <div class="toggle-switch"><div class="toggle-track"><div class="toggle-thumb"></div></div>OTS/MBA</div></span>
+            <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+          <div class="card-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>CURRENT</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>30</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>60</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>90</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>BK</div>
+          </div>
+          <div class="chart-area">
+            <svg class="chart" viewBox="0 0 300 110" preserveAspectRatio="xMidYMid meet">
+              <rect x="5" y="10" width="18" height="90" rx="2" fill="#2D0A45" opacity="0.9"/>
+              <rect x="30" y="20" width="18" height="80" rx="2" fill="#6B2FA0" opacity="0.9"/>
+              <rect x="55" y="30" width="18" height="70" rx="2" fill="#9B1F6E" opacity="0.9"/>
+              <rect x="80" y="25" width="18" height="75" rx="2" fill="#C4387A" opacity="0.9"/>
+              <rect x="105" y="35" width="18" height="65" rx="2" fill="#E8629A" opacity="0.9"/>
+              <rect x="130" y="40" width="18" height="60" rx="2" fill="#F5A04A" opacity="0.9"/>
+              <rect x="155" y="22" width="18" height="78" rx="2" fill="#2D0A45" opacity="0.9"/>
+              <text x="14" y="7" text-anchor="middle" font-size="7" fill="#555" font-family="Source Sans Pro">1.28k</text>
+              <text x="39" y="17" text-anchor="middle" font-size="7" fill="#555" font-family="Source Sans Pro">1.25k</text>
+              <text x="64" y="27" text-anchor="middle" font-size="7" fill="#555" font-family="Source Sans Pro">1.30k</text>
+              <line x1="0" y1="100" x2="290" y2="100" stroke="#eee" stroke-width="1"/>
+              <text x="0" y="108" font-size="7" fill="#aaa" font-family="Source Sans Pro">0</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid grid-2">
+        <!-- Cashflow -->
+        <div class="card">
+          <div class="card-title"><span class="card-title-left">Cashflow</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>COLLECTED</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#E8629A;opacity:0.5"></div>UNCOLLECTED</div>
+          </div>
+          <div class="chart-area">
+            <svg class="chart" viewBox="0 0 400 130" preserveAspectRatio="xMidYMid meet" style="overflow:hidden; display:block">
+              <defs>
+                <linearGradient id="areaG1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9B1F6E" stop-opacity="0.3"/><stop offset="100%" stop-color="#9B1F6E" stop-opacity="0.02"/></linearGradient>
+                <linearGradient id="areaG2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E8629A" stop-opacity="0.2"/><stop offset="100%" stop-color="#E8629A" stop-opacity="0.01"/></linearGradient>
+                <clipPath id="chartClip"><rect x="0" y="0" width="400" height="130"/></clipPath>
+              </defs>
+              <g clip-path="url(#chartClip)">
+              <!-- area fill uncollected -->
+              <path d="M10,80 C40,70 70,85 100,75 C130,65 160,90 190,80 C220,70 250,85 280,78 C310,72 340,88 370,82 L370,115 L10,115 Z" fill="url(#areaG2)"/>
+              <path d="M10,80 C40,70 70,85 100,75 C130,65 160,90 190,80 C220,70 250,85 280,78 C310,72 340,88 370,82" fill="none" stroke="#E8629A" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+              <!-- area fill collected -->
+              <path d="M10,60 C40,50 70,65 100,55 C130,45 160,62 190,52 C220,42 250,60 280,53 C310,46 340,62 370,55 L370,115 L10,115 Z" fill="url(#areaG1)"/>
+              <path d="M10,60 C40,50 70,65 100,55 C130,45 160,62 190,52 C220,42 250,60 280,53 C310,46 340,62 370,55" fill="none" stroke="#9B1F6E" stroke-width="2"/>
+              <!-- dots collected -->
+              <circle cx="10" cy="60" r="3" fill="#9B1F6E"/>
+              <circle cx="70" cy="65" r="3" fill="#9B1F6E"/>
+              <circle cx="130" cy="45" r="3" fill="#9B1F6E"/>
+              <circle cx="190" cy="52" r="3" fill="#9B1F6E"/>
+              <circle cx="250" cy="60" r="3" fill="#9B1F6E"/>
+              <circle cx="310" cy="46" r="3" fill="#9B1F6E"/>
+              <circle cx="370" cy="55" r="3" fill="#9B1F6E"/>
+              <text x="1" y="120" font-size="7" fill="#aaa" font-family="Source Sans Pro">0</text>
+              <text x="1" y="80" font-size="7" fill="#aaa" font-family="Source Sans Pro">700</text>
+              <text x="1" y="50" font-size="7" fill="#aaa" font-family="Source Sans Pro">1,300</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- MTD Inactive -->
+        <div class="card">
+          <div class="card-title"><span class="card-title-left">MTD Inactive</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>PIF</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>SHORT SETTLE</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>CHARGE OFF</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>3RD PTY SALE</div>
+          </div>
+          <div class="chart-area">
+            <svg class="chart" viewBox="0 0 300 130" preserveAspectRatio="xMidYMid meet">
+              <rect x="10" y="15" width="50" height="100" rx="3" fill="#2D0A45" opacity="0.9"/>
+              <rect x="80" y="50" width="50" height="65" rx="3" fill="#9B1F6E" opacity="0.9"/>
+              <rect x="150" y="30" width="50" height="85" rx="3" fill="#E8629A" opacity="0.9"/>
+              <rect x="220" y="20" width="50" height="95" rx="3" fill="#F5A04A" opacity="0.9"/>
+              <text x="35" y="11" text-anchor="middle" font-size="8" fill="#555" font-family="Source Sans Pro">1.29k</text>
+              <text x="105" y="46" text-anchor="middle" font-size="8" fill="#555" font-family="Source Sans Pro">900k</text>
+              <text x="175" y="26" text-anchor="middle" font-size="8" fill="#555" font-family="Source Sans Pro">1.20k</text>
+              <text x="245" y="16" text-anchor="middle" font-size="8" fill="#555" font-family="Source Sans Pro">1.28k</text>
+              <line x1="5" y1="115" x2="295" y2="115" stroke="#eee" stroke-width="1"/>
+              <text x="0" y="122" font-size="7" fill="#aaa" font-family="Source Sans Pro">0</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INVESTOR TYPE TAB -->
+  <div class="tab-content" id="tab-investor">
+    <div class="page-content">
+      <div class="card-grid grid-3" style="margin-bottom:14px">
+        <div class="card">
+          <div class="card-title"><span>Product Type</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>VA</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>GMFS</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>GNMA</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>FHA</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>FNMA</div>
+          </div>
+          <div class="chart-area">
+            <svg class="chart" viewBox="0 0 280 110"><rect x="5" y="15" width="28" height="85" rx="3" fill="#2D0A45"/><rect x="45" y="15" width="28" height="85" rx="3" fill="#6B2FA0"/><rect x="85" y="15" width="28" height="85" rx="3" fill="#9B1F6E"/><rect x="125" y="15" width="28" height="85" rx="3" fill="#C4387A"/><rect x="165" y="15" width="28" height="85" rx="3" fill="#E8629A"/><rect x="205" y="15" width="28" height="85" rx="3" fill="#F5A04A"/><text x="19" y="11" text-anchor="middle" font-size="7" fill="#555" font-family="Source Sans Pro">3,015</text><text x="59" y="11" text-anchor="middle" font-size="7" fill="#555" font-family="Source Sans Pro">3,015</text><text x="99" y="11" text-anchor="middle" font-size="7" fill="#555" font-family="Source Sans Pro">3,015</text><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>Mortgage Type</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>BUYDOWN</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>FIXED</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>ARM</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>STEP RATE</div>
+          </div>
+          <div class="chart-area">
+            <svg class="chart" viewBox="0 0 280 110"><rect x="5" y="15" width="28" height="85" rx="3" fill="#2D0A45"/><rect x="45" y="15" width="28" height="85" rx="3" fill="#6B2FA0"/><rect x="85" y="15" width="28" height="85" rx="3" fill="#9B1F6E"/><rect x="125" y="15" width="28" height="85" rx="3" fill="#E8629A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>HELOC Limit</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>AVAILABLE 80%</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>UPB 20%</div>
+          </div>
+          <div class="chart-area donut-center">
+            <svg viewBox="0 0 120 120" width="100" height="100">
+              <circle cx="60" cy="60" r="46" fill="none" stroke="#2D0A45" stroke-width="18" stroke-dasharray="230 289" stroke-dashoffset="-30" transform="rotate(-90 60 60)"/>
+              <circle cx="60" cy="60" r="46" fill="none" stroke="#E8629A" stroke-width="18" stroke-dasharray="58 289" stroke-dashoffset="-260" transform="rotate(-90 60 60)"/>
+              <circle cx="60" cy="60" r="36" fill="white"/>
+              <text x="60" y="56" text-anchor="middle" font-size="11" font-weight="700" fill="#2D0A45" font-family="Source Sans Pro">80%</text>
+              <text x="60" y="68" text-anchor="middle" font-size="8" fill="#9B1F6E" font-family="Source Sans Pro">Available</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="card-grid grid-3">
+        <div class="card">
+          <div class="card-title"><span>Lien Position</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>1ST</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>2ND</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="30" y="15" width="60" height="85" rx="3" fill="#2D0A45"/><rect x="130" y="35" width="60" height="65" rx="3" fill="#E8629A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>Interest Rate</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>1%</div><div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>1-3%</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>3-5%</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>7-6%</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="5" y="15" width="35" height="85" rx="3" fill="#2D0A45"/><rect x="55" y="15" width="35" height="85" rx="3" fill="#6B2FA0"/><rect x="105" y="15" width="35" height="85" rx="3" fill="#9B1F6E"/><rect x="155" y="15" width="35" height="85" rx="3" fill="#F5A04A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>Top 10 States</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>WY</div><div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>VT</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>NH</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>CA</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="3" y="15" width="18" height="85" rx="2" fill="#2D0A45"/><rect x="27" y="15" width="18" height="85" rx="2" fill="#3D1870"/><rect x="51" y="15" width="18" height="85" rx="2" fill="#6B2FA0"/><rect x="75" y="15" width="18" height="85" rx="2" fill="#8C2890"/><rect x="99" y="15" width="18" height="85" rx="2" fill="#9B1F6E"/><rect x="123" y="15" width="18" height="85" rx="2" fill="#B83080"/><rect x="147" y="15" width="18" height="85" rx="2" fill="#C4387A"/><rect x="171" y="15" width="18" height="85" rx="2" fill="#E8629A"/><rect x="195" y="15" width="18" height="85" rx="2" fill="#F5A04A"/><rect x="219" y="15" width="18" height="85" rx="2" fill="#F5C04A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELINQUENCY TAB -->
+  <div class="tab-content" id="tab-delinquency">
+    <div class="page-content">
+      <div class="card-grid" style="grid-template-columns:1fr 1.4fr; margin-bottom:14px">
+        <div class="card">
+          <div class="card-title"><span class="card-title-left">Delinquency</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>COLLECTED</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>UNCOLLECTED</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 70"><rect x="5" y="10" width="100" height="50" rx="3" fill="#9B1F6E" opacity="0.85"/><rect x="125" y="28" width="80" height="32" rx="3" fill="#F5A04A" opacity="0.85"/><text x="55" y="7" text-anchor="middle" font-size="8" fill="#555" font-family="Source Sans Pro">1.29k</text><text x="165" y="25" text-anchor="middle" font-size="8" fill="#555" font-family="Source Sans Pro">900k</text><line x1="0" y1="60" x2="280" y2="60" stroke="#eee" stroke-width="1"/></svg></div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>Delinquency Matrix</span></div>
+          <div style="overflow-x:auto">
+            <table class="heatmap-table">
+              <thead>
+                <tr><th>Status</th><th>Better</th><th>UPB</th><th>Current</th><th>30</th><th>60</th><th>90</th><th>BK</th><th>FCL</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Current</td><td>$130M</td><td class="hm-active">$130M</td><td class="hm-active">$130M</td><td>$130M</td><td>$130M</td><td>$130M</td><td>$130M</td><td>$130M</td></tr>
+                <tr><td>30</td><td>$3.1M</td><td>$3.1M</td><td>$3.1M</td><td class="hm-active">$3.1M</td><td>$3.1M</td><td>$3.1M</td><td>$3.1M</td><td>$3.1M</td></tr>
+                <tr><td>60</td><td>$1.1M</td><td>$1.1M</td><td>$1.1M</td><td>$1.1M</td><td class="hm-active">$1.1M</td><td>$1.1M</td><td>$1.1M</td><td>$1.1M</td></tr>
+                <tr><td>90</td><td>$424k</td><td>$424k</td><td>$424k</td><td>$424k</td><td>$424k</td><td class="hm-highlight">$424k</td><td>$424k</td><td>$424k</td></tr>
+                <tr><td>BK</td><td>$225k</td><td>$225k</td><td>$225k</td><td>$225k</td><td>$225k</td><td>$225k</td><td class="hm-highlight">$225k</td><td>$225k</td></tr>
+                <tr><td>FCL</td><td>$1.6M</td><td>$1.6M</td><td>$1.6M</td><td>$1.6M</td><td>$1.6M</td><td>$1.6M</td><td>$1.6M</td><td class="hm-highlight">$1.6M</td></tr>
+                <tr><td class="hm-total">Total</td><td class="hm-total">$139M</td><td class="hm-total">$139M</td><td class="hm-total">$139M</td><td class="hm-total">$139M</td><td class="hm-total">$139M</td><td class="hm-total">$139M</td><td class="hm-total">$139M</td><td class="hm-total">$139M</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card-grid grid-3">
+        <div class="card">
+          <div class="card-title"><span>Bankruptcy Status</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>BK FILED</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>DISCHARGE</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>DM</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 110">
+            <rect x="5" y="15" width="20" height="85" rx="2" fill="#2D0A45"/><rect x="33" y="15" width="20" height="85" rx="2" fill="#3D1870"/><rect x="61" y="15" width="20" height="85" rx="2" fill="#6B2FA0"/><rect x="89" y="15" width="20" height="85" rx="2" fill="#8A2590"/><rect x="117" y="15" width="20" height="85" rx="2" fill="#9B1F6E"/><rect x="145" y="15" width="20" height="85" rx="2" fill="#C4387A"/><rect x="173" y="15" width="20" height="85" rx="2" fill="#E8629A"/><rect x="201" y="15" width="20" height="85" rx="2" fill="#F0905A"/><rect x="229" y="15" width="20" height="85" rx="2" fill="#F5A04A"/>
+            <line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/>
+          </svg></div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>Loss Mitigation</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>CURRENT</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>30</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>FCL</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="10" y="15" width="30" height="85" rx="3" fill="#2D0A45"/><rect x="52" y="15" width="30" height="85" rx="3" fill="#6B2FA0"/><rect x="94" y="15" width="30" height="85" rx="3" fill="#9B1F6E"/><rect x="136" y="15" width="30" height="85" rx="3" fill="#C4387A"/><rect x="178" y="15" width="30" height="85" rx="3" fill="#E8629A"/><rect x="220" y="15" width="30" height="85" rx="3" fill="#F5A04A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>Foreclosure</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>JUDGEMENT</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>1ST LEGAL</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>FCL APPROVAL</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="10" y="15" width="30" height="85" rx="3" fill="#2D0A45"/><rect x="52" y="15" width="30" height="85" rx="3" fill="#6B2FA0"/><rect x="94" y="15" width="30" height="85" rx="3" fill="#9B1F6E"/><rect x="136" y="15" width="30" height="85" rx="3" fill="#E8629A"/><rect x="178" y="15" width="30" height="85" rx="3" fill="#F5A04A"/><rect x="220" y="15" width="30" height="85" rx="3" fill="#F5C04A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASHFLOW TAB -->
+  <div class="tab-content" id="tab-cashflow">
+    <div class="page-content">
+      <div class="card-grid" style="grid-template-columns:280px 1fr 1fr; margin-bottom:14px">
+        <div class="card">
+          <div class="card-title"><span>Cashflow Summary</span></div>
+          <div class="cf-table">
+            <div class="cf-row" style="font-weight:700;font-size:11px;color:var(--text-body);padding-bottom:6px;border-bottom:2px solid #eee"><span>Item</span><span>Total</span></div>
+            <div class="cf-row"><span class="cf-label">Total Collected (PITI)</span><span class="cf-val">$365,000</span></div>
+            <div class="cf-row"><span class="cf-label">Total Collected (P&I)</span><span class="cf-val">$350,000</span></div>
+            <div class="cf-row"><span class="cf-label">Total Collected (T&I)</span><span class="cf-val">$15,000</span></div>
+            <div class="cf-row"><span class="cf-label">Principal</span><span class="cf-val">$100,000</span></div>
+            <div class="cf-row"><span class="cf-label">Interest</span><span class="cf-val">$250,000</span></div>
+            <div class="cf-row"><span class="cf-label">Scheduled</span><span class="cf-val">$150,000</span></div>
+            <div class="cf-row"><span class="cf-label">Unscheduled</span><span class="cf-val">$250,000</span></div>
+            <div class="cf-row"><span class="cf-label">Insurance</span><span class="cf-val">$10,000</span></div>
+            <div class="cf-row"><span class="cf-label">Taxes</span><span class="cf-val">$5,000</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>Cashflow by Delinquency</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>CURRENT</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>DELINQUENT</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 130"><rect x="30" y="20" width="80" height="95" rx="3" fill="#2D0A45"/><rect x="160" y="40" width="80" height="75" rx="3" fill="#E8629A"/><line x1="0" y1="115" x2="280" y2="115" stroke="#eee" stroke-width="1"/></svg></div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>Month to Date <span class="info-icon">i</span></span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>CURRENT</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A;opacity:0.5"></div>DELINQUENT</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 130" preserveAspectRatio="xMidYMid meet">
+            <defs><linearGradient id="cf1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9B1F6E" stop-opacity="0.2"/><stop offset="100%" stop-color="#9B1F6E" stop-opacity="0"/></linearGradient></defs>
+            <path d="M10,80 C40,60 70,90 110,70 C140,55 170,85 210,65 C240,50 260,70 275,60 L275,110 L10,110Z" fill="url(#cf1)"/>
+            <path d="M10,80 C40,60 70,90 110,70 C140,55 170,85 210,65 C240,50 260,70 275,60" fill="none" stroke="#9B1F6E" stroke-width="2"/>
+            <path d="M10,95 C40,80 70,105 110,90 C140,78 170,98 210,85 C240,75 260,88 275,82" fill="none" stroke="#F5A04A" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+            <line x1="0" y1="110" x2="280" y2="110" stroke="#eee" stroke-width="1"/>
+          </svg></div>
+        </div>
+      </div>
+      <div class="card-grid grid-3">
+        <div class="card">
+          <div class="card-title"><span>Payment Method</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>ACH</div><div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>EBOX</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>LOCKBOX</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>ACI</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="5" y="15" width="22" height="85" rx="2" fill="#2D0A45"/><rect x="35" y="15" width="22" height="85" rx="2" fill="#3D1870"/><rect x="65" y="15" width="22" height="85" rx="2" fill="#6B2FA0"/><rect x="95" y="15" width="22" height="85" rx="2" fill="#9B1F6E"/><rect x="125" y="15" width="22" height="85" rx="2" fill="#C4387A"/><rect x="155" y="15" width="22" height="85" rx="2" fill="#E8629A"/><rect x="185" y="15" width="22" height="85" rx="2" fill="#F5A04A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>End of Month CPR</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>SCHEDULED</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>UNSCHEDULED</div></div>
+          <div class="chart-area donut-center">
+            <svg viewBox="0 0 120 120" width="100" height="100">
+              <circle cx="60" cy="60" r="46" fill="none" stroke="#2D0A45" stroke-width="20" stroke-dasharray="200 289" stroke-dashoffset="-30" transform="rotate(-90 60 60)"/>
+              <circle cx="60" cy="60" r="46" fill="none" stroke="#F5A04A" stroke-width="20" stroke-dasharray="89 289" stroke-dashoffset="-230" transform="rotate(-90 60 60)"/>
+              <circle cx="60" cy="60" r="36" fill="white"/>
+              <text x="60" y="64" text-anchor="middle" font-size="10" font-weight="700" fill="#2D0A45" font-family="Source Sans Pro">CPR</text>
+            </svg>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>HELOC Open/Close</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>OPEN</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>CLOSE</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="40" y="20" width="70" height="80" rx="3" fill="#2D0A45"/><rect x="160" y="35" width="70" height="65" rx="3" fill="#E8629A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HELOC TAB -->
+  <div class="tab-content" id="tab-heloc">
+    <div class="page-content">
+      <div class="card-grid" style="grid-template-columns:260px 1fr 1fr; margin-bottom:14px">
+        <div class="card">
+          <div class="card-title"><span>HELOC Summary</span></div>
+          <table class="data-table">
+            <thead><tr><th>Type</th><th class="num">Total UPB</th></tr></thead>
+            <tbody>
+              <tr><td>Draw</td><td class="num">$1,927,625.64</td></tr>
+              <tr><td>Collection</td><td class="num">$9,463,785.70</td></tr>
+              <tr><td>Available</td><td class="num">$5,930,973.08</td></tr>
+              <tr><td>Limit</td><td class="num">$7,090,943.92</td></tr>
+              <tr><td><strong>UPB</strong></td><td class="num"><strong>$6,923,791.56</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>Non-FRLO <span class="info-icon">i</span></span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>FRLO</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>NON-FRLO</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 130"><rect x="40" y="20" width="80" height="95" rx="3" fill="#2D0A45"/><rect x="160" y="20" width="80" height="95" rx="3" fill="#E8629A"/><line x1="0" y1="115" x2="280" y2="115" stroke="#eee" stroke-width="1"/></svg></div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>Open/Close</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>OPEN</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>CLOSE</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 130"><rect x="40" y="20" width="80" height="95" rx="3" fill="#2D0A45"/><rect x="160" y="25" width="80" height="90" rx="3" fill="#E8629A"/><line x1="0" y1="115" x2="280" y2="115" stroke="#eee" stroke-width="1"/></svg></div>
+        </div>
+      </div>
+      <div class="card-grid grid-3">
+        <div class="card">
+          <div class="card-title"><span>Freeze Reasons</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>CLOSED LINE</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>BRANCH REQ</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>DIVORCE</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>PENDING SALE</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="5" y="15" width="50" height="85" rx="3" fill="#2D0A45"/><rect x="68" y="15" width="50" height="85" rx="3" fill="#9B1F6E"/><rect x="131" y="15" width="50" height="85" rx="3" fill="#E8629A"/><rect x="194" y="15" width="50" height="85" rx="3" fill="#F5A04A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>HELOC Limit</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>UPB</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>AMOUNT AVAILABLE</div></div>
+          <div class="chart-area donut-center">
+            <svg viewBox="0 0 120 120" width="100" height="100">
+              <circle cx="60" cy="60" r="46" fill="none" stroke="#2D0A45" stroke-width="20" stroke-dasharray="180 289" stroke-dashoffset="-30" transform="rotate(-90 60 60)"/>
+              <circle cx="60" cy="60" r="46" fill="none" stroke="#E8629A" stroke-width="20" stroke-dasharray="109 289" stroke-dashoffset="-210" transform="rotate(-90 60 60)"/>
+              <circle cx="60" cy="60" r="36" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>Draw/Available</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>AMOUNT DRAWN</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>AMOUNT AVAILABLE</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="40" y="15" width="80" height="85" rx="3" fill="#2D0A45"/><rect x="160" y="15" width="80" height="85" rx="3" fill="#E8629A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTIVE TAB -->
+  <div class="tab-content" id="tab-active">
+    <div class="page-content">
+      <div class="card-grid grid-3" style="margin-bottom:14px">
+        <div class="card"><div class="card-title"><span>Due Day</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div><div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>1ST</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>OTHER</div></div><div class="chart-area"><svg class="chart" viewBox="0 0 280 120"><rect x="40" y="15" width="80" height="95" rx="3" fill="#2D0A45"/><rect x="160" y="40" width="80" height="70" rx="3" fill="#E8629A"/><line x1="0" y1="110" x2="280" y2="110" stroke="#eee" stroke-width="1"/></svg></div></div>
+        <div class="card"><div class="card-title"><span>FICO Score</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div><div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>&gt;620</div><div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>&gt;700</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>620-700</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>&gt;780</div></div><div class="chart-area"><svg class="chart" viewBox="0 0 280 120"><rect x="10" y="15" width="50" height="95" rx="3" fill="#2D0A45"/><rect x="80" y="15" width="50" height="95" rx="3" fill="#6B2FA0"/><rect x="150" y="15" width="50" height="95" rx="3" fill="#9B1F6E"/><rect x="220" y="15" width="50" height="95" rx="3" fill="#F5A04A"/><line x1="0" y1="110" x2="280" y2="110" stroke="#eee" stroke-width="1"/></svg></div></div>
+        <div class="card"><div class="card-title"><span>Interest Rate</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div><div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>1%</div><div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>1-3%</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>3-5%</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>7-6%</div></div><div class="chart-area"><svg class="chart" viewBox="0 0 280 120"><rect x="10" y="15" width="50" height="95" rx="3" fill="#2D0A45"/><rect x="80" y="15" width="50" height="95" rx="3" fill="#6B2FA0"/><rect x="150" y="15" width="50" height="95" rx="3" fill="#9B1F6E"/><rect x="220" y="15" width="50" height="95" rx="3" fill="#F5A04A"/><line x1="0" y1="110" x2="280" y2="110" stroke="#eee" stroke-width="1"/></svg></div></div>
+      </div>
+      <div class="card-grid grid-3">
+        <div class="card"><div class="card-title"><span>Top 10 States</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div><div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>WY</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>CA</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>LA</div></div><div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="3" y="15" width="18" height="85" rx="2" fill="#2D0A45"/><rect x="27" y="15" width="18" height="85" rx="2" fill="#3D1870"/><rect x="51" y="15" width="18" height="85" rx="2" fill="#6B2FA0"/><rect x="75" y="15" width="18" height="85" rx="2" fill="#9B1F6E"/><rect x="99" y="15" width="18" height="85" rx="2" fill="#C4387A"/><rect x="123" y="15" width="18" height="85" rx="2" fill="#E8629A"/><rect x="147" y="15" width="18" height="85" rx="2" fill="#F0905A"/><rect x="171" y="15" width="18" height="85" rx="2" fill="#F5A04A"/><rect x="195" y="15" width="18" height="85" rx="2" fill="#F5C04A"/><rect x="219" y="15" width="18" height="85" rx="2" fill="#F5D04A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div></div>
+        <div class="card"><div class="card-title"><span>Product Type</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div><div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>VHA</div><div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>FHA</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>HELOC</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>CONVENTIONAL</div></div><div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="10" y="15" width="50" height="85" rx="3" fill="#2D0A45"/><rect x="80" y="15" width="50" height="85" rx="3" fill="#6B2FA0"/><rect x="150" y="15" width="50" height="85" rx="3" fill="#9B1F6E"/><rect x="220" y="15" width="50" height="85" rx="3" fill="#F5A04A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div></div>
+        <div class="card"><div class="card-title"><span>QM / Non-QM <span class="info-icon">i</span></span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div><div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>YES</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>NO</div></div><div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="40" y="15" width="80" height="85" rx="3" fill="#2D0A45"/><rect x="160" y="35" width="80" height="65" rx="3" fill="#E8629A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INACTIVE TAB -->
+  <div class="tab-content" id="tab-inactive">
+    <div class="page-content">
+      <div class="card-grid grid-3" style="margin-bottom:14px">
+        <div class="card"><div class="card-title"><span>Inactive Today</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>REDEMPTION</div><div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>REO</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>MORTGAGE PAYOFF</div></div>
+          <div class="chart-area donut-center">
+            <svg viewBox="0 0 130 130" width="120" height="120">
+              <circle cx="65" cy="65" r="50" fill="none" stroke="#2D0A45" stroke-width="20" stroke-dasharray="80 314" stroke-dashoffset="-10" transform="rotate(-90 65 65)"/>
+              <circle cx="65" cy="65" r="50" fill="none" stroke="#6B2FA0" stroke-width="20" stroke-dasharray="60 314" stroke-dashoffset="-90" transform="rotate(-90 65 65)"/>
+              <circle cx="65" cy="65" r="50" fill="none" stroke="#9B1F6E" stroke-width="20" stroke-dasharray="70 314" stroke-dashoffset="-150" transform="rotate(-90 65 65)"/>
+              <circle cx="65" cy="65" r="50" fill="none" stroke="#C4387A" stroke-width="20" stroke-dasharray="40 314" stroke-dashoffset="-220" transform="rotate(-90 65 65)"/>
+              <circle cx="65" cy="65" r="50" fill="none" stroke="#E8629A" stroke-width="20" stroke-dasharray="30 314" stroke-dashoffset="-260" transform="rotate(-90 65 65)"/>
+              <circle cx="65" cy="65" r="40" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card"><div class="card-title"><span>Interest Rate</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div><div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>1%</div><div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>1-3%</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>7-6%</div></div><div class="chart-area"><svg class="chart" viewBox="0 0 280 120"><rect x="10" y="15" width="50" height="95" rx="3" fill="#2D0A45"/><rect x="80" y="15" width="50" height="95" rx="3" fill="#6B2FA0"/><rect x="150" y="15" width="50" height="95" rx="3" fill="#9B1F6E"/><rect x="220" y="15" width="50" height="95" rx="3" fill="#F5A04A"/><line x1="0" y1="110" x2="280" y2="110" stroke="#eee" stroke-width="1"/></svg></div></div>
+        <div class="card"><div class="card-title"><span>Top 10 States</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div><div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>WY</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>CA</div></div><div class="chart-area"><svg class="chart" viewBox="0 0 280 120"><rect x="3" y="15" width="20" height="95" rx="2" fill="#2D0A45"/><rect x="29" y="15" width="20" height="95" rx="2" fill="#3D1870"/><rect x="55" y="15" width="20" height="95" rx="2" fill="#6B2FA0"/><rect x="81" y="15" width="20" height="95" rx="2" fill="#9B1F6E"/><rect x="107" y="15" width="20" height="95" rx="2" fill="#C4387A"/><rect x="133" y="15" width="20" height="95" rx="2" fill="#E8629A"/><rect x="159" y="15" width="20" height="95" rx="2" fill="#F0905A"/><rect x="185" y="15" width="20" height="95" rx="2" fill="#F5A04A"/><line x1="0" y1="110" x2="280" y2="110" stroke="#eee" stroke-width="1"/></svg></div></div>
+      </div>
+      <div class="card-grid grid-3">
+        <div class="card"><div class="card-title"><span>Product Type</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div><div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>VA</div><div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>FHA</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>HELOC</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>CONVENTIONAL</div></div><div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="10" y="15" width="50" height="85" rx="3" fill="#2D0A45"/><rect x="80" y="15" width="50" height="85" rx="3" fill="#6B2FA0"/><rect x="150" y="15" width="50" height="85" rx="3" fill="#9B1F6E"/><rect x="220" y="15" width="50" height="85" rx="3" fill="#F5A04A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div></div>
+        <div class="card"><div class="card-title"><span>QM / Non-QM <span class="info-icon">i</span></span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div><div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>YES</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>NO</div></div><div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="40" y="15" width="80" height="85" rx="3" fill="#2D0A45"/><rect x="160" y="35" width="80" height="65" rx="3" fill="#E8629A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div></div>
+        <div class="card"><div class="card-title"><span>Origination Vintage</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div><div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>2004</div><div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>2010</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>2022</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>2023</div></div><div class="chart-area"><svg class="chart" viewBox="0 0 280 110"><rect x="10" y="15" width="45" height="85" rx="3" fill="#2D0A45"/><rect x="68" y="15" width="45" height="85" rx="3" fill="#6B2FA0"/><rect x="126" y="15" width="45" height="85" rx="3" fill="#9B1F6E"/><rect x="184" y="15" width="45" height="85" rx="3" fill="#E8629A"/><rect x="242" y="15" width="35" height="85" rx="3" fill="#F5A04A"/><line x1="0" y1="100" x2="280" y2="100" stroke="#eee" stroke-width="1"/></svg></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISASTER TAB -->
+  <div class="tab-content" id="tab-disaster">
+    <div class="page-content">
+      <div class="card-grid grid-2">
+        <div class="card">
+          <div class="card-title"><span>Declared Disasters</span><div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+          <div class="card-legend"><div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div>FIRE</div><div class="legend-item"><div class="legend-dot" style="background:#6B2FA0"></div>FLOOD</div><div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div>TORNADO</div><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div>TROPICAL STORM</div><div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div>OTHER</div></div>
+          <div class="chart-area"><svg class="chart" viewBox="0 0 400 170" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="dg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2D0A45" stop-opacity="0.4"/><stop offset="100%" stop-color="#2D0A45" stop-opacity="0.05"/></linearGradient>
+              <linearGradient id="dg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9B1F6E" stop-opacity="0.4"/><stop offset="100%" stop-color="#9B1F6E" stop-opacity="0.05"/></linearGradient>
+              <linearGradient id="dg3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E8629A" stop-opacity="0.3"/><stop offset="100%" stop-color="#E8629A" stop-opacity="0.02"/></linearGradient>
+              <linearGradient id="dg4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F5A04A" stop-opacity="0.3"/><stop offset="100%" stop-color="#F5A04A" stop-opacity="0.02"/></linearGradient>
+            </defs>
+            <path d="M15,140 C55,120 95,130 135,100 C175,80 215,95 255,75 C295,55 335,80 385,65 L385,155 L15,155Z" fill="url(#dg4)"/>
+            <path d="M15,140 C55,120 95,130 135,100 C175,80 215,95 255,75 C295,55 335,80 385,65" fill="none" stroke="#F5A04A" stroke-width="1.5"/>
+            <path d="M15,125 C55,105 95,115 135,85 C175,65 215,80 255,60 C295,42 335,65 385,50 L385,155 L15,155Z" fill="url(#dg3)"/>
+            <path d="M15,125 C55,105 95,115 135,85 C175,65 215,80 255,60 C295,42 335,65 385,50" fill="none" stroke="#E8629A" stroke-width="1.5"/>
+            <path d="M15,110 C55,90 95,100 135,70 C175,50 215,65 255,45 C295,28 335,50 385,35 L385,155 L15,155Z" fill="url(#dg2)"/>
+            <path d="M15,110 C55,90 95,100 135,70 C175,50 215,65 255,45 C295,28 335,50 385,35" fill="none" stroke="#9B1F6E" stroke-width="2"/>
+            <path d="M15,90 C55,70 95,80 135,55 C175,35 215,48 255,30 C295,14 335,35 385,22 L385,155 L15,155Z" fill="url(#dg1)"/>
+            <path d="M15,90 C55,70 95,80 135,55 C175,35 215,48 255,30 C295,14 335,35 385,22" fill="none" stroke="#2D0A45" stroke-width="2"/>
+            <text x="15" y="165" font-size="7" fill="#aaa" font-family="Source Sans Pro">JAN Q1</text>
+            <text x="75" y="165" font-size="7" fill="#aaa" font-family="Source Sans Pro">MAR</text>
+            <text x="155" y="165" font-size="7" fill="#aaa" font-family="Source Sans Pro">APR Q2</text>
+            <text x="235" y="165" font-size="7" fill="#aaa" font-family="Source Sans Pro">JUL Q3</text>
+            <text x="325" y="165" font-size="7" fill="#aaa" font-family="Source Sans Pro">OCT Q4</text>
+          </svg></div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>Disaster Portfolio Table</span></div>
+          <div style="overflow-x:auto">
+            <table class="data-table">
+              <thead><tr><th>State</th><th>County</th><th>Type</th><th>Count</th><th>Disaster Name</th><th>Dec. No.</th><th class="num">UPB</th><th>Occurrence</th></tr></thead>
+              <tbody>
+                <tr><td>CO</td><td>Jefferson</td><td>Flood</td><td>3</td><td><a href="#">Colorado Flooding</a></td><td class="dr-badge">DR-4684-CO</td><td class="num">$1,345,643.04</td><td>10/17/23</td></tr>
+                <tr><td>WY</td><td>Niobraha</td><td>Flood</td><td>7</td><td><a href="#">Wyoming Flooding</a></td><td class="dr-badge">DR-1744-CO</td><td class="num">$2,145,637.25</td><td>10/19/23</td></tr>
+                <tr><td>VT</td><td>Orange</td><td>Storm</td><td>3</td><td><a href="#">Vermont Severe Storm</a></td><td class="dr-badge">DR-9462-CO</td><td class="num">$3,335,847.63</td><td>10/20/23</td></tr>
+                <tr><td>NH</td><td>Sullivan</td><td>Storm</td><td>2</td><td><a href="#">New Hampshire Severe...</a></td><td class="dr-badge">DR-3234-CO</td><td class="num">$1,643,924.63</td><td>10/21/23</td></tr>
+                <tr><td>ME</td><td>Cumberland</td><td>Storm</td><td>4</td><td><a href="#">Maine Severe Storm</a></td><td class="dr-badge">DR-3674-CO</td><td class="num">$1,434,556.52</td><td>10/22/23</td></tr>
+                <tr><td>HI</td><td>Jefferson</td><td>Fire</td><td>6</td><td><a href="#">Maui Fire</a></td><td class="dr-badge">DR-3452-CO</td><td class="num">$1,737,266.63</td><td>10/23/23</td></tr>
+                <tr><td>CO</td><td>Cascade</td><td>Flood</td><td>7</td><td><a href="#">Denver Flooding</a></td><td class="dr-badge">DR-1435-CO</td><td class="num">$1,262,256.36</td><td>10/22/23</td></tr>
+                <tr><td>CA</td><td>Orange</td><td>Fire</td><td>2</td><td><a href="#">California Fire</a></td><td class="dr-badge">DR-2345-CO</td><td class="num">$1,431,626.98</td><td>10/17/23</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ FOOTER ════ -->
+  <div class="dash-footer" id="dashFooter">
+    <span class="brand-name">Computershare</span>
+    <div class="footer-links">
+      <span class="footer-link active" onclick="switchSection('dashboard')">DASHBOARD</span>
+      <span class="footer-link" onclick="switchSection('map')">DISASTER MAP</span>
+      <span class="footer-link">INVESTOR WEB</span>
+      <span class="footer-link">DEAL CENTER</span>
+      <span class="footer-link">FEEDBACK</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════ MAP SECTION ════ -->
+<div class="map-tab-content" id="section-map">
+  <!-- Map Top Bar -->
+  <div style="position:absolute; top:var(--topnav-h); left:var(--sidebar-w); right:0; z-index:60; pointer-events:none; display:flex; flex-direction:column">
+    <div style="background:var(--deep-purple); height:48px; display:flex; align-items:center; padding:0 20px 0 16px; pointer-events:all; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,0.08)">
+      <div class="brand">
+        <div class="brand-c">C</div>
+        <span class="brand-name">Computershare</span>
+        <span class="brand-sub">Dashboard</span>
+      </div>
+      <div class="topnav-right">
+        <div class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+        <div class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
+        <span class="refresh-text">Last refreshed 11:43am</span>
+        <div class="user-pill"><div class="user-avatar">CW</div><span class="user-name">Corey Watts</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Map Container -->
+  <div class="map-container" style="margin-top:calc(var(--topnav-h)*2); position:relative; flex:1">
+    <!-- Choropleth Map SVG (simplified US/CO) -->
+    <svg width="100%" height="100%" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0">
+      <!-- Background -->
+      <rect width="900" height="600" fill="#e8e4f0"/>
+      <!-- Simplified county shapes — Colorado focus -->
+      <!-- Row 1 counties -->
+      <rect x="50" y="80" width="100" height="80" rx="2" fill="#6B2FA0" opacity="0.6" class="county" data-county="Moffat" onclick="showCountyTooltip(event,'Moffat','CO','Flood',12)"/>
+      <rect x="155" y="80" width="100" height="80" rx="2" fill="#9B1F6E" opacity="0.7" class="county" data-county="Routt" onclick="showCountyTooltip(event,'Routt','CO','Flood',8)"/>
+      <rect x="260" y="80" width="120" height="80" rx="2" fill="#E8629A" opacity="0.6" class="county" data-county="Grand" onclick="showCountyTooltip(event,'Grand','CO','Storm',5)"/>
+      <rect x="385" y="40" width="130" height="120" rx="2" fill="#F5A04A" opacity="0.7" class="county" data-county="Boulder" onclick="showCountyTooltip(event,'Boulder','CO','Flood',19)"/>
+      <rect x="520" y="40" width="120" height="120" rx="2" fill="#9B1F6E" opacity="0.65" class="county" data-county="Adams" onclick="showCountyTooltip(event,'Adams','CO','Flood',15)"/>
+      <rect x="645" y="40" width="200" height="120" rx="2" fill="#6B2FA0" opacity="0.5" class="county"/>
+      <!-- Row 2 counties -->
+      <rect x="50" y="165" width="100" height="90" rx="2" fill="#2D0A45" opacity="0.5" class="county"/>
+      <rect x="155" y="165" width="100" height="90" rx="2" fill="#6B2FA0" opacity="0.55" class="county" data-county="Eagle" onclick="showCountyTooltip(event,'Eagle','CO','Fire',3)"/>
+      <rect x="260" y="165" width="120" height="90" rx="2" fill="#9B1F6E" opacity="0.6" class="county" data-county="Summit" onclick="showCountyTooltip(event,'Summit','CO','Storm',7)"/>
+      <rect x="385" y="165" width="130" height="90" rx="2" fill="#F5A04A" opacity="0.65" class="county" data-county="Jefferson" onclick="showCountyTooltip(event,'Jefferson','CO','Flood',22)"/>
+      <rect x="520" y="165" width="120" height="90" rx="2" fill="#E8629A" opacity="0.7" class="county" data-county="Arapahoe" onclick="showCountyTooltip(event,'Arapahoe','CO','Flood',18)"/>
+      <rect x="645" y="165" width="200" height="90" rx="2" fill="#9B1F6E" opacity="0.45" class="county"/>
+      <!-- Row 3 -->
+      <rect x="50" y="260" width="200" height="90" rx="2" fill="#6B2FA0" opacity="0.4" class="county" data-county="Garfield"/>
+      <rect x="260" y="260" width="120" height="90" rx="2" fill="#2D0A45" opacity="0.45" class="county" data-county="Lake"/>
+      <rect x="385" y="260" width="130" height="90" rx="2" fill="#E8629A" opacity="0.55" class="county" data-county="Park" onclick="showCountyTooltip(event,'Park','CO','Flood',19)"/>
+      <rect x="520" y="260" width="120" height="90" rx="2" fill="#F5A04A" opacity="0.7" class="county" data-county="El Paso" onclick="showCountyTooltip(event,'El Paso','CO','Fire',11)"/>
+      <rect x="645" y="260" width="200" height="90" rx="2" fill="#9B1F6E" opacity="0.4" class="county" data-county="Lincoln"/>
+      <!-- Row 4 -->
+      <rect x="50" y="355" width="150" height="90" rx="2" fill="#2D0A45" opacity="0.4" class="county"/>
+      <rect x="205" y="355" width="170" height="90" rx="2" fill="#6B2FA0" opacity="0.45" class="county" data-county="Gunnison"/>
+      <rect x="385" y="355" width="250" height="90" rx="2" fill="#9B1F6E" opacity="0.55" class="county" data-county="Pueblo" onclick="showCountyTooltip(event,'Pueblo','CO','Storm',6)"/>
+      <rect x="645" y="355" width="200" height="90" rx="2" fill="#E8629A" opacity="0.35" class="county"/>
+      <!-- Labels -->
+      <text x="520" y="215" text-anchor="middle" font-size="11" font-weight="600" fill="#2D0A45" font-family="Source Sans Pro">Arapahoe</text>
+      <text x="450" y="215" text-anchor="middle" font-size="11" font-weight="600" fill="#2D0A45" font-family="Source Sans Pro">Jefferson</text>
+      <text x="580" y="100" text-anchor="middle" font-size="11" font-weight="600" fill="#2D0A45" font-family="Source Sans Pro">Adams</text>
+      <text x="450" y="100" text-anchor="middle" font-size="11" font-weight="600" fill="#2D0A45" font-family="Source Sans Pro">Boulder</text>
+      <text x="320" y="215" text-anchor="middle" font-size="11" font-weight="600" fill="#2D0A45" font-family="Source Sans Pro">Summit</text>
+      <text x="450" y="310" text-anchor="middle" font-size="11" font-weight="600" fill="#2D0A45" font-family="Source Sans Pro">Park</text>
+      <text x="580" y="310" text-anchor="middle" font-size="11" font-weight="600" fill="#2D0A45" font-family="Source Sans Pro">El Paso</text>
+      <!-- COLORADO label -->
+      <text x="380" y="440" text-anchor="middle" font-size="20" font-weight="700" fill="rgba(45,10,69,0.2)" font-family="Source Sans Pro" letter-spacing="6">COLORADO</text>
+    </svg>
+
+    <!-- Map Top Controls -->
+    <div class="map-top-bar">
+      <div class="legend-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        Legend
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="10" height="10"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="map-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input placeholder="Search category or state">
+      </div>
+      <button style="padding:7px 14px;background:var(--grad-hero);color:#fff;border:none;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font)" onclick="showInsightPanel('portfolio')">📊 Portfolio Insights</button>
+      <button style="padding:7px 14px;background:rgba(255,255,255,0.9);color:var(--deep-purple);border:1px solid #ede;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font)" onclick="showInsightPanel('county')">🗺 County Insights</button>
+    </div>
+
+    <!-- Map Controls Right -->
+    <div class="map-controls">
+      <div class="map-ctrl-btn" title="Chart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+      <div class="map-ctrl-sep"></div>
+      <div class="map-ctrl-btn" title="Zoom in" onclick="this.style.background='#ede8f5'">+</div>
+      <div class="map-ctrl-btn" title="Zoom out">−</div>
+      <div class="map-ctrl-sep"></div>
+      <div class="map-ctrl-btn" title="Home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="map-ctrl-btn" title="Locate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
+    </div>
+
+    <!-- Tooltip -->
+    <div class="map-tooltip" id="mapTooltip" style="display:none; top:200px; left:300px">
+      <div id="tooltipContent"></div>
+    </div>
+
+    <!-- FEMA Badge -->
+    <div class="fema-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#003087" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      FEMA
+    </div>
+
+    <!-- Insight Panel -->
+    <div id="insightPanel" style="display:none; position:absolute; top:0; left:0; bottom:0; width:440px; background:rgba(45,10,69,0.94); backdrop-filter:blur(12px); overflow-y:auto; z-index:10; flex-direction:column">
+      <div class="mip-header">
+        <div>
+          <div class="mip-title" id="insightTitle">Disaster Insights</div>
+          <div class="mip-meta" id="insightMeta"></div>
+        </div>
+        <button class="mip-close" onclick="closeInsightPanel()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
+      <div class="mip-body" id="insightBody"></div>
+    </div>
+  </div>
+
+  <!-- Map Footer -->
+  <div class="dash-footer" style="position:absolute; bottom:0; left:var(--sidebar-w); right:0">
+    <span class="brand-name">Computershare</span>
+    <div class="footer-links">
+      <span class="footer-link" onclick="switchSection('dashboard')">DASHBOARD</span>
+      <span class="footer-link active">DISASTER MAP</span>
+      <span class="footer-link">INVESTOR WEB</span>
+      <span class="footer-link">DEAL CENTER</span>
+      <span class="footer-link">FEEDBACK</span>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── FILTER CONFIGS ──
+const filterConfigs = {
+  home: [
+    { label: 'Investor', items: ['GNMA','FNMA','FHLMC','FHA','VA'] },
+    { label: 'Forbearance', items: ['Active','Inactive','Pending'] },
+    { label: 'Status MBA', items: ['Current','30 Day','60 Day','90+ Day'] },
+    { label: 'Status OTS', items: ['Performing','Non-Performing'] },
+    { label: 'MTD Inactive', items: ['PIF','Short Settle','Charge Off','3rd Pty Sale'] }
+  ],
+  investor: [
+    { label: 'Investor', items: ['GNMA','FNMA','FHLMC','FHA','VA'] },
+    { label: 'Product Type', items: ['Fixed','ARM','HELOC','Buydown'], applied: true },
+    { label: 'Credit Type', items: ['Prime','Near Prime','Subprime'] },
+    { label: 'Securitized / Unsecuritized', items: ['Securitized','Unsecuritized'] },
+    { label: 'Lien Position', items: ['1st','2nd'] },
+    { label: 'HELOC', items: ['Open','Closed','Draw','Collection'], applied: true },
+    { label: 'Qualified Mortgage (QM)', items: ['QM','Non-QM'] },
+    { label: 'Interest Rate', items: ['1%','1-3%','3-5%','7-6%'] },
+    { label: 'FICO Score', items: ['>620','>700','620-700','>780'] },
+    { label: 'Mortgage Type', items: ['Fixed','ARM','Step Rate'] }
+  ],
+  delinquency: [
+    { label: 'Loss Mit Status', items: ['Active','Resolved','Pending'] },
+    { label: 'Status MBA', items: ['Current','30','60','90'] },
+    { label: 'Status OTS', items: ['Performing','Non-Performing'] },
+    { label: 'Forbearance', items: ['Active','Inactive'] },
+    { label: 'Bankruptcy Status', items: ['Filed','Discharged','Dismissed'] },
+    { label: 'Bankruptcy Chapter', items: ['Chapter 7','Chapter 11','Chapter 13'] },
+    { label: 'Foreclosure Status', items: ['Pre-Foreclosure','Foreclosure','REO'] },
+    { label: 'Rolls', items: ['Better','Worse','Same'] },
+    { label: 'Lien Position', items: ['1st','2nd'] },
+    { label: 'HELOC', items: ['Open','Closed'], applied: true },
+    { label: 'Attorney Representation', items: ['Yes','No'] },
+    { label: 'Cease and Desist', items: ['Active','Inactive'] }
+  ],
+  cashflow: [
+    { label: 'Month to Date', items: ['Current Month','Prior Month'] },
+    { label: 'Cashflow', items: ['Collected','Uncollected'] },
+    { label: 'Payment Method', items: ['ACH','EBOX','Lockbox','Speed Pay','ACI'] },
+    { label: 'EOM CPR', items: ['Scheduled','Unscheduled'] },
+    { label: 'HELOC', items: ['Open','Closed'], applied: true },
+    { label: 'Mortgage Type', items: ['Fixed','ARM','Step Rate'] }
+  ],
+  heloc: [
+    { label: 'Freeze Reasons', items: ['Closed Line Access','Branch Requested','Divorce/Legal','Pending Sale'] },
+    { label: 'HELOC', items: ['Draw','Collection','Available'], applied: true }
+  ],
+  active: [
+    { label: 'FICO Score', items: ['>620','>700','620-700','>780'] },
+    { label: 'Interest Rate', items: ['1%','1-3%','3-5%','7-6%'] },
+    { label: 'Product Type', items: ['VA','FHA','HELOC','Conventional'], applied: true },
+    { label: 'Due Day', items: ['1st','Other'] },
+    { label: 'Qualified Mortgage (QM)', items: ['QM','Non-QM'] },
+    { label: 'Investor', items: ['GNMA','FNMA','FHLMC'] },
+    { label: 'Closing Day', items: ['Standard','Extended'], applied: true },
+    { label: 'Loan Sub Type', items: ['Purchase','Refinance','Cash-Out'] },
+    { label: 'Loan Purpose', items: ['Primary','Secondary','Investment'] }
+  ],
+  inactive: [
+    { label: 'FICO Score', items: ['>620','>700','620-700','>780'] },
+    { label: 'Interest Rate', items: ['1%','1-3%','3-5%','7-6%'] },
+    { label: 'Product Type', items: ['VA','FHA','HELOC','Conventional'], applied: true },
+    { label: 'Due Day', items: ['1st','Other'] },
+    { label: 'Qualified Mortgage (QM)', items: ['QM','Non-QM'] },
+    { label: 'Investor', items: ['GNMA','FNMA','FHLMC'] },
+    { label: 'Closing Day', items: ['Standard','Extended'] },
+    { label: 'MTD Inactive', items: ['PIF','Short Settle','Charge Off','3rd Pty Sale'] },
+    { label: 'Loan Purpose', items: ['Primary','Secondary','Investment'] }
+  ],
+  disaster: [
+    { label: 'Disaster Type', items: ['Fire','Flood','Tornado','Tropical Storm','Other'] },
+    { label: 'State', items: ['CO','WY','VT','NH','ME','HI','CA'] },
+    { label: 'Individual Assistance', items: ['Yes','No'] }
+  ]
+};
+
+let currentTab = 'home';
+let currentSection = 'dashboard';
+
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-' + tab)?.classList.add('active');
+  buildFilterPanel(tab);
+}
+
+function switchSection(sec) {
+  currentSection = sec;
+  const mainArea = document.getElementById('mainArea');
+  const mapSection = document.getElementById('section-map');
+
+  // Update sidebar active states
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  const navItems = document.querySelectorAll('.nav-item');
+  if (sec === 'dashboard') navItems[0]?.classList.add('active');
+  if (sec === 'map') navItems[1]?.classList.add('active');
+
+  if (sec === 'map') {
+    mainArea.style.display = 'none';
+    mapSection.style.display = 'flex';
+    mapSection.style.position = 'fixed';
+    mapSection.style.top = '0';
+    mapSection.style.left = 'var(--sidebar-w)';
+    mapSection.style.right = '0';
+    mapSection.style.bottom = '0';
+    mapSection.style.zIndex = '40';
+    mapSection.style.flexDirection = 'column';
+  } else {
+    mainArea.style.display = 'flex';
+    mapSection.style.display = 'none';
+  }
+}
+
+function buildFilterPanel(tab) {
+  const config = filterConfigs[tab] || filterConfigs.home;
+  const body = document.getElementById('filterBody');
+  body.innerHTML = '';
+  config.forEach((section, i) => {
+    const div = document.createElement('div');
+    div.className = 'fp-section';
+    const applied = section.applied ? '<span class="applied-dot"></span>' : '';
+    div.innerHTML = `
+      <div class="fp-section-header ${section.applied ? 'active' : ''}" onclick="toggleFpSection(this)">
+        <span class="plus">${section.applied ? '✓' : '+'}</span>
+        ${section.label}
+        ${applied}
+      </div>
+      <div class="fp-section-body ${section.applied ? 'open' : ''}">
+        ${section.items.map(item => `<label class="fp-check"><input type="checkbox"> ${item}</label>`).join('')}
+      </div>
+    `;
+    body.appendChild(div);
+  });
+}
+
+function toggleFpSection(el) {
+  const body = el.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+function openFilter() {
+  document.getElementById('filterPanel').classList.add('open');
+  document.getElementById('filterBackdrop').classList.add('open');
+  buildFilterPanel(currentTab);
+}
+
+function closeFilter() {
+  document.getElementById('filterPanel').classList.remove('open');
+  document.getElementById('filterBackdrop').classList.remove('open');
+}
+
+function setMetric(btn) {
+  document.querySelectorAll('.metric-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function setStatTab(btn) {
+  document.querySelectorAll('.stat-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// ── DROPDOWNS ──
+let openDropdown = null;
+function toggleDropdown(id, el) {
+  const panel = document.getElementById(id);
+  if (openDropdown && openDropdown !== id) {
+    document.getElementById(openDropdown).style.display = 'none';
+  }
+  if (panel.style.display === 'none' || !panel.style.display) {
+    panel.style.display = 'block';
+    openDropdown = id;
+    // Position
+    const rect = el.getBoundingClientRect();
+    panel.style.top = (el.offsetHeight + 4) + 'px';
+  } else {
+    panel.style.display = 'none';
+    openDropdown = null;
+  }
+}
+
+document.addEventListener('click', (e) => {
+  if (openDropdown && !e.target.closest('.time-selector')) {
+    const panel = document.getElementById(openDropdown);
+    if (panel) panel.style.display = 'none';
+    openDropdown = null;
+  }
+});
+
+// ── MAP TOOLTIP ──
+function showCountyTooltip(event, county, state, type, count) {
+  event.stopPropagation();
+  const tt = document.getElementById('mapTooltip');
+  const tc = document.getElementById('tooltipContent');
+  tc.innerHTML = `
+    <strong>Incident No. #${Math.floor(Math.random()*100000+300000)}</strong><br>
+    State: <strong>${state}</strong><br>
+    Area Description: <strong>${county} County</strong><br>
+    Counties: 1<br>
+    Loan Count: <strong>${count}</strong><br>
+    Type Code: <strong>EM</strong><br>
+    Incident Type: <strong>${type}</strong><br>
+    Date: <strong>01/01/2024</strong><br>
+    Individual Assistance: <strong>Yes</strong>
+  `;
+  const mapContainer = event.target.closest('.map-container');
+  const rect = mapContainer.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
+  tt.style.left = Math.min(x + 10, rect.width - 200) + 'px';
+  tt.style.top = Math.min(y - 20, rect.height - 220) + 'px';
+  tt.style.display = 'block';
+}
+
+document.addEventListener('click', (e) => {
+  if (!e.target.classList.contains('county') && !e.target.closest('#mapTooltip')) {
+    document.getElementById('mapTooltip').style.display = 'none';
+  }
+});
+
+// ── INSIGHT PANELS ──
+const countyInsightHTML = `
+  <div class="mip-chart-area">
+    <div style="font-size:12px;font-weight:700;color:#fff;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between">
+      Declared Disasters <span style="font-size:10px;font-weight:400;opacity:0.6">→</span>
+    </div>
+    <div class="card-legend" style="margin-bottom:8px"><div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div><span style="color:rgba(255,255,255,0.7)">FLOOD</span></div></div>
+    <svg width="100%" viewBox="0 0 340 100" preserveAspectRatio="xMidYMid meet">
+      <defs><linearGradient id="mg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E8629A" stop-opacity="0.3"/><stop offset="100%" stop-color="#E8629A" stop-opacity="0"/></linearGradient></defs>
+      <path d="M5,70 C55,55 95,65 140,45 C185,30 220,50 270,40 C300,33 320,48 335,38 L335,90 L5,90Z" fill="url(#mg1)"/>
+      <path d="M5,70 C55,55 95,65 140,45 C185,30 220,50 270,40 C300,33 320,48 335,38" fill="none" stroke="#E8629A" stroke-width="2"/>
+      <circle cx="5" cy="70" r="3" fill="#E8629A"/>
+      <circle cx="70" cy="58" r="3" fill="#E8629A"/>
+      <circle cx="140" cy="45" r="3" fill="#E8629A"/>
+      <circle cx="210" cy="48" r="3" fill="#E8629A"/>
+      <circle cx="270" cy="40" r="3" fill="#E8629A"/>
+      <circle cx="335" cy="38" r="3" fill="#E8629A"/>
+      <text x="5" y="97" font-size="7" fill="rgba(255,255,255,0.4)" font-family="Source Sans Pro">JAN Q1</text>
+      <text x="115" y="97" font-size="7" fill="rgba(255,255,255,0.4)" font-family="Source Sans Pro">APR Q2</text>
+      <text x="220" y="97" font-size="7" fill="rgba(255,255,255,0.4)" font-family="Source Sans Pro">JUL Q3</text>
+      <text x="305" y="97" font-size="7" fill="rgba(255,255,255,0.4)" font-family="Source Sans Pro">OCT Q4</text>
+    </svg>
+  </div>
+  <table class="mip-table">
+    <thead><tr><th>County</th><th>Count</th><th>Name</th><th>Dec. No.</th><th>Occurrence</th><th>UPB</th></tr></thead>
+    <tbody>
+      <tr class="county-row"><td colspan="5">Jefferson</td><td>$4,345,626.04</td></tr>
+      <tr><td></td><td>3</td><td><a href="#">Colorado Flooding</a><br><small style="color:rgba(255,255,255,0.4)">Flood</small></td><td>DR-4745-CO</td><td>10/17/23</td><td>$905,626.04</td></tr>
+      <tr><td></td><td>7</td><td><a href="#">Colorado Flooding</a><br><small style="color:rgba(255,255,255,0.4)">Flood</small></td><td>DR-4739-CO</td><td>10/19/23</td><td>$1,145,626.36</td></tr>
+      <tr><td></td><td>3</td><td><a href="#">Colorado Flooding</a><br><small style="color:rgba(255,255,255,0.4)">Flood</small></td><td>DR-4744-CO</td><td>10/20/23</td><td>$1,305,626.04</td></tr>
+      <tr class="county-row"><td colspan="5">Adams</td><td>$3,345,626.04</td></tr>
+      <tr><td></td><td>7</td><td><a href="#">Denver Flooding</a><br><small style="color:rgba(255,255,255,0.4)">Flood</small></td><td>DR-4739-CO</td><td>10/23/23</td><td>$1,001,626.36</td></tr>
+      <tr><td></td><td>3</td><td><a href="#">Denver Flooding</a><br><small style="color:rgba(255,255,255,0.4)">Flood</small></td><td>DR-4731-CO</td><td>10/22/23</td><td>$945,626.04</td></tr>
+      <tr class="county-row"><td colspan="5">Douglas</td><td>$2,345,626.04</td></tr>
+      <tr><td></td><td>1</td><td><a href="#">Colorado Fire</a><br><small style="color:rgba(255,255,255,0.4)">Fire</small></td><td>DR-4752-CO</td><td>10/22/23</td><td>$1,000,626.04</td></tr>
+    </tbody>
+  </table>
+`;
+
+const portfolioInsightHTML = `
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+    <div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:.05em">Date Range</div>
+      <div style="display:flex;gap:8px;margin-top:4px">
+        <span style="font-size:11px;color:rgba(255,255,255,0.8);background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:6px">MONTH: JANUARY</span>
+        <span style="font-size:11px;color:rgba(255,255,255,0.8);background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:6px">YEAR: 2024</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:6px">
+      <button style="padding:4px 10px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.2);border-radius:16px;font-size:10px;font-weight:600;cursor:pointer;font-family:var(--font)">DAILY</button>
+      <button style="padding:4px 10px;background:var(--grad-accent);color:#fff;border:none;border-radius:16px;font-size:10px;font-weight:700;cursor:pointer;font-family:var(--font)">ANNUAL</button>
+    </div>
+  </div>
+  <div class="mip-chart-area">
+    <div style="font-size:12px;font-weight:700;color:#fff;margin-bottom:8px">Declared Disasters →</div>
+    <div class="card-legend" style="margin-bottom:8px">
+      <div class="legend-item"><div class="legend-dot" style="background:#2D0A45"></div><span style="color:rgba(255,255,255,0.7)">FIRE</span></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#9B1F6E"></div><span style="color:rgba(255,255,255,0.7)">FLOOD</span></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#E8629A"></div><span style="color:rgba(255,255,255,0.7)">TORNADO</span></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#F5A04A"></div><span style="color:rgba(255,255,255,0.7)">TROPICAL STORM</span></div>
+    </div>
+    <svg width="100%" viewBox="0 0 340 110" preserveAspectRatio="xMidYMid meet">
+      <path d="M5,90 C55,75 95,85 140,65 C185,50 220,70 270,58 C300,48 320,65 335,55 L335,100 L5,100Z" fill="rgba(245,160,74,0.15)"/>
+      <path d="M5,90 C55,75 95,85 140,65 C185,50 220,70 270,58 C300,48 320,65 335,55" fill="none" stroke="#F5A04A" stroke-width="1.5"/>
+      <path d="M5,75 C55,60 95,70 140,50 C185,35 220,55 270,43 C300,33 320,50 335,40" fill="none" stroke="#E8629A" stroke-width="1.5"/>
+      <path d="M5,60 C55,45 95,55 140,35 C185,20 220,40 270,28 C300,18 320,35 335,25" fill="none" stroke="#9B1F6E" stroke-width="2"/>
+      <path d="M5,45 C55,30 95,40 140,22 C185,8 220,25 270,15 C300,7 320,20 335,12" fill="none" stroke="#2D0A45" stroke-width="2"/>
+    </svg>
+  </div>
+  <table class="mip-table">
+    <thead><tr><th>State</th><th>County</th><th>Type</th><th>Count</th><th>Disaster Name</th><th>Dec. No.</th><th>UPB</th><th>Occurrence</th></tr></thead>
+    <tbody>
+      <tr><td>CO</td><td>Jefferson</td><td>Flood</td><td>3</td><td><a href="#">Colorado Flooding</a></td><td>DR-4684-CO</td><td>$1,345,643</td><td>10/17/23</td></tr>
+      <tr><td>WY</td><td>Niobraha</td><td>Flood</td><td>7</td><td><a href="#">Wyoming Flooding</a></td><td>DR-1744-CO</td><td>$2,145,637</td><td>10/19/23</td></tr>
+      <tr><td>VT</td><td>Orange</td><td>Storm</td><td>3</td><td><a href="#">Vermont Storm</a></td><td>DR-9462-CO</td><td>$3,335,847</td><td>10/20/23</td></tr>
+      <tr><td>HI</td><td>Jefferson</td><td>Fire</td><td>6</td><td><a href="#">Maui Fire</a></td><td>DR-3452-CO</td><td>$1,737,266</td><td>10/23/23</td></tr>
+      <tr><td>CA</td><td>Orange</td><td>Fire</td><td>2</td><td><a href="#">California Fire</a></td><td>DR-2345-CO</td><td>$1,431,626</td><td>10/17/23</td></tr>
+    </tbody>
+  </table>
+`;
+
+function showInsightPanel(type) {
+  const panel = document.getElementById('insightPanel');
+  const title = document.getElementById('insightTitle');
+  const meta = document.getElementById('insightMeta');
+  const body = document.getElementById('insightBody');
+
+  panel.style.display = 'flex';
+  panel.style.flexDirection = 'column';
+
+  if (type === 'county') {
+    title.textContent = 'Disaster Insights — Colorado';
+    meta.innerHTML = `<span>Last refreshed 11:43am</span>`;
+    body.innerHTML = countyInsightHTML;
+  } else {
+    title.textContent = 'Disaster Insights — Portfolio Book';
+    meta.innerHTML = `<span>Last refreshed 11:43am</span>`;
+    body.innerHTML = portfolioInsightHTML;
+  }
+}
+
+function closeInsightPanel() {
+  document.getElementById('insightPanel').style.display = 'none';
+}
+
+// Init
+buildFilterPanel('home');
+
+// Hide map section on load
+document.getElementById('section-map').style.display = 'none';
+</script>
+</body>
+</html>

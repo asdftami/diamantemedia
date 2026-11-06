@@ -70,6 +70,7 @@
   .p-insight{--c1:#c9b6ff;--c2:#4b3bc9;--glow:#c9b6ff77;--ring:#ffb3d9aa}
   .p-bond{--c1:#a8d8ff;--c2:#2b4fb8;--glow:#a8d8ff66;--ring:#fff1a6aa}
   .hero3{width:min(300px,100%);margin:0 auto}
+  .hero{overflow-x:clip}
   .p-jars{--c1:#fff1a6;--c2:#9b6bff;--glow:#c9b6ff66;--ring:#81d8d0aa}
   .p-fridays{--c1:#f5f3ef;--c2:#c7a77c;--glow:#d8c3a566;--ring:#3b2a20aa}
 
@@ -118,6 +119,9 @@
   dialog.zoom img{display:block;max-width:96vw;max-height:88vh;background:#fff}
   dialog.zoom button{position:absolute;top:10px;right:10px;min-height:44px;padding:0 16px;border-radius:999px;border:0;background:var(--butter);color:#1a1033;font:inherit;font-weight:700;cursor:pointer}
   @media (max-width:420px){.pair .gallery{grid-template-columns:1fr}}
+  .proto{display:grid;gap:12px;justify-items:start;margin:22px 0;width:min(1160px,calc(100vw - 32px));position:relative;left:50%;transform:translateX(-50%)}
+  .proto iframe{width:100%;height:min(720px,80vh);border:1px solid var(--line);border-radius:var(--radius);background:#f4f4f4;box-shadow:0 18px 50px #0007}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   ol.learnings{list-style:none;counter-reset:l;padding:0;margin:20px 0 10px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
   ol.learnings li{counter-increment:l;position:relative;padding:18px 18px 18px 58px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);margin:0;line-height:1.55}
   ol.learnings li::before{content:counter(l);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;border:2px solid var(--pink);color:var(--pink);font-weight:700;font-size:.9rem;display:grid;place-items:center}
@@ -280,6 +284,14 @@
 <li><strong>Start with a design system.</strong> Tokens, reusable components and documented decisions make the handoff dev-ready from day one.</li>
 <li><strong>Use AI to move faster.</strong> I reached high fidelity before AI design tools existed. Today I'd use AI for synthesis, variations and prototyping, and spend the saved time with users.</li>
 </ol>
+<hr />
+<h2>Revisited: Project Insight, reimagined with AI</h2>
+<p>The dashboard never launched, and I knew it could be better. After leaving Computershare, while working at Jars, I rebuilt it on my own with AI to keep my UX muscles sharp and push the design further. Try it below: switch tabs, filters and views.</p>
+<div class="proto" markdown="0">
+<iframe src="../prototypes/project-insight-dashboard.html" title="Interactive Project Insight dashboard concept" loading="lazy"></iframe>
+<a class="pill" href="../prototypes/project-insight-dashboard.html" target="_blank" rel="noopener">Open full screen ↗<span class="sr-only"> (opens in a new tab)</span></a>
+</div>
+
 <hr />
 <p><em>Data shown is representative; client information has been anonymized to protect confidentiality.</em></p>
 </main>

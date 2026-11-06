@@ -152,4 +152,15 @@ The designs were validated, and the data team was preparing the backend, when **
 
 ---
 
+## Revisited: Project Insight, reimagined with AI
+
+The dashboard never launched, and I knew it could be better. After leaving Computershare, while working at Jars, I rebuilt it on my own with AI to keep my UX muscles sharp and push the design further. Try it below: switch tabs, filters and views.
+
+<div class="proto" markdown="0">
+<iframe src="../prototypes/project-insight-dashboard.html" title="Interactive Project Insight dashboard concept" loading="lazy"></iframe>
+<a class="pill" href="../prototypes/project-insight-dashboard.html" target="_blank" rel="noopener">Open full screen ↗<span class="sr-only"> (opens in a new tab)</span></a>
+</div>
+
+---
+
 *Data shown is representative; client information has been anonymized to protect confidentiality.*
