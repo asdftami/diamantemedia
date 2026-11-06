@@ -93,7 +93,7 @@ One sticky note from those sessions changed the product:
 
 I then mapped the full structure: every tab, every chart, and every drill-down.
 
-![Project Insight dashboard flow](../../assets/project-insight/09-dashboard-flow-full-ia.png)
+![The full map: 8 focused dashboards, each with its own drill-downs, organized so investors never hunt for data.](../../assets/project-insight/09-dashboard-flow-full-ia.png)
 
 ---
 
@@ -103,7 +103,7 @@ My first concept (**Prototype A**) was a single at-a-glance dashboard built arou
 
 After 1–2 rounds of low-fidelity usability testing with **real investors (5 in total)**, the pattern was clear: they wanted **more data at a glance**, including data points we didn't have on the screen at all. So we asked them directly what they needed, and those answers became a **secondary navigation** of focused dashboards.
 
-![Prototypes A, B and C](../../assets/project-insight/13-prototypes-tested-abc.png)
+![5 investors tested 3 versions. They had no preference on where the navigation sat, so we reused an existing component and saved dev time.](../../assets/project-insight/13-prototypes-tested-abc.png)
 
 **Prototypes B and C** differed only in where that navigation lived: two rows of tabs on top, or a side nav plus top tabs.
 
@@ -111,7 +111,7 @@ After 1–2 rounds of low-fidelity usability testing with **real investors (5 in
 
 **Decision:** I brought this to our weekly meeting, and we went with the version we **already had a component for** (side nav + top tabs). When users don't care, engineering effort should decide, and this choice saved design and development time.
 
-![Before and after: adding the dashboard tabs](../../assets/project-insight/12-lofi-trending-with-tabs.png)
+![Testing showed one dashboard wasn't enough, so the design grew into a tabbed set of focused dashboards.](../../assets/project-insight/12-lofi-trending-with-tabs.png)
 
 ---
 
@@ -123,9 +123,9 @@ After 1–2 rounds of low-fidelity usability testing with **real investors (5 in
 
 **Built for how investors actually work.** A UPB / Count / Weighted-average toggle, year, quarter, month and date filters, column editing, plus download, print and email for the people who still need to share a file.
 
-![High-fidelity main dashboard](../../assets/project-insight/10-hifi-main-dashboard.png)
-![Disaster dashboard with FEMA map link](../../assets/project-insight/06-hifi-disaster-dashboard.png)
-![FEMA disaster map](../../assets/project-insight/07-hifi-fema-disaster-map.webp)
+![The main dashboard: portfolio health at a glance, with filters, exports and a one-click switch between UPB, count and weighted average.](../../assets/project-insight/10-hifi-main-dashboard.png)
+![Disaster data got its own tab, so investors can dig in when it matters without clutter when it doesn't.](../../assets/project-insight/06-hifi-disaster-dashboard.png)
+![A real investor question, answered: county-level FEMA disaster risk mapped against the portfolio.](../../assets/project-insight/07-hifi-fema-disaster-map.webp)
 
 **What we didn't build (yet).** A loan-level research search engine came up in research. I wireframed it, but we chose to put our effort into getting the dashboards right first.
 
