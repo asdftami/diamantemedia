@@ -43,7 +43,7 @@ A heuristic evaluation against **Nielsen's 10 heuristics**, with WCAG contrast c
 
 I closed with a priority table for leadership: **3 High, 2 Medium**, each with an owner team.
 
-<div class="pair wide" markdown="1">
+<div class="pair wide slides" markdown="1">
 ![Contrast check: 2.41:1 fails WCAG AA.](../../assets/jars/j01-contrast.png)
 ![The footer breaks on tablet and disappears on mobile.](../../assets/jars/j02-responsive.png)
 ![Priorities and owners for leadership.](../../assets/jars/j03-priorities.png)
@@ -63,7 +63,7 @@ A task walkthrough that retraced the customer's search.
 
 My re-check showed **6 of 8 brands** now findable, a visible scrollbar and the correct store status.
 
-<div class="pair wide" markdown="1">
+<div class="pair wide slides" markdown="1">
 ![Re-check: 6 of 8 brands now findable.](../../assets/jars/j05-brands-recheck.png)
 ![Before and after: a visible scrollbar on the filters.](../../assets/jars/j06-filters-before-after.png)
 </div>
@@ -78,7 +78,7 @@ My re-check showed **6 of 8 brands** now findable, a visible scrollbar and the c
 - **Missing feedback erodes trust:** no pressed state on Add to Cart, which invites double orders
 - **Catalog inconsistencies kill conversions:** filters and tags that hide items in stock
 
-<div class="pair wide trio" markdown="1">
+<div class="pair wide trio slides" markdown="1">
 ![Onboarding: land new users on the rewards tab.](../../assets/jars/j07-onboarding.png)
 ![Button states: show the tap, prevent double orders.](../../assets/jars/j08-button-states.png)
 ![Three themes behind 10 findings.](../../assets/jars/j09-summary.png)
