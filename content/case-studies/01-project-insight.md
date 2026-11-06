@@ -59,7 +59,7 @@ This was my first role in finance, so I learned mortgage servicing from scratch:
 
 **3. Reading the artifacts.** I studied the spreadsheets and PDFs investors received to learn what they actually asked for.
 
-**4. Making the user real.** I started with a **proto-persona**, *Corey Watts*, a 56-year-old banker built from our assumption map. After the interviews, I built a research-based persona, *Eduardo Reyes*, a head of asset management, and mapped his journey.
+**4. Making the user real.** I started with a **proto-persona**, *Corey Watts*, a 56-year-old banker built from our assumption map. After the interviews, I built *Eduardo Reyes*, a persona **based on a real investor**, a head of asset management, and mapped his journey.
 
 <div class="pair wide" markdown="1">
 ![Proto-persona: Corey emailed for every data point, searched the old Investor Web, then decoded long spreadsheets into his own dashboards.](../../assets/project-insight/19-persona-corey-watts.png)
