@@ -20,12 +20,12 @@ OUT = ROOT / "site" / "case-studies"
 ASSET_OUT = ROOT / "site" / "assets"
 MAX_W = 1600
 
-# Same order and numbering as the homepage journey.
+# Same order and numbering as the homepage Selected Work strip (the timeline itself stays in date order).
 PAGES = [
-    {"src": "04-dental-websites.md", "slug": "dental", "num": "01", "planet": "p-dental", "year": "2020–2022 · AUSTIN"},
-    {"src": "01-project-insight.md", "slug": "project-insight", "num": "02", "planet": "p-insight", "year": "2022–2024 · COMPUTERSHARE"},
-    {"src": "02-israel-bond-centre.md", "slug": "bond-centre", "num": "03", "planet": "p-bond", "year": "2023–2024 · COMPUTERSHARE"},
-    {"src": "03-fridays-off.md", "slug": "fridays-off", "num": "04", "planet": "p-fridays", "year": "OCT 2026–NOW · CO-FOUNDER"},
+    {"src": "01-project-insight.md", "slug": "project-insight", "num": "01", "planet": "p-insight", "year": "2022–2024 · COMPUTERSHARE"},
+    {"src": "02-israel-bond-centre.md", "slug": "bond-centre", "num": "02", "planet": "p-bond", "year": "2023–2024 · COMPUTERSHARE"},
+    {"src": "03-fridays-off.md", "slug": "fridays-off", "num": "03", "planet": "p-fridays", "year": "OCT 2026–NOW · CO-FOUNDER"},
+    {"src": "04-dental-websites.md", "slug": "dental", "num": "04", "planet": "p-dental", "year": "2020–2022 · AUSTIN"},
 ]
 
 
