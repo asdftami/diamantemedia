@@ -73,7 +73,7 @@
     f.innerHTML = '<p class="sig">Tami Trevino <span aria-hidden="true">✦</span> Product designer · maker</p>' +
       '<nav aria-label="Social media"><ul>' + SOCIAL.map(([n, u, svg]) =>
         '<li><a href="' + u + '" target="_blank" rel="noopener"><span class="ico">' + svg + '</span>' + n + '<span class="sr-only"> (opens in a new tab)</span></a></li>').join('') + '</ul></nav>' +
-      '<p class="legal"><a href="' + ROOT + 'privacy.html">Privacy</a></p>' +
+      '<p class="legal"><a href="' + ROOT + 'privacy.html">Privacy</a> · <a href="' + ROOT + 'accessibility.html">Accessibility</a></p>' +
       '<p class="copy">© 2026 Tami Trevino · Designed and built with care, and with accessibility first.</p>';
     document.body.appendChild(f);
   }
