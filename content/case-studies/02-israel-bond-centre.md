@@ -106,9 +106,9 @@ Updating communication preferences across several accounts used to be one dense 
 
 Printable forms are grouped into accordions: US holders, international holders, tax forms, direct registration, international currency. Bondholders can **view a form and upload the signed copy right inside the section**: drag and drop, a progress bar, an "Uploaded ✓" state, and a **Remove file** option if they picked the wrong one.
 
-![Printable forms](../../assets/israel-bond-centre/03-printable-forms-one-expanded.png)
-![Inline upload](../../assets/israel-bond-centre/04-upload-drag-and-drop.png)
-![Upload success](../../assets/israel-bond-centre/05-upload-success.png)
+![Five form categories in tidy accordions, so bondholders open only the one they need.](../../assets/israel-bond-centre/03-printable-forms-one-expanded.png)
+![Upload a signed form right where you found it: no new page, no lost place.](../../assets/israel-bond-centre/04-upload-drag-and-drop.png)
+![Clear progress and an "Uploaded ✓" state, plus a way to remove the wrong file.](../../assets/israel-bond-centre/05-upload-success.png)
 
 ---
 
@@ -116,8 +116,8 @@ Printable forms are grouped into accordions: US holders, international holders, 
 
 When a bondholder submits a form, the **admin** sees it marked **Proposed**, with **Preview, Approve, Reject and Cancel** actions. The **bondholder** then sees the result (for example, **Rejected**) right next to the form, with an info icon explaining what happened. No more guessing whether a request went through.
 
-![Admin view: approve or reject](../../assets/israel-bond-centre/06-admin-approve-reject-proposed.png)
-![Bondholder view: status shown](../../assets/israel-bond-centre/07-bondholder-rejected-status.png)
+![Admins review each submission and approve or reject it in one place.](../../assets/israel-bond-centre/06-admin-approve-reject-proposed.png)
+![Bondholders see the decision right next to their form, closing the loop between both users.](../../assets/israel-bond-centre/07-bondholder-rejected-status.png)
 
 ---
 
@@ -131,8 +131,8 @@ For the mobile **Inbox**, I compared two layouts:
 
 **A won:** it was more intuitive, because it works like the email apps people already use.
 
-![Mobile wireframes](../../assets/israel-bond-centre/15-mobile-wireframes-overview.png)
-![Mobile inbox: A vs B](../../assets/israel-bond-centre/14-mobile-inbox-a-vs-b.png)
+![The full product, designed for iOS and Android: portfolio, forms, tax details, inbox and more.](../../assets/israel-bond-centre/15-mobile-wireframes-overview.png)
+![Version A won: separate list and message screens felt more intuitive, like the email apps people already use.](../../assets/israel-bond-centre/14-mobile-inbox-a-vs-b.png)
 
 ---
 
@@ -140,7 +140,7 @@ For the mobile **Inbox**, I compared two layouts:
 
 **Bond Centre 2.0 shipped to production.** The development team and product owners were excited about the upgrade: a cleaner, calmer, more organized experience for bondholders, and real controls for admins.
 
-![Shipped: the live Bond Centre welcome page in production](../../assets/israel-bond-centre/09-BEFORE-old-welcome-page.webp)
+![Shipped: the Bond Centre welcome page live in production.](../../assets/israel-bond-centre/09-BEFORE-old-welcome-page.webp)
 
 I was part of a company-wide layoff shortly after launch, so I wasn't able to collect post-launch usage data.
 
