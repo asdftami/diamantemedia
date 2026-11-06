@@ -66,15 +66,13 @@ Many Austin patients only speak Spanish, so I launched the site with an **Englis
 
 ## Evolve Dental Partners: building the foundation, then handing over the keys
 
-### The client
-The DSO's former CEO is a **dental hygienist turned serial entrepreneur**. She builds companies that support hygienists and help clinics run hygiene better, then sells them. When she started her next venture, **Evolve Dental Partners**, she asked me to build its website.
+The group's former CEO, a **hygienist turned serial entrepreneur**, asked me to build the site for her new venture.
 
-### What I did
-- Took her **existing logo and brand guidelines** and translated them into a clean, credible **Squarespace site**
-- Structured the site so a busy founder could **update it herself**
-- Collaborated closely, then **handed it off**. She loved working in Squarespace and took over editing from there.
+- Turned her **existing logo and brand guidelines** into a clean **Squarespace site**
+- Structured it so she could **update it herself**
+- **Handed it off**; she took over editing from there
 
-The goal wasn't a site she'd depend on me for. It was a site she could run.
+The goal: a site she could run without me.
 
 <!-- No screenshots available: the site is currently offline. Add Wayback Machine captures if found. -->
 
