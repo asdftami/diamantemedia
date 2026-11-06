@@ -85,7 +85,7 @@ def build():
     OUT.mkdir(parents=True, exist_ok=True)
     for i, page in enumerate(PAGES):
         meta, text = parse((SRC / page["src"]).read_text())
-        body = markdown.markdown(text, extensions=["tables", "fenced_code", "sane_lists"])
+        body = markdown.markdown(text, extensions=["tables", "fenced_code", "sane_lists", "md_in_html"])
         body = figures(body)
         body = re.sub(r"<thead>\s*<tr>(\s*<th[^>]*>\s*</th>)+\s*</tr>\s*</thead>", "", body)  # blank header rows
         body = body.replace("<table>", '<div class="table-wrap"><table>').replace("</table>", "</table></div>")

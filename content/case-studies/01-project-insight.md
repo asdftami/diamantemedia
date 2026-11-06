@@ -41,7 +41,7 @@ Computershare services mortgage loans on behalf of investors. To know how their 
 
 **How might we give investors insight into their portfolios in the clearest, most effective way?**
 
-![Assumption map: Do they want this? Should we do this? Can we do this?](../../assets/project-insight/01-assumption-map-desirability.png)
+![Before designing anything, I mapped what we didn't know, so we tested the riskiest guesses first.](../../assets/project-insight/01-assumption-map-desirability.png)
 
 ---
 
@@ -66,15 +66,15 @@ I kept every interview note and usability-test finding in **Airtable**, so feedb
 
 **3. Reading the artifacts.** I studied the spreadsheets and PDFs investors were receiving to learn what they actually asked for.
 
-**4. Making the user real.** I built a persona, *Corey Watts*, a 56-year-old banker with a loan portfolio. His pain points: he had to email for every data point, he navigated all over the old Investor Web to find things, and the files he got were too big to use. I mapped a second user's journey: a head of asset management trying to isolate the loans in loss mitigation.
+**4. Making the user real.** I built a persona, *Corey Watts*, a 56-year-old banker with a loan portfolio. His pain points: he had to email for every data point, he navigated all over the old Investor Web to find things, and the long spreadsheets he received had to be decoded and rebuilt into his own dashboards. I mapped a second user's journey: a head of asset management trying to isolate the loans in loss mitigation.
 
-![Persona: Corey Watts](../../assets/project-insight/19-persona-corey-watts.png)
-![User journey map: Head of Asset Management](../../assets/project-insight/22-journey-map-eduardo-reyes.png)
+![Corey had to email for every data point, wait 3–5 days, then decode long spreadsheets and build his own dashboards to make sense of it.](../../assets/project-insight/19-persona-corey-watts.png)
+![Mapping a head of asset management's journey showed where investors got stuck: loss-mitigation data was buried and hard to find.](../../assets/project-insight/22-journey-map-eduardo-reyes.png)
 
 **5. Telling the story.** Two storyboards showed the experience we were building toward. A new loan is onboarded, the investor checks how it affects their portfolio, and the insight leads them to onboard more loans.
 
-![Storyboard, panels 1–4: Awareness of need](../../assets/project-insight/20-storyboard-awareness-of-need.png)
-![Storyboard, panels 5–8: Checking portfolio insights to make data-driven decisions](../../assets/project-insight/21-storyboard-data-driven-decisions.png)
+![Panels 1–4: a new loan is added, and the investor logs in to see its impact.](../../assets/project-insight/20-storyboard-awareness-of-need.png)
+![Panels 5–8: clear insight leads the investor to onboard more loans. That's the business case.](../../assets/project-insight/21-storyboard-data-driven-decisions.png)
 
 ---
 
@@ -86,8 +86,10 @@ One sticky note from those sessions changed the product:
 
 > *"Has my portfolio been impacted by natural disasters?"*
 
-![Whiteboard session: the "NOW" dashboard](../../assets/project-insight/27-whiteboard-now-dashboard.jpg)
-![The sticky note that became the FEMA disaster map](../../assets/project-insight/05-workshop-sticky-natural-disasters.jpg)
+<div class="pair" markdown="1">
+![This whiteboard sketch from our workshop became the main dashboard layout.](../../assets/project-insight/27-whiteboard-now-dashboard.jpg)
+![This sticky note from an investor question became the FEMA disaster map.](../../assets/project-insight/05-workshop-sticky-natural-disasters.jpg)
+</div>
 
 I then mapped the full structure: every tab, every chart, and every drill-down.
 
