@@ -72,3 +72,8 @@
 .phone .k:active{transform:translateY(1px)}
 .phone.caps .k[data-k="#"]{background:linear-gradient(180deg,#fff1a6,#ffe07a)}
 .phone .t9-help{display:block;margin-top:10px;text-align:center;font:1rem VT323,monospace;letter-spacing:.06em;color:#d6cef0}
+.contact-phone{display:grid;justify-items:center;gap:8px}
+.sound-toggle{position:relative;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 14px;border-radius:999px;border:1.5px solid #ffffff40;background:#ffffff10;color:#f7f3ff;font:inherit;font-size:.9rem;font-weight:500;cursor:pointer}
+.sound-toggle::after{content:"";position:absolute;left:0;right:0;top:50%;height:44px;transform:translateY(-50%)}
+.sound-toggle:hover{border-color:#ffb3d9;background:#ffb3d91f}
+.sound-toggle[aria-pressed="false"]{color:#d6cef0}

@@ -74,8 +74,15 @@
   const box = form.message;
   const MAP = { '1': ".,?!'1", '2': 'abc2', '3': 'def3', '4': 'ghi4', '5': 'jkl5', '6': 'mno6', '7': 'pqrs7', '8': 'tuv8', '9': 'wxyz9', '0': ' 0' };
   let last = null, idx = 0, timer = null, upper = false, ctx = null;
+  // Mute: remembered per visitor
+  let sound = true; try { sound = localStorage.getItem('tt-sound') !== 'off'; } catch (e) {}
+  const st = document.getElementById('soundToggle');
+  const showSound = () => { if (!st) return; st.setAttribute('aria-pressed', sound); st.querySelector('.ic').textContent = sound ? '🔊' : '🔇'; st.querySelector('b').textContent = sound ? 'on' : 'off'; };
+  if (st) st.addEventListener('click', () => { sound = !sound; try { localStorage.setItem('tt-sound', sound ? 'on' : 'off'); } catch (e) {} showSound(); });
+  showSound();
 
   function beep(freq = 1180) {
+    if (!sound) return;
     try {
       ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
       const o = ctx.createOscillator(), g = ctx.createGain(), t = ctx.currentTime;
