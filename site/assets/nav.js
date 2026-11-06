@@ -3,6 +3,11 @@
    so items, order, labels, icons and the "you are here" highlight always match.
    Header links opt in with data-ico="work|about|contact". */
 (function () {
+  // Every page opens at the top (consistent, predictable). Links that name a section (#contact) land on it.
+  try { history.scrollRestoration = 'manual'; } catch (e) {}
+  const toTop = () => { if (!location.hash) scrollTo(0, 0); };
+  toTop(); addEventListener('load', toTop); addEventListener('pageshow', e => { if (e.persisted) toTop(); });
+
   const ICONS = {
     work: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6.2" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="12" cy="12" rx="11" ry="3.6" fill="none" stroke="currentColor" stroke-width="1.6" transform="rotate(-18 12 12)"/></svg>',
     about: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="10" r="1.3" fill="currentColor"/><circle cx="15" cy="10" r="1.3" fill="currentColor"/><path d="M8 14.2c1 1.6 2.4 2.4 4 2.4s3-.8 4-2.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',

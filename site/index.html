@@ -130,38 +130,28 @@
   /* Y2K: Tamagotchi spaceship = journey navigator */
   .ship{position:fixed;z-index:20;right:clamp(16px,2.5vw,36px);bottom:clamp(18px,3vw,40px);width:186px;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
   /* virtual-pet egg: glitter galaxy shell, gold starburst bezel */
-  .ship-body{position:relative;padding:30px 24px 16px;border-radius:50% 50% 47% 47%/58% 58% 42% 42%;
-    background:
-      radial-gradient(circle at 30% 18%,#ffffff55,transparent 28%),
-      radial-gradient(1.2px 1.2px at 18% 30%,#fff1a6 99%,transparent),radial-gradient(1px 1px at 72% 22%,#fff 99%,transparent),
-      radial-gradient(1.4px 1.4px at 84% 58%,#fff1a6 99%,transparent),radial-gradient(1px 1px at 12% 70%,#81d8d0 99%,transparent),
-      radial-gradient(1.2px 1.2px at 64% 86%,#fff 99%,transparent),radial-gradient(1px 1px at 40% 12%,#ffb3d9 99%,transparent),
-      radial-gradient(1px 1px at 90% 34%,#81d8d0 99%,transparent),radial-gradient(1.3px 1.3px at 26% 90%,#fff1a6 99%,transparent),
-      radial-gradient(circle,#ffffff70 0 .6px,transparent 1.1px) 0 0/9px 11px,
-      radial-gradient(circle,#ffd86b80 0 .6px,transparent 1.1px) 4px 6px/13px 12px,
-      radial-gradient(circle,#81d8d070 0 .5px,transparent 1px) 7px 2px/17px 15px,
-      linear-gradient(165deg,#5b4bd6,#3b2a9e 45%,#24186b);
-    border:1.5px solid #ffffff38;box-shadow:inset 0 3px 0 #ffffff30,inset 0 -10px 24px #0005,0 0 40px #9b86ff55,0 12px 30px #0009;animation:bob 4s ease-in-out infinite}
+  .ship-body{position:relative;padding:26px 22px 16px;border-radius:50% 50% 47% 47%/58% 58% 42% 42%;
+    background:linear-gradient(180deg,#ffffffeb,#e7defce0);border:0;
+    box-shadow:inset 0 0 0 2px #fff,0 12px 28px #000b,0 0 30px #c9b6ff33;animation:bob 4s ease-in-out infinite}
   .deco{position:absolute;inset:0;pointer-events:none;color:#ffd86b;text-shadow:0 0 6px #ffd86b88}
   .deco i{position:absolute;font-style:normal;line-height:1}
   .deco i:nth-child(1){left:7px;top:43%;font-size:1.55rem}
-  .eggmark{display:block;text-align:center;font-family:VT323,monospace;font-size:.95rem;letter-spacing:.3em;color:#ffd86b;text-shadow:0 0 6px #ffd86b66;margin:-14px 0 6px}
+  .eggmark{display:block;text-align:center;font-family:VT323,monospace;font-size:.95rem;letter-spacing:.3em;color:#3a2a6e;margin:-12px 0 6px}
   .deco i:nth-child(2){right:22px;top:12%;font-size:.8rem}
   .deco i:nth-child(3){right:30px;bottom:14px;font-size:.75rem}
-  .bezel{padding:8px;background:linear-gradient(145deg,#ffe48a,#d9a93a 60%,#f5cf62);clip-path:polygon(8% 0,22% 5%,36% 0,50% 5%,64% 0,78% 5%,92% 0,100% 10%,95% 26%,100% 42%,95% 58%,100% 74%,95% 90%,100% 100%,78% 95%,64% 100%,50% 95%,36% 100%,22% 95%,8% 100%,0 90%,5% 74%,0 58%,5% 42%,0 26%,5% 10%);filter:drop-shadow(0 2px 0 #0003)}
+  .bezel{padding:6px;border-radius:12px;background:#3a2a6e;box-shadow:inset 0 2px 4px #0006}
   .bezel .lcd{border-radius:4px;padding:4px 6px}
   .lcd .icons{display:flex;justify-content:space-between;font-size:.8rem;opacity:.75;line-height:1}
   /* keychain loop */
-  .antenna{position:absolute;top:-12px;left:50%;width:18px;height:16px;transform:translateX(-50%);border-radius:9px 9px 3px 3px;border:3px solid #a8d8ff;border-bottom:0;box-shadow:0 0 8px #a8d8ff66}
+  .antenna{position:absolute;top:-11px;left:50%;width:16px;height:14px;transform:translateX(-50%);border-radius:8px 8px 3px 3px;border:3px solid #e7defc;border-bottom:0}
   .lcd{background:var(--lcd-bg);color:var(--lcd-ink);font-family:VT323,monospace;border-radius:14px;padding:6px 8px;font-size:1rem;line-height:1.05;text-align:center;box-shadow:inset 0 0 0 3px #0002}
   .lcd .pet{font-size:1.35rem;letter-spacing:.02em}
   .lcd .big{font-size:1.5rem}
   .keys{display:flex;justify-content:center;gap:12px;margin-top:12px}
-  .key{position:relative;width:32px;height:32px;border-radius:50%;border:0;background:radial-gradient(circle at 35% 30%,#fff,#d6ecff 60%,#a8d8ff);color:#2a2a6e;font:700 .7rem "Space Grotesk",sans-serif;cursor:pointer;box-shadow:inset 0 -3px #0002,0 2px 0 #0004}
+  .key{position:relative;width:34px;height:34px;border-radius:50%;border:0;background:#fff;color:#3a2a6e;font:700 .8rem "Space Grotesk",sans-serif;cursor:pointer;box-shadow:inset 0 0 0 1.5px #c9b6ff,0 2px 0 #3a2a6e33}
   .key::after{content:"";position:absolute;inset:-6px}
-  .keys .key:nth-child(2){margin-top:8px}
   .key{transition:transform .15s,background .15s,box-shadow .15s}
-  .key:hover{background:#fff;transform:translateY(-2px);box-shadow:inset 0 -3px #0002,0 6px 14px #a8d8ffaa}
+  .key:hover{background:#3a2a6e;color:#fff;transform:translateY(-2px)}
   .key:active{transform:translateY(1px)}
   .brand .spark{display:inline-block;transition:transform .5s}.brand:hover .spark{transform:rotate(180deg) scale(1.3)}
   .flame{position:absolute;left:50%;bottom:-34px;width:34px;height:44px;transform:translateX(-50%) scaleY(.35);transform-origin:top;opacity:.0;
@@ -434,8 +424,7 @@
 <aside class="ship docked" id="ship" aria-label="Journey navigator">
   <div class="ship-body">
     <div class="antenna" aria-hidden="true"></div>
-    <span class="deco" aria-hidden="true"><i>☾</i><i>✦</i><i>★</i></span>
-    <span class="eggmark" aria-hidden="true">✦ TT ✦</span>
+        <span class="eggmark" aria-hidden="true">✦ TT ✦</span>
     <div class="bezel">
       <div class="lcd" aria-live="polite"><div class="icons" aria-hidden="true"><span>♥</span><span>✦</span><span>★</span><span>✉</span></div><div class="pet" id="pet" aria-hidden="true">(^ᴗ^)</div><div><div class="big" id="lcdYear">1993→2026</div><div id="lcdName">WELCOME</div></div><div class="icons" aria-hidden="true"><span>☺</span><span>♪</span><span>☾</span><span>⌂</span></div></div>
     </div>
@@ -445,8 +434,7 @@
       <button class="key" id="nextBtn" type="button" aria-label="Next stop">▼</button>
     </div>
   </div>
-  <div class="flame" aria-hidden="true"></div>
-</aside>
+  </aside>
 
 <script>
 (() => {

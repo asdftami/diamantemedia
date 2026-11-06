@@ -46,6 +46,8 @@
   .spy a[aria-current]{color:var(--ink);background:#ffffff16;border-color:#ffffff38}
   .spy a[aria-current]::before{content:"";position:absolute;left:50%;bottom:-7px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--pink);box-shadow:0 0 8px var(--pink)}
   .navcta{position:relative;display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 14px;border-radius:999px;background:var(--pink);color:#2a0d22;font-weight:700;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+  .navcta[aria-current]{background:var(--butter);box-shadow:0 8px 22px #fff1a655}
+  .navcta[aria-current]::before{content:"";position:absolute;left:50%;bottom:-7px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--pink);box-shadow:0 0 8px var(--pink)}
   .navcta:hover{background:var(--butter);transform:translateY(-2px);box-shadow:0 8px 22px #ffb3d966}
   .spy a::after,.navcta::after,.pill::after{content:"";position:absolute;left:0;right:0;top:50%;height:44px;transform:translateY(-50%)}
 
@@ -212,6 +214,15 @@
 <script src="assets/planets.js"></script>
 <script src="assets/cursor.js"></script>
 <script src="assets/contact.js"></script>
+<script>
+  document.querySelectorAll('a[href="about.html"]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); history.replaceState(null, '', 'about.html'); scrollTo({ top: 0, behavior: 'smooth' }); }));
+  // the menu shows where you are: About up top, Contact once the contact section is on screen
+  const aboutLink = document.querySelector('header.top a[href="about.html"]'), contactLink = document.querySelector('header.top a[href="#contact"]');
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) { contactLink.setAttribute('aria-current', 'location'); aboutLink.removeAttribute('aria-current'); }
+    else { aboutLink.setAttribute('aria-current', 'page'); contactLink.removeAttribute('aria-current'); }
+  }, { rootMargin: '-45% 0px -45% 0px' }).observe(document.getElementById('contact'));
+</script>
 <script src="assets/nav.js"></script>
 </body>
 </html>
