@@ -7,11 +7,11 @@
     // name: [band colors], band count, swirl, ring color (or null), moon color (or null), glow
     rose:     { c: ['#7a1f45', '#c94f7c', '#f3c4d2', '#fff1f4', '#e58aa8', '#a83260', '#f7d9e2'], bands: 9, swirl: 0.55, ring: null, moon: '#e9d6f2', glow: '#ff8fb855' },
     lavender: { c: ['#5b4b9a', '#9f8fe0', '#e6dcff', '#c9b6ff', '#f6efff', '#8a73d6', '#d8c9ff'], bands: 7, swirl: 0.35, ring: '#ffd6ec', moon: null, glow: '#c9b6ff66' },
-    cream:    { c: ['#b86b5b', '#f2d2c0', '#fff6ee', '#e7a98f', '#fbe3d6', '#c98974', '#fff0e6'], bands: 11, swirl: 0.6, ring: null, moon: '#ffd6e6', glow: '#ffd2c066' },
+    cream:    { c: ['#b86b5b', '#f2d2c0', '#fff6ee', '#e7a98f', '#fbe3d6', '#c98974', '#fff0e6'], bands: 11, swirl: 0.6, ring: null, moon: ['#ffd6e6', '#a8d8ff'], glow: '#ffd2c066' },
     aqua:     { c: ['#0d2a6b', '#1f5fb8', '#38c6d9', '#a8f0ff', '#2a86d6', '#0f3f91', '#7fe3f0'], bands: 6, swirl: 0.9, ring: null, moon: null, glow: '#5fd8ff66' },
     dusk:     { c: ['#6b3f8f', '#d99cc8', '#ffe1ef', '#b48be0', '#f5c2de', '#8c5bb5', '#ffd9ec'], bands: 8, swirl: 0.45, ring: '#fff1a6', moon: '#a8d8ff', glow: '#e7a6ff55' },
     sand:     { c: ['#8a5a3c', '#d8b48a', '#f5e6cf', '#c49a6c', '#efd8b8', '#a9764f', '#fbf0de'], bands: 10, swirl: 0.4, ring: '#3b2a20', moon: null, glow: '#d8c3a566' },
-    mint:     { c: ['#1d6b66', '#5fc4b8', '#d9fff8', '#81d8d0', '#b8f2ea', '#2f8f86', '#effffc'], bands: 7, swirl: 0.5, ring: '#ffb3d9', moon: null, glow: '#81d8d066' },
+    mint:     { c: ['#1d6b66', '#5fc4b8', '#d9fff8', '#81d8d0', '#b8f2ea', '#2f8f86', '#effffc'], bands: 7, swirl: 0.5, ring: [['#ffb3d9', -22], ['#fff1a6', 22]], moon: null, glow: '#81d8d066' },
     sky:      { c: ['#2b4fb8', '#7fb6ff', '#e6f3ff', '#a8d8ff', '#cfe6ff', '#4a74d6', '#f5fbff'], bands: 9, swirl: 0.3, ring: '#fff1a6', moon: '#ffb3d9', glow: '#a8d8ff66' },
   };
 
@@ -58,11 +58,13 @@
   function build(el) {
     const name = el.dataset.p, p = PRESETS[name]; if (!p) return;
     el.style.setProperty('--glow', p.glow);
-    el.innerHTML =
-      (p.ring ? '<span class="p3-ring back" style="--ring:' + p.ring + '"></span>' : '') +
+    const rings = !p.ring ? [] : Array.isArray(p.ring) ? p.ring : [[p.ring, -14]];
+    const moons = !p.moon ? [] : [].concat(p.moon);
+    const ring = side => rings.map(([c, a]) => '<span class="p3-ring ' + side + '" style="--ring:' + c + ';--tilt:' + a + 'deg"></span>').join('');
+    el.innerHTML = ring('back') +
       '<span class="p3-ball"><span class="p3-tex" style="background-image:url(' + texture(name, p) + ')"></span><span class="p3-shade"></span></span>' +
-      (p.ring ? '<span class="p3-ring front" style="--ring:' + p.ring + '"></span>' : '') +
-      (p.moon ? '<span class="p3-orbit"><span class="p3-moon" style="--moon:' + p.moon + '"></span></span>' : '');
+      ring('front') +
+      moons.map((c, i) => '<span class="p3-orbit' + (i ? ' alt' : '') + '"><span class="p3-moon" style="--moon:' + c + '"></span></span>').join('');
   }
 
   function init() { document.querySelectorAll('.planet3').forEach(build); }
