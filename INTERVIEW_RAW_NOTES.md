@@ -749,3 +749,4 @@ Tami talks casually; **everything written for her must read as a polished profes
 6. Clean visuals (recreate sticky note/whiteboards as diagrams)
 7. Learnings cards + mobile first-frame fix
 Also pending: Google Drive upload of SOURCE_OF_TRUTH, About planet (Tami's HTML), Bond Centre mockups, headline choice.
+- Hero eyebrow: '6+ years in design' (counted from 2020 BFA; phrase as 'in design', not 'in product design').
