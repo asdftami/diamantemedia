@@ -114,17 +114,16 @@
     const d = noiseBuf.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
     return noiseBuf;
   }
-  function beep(freq = 1180) {               // name kept: every key press calls this
+  // Classic keypad tones (DTMF): each key plays its own pair of notes, like dialing on an old phone.
+  const DTMF = { '1':[697,1209],'2':[697,1336],'3':[697,1477],'4':[770,1209],'5':[770,1336],'6':[770,1477],'7':[852,1209],'8':[852,1336],'9':[852,1477],'*':[941,1209],'0':[941,1336],'#':[941,1477] };
+  let currentKey = '5';
+  function beep() {                           // every key press calls this
     if (!sound) return;
     try {
-      const c = audio(), t = c.currentTime;
-      const n = c.createBufferSource(); n.buffer = noise(c);
-      const bp = c.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = 2600 + (freq - 1200) * 1.5; bp.Q.value = 1.4;
-      const g = c.createGain(); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.5, t + 0.002); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.035);
-      n.connect(bp).connect(g).connect(c.destination); n.start(t, Math.random() * 0.5); n.stop(t + 0.04);
-      const o = c.createOscillator(), g2 = c.createGain(); o.type = 'sine'; o.frequency.setValueAtTime(190, t); o.frequency.exponentialRampToValueAtTime(90, t + 0.05);
-      g2.gain.setValueAtTime(0.0001, t); g2.gain.exponentialRampToValueAtTime(0.18, t + 0.003); g2.gain.exponentialRampToValueAtTime(0.0001, t + 0.06);
-      o.connect(g2).connect(c.destination); o.start(t); o.stop(t + 0.07);
+      const c = audio(), t = c.currentTime, pair = DTMF[currentKey] || [941, 1633];
+      const g = c.createGain(); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.12, t + 0.006); g.gain.setValueAtTime(0.12, t + 0.11); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.14);
+      g.connect(c.destination);
+      pair.forEach(f => { const o = c.createOscillator(); o.type = 'sine'; o.frequency.value = f; o.connect(g); o.start(t); o.stop(t + 0.15); });
     } catch (e) {}
   }
   // Launch sound: an ignition rumble that rises into a whoosh, plus a little sparkle at the end.
@@ -173,6 +172,7 @@
   const changed = () => box.dispatchEvent(new Event('input', { bubbles: true }));
   const commit = () => { last = null; idx = 0; clearTimeout(timer); };
   function press(k) {
+    currentKey = k;
     if (MAP[k]) {
       const chars = MAP[k];
       if (k === last) { idx = (idx + 1) % chars.length; box.value = box.value.slice(0, -1); }
@@ -189,7 +189,7 @@
     el.addEventListener('pointerdown', e => { e.preventDefault(); el.classList.add('hit'); setTimeout(() => el.classList.remove('hit'), 180); press(el.dataset.k); });
     ['pointerup', 'pointerleave'].forEach(t => el.addEventListener(t, () => el.classList.remove('hit')));
   });
-  const soft = (sel, fn) => { const el = phone.querySelector(sel); if (el) { el.style.cursor = 'pointer'; el.addEventListener('pointerdown', e => { e.preventDefault(); beep(1300); fn(); }); } };
+  const soft = (sel, fn) => { const el = phone.querySelector(sel); if (el) { el.style.cursor = 'pointer'; el.addEventListener('pointerdown', e => { e.preventDefault(); currentKey = 'soft'; beep(); fn(); }); } };
   soft('.nk.soft-l', () => { commit(); box.value = ''; changed(); });                 // Clear
   soft('.nk.end', () => { commit(); box.value = ''; changed(); });
   soft('.nk.soft-r', () => form.requestSubmit ? form.requestSubmit() : form.submit()); // Send
