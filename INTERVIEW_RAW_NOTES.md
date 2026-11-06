@@ -59,8 +59,8 @@
 
 ### Design work during the BFA
 
-**1. Internship at LUXXE Digital (exact spelling TBD): OMG RGV**
-- Co-launched **OMG RGV**, a digital blog/magazine featuring **hidden gems in the Rio Grande Valley**, with an embedded CSS events calendar.
+**1. Internship at LUXXE Digital (exact spelling TBD): OMG! RGV**
+- Co-launched **OMG! RGV**, a digital blog/magazine featuring **hidden gems in the Rio Grande Valley**, with an embedded CSS events calendar.
 - Role: **Editor-in-Chief.** Led a **team of 5 designers** (mostly freshmen and sophomores; Tami was the senior).
 - **Single-handedly built the entire website/blog**, helped design the **brand logo**, drove the content strategy, and reviewed all copy and visuals before publishing.
 - Grew social platforms and drove traffic to the site: **interviews, recording and editing videos**, posting to social.
@@ -193,7 +193,7 @@
 | — | Newrez login redesign | UX: supporting project | ? |
 | — | Jars website/app audits | UX audit: supporting project | ? |
 | — | The Makers Lab / Tami Makes Stuff | Maker + creator | ? |
-| — | OMG RGV | Early web + editorial leadership | ? |
+| — | OMG! RGV | Early web + editorial leadership | ? |
 | — | School: Femfly, game studio app, yoga, games | Academic | ? |
 | — | Senior BFA work about her dad | Personal / fine art | Tami decides |
 
@@ -527,7 +527,7 @@ Saved in `assets/israel-bond-centre/`:
 ## ▶️ Resume point (next session)
 - Fridays-Off: website screenshots → then Q7 (biggest design decisions on the site / what she'd improve).
 - Then: Dental websites case study (Parkfield Family Dental + Evolve Dental Partners).
-- Then: supporting projects (Newrez login, Jars audits, Makers Lab, OMG RGV, school projects).
+- Then: supporting projects (Newrez login, Jars audits, Makers Lab, OMG! RGV, school projects).
 
 ### Fridays-Off store cleanup (done Nov 3, 2026, approved by Tami)
 - ✅ Vendor "Grav" → **GRAV** and type "Water Pipes" → **Bubblers** on *GRAV Clear Milk Carton Pocket Bubbler* (archived; it's a duplicate listing of the active "Clear Milk Carton Pocket Bubbler – 3.25″", same SKU B1543).
@@ -584,7 +584,7 @@ Saved in `assets/israel-bond-centre/`:
 
 **P1b. "Tami is the designer who…"** *"…would make the coolest, most aesthetic and intuitive work in any industry."*
 - Key words: **cool · aesthetic · intuitive · any industry**.
-- Evidence for "any industry": mortgage finance (Project Insight), government bonds (Bond Centre), dental (Parkfield, Evolve), luxury e-commerce (Fridays-Off), local media (OMG RGV, The Monitor), crafts/maker (Makers Lab), cannabis retail UX audits (Jars).
+- Evidence for "any industry": mortgage finance (Project Insight), government bonds (Bond Centre), dental (Parkfield, Evolve), luxury e-commerce (Fridays-Off), local media (OMG! RGV, The Monitor), crafts/maker (Makers Lab), cannabis retail UX audits (Jars).
 - Draft headline directions (to refine later):
   - "Beautiful, intuitive design for any world."
   - "I design cool things that make sense, in any industry."
@@ -595,7 +595,7 @@ Saved in `assets/israel-bond-centre/`:
 - Homepage hierarchy: fast path to case studies and resume → then "Work with me" for clients.
 
 **P3. Target titles:** Product Designer · Design Director · UX Design Director.
-- *Recommendation:* lead with **"Product Designer"** on the site and resume; it's the widest door for remote roles. Show **leadership signals** throughout (led a team of 5 at OMG RGV, sole designer driving workshops with 12–15 people, promoted repeatedly, ran stakeholder sessions, founder) to make Senior/Lead the next step and Director the trajectory. Director roles usually require several years of managing designers, so apply for **Product Designer / Senior Product Designer**, plus **Lead** roles at smaller companies, now.
+- *Recommendation:* lead with **"Product Designer"** on the site and resume; it's the widest door for remote roles. Show **leadership signals** throughout (led a team of 5 at OMG! RGV, sole designer driving workshops with 12–15 people, promoted repeatedly, ran stakeholder sessions, founder) to make Senior/Lead the next step and Director the trajectory. Director roles usually require several years of managing designers, so apply for **Product Designer / Senior Product Designer**, plus **Lead** roles at smaller companies, now.
 
 **P4. Compensation** 🔒 *(private: never on the site)*
 - **Last role: $113K** (Computershare / Newrez UX Designer).
@@ -644,7 +644,7 @@ Saved in `assets/israel-bond-centre/`:
 - Top views: **~1.5K on a long-form video**, **~6.8K on a Short** *(interpreted as best-performing videos; confirm)*.
 - Portfolio framing: lead with the **6.8K-view Short** and the content skills (filming, editing, A/B-roll learned at The Monitor, hooks). Keep subscriber counts out of the headline; use them in the creator section only.
 
-## OMG RGV (LUXXE Digital internship)
+## OMG! RGV (LUXXE Digital internship)
 **O1.** A digital brand with a **website, Facebook page, and Instagram**. Not live anymore as far as Tami knows; she'll check whether the **Facebook page** still exists.
 - **Dates:** about **2019** (junior/senior year). UTRGV attendance: **2015–2020**, so the **BFA graduation year is likely 2020** *(confirm; earlier notes guessed ~2017/18)*.
 - *Note: if her dad passed ~2017 "before graduation," confirm the timeline: did he pass in 2017 or closer to 2019/2020?*
@@ -676,7 +676,7 @@ Saved in `assets/israel-bond-centre/`:
 4. Dental websites (Parkfield Family Dental + Evolve Dental Partners)
 
 **v1 also needs:** homepage (galaxy timeline, accessible), About (story), Resume (PDF + "email me for a tailored one"), Contact / Start a project.
-**Phase 2 (after launch):** Personal & School Projects (Femfly, Canielle, yoga flow studio, game studio), the supporting projects (Newrez login, Jars audits, Makers Lab / YouTube, OMG RGV), and Fridays-Off metrics after 30–60 days.
+**Phase 2 (after launch):** Personal & School Projects (Femfly, Canielle, yoga flow studio, game studio), the supporting projects (Newrez login, Jars audits, Makers Lab / YouTube, OMG! RGV), and Fridays-Off metrics after 30–60 days.
 
 ### Parkfield Family Dental: live site captured (Nov 4, 2026)
 Saved in `assets/dental/parkfield/`: full-page desktop screenshots of Home, Services, Insurance, Meet Us, Reviews, Financing Options, Contact, plus the mobile homepage.
@@ -770,6 +770,6 @@ Context (Tami): self-initiated audits done while working the retail floor. The c
 
 ## Links added (Nov 7, 2026)
 - The Monitor (graphic designer, in-house media team): https://myrgv.com/category/publications/the-monitor/
-- OMG RGV interviews (YouTube): https://www.youtube.com/channel/UCzMvjvTz2uzrQExGYtOVKNg · on X: https://x.com/OmgRgv/status/1314725741414830080 · Facebook page no longer live.
-- Context (Tami): OMG RGV was an internship project; she led the magazine. After graduation the internship leader (founder of the digital agency) disbanded it and started a new company. 🔒 Keep that backstory private.
+- OMG! RGV interviews (YouTube): https://www.youtube.com/channel/UCzMvjvTz2uzrQExGYtOVKNg · on X: https://x.com/OmgRgv/status/1314725741414830080 · Facebook page no longer live.
+- Context (Tami): OMG! RGV was an internship project; she led the magazine. After graduation the internship leader (founder of the digital agency) disbanded it and started a new company. 🔒 Keep that backstory private.
 - Socials: LinkedIn linkedin.com/in/tamitrevino · YouTube @tamimakesstuff · Instagram @TAMIMAKESSTUFF · TikTok @asdftami

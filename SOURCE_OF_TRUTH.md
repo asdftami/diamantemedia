@@ -98,9 +98,9 @@ Austin, TX · Worked through COVID while starting her Master's
 ### The Monitor (McAllen, TX newspaper): Graphic Designer, in-house digital media team
 - Production graphic design; video interviews and editing (A-roll/B-roll); brand-cohesive document design
 
-### LUXXE Digital: Intern → Editor-in-Chief, OMG RGV
+### LUXXE Digital: Intern → Editor-in-Chief, OMG! RGV
 **~2019** · Rio Grande Valley, TX
-- Co-launched **OMG RGV**, a digital magazine featuring Rio Grande Valley hidden gems
+- Co-launched **OMG! RGV**, a digital magazine featuring Rio Grande Valley hidden gems
 - **Led a team of 5 designers**; **single-handedly built the website/blog** (with an embedded events calendar); helped design the logo; reviewed all copy and visuals; grew the social channels with interviews and edited video
 
 ### Earlier
@@ -118,7 +118,7 @@ Austin, TX · Worked through COVID while starting her Master's
 | 4 | Dental Brands & Websites | Freelance brand + web | Live (client-edited) / handed off | `content/case-studies/04-dental-websites.md` |
 
 **Phase 2 (personal & school):** Femfly (women's networking & mentorship app, her first research project, evolving with AI), yoga flow studio app, game studio app.
-**Supporting pieces:** Newrez login, Jars audits, Makers Lab / YouTube, OMG RGV.
+**Supporting pieces:** Newrez login, Jars audits, Makers Lab / YouTube, OMG! RGV.
 
 ---
 
@@ -133,7 +133,7 @@ Austin, TX · Worked through COVID while starting her Master's
 **Tools:** Figma · FigJam · Adobe Illustrator · Airtable · Azure DevOps · Shopify · Squarespace · Notion · Blotato
 **AI:** Claude & Claude Code (skills, automations, code pairing) · ChatGPT · Google Gemini · Midjourney · Higgsfield · Kittl
 
-**Leadership:** led a team of 5 (OMG RGV) · sole designer driving cross-functional workshops · promoted repeatedly (office manager, treatment coordinator, floor lead) · workshop facilitation (groups of up to 15)
+**Leadership:** led a team of 5 (OMG! RGV) · sole designer driving cross-functional workshops · promoted repeatedly (office manager, treatment coordinator, floor lead) · workshop facilitation (groups of up to 15)
 
 ---
 
