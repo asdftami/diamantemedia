@@ -58,15 +58,17 @@ Every flow had two sides: what the bondholder does, and what the admin sees next
 
 ## 1. Navigation: separating *doing* from *managing*
 
-I tested **one long left-hand menu** against a **split navigation**:
+I tested **one long left menu** against a **split navigation**:
 
-- **Left:** the tasks you came to do (Portfolio, Payments & Transactions, Banking Details, Account Statements, Suppress Maturity Payment)
-- **Top right:** everything about *you* (Alerts, Messages, country, User Preferences, Help & FAQ, Logout)
+- **Left:** tasks (Portfolio, Payments & Transactions, Banking Details, Statements, Suppress Maturity Payment)
+- **Top right:** account items (Alerts, Messages, Preferences, Help, Logout)
 
-**The split navigation won.** With everything stacked on the left, people found it busy and confusing. Splitting it follows a pattern people already know from the apps they use every day.
+**The split navigation won.** The single menu felt busy; the split follows a pattern people know from everyday apps.
 
-![Version A: every link stacked on the left. Users found it busy and confusing.](../../assets/israel-bond-centre/12-new-portfolio-single-left-nav-variant.png)
-![Version B won: tasks on the left, account settings at the top right, a pattern people already know.](../../assets/israel-bond-centre/10-new-portfolio-split-nav.png)
+<div class="pair wide" markdown="1">
+![Version A: every link on the left felt busy.](../../assets/israel-bond-centre/12-new-portfolio-single-left-nav-variant.png)
+![Version B won: tasks left, account top right.](../../assets/israel-bond-centre/10-new-portfolio-split-nav.png)
+</div>
 
 ---
 
