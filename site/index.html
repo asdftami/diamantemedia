@@ -660,7 +660,7 @@
   const setMax = on => { win.classList.toggle('max', on); bMax.setAttribute('aria-pressed', on); bMax.setAttribute('aria-label', on ? 'Restore Selected Work' : 'Maximize Selected Work'); bMax.textContent = on ? '❐' : '□'; document.documentElement.style.overflow = on ? 'hidden' : ''; };
   bMin.addEventListener('click', () => {
     const min = win.classList.toggle('min'); if (min) setMax(false);
-    bMin.setAttribute('aria-expanded', !min); bMin.setAttribute('aria-label', min ? 'Restore Selected Work' : 'Minimize Selected Work'); bMin.textContent = min ? '▢' : '–';
+    bMin.setAttribute('aria-expanded', !min); bMin.setAttribute('aria-label', min ? 'Restore Selected Work' : 'Minimize Selected Work'); bMin.textContent = min ? '+' : '–';
   });
   bMax.addEventListener('click', () => { win.classList.remove('min'); bMin.setAttribute('aria-expanded', true); bMin.textContent = '–'; setMax(!win.classList.contains('max')); bMax.focus(); });
   bClose.addEventListener('click', () => { setMax(false); win.hidden = true; reopen.hidden = false; reopen.focus(); });
