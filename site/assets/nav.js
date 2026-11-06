@@ -12,7 +12,8 @@
     work: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6.2" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="12" cy="12" rx="11" ry="3.6" fill="none" stroke="currentColor" stroke-width="1.6" transform="rotate(-18 12 12)"/></svg>',
     about: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="10" r="1.3" fill="currentColor"/><circle cx="15" cy="10" r="1.3" fill="currentColor"/><path d="M8 14.2c1 1.6 2.4 2.4 4 2.4s3-.8 4-2.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
     contact: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>',
-    next: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8l7 8 7-8z" fill="currentColor"/></svg>'
+    next: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8l7 8 7-8z" fill="currentColor"/></svg>',
+    prev: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16l7-8 7 8z" fill="currentColor"/></svg>'
   };
 
   const css = `
@@ -32,6 +33,7 @@
     .dock{position:fixed;z-index:30;left:0;right:0;bottom:0;
       display:flex;gap:4px;padding:6px max(8px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px));
       border-radius:20px 20px 0 0;background:linear-gradient(180deg,#ffffff,#ece5fd);box-shadow:0 -8px 24px #0009,inset 0 2px 0 #fff}
+    .dock .step{flex:.8}
     .dock a,.dock button{position:relative;flex:1;display:grid;justify-items:center;align-content:center;gap:2px;min-height:52px;padding:4px 0;border:0;border-radius:15px;background:none;color:#3a2a6e;font:700 .72rem "Space Grotesk",system-ui,sans-serif;text-decoration:none;cursor:pointer;transition:background .2s,transform .15s}
     .dock .ico{width:22px;height:22px;margin:0}
     .dock a:active,.dock button:active{transform:scale(.94)}
@@ -80,11 +82,20 @@
       return [a, d];
     });
     // the homepage keeps its "next stop" step in the dock (the pet navigator is desktop-only)
-    const next = document.getElementById('nextBtn');
-    if (next) {
-      dock.insertAdjacentHTML('beforeend', '<span class="sep" aria-hidden="true"></span><button type="button" aria-label="Next stop"><span class="ico">' + ICONS.next + '</span>Next</button>');
-      dock.lastElementChild.addEventListener('click', () => next.click());
-    }
+    // ▲ ▼ are on every page so the dock never changes: timeline stops on the homepage, section headings elsewhere
+    dock.insertAdjacentHTML('beforeend', '<span class="sep" aria-hidden="true"></span>' +
+      '<button type="button" class="step" data-dir="-1" aria-label="Previous section"><span class="ico">' + ICONS.prev + '</span>Up</button>' +
+      '<button type="button" class="step" data-dir="1" aria-label="Next section"><span class="ico">' + ICONS.next + '</span>Down</button>');
+    const homePrev = document.getElementById('prevBtn'), homeNext = document.getElementById('nextBtn');
+    const targets = () => [document.body, ...document.querySelectorAll('main h2, section[id] h2, .hero h1')].filter((el, i, a) => a.indexOf(el) === i);
+    const step = dir => {
+      if (homeNext) return (dir > 0 ? homeNext : homePrev).click();
+      const head = 90, list = targets().map(el => el === document.body ? 0 : el.getBoundingClientRect().top + scrollY - head).sort((x, y) => x - y);
+      const y = scrollY, smooth = document.documentElement.classList.contains('no-motion') ? 'auto' : 'smooth';
+      const to = dir > 0 ? list.find(t => t > y + 8) : [...list].reverse().find(t => t < y - 8);
+      scrollTo({ top: to === undefined ? (dir > 0 ? document.body.scrollHeight : 0) : to, behavior: smooth });
+    };
+    dock.querySelectorAll('.step').forEach(b => b.addEventListener('click', () => step(+b.dataset.dir)));
     document.body.appendChild(dock);
     // keep the "you are here" highlight identical in both places
     const sync = () => pairs.forEach(([a, d]) => a.hasAttribute('aria-current') ? d.setAttribute('aria-current', a.getAttribute('aria-current')) : d.removeAttribute('aria-current'));
