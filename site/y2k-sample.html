@@ -27,7 +27,8 @@
   .icons{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
   .icons a{display:grid;justify-items:center;gap:6px;padding:14px 8px;border-radius:14px;text-decoration:none;color:var(--win-ink);text-align:center;transition:background .2s,transform .2s,box-shadow .2s}
   .icons a:hover,.icons a:focus-visible{background:#ffffff8c;transform:translateY(-4px);box-shadow:0 10px 24px #6b5bb533,0 0 0 2px #fff inset}
-  .icons .planet3{width:92px}
+  .well{display:grid;place-items:center;width:108px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 45%,#2a1d63,#120c35 70%);box-shadow:inset 0 0 0 2px #ffffffcc,inset 0 6px 18px #0009,0 6px 14px #3a2a6e55}
+  .icons .planet3{width:100px}
   .icons strong{font-size:1rem}
   .icons small{font-size:.82rem;color:#5b4b8f}
   .tag{font-family:VT323,monospace;font-size:1rem;letter-spacing:.06em;padding:1px 8px;border-radius:6px;background:#3a2a6e;color:var(--butter)}
@@ -46,6 +47,25 @@
   .dock span{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;background:linear-gradient(180deg,#fff,#efe9ff);box-shadow:inset 0 -3px #0001,0 0 0 1px #d9c9ff;transition:transform .2s}
   .dock span:hover{transform:translateY(-6px) scale(1.1)}
   .dock .clock{width:auto;padding:0 12px;font:1.5rem VT323,monospace}
+  .phones{display:flex;flex-wrap:wrap;gap:28px}
+  .phones figure{margin:0;width:260px}
+  .phones figcaption{margin-top:10px;color:var(--ink-dim);font-size:.92rem}
+  .phone-mock{position:relative;height:520px;border-radius:34px;border:8px solid #2a2350;background:linear-gradient(180deg,#1a1045,#07051a);overflow:hidden;box-shadow:0 20px 50px #000a}
+  .pm-head{display:flex;align-items:center;gap:10px;padding:14px 14px 10px;font-size:.85rem;border-bottom:1px solid #ffffff14}
+  .pm-head b{margin-right:auto}
+  .pm-pink{background:var(--pink);color:#2a0d22;padding:3px 9px;border-radius:999px;font-weight:700}
+  .pm-clock{font:1.1rem VT323,monospace;color:var(--butter)}
+  .pm-body{padding:22px 16px}
+  .pm-eyebrow{margin:0;font:1rem VT323,monospace;color:var(--butter);letter-spacing:.08em}
+  .pm-h{margin:6px 0;font-size:1.6rem;font-weight:700;line-height:1.1}
+  .pm-t{margin:0;color:var(--ink-dim);font-size:.9rem}
+  .pm-pet{position:absolute;left:10px;right:10px;bottom:12px;display:flex;align-items:center;gap:6px;padding:7px;border-radius:24px;background:linear-gradient(165deg,#5b4bd6,#24186b);border:1px solid #ffffff38}
+  .pm-lcd{flex:1;padding:4px 8px;border-radius:10px;background:#a9c48a;color:#1b2a12;font:.95rem/1 VT323,monospace;border:2px solid #e6b94a}
+  .pm-k{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:.7rem;background:radial-gradient(circle at 35% 30%,#fff,#a8d8ff);color:#2a2a6e}
+  .pm-dock{position:absolute;left:10px;right:10px;bottom:12px;display:flex;justify-content:space-between;padding:6px;border-radius:20px;background:linear-gradient(180deg,#ffffffe6,#e7defcd9);box-shadow:0 10px 24px #000a,inset 0 0 0 2px #fff}
+  .pm-dock span{flex:1;display:grid;justify-items:center;gap:1px;padding:5px 0;border-radius:12px;font-size:1.15rem;color:#3a2a6e}
+  .pm-dock span.on{background:#3a2a6e;color:#fff}
+  .pm-dock i{font-style:normal;font-size:.62rem;font-weight:700}
   @media (max-width:760px){.icons{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
@@ -54,15 +74,15 @@
   <h1>Y2K desktop: a sample</h1>
   <p class="note">Your AI desktop translated into the galaxy site. Nothing on the real site changes until you pick what you like.</p>
 
-  <p class="label">A · SELECTED WORK AS A HOLOGRAPHIC WINDOW</p>
+  <p class="label">A · SELECTED WORK AS A HOLOGRAPHIC WINDOW (NOW WITH DARK ICON WELLS FOR CONTRAST)</p>
   <section class="win" aria-labelledby="w-title">
     <div class="win-bar"><h2 id="w-title">📁 Selected Work</h2><span class="tag">4 PLANETS</span><span class="ctl" aria-hidden="true"><span>–</span><span>□</span><span>✕</span></span></div>
     <div class="win-body">
       <ul class="icons">
-        <li><a href="#"><span class="planet3" data-p="lavender" style="--spin:27s" aria-hidden="true"></span><strong>Project Insight</strong><small>Investor Dashboards · Fintech</small></a></li>
-        <li><a href="#"><span class="planet3" data-p="sky" style="--spin:32s" aria-hidden="true"></span><strong>Bond Centre 2.0</strong><small>Portal Redesign · Shipped</small></a></li>
-        <li><a href="#"><span class="planet3" data-p="sand" style="--spin:37s" aria-hidden="true"></span><strong>Fridays-Off</strong><small>Brand + E-Commerce · Founder</small></a></li>
-        <li><a href="#"><span class="planet3" data-p="mint" style="--spin:25s" aria-hidden="true"></span><strong>Dental Brands</strong><small>Brand + Web · Healthcare</small></a></li>
+        <li><a href="#"><span class="well" aria-hidden="true"><span class="planet3" data-p="lavender" style="--spin:27s"></span></span><strong>Project Insight</strong><small>Investor Dashboards · Fintech</small></a></li>
+        <li><a href="#"><span class="well" aria-hidden="true"><span class="planet3" data-p="sky" style="--spin:32s"></span></span><strong>Bond Centre 2.0</strong><small>Portal Redesign · Shipped</small></a></li>
+        <li><a href="#"><span class="well" aria-hidden="true"><span class="planet3" data-p="sand" style="--spin:37s"></span></span><strong>Fridays-Off</strong><small>Brand + E-Commerce · Founder</small></a></li>
+        <li><a href="#"><span class="well" aria-hidden="true"><span class="planet3" data-p="mint" style="--spin:25s"></span></span><strong>Dental Brands</strong><small>Brand + Web · Healthcare</small></a></li>
       </ul>
     </div>
   </section>
@@ -74,8 +94,25 @@
     <span class="heart">♥</span><span class="spark">✦</span>
   </div>
 
-  <p class="label">C · A DOCK FOR THE PHONE NAV (REPLACES THE BAR AT THE BOTTOM ON MOBILE)</p>
-  <div class="dock" aria-hidden="true"><span>🪐</span><span>👩🏻‍💻</span><span>📄</span><span>✉</span><span class="clock">11:11 PM</span></div>
+  <p class="label">C · PHONE NAV: TODAY VS. A DOCK (PREVIEW ONLY)</p>
+  <div class="phones">
+    <figure>
+      <div class="phone-mock">
+        <div class="pm-head"><b>Tami ✦</b><span>Work</span><span class="pm-pink">Contact ↗</span></div>
+        <div class="pm-body"><p class="pm-eyebrow">PRODUCT DESIGNER · UX</p><p class="pm-h">Every industry is a new world.</p><p class="pm-t">I'm Tami. I make each world beautiful, intuitive and accessible…</p></div>
+        <div class="pm-pet"><span class="pm-lcd">(^ᴗ^) 1993<br>MONTERREY</span><span class="pm-k">▲</span><span class="pm-k">⌂</span><span class="pm-k">▼</span></div>
+      </div>
+      <figcaption>Today: links at the top, pet navigator steps through the timeline.</figcaption>
+    </figure>
+    <figure>
+      <div class="phone-mock">
+        <div class="pm-head"><b>Tami ✦</b><span class="pm-clock">11:11 PM</span></div>
+        <div class="pm-body"><p class="pm-eyebrow">PRODUCT DESIGNER · UX</p><p class="pm-h">Every industry is a new world.</p><p class="pm-t">I'm Tami. I make each world beautiful, intuitive and accessible…</p></div>
+        <div class="pm-dock"><span class="on">🪐<i>Work</i></span><span>☺<i>About</i></span><span>📄<i>Resume</i></span><span>✉<i>Contact</i></span><span>▼<i>Next</i></span></div>
+      </div>
+      <figcaption>Dock idea: one glossy bar at the thumb, labeled icons, the current page lit up. The pet navigator would live only on desktop.</figcaption>
+    </figure>
+  </div>
 </div>
 <script src="assets/planets.js"></script>
 <script src="assets/cursor.js"></script>
