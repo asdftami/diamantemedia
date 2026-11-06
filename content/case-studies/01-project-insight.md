@@ -41,7 +41,7 @@ Computershare services mortgage loans for investors. To check on a portfolio, in
 
 **How might we give investors clear insight into their portfolios?**
 
-![Before designing anything, I mapped what we didn't know, so we tested the riskiest guesses first.](../../assets/project-insight/01-assumption-map-desirability.png)
+![I mapped our assumptions first, so we tested the riskiest guesses early.](../../assets/project-insight/01-assumption-map-desirability.png)
 
 ---
 
@@ -53,13 +53,11 @@ This was my first role in finance, so I learned mortgage servicing from scratch:
 
 ## Discovery
 
-**1. Mapping what we didn't know.** I started with an assumption map: who the customers are, what problem they want solved, how they solve it today, and what could make this fail. Then I worked through the answers with my PM.
+**1. Mapping what we didn't know.** With my PM, I mapped our assumptions: who the customers are, what they need, how they cope today and what could make this fail. I logged every interview and test finding in **Airtable**, so feedback could be compared and traced to design decisions.
 
-I kept every interview note and usability-test finding in **Airtable**, so feedback could be tagged, compared across sessions and traced back to design decisions. Prioritized work went into the team's **Azure DevOps** backlog.
+**2. Talking to the people closest to the pain.** I interviewed the stakeholder who handled investor requests and wrote questions for investors.
 
-**2. Talking to the people closest to the pain.** I interviewed the stakeholder who received investor requests, then wrote interview questions that were passed to investors directly.
-
-**3. Reading the artifacts.** I studied the spreadsheets and PDFs investors were receiving to learn what they actually asked for.
+**3. Reading the artifacts.** I studied the spreadsheets and PDFs investors received to learn what they actually asked for.
 
 **4. Making the user real.** I built a persona, *Corey Watts*, a 56-year-old banker with a loan portfolio. His pain points: he had to email for every data point, he navigated all over the old Investor Web to find things, and the long spreadsheets he received had to be decoded and rebuilt into his own dashboards. I mapped a second user's journey: a head of asset management trying to isolate the loans in loss mitigation.
 
