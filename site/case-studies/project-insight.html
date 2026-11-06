@@ -81,6 +81,10 @@
   .pair .gallery{grid-template-columns:1fr 1fr;max-width:620px;margin-left:auto;margin-right:auto}
   .pair figure img{max-height:340px}
   @media (max-width:560px){.pair .gallery{grid-template-columns:1fr}}
+  ol.learnings{list-style:none;counter-reset:l;padding:0;margin:20px 0 10px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  ol.learnings li{counter-increment:l;position:relative;padding:18px 18px 18px 58px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);margin:0;line-height:1.55}
+  ol.learnings li::before{content:counter(l);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;border:2px solid var(--pink);color:var(--pink);font-weight:700;font-size:.9rem;display:grid;place-items:center}
+  @media (max-width:640px){ol.learnings{grid-template-columns:1fr}}
   .gallery{display:grid;gap:22px;margin:26px 0}
   figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px;overflow:hidden}
   figure img{display:block;max-width:100%;max-height:78vh;width:auto;height:auto;margin:0 auto;border-radius:12px;background:#fff}
@@ -229,11 +233,11 @@
 <p>The goal was to replace a <strong>3–5 day manual request process</strong> with <strong>self-serve, on-demand insight</strong>. The research and testing showed investors wanted exactly that.</p>
 <hr />
 <h2>What I'd do differently today</h2>
-<ul>
+<ol class="learnings">
 <li><strong>Start with a design system:</strong> tokens, reusable components, and documented patterns, so the hand-off is dev-ready from day one. Nobody had taught me documentation then; I've since learned it.</li>
 <li><strong>Document every decision as I go</strong>, not after.</li>
 <li><strong>Use AI to move faster.</strong> I took this to high fidelity before AI design tools existed. Today I'd use AI to speed up synthesis, variations and prototyping, and spend that saved time with users.</li>
-</ul>
+</ol>
 <hr />
 <p><em>Data shown is representative; client information has been anonymized to protect confidentiality.</em></p>
 </main>

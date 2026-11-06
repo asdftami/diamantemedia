@@ -81,6 +81,10 @@
   .pair .gallery{grid-template-columns:1fr 1fr;max-width:620px;margin-left:auto;margin-right:auto}
   .pair figure img{max-height:340px}
   @media (max-width:560px){.pair .gallery{grid-template-columns:1fr}}
+  ol.learnings{list-style:none;counter-reset:l;padding:0;margin:20px 0 10px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  ol.learnings li{counter-increment:l;position:relative;padding:18px 18px 18px 58px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);margin:0;line-height:1.55}
+  ol.learnings li::before{content:counter(l);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;border:2px solid var(--pink);color:var(--pink);font-weight:700;font-size:.9rem;display:grid;place-items:center}
+  @media (max-width:640px){ol.learnings{grid-template-columns:1fr}}
   .gallery{display:grid;gap:22px;margin:26px 0}
   figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px;overflow:hidden}
   figure img{display:block;max-width:100%;max-height:78vh;width:auto;height:auto;margin:0 auto;border-radius:12px;background:#fff}
@@ -304,12 +308,12 @@
 </ul>
 <hr />
 <h2>What I learned</h2>
-<ul>
+<ol class="learnings">
 <li><strong>Systems beat hustle.</strong> The brand guide, the IA and the content pipeline do the work of a much bigger team.</li>
 <li><strong>Luxury is mostly restraint:</strong> fewer colors, more whitespace, calmer type.</li>
 <li><strong>AI is a collaborator, not a shortcut.</strong> It's only as good as the references and rules you give it.</li>
 <li><strong>Next:</strong> measure everything from day one, and A/B test the homepage hero and product page layout once traffic comes in.</li>
-</ul>
+</ol>
 </main>
 
 <section class="cta" aria-label="Get in touch">

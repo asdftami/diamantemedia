@@ -88,6 +88,8 @@ def build():
         body = markdown.markdown(text, extensions=["tables", "fenced_code", "sane_lists", "md_in_html"])
         body = figures(body)
         body = re.sub(r"<thead>\s*<tr>(\s*<th[^>]*>\s*</th>)+\s*</tr>\s*</thead>", "", body)  # blank header rows
+        body = re.sub(r"(<h2[^>]*>What I(?:'|&rsquo;|’)?(?:d do differently today| learned)</h2>\s*)<ul>(.*?)</ul>",
+                      r'\1<ol class="learnings">\2</ol>', body, flags=re.S)   # learnings as numbered cards
         body = body.replace("<table>", '<div class="table-wrap"><table>').replace("</table>", "</table></div>")
         prev_p = PAGES[i - 1] if i > 0 else None
         next_p = PAGES[i + 1] if i < len(PAGES) - 1 else None

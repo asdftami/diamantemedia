@@ -81,6 +81,10 @@
   .pair .gallery{grid-template-columns:1fr 1fr;max-width:620px;margin-left:auto;margin-right:auto}
   .pair figure img{max-height:340px}
   @media (max-width:560px){.pair .gallery{grid-template-columns:1fr}}
+  ol.learnings{list-style:none;counter-reset:l;padding:0;margin:20px 0 10px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  ol.learnings li{counter-increment:l;position:relative;padding:18px 18px 18px 58px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);margin:0;line-height:1.55}
+  ol.learnings li::before{content:counter(l);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;border:2px solid var(--pink);color:var(--pink);font-weight:700;font-size:.9rem;display:grid;place-items:center}
+  @media (max-width:640px){ol.learnings{grid-template-columns:1fr}}
   .gallery{display:grid;gap:22px;margin:26px 0}
   figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px;overflow:hidden}
   figure img{display:block;max-width:100%;max-height:78vh;width:auto;height:auto;margin:0 auto;border-radius:12px;background:#fff}
@@ -251,12 +255,12 @@
 <p>I was part of a company-wide layoff shortly after launch, so I wasn't able to collect post-launch usage data.</p>
 <hr />
 <h2>What I learned</h2>
-<ul>
+<ol class="learnings">
 <li><strong>Reduce before you redesign.</strong> Most of the "clutter" problem was solved by deciding <em>what doesn't need to be visible yet</em>: accordions, pagination, wizards.</li>
 <li><strong>Familiar beats clever.</strong> The split navigation and Inbox A won because they match patterns people already trust.</li>
 <li><strong>Every action needs a visible result.</strong> Upload states, wizard summaries and approval statuses turned "Did that work?" into "Done."</li>
 <li><strong>Next time:</strong> I'd set up success metrics <em>before</em> launch (task completion, support tickets, time to submit a form), so the impact is measurable even if I'm not there to see it.</li>
-</ul>
+</ol>
 </main>
 
 <section class="cta" aria-label="Get in touch">

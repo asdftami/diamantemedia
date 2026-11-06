@@ -81,6 +81,10 @@
   .pair .gallery{grid-template-columns:1fr 1fr;max-width:620px;margin-left:auto;margin-right:auto}
   .pair figure img{max-height:340px}
   @media (max-width:560px){.pair .gallery{grid-template-columns:1fr}}
+  ol.learnings{list-style:none;counter-reset:l;padding:0;margin:20px 0 10px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  ol.learnings li{counter-increment:l;position:relative;padding:18px 18px 18px 58px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);margin:0;line-height:1.55}
+  ol.learnings li::before{content:counter(l);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;border:2px solid var(--pink);color:var(--pink);font-weight:700;font-size:.9rem;display:grid;place-items:center}
+  @media (max-width:640px){ol.learnings{grid-template-columns:1fr}}
   .gallery{display:grid;gap:22px;margin:26px 0}
   figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px;overflow:hidden}
   figure img{display:block;max-width:100%;max-height:78vh;width:auto;height:auto;margin:0 auto;border-radius:12px;background:#fff}
@@ -213,11 +217,11 @@
 <li><strong>Evolve</strong> launched with a brand-compliant site its founder could manage on her own.</li>
 </ul>
 <h2>What I learned</h2>
-<ul>
+<ol class="learnings">
 <li><strong>A brand is a system, not a logo.</strong> Designing the logo and website together kept everything consistent, down to the icons.</li>
 <li><strong>Inclusive design is a business decision.</strong> Speaking your patients' language is good care and good marketing.</li>
 <li><strong>Plan for the handoff.</strong> Clients will keep editing after launch. Next time I'd deliver a one-page brand and site guide (fonts, colors, image specs, do's and don'ts) so the site stays sharp, and I'd keep my own launch screenshots.</li>
-</ul>
+</ol>
 </main>
 
 <section class="cta" aria-label="Get in touch">
