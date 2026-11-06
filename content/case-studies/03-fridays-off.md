@@ -152,7 +152,7 @@ The social launch is underway. In soft-launch previews, people **loved the aesth
 
 ## What I learned
 
-- **Great brands borrow wisely.** Studying luxury and high-end brands taught me how to find inspiration and translate it into our own identity.
-- **One source of truth keeps a remote team in sync.** My co-founder and I each work with our own AI agents in Claude, but we pull from and update the same Notion library, so our work never drifts apart.
-- **AI and automation multiply a small team.** I built Claude skills and automations, created stunning AI product renders in Higgsfield, and automated content creation and scheduling through Blotato.
-- **E-commerce is part design, part systems.** Connecting dropshipping suppliers in Shopify and rewriting existing product copy in our brand voice taught me how product data, inventory, copy and design have to work together.
+- **Great brands borrow wisely.** Studying luxury brands taught me to turn inspiration into our own identity.
+- **One source of truth keeps a remote team in sync.** We each work with our own Claude agents, but share one Notion library, so our work never drifts.
+- **AI and automation multiply a small team.** Claude skills, Higgsfield renders and Blotato scheduling do the work of a bigger team.
+- **E-commerce is part design, part systems.** Connecting suppliers and rewriting product copy in our voice taught me how data, inventory, copy and design fit together.
