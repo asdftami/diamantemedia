@@ -58,11 +58,9 @@ The VP of Operations bought an established practice with loyal patients but **da
 ![Built for phones, where most patients search.](../../assets/dental/parkfield/portfolio/p07-mobile-hero.png)
 
 ### Designed for the whole community
-Austin has a large Latino community, and many patients only speak Spanish. At launch, I built the site with a **site-wide English/Spanish translator**, so every page (services, insurance, booking) could be read in the patient's own language. I also designed for **accessibility**: readable type, strong contrast, and clear, consistent buttons.
+Many Austin patients only speak Spanish, so I launched the site with an **English/Spanish translator** on every page. I also designed for **accessibility**: readable type, strong contrast and consistent buttons.
 
-This one is personal. I moved from Monterrey, Mexico to Texas when I was nine and started school in an ESL class. I know what it feels like when a place isn't built for you. I want the places I design to feel like they are.
-
-*Note: the client has updated the live site since launch, and the translator is no longer active. The work shown here is my original design.*
+*The client has since updated the site and removed the translator.*
 
 ---
 
