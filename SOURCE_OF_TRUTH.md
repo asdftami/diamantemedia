@@ -7,7 +7,7 @@
 
 ## 1. Snapshot
 
-**Name:** Tami Trevino · **Based in:** Colorado (US) · **Work style:** Remote
+**Name:** Tami Trevino · **LinkedIn:** linkedin.com/in/tamitrevino · **Based in:** Colorado (US) · **Work style:** Remote
 **Languages:** English, Spanish (bilingual since childhood)
 
 **Headline (draft):** Product Designer · UX, Brand & Web · Designing beautiful, intuitive, accessible experiences in any industry
