@@ -138,7 +138,7 @@ The website uses **curated supplier photography**; social uses AI editorial imag
 
 ## 5. Keeping the store healthy
 
-Dropshipping hundreds of products from dozens of brands creates mess: duplicate brand names, duplicate categories, empty brand pages. I cleaned up the duplicates and set up an **automated weekly store check** that reports issues before customers ever see them.
+Hundreds of dropshipped products create mess: duplicate brands, duplicate categories, empty pages. I cleaned them up and set up an **automated weekly store check** that catches issues before customers do.
 
 ---
 
