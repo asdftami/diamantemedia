@@ -306,7 +306,7 @@
 <header class="top">
   <a class="brand" href="#start"><span class="brand-first">Tami</span><span class="brand-last"> Trevino</span> <span class="spark">✦</span></a>
   <nav class="actions" aria-label="Quick links">
-    <span class="spy" id="spy"><span class="ind" aria-hidden="true"></span><a href="#work" data-nav="work">Work</a><a class="hide-sm" href="#origin" data-nav="about">About</a><a class="hide-sm" href="#message" data-resume data-nav="resume">Resume</a></span>
+    <span class="spy" id="spy"><span class="ind" aria-hidden="true"></span><a href="#work" data-nav="work">Work</a><a class="hide-sm" href="about.html">About</a><a class="hide-sm" href="#message" data-resume data-nav="resume">Resume</a></span>
     <a class="cta" href="#contact" data-nav="contact">Contact <span class="arr" aria-hidden="true">↗</span></a>
     <button class="switch" id="motionToggle" aria-pressed="true" type="button"><span class="track" aria-hidden="true"><span class="knob"></span></span><span>Animation<span class="state-txt"> <span id="motionState">on</span></span></span></button>
   </nav>
@@ -622,7 +622,7 @@
       if (i !== current) { current = i; target = 1; boost(); }
       lcdYear.textContent = e.target.dataset.year; lcdName.textContent = e.target.dataset.name;
       document.getElementById('ship').classList.toggle('docked', i === 0);
-      setNav(i === 0 ? null : i <= 3 ? 'about' : i < stops.length - 1 ? 'work' : 'contact');
+      setNav(i <= 3 ? null : i < stops.length - 1 ? 'work' : 'contact');
     });
   }, { threshold: .55 });
   stops.forEach(s => io.observe(s));
@@ -706,5 +706,6 @@
   })();
 </script>
 <script src="assets/planets.js"></script>
+<script src="assets/cursor.js"></script>
 </body>
 </html>
