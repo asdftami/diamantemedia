@@ -25,7 +25,7 @@ hero_image: "assets/fridays-off/site/portfolio/f00-mockup-laptop-page.webp"
 <p>Co-founded and built a luxury lifestyle brand from zero: a <strong>460+ product</strong> store from <strong>~48 brands</strong>, designed to be <strong>fully keyboard- and screen-reader accessible</strong> with <strong>WCAG AAA</strong> color contrast, plus an <strong>AI content pipeline</strong> that keeps a two-person team publishing every week.</p>
 </div>
 
-![Fridays-Off on desktop: lifestyle-first homepage design](../../assets/fridays-off/site/portfolio/f00-mockup-laptop-page.webp)
+![Quiet luxury on screen: warm neutrals, editorial photography and generous whitespace.](../../assets/fridays-off/site/portfolio/f00-mockup-laptop-page.webp)
 
 
 | | |
@@ -73,9 +73,9 @@ For my co-founder and me, it's also personal: a business we're building on our o
 |---|---|---|---|
 | `#F5F3EF` | `#D8C3A5` | `#3B2A20` | `#1A1A1A` |
 
-![Brand guide](../../assets/fridays-off/01-brand-guide.png)
-![Logo lockups, light and dark](../../assets/fridays-off/03-logo-lockup-light-tagline.jpg)
-![Brand applied: van wrap concept](../../assets/fridays-off/02-van-mockup-ai.jpg)
+![One small system (four colors, two typefaces, one monogram) keeps every touchpoint consistent.](../../assets/fridays-off/01-brand-guide.png)
+![The "ff" mark and tagline work on light and dark, from the website to merch.](../../assets/fridays-off/03-logo-lockup-light-tagline.jpg)
+![The monogram doubles as a pattern, proving the brand scales beyond the screen.](../../assets/fridays-off/02-van-mockup-ai.jpg)
 
 ---
 
@@ -89,9 +89,9 @@ On top of those: **Shop by Brand**, **New Arrivals**, **Best Sellers**, **Travel
 
 **Product pages** have a large gallery, clear specs, Shop Pay installments, trust tiles, and accordions for details and shipping, so the page stays clean while every answer is one tap away.
 
-![Homepage hero: lifestyle photography sets the tone](../../assets/fridays-off/site/portfolio/f01-hero.png)
-![Mobile homepage](../../assets/fridays-off/site/portfolio/f03-mobile-hero.png)
-![Join the Friday List: email signup](../../assets/fridays-off/site/portfolio/f02-friday-list-signup.png)
+![The hero leads with lifestyle, not product, so the store feels like a home, not a warehouse.](../../assets/fridays-off/site/portfolio/f01-hero.png)
+![Designed mobile-first, where most shoppers browse.](../../assets/fridays-off/site/portfolio/f03-mobile-hero.png)
+![The Friday List turns first-time visitors into a community, with no spam, just good pieces.](../../assets/fridays-off/site/portfolio/f02-friday-list-signup.png)
 
 **Responsible by design.** An **age verification gate** greets every visitor, and the email signup repeats the age requirement.
 
