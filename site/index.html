@@ -288,7 +288,7 @@
     #start .planet-wrap{display:none}
     .planet-wrap{max-width:260px}
     .stop{padding-top:96px;padding-bottom:170px}
-    .ship{width:auto;left:12px;right:12px;bottom:12px}
+    .ship{display:none} /* phones use the bottom dock instead */
     .ship-body{display:flex;align-items:center;gap:10px;border-radius:30px;padding:8px 10px}
     .antenna,.deco,.eggmark,.lcd .icons{display:none}
     .bezel{flex:1;clip-path:none;padding:3px;border-radius:16px}
@@ -321,8 +321,8 @@
 <header class="top">
   <a class="brand" href="#start"><span class="brand-first">Tami</span><span class="brand-last"> Trevino</span> <span class="spark">✦</span></a>
   <nav class="actions" aria-label="Quick links">
-    <span class="spy" id="spy"><span class="ind" aria-hidden="true"></span><a href="#work" data-nav="work">Work</a><a class="hide-sm" href="about.html">About</a><a class="hide-sm" href="#message" data-resume data-nav="resume">Resume</a></span>
-    <a class="cta" href="#contact" data-nav="contact">Contact <span class="arr" aria-hidden="true">↗</span></a>
+    <span class="spy" id="spy"><span class="ind" aria-hidden="true"></span><a href="#work" data-nav="work" data-ico="work">Work</a><a href="about.html" data-ico="about">About</a></span>
+    <a class="cta" href="#contact" data-nav="contact" data-ico="contact">Contact</a>
     <button class="switch" id="motionToggle" aria-pressed="true" type="button"><span class="track" aria-hidden="true"><span class="knob"></span></span><span>Animation<span class="state-txt"> <span id="motionState">on</span></span></span></button>
   </nav>
 </header>
@@ -722,5 +722,6 @@
 </script>
 <script src="assets/planets.js"></script>
 <script src="assets/cursor.js"></script>
+<script src="assets/nav.js"></script>
 </body>
 </html>
