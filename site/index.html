@@ -173,61 +173,6 @@
   .ship:hover .ship-body,.ship:focus-within .ship-body{animation-play-state:paused} /* steady target for clicks */
   @keyframes bob{50%{transform:translateY(-6px)}}
 
-  /* Y2K: candybar phone contact card (dark rim, silver-lilac faceplate, T9 keypad) */
-  .phone{position:relative;width:min(236px,74%);margin:0 auto;padding:9px;border-radius:44px 44px 52px 52px / 40px 40px 60px 60px;background:linear-gradient(90deg,#14143a,#2a2b5e 18%,#1d1e48 82%,#121236);box-shadow:0 0 50px #c9b6ff40,inset 0 1px 0 #ffffff26}
-  .phone .face{border-radius:36px 36px 44px 44px / 32px 32px 52px 52px;padding:16px 14px 22px;background:linear-gradient(180deg,#e9e4ff,#cfc6ef 45%,#bdb3e3);box-shadow:inset 0 2px 0 #fff9,inset 0 -3px 6px #0002}
-  .phone .ear{width:40px;height:6px;margin:0 auto 10px;border-radius:6px;background:#3a3566;box-shadow:inset 0 2px 2px #0007}
-  .phone .bezel{border-radius:10px 10px 14px 14px;padding:8px 10px 10px;background:linear-gradient(180deg,#8f88b8,#7a73a6);box-shadow:inset 0 1px 0 #ffffff55}
-  .phone .mark{display:block;text-align:center;font-family:VT323,monospace;font-size:.9rem;letter-spacing:.3em;color:#f1edff;margin:-2px 0 6px}
-  .phone .screen{background:var(--lcd-bg);color:var(--lcd-ink);font-family:VT323,monospace;border-radius:4px;padding:6px 8px 5px;box-shadow:inset 0 0 0 2px #0003,inset 0 6px 10px #0002}
-  .phone .status{display:flex;justify-content:space-between;align-items:flex-end;font-size:.85rem;line-height:1}
-  .phone .bars{display:flex;gap:2px;align-items:flex-end}
-  .phone .bars i{display:block;width:3px;background:var(--lcd-ink)}
-  .phone .bars i:nth-child(1){height:4px}.phone .bars i:nth-child(2){height:7px}.phone .bars i:nth-child(3){height:10px}.phone .bars i:nth-child(4){height:13px}
-  .phone .batt{width:18px;height:9px;border:1.5px solid var(--lcd-ink);border-radius:2px;position:relative;padding:1px}
-  .phone .batt::before{content:"";display:block;height:100%;width:75%;background:var(--lcd-ink)}
-  .phone .batt::after{content:"";position:absolute;right:-4px;top:2px;width:2px;height:3px;background:var(--lcd-ink)}
-  .phone .sms{font-size:1.15rem;line-height:1.05;margin:7px 0 5px;height:86px;overflow:hidden;overflow-wrap:anywhere}
-  .phone .sms.live{display:flex;flex-direction:column}
-  .phone .sms .body{flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
-  .phone .sms .from{display:flex;justify-content:space-between;gap:6px;border-bottom:1px dashed #1b2a1255;margin-bottom:3px}
-  .phone .sms .tag{background:var(--lcd-ink);color:var(--lcd-bg);padding:0 3px}
-  .phone .caret{display:inline-block;width:.5em;height:.9em;background:var(--lcd-ink);vertical-align:-1px;animation:blink 1s steps(1) infinite}
-  @keyframes blink{50%{opacity:0}}
-  .no-motion .phone .caret{animation:none}
-  @media (prefers-reduced-motion: reduce){.phone .caret{animation:none}}
-  .phone .k.hit{background:linear-gradient(180deg,#fff1a6,#ffe07a)!important;transform:translateY(1px);box-shadow:inset 0 1px #0002,0 0 10px #fff1a6aa}
-  .phone .k{transition:background .15s,transform .1s}
-  .phone .soft{display:flex;justify-content:space-between;font-size:.9rem;border-top:1.5px solid #1b2a1240;padding-top:3px}
-  .phone .nav{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto;gap:6px 8px;align-items:center;margin:12px 2px 8px}
-  .phone .nk{height:22px;border-radius:6px;background:linear-gradient(180deg,#f7f4ff,#ddd6f5);box-shadow:inset 0 -2px #0002,0 1px 0 #0003;display:grid;place-items:center;font-size:.8rem;line-height:1}
-  .phone .nk.soft-l::before,.phone .nk.soft-r::before{content:"";width:16px;height:3px;border-radius:2px;background:#5aa8e6}
-  .phone .nk.call{color:#2e9e5b;font-weight:700}.phone .nk.end{color:#e0475b;font-weight:700}
-  .phone .dpad{grid-row:1 / span 2;grid-column:2;width:52px;height:50px;border-radius:12px;background:linear-gradient(180deg,#fff,#e6e0fa);box-shadow:inset 0 -3px #0002,0 0 0 3px #b3a9dd,0 2px 0 3px #0002;display:grid;place-items:center}
-  .phone .dpad::before{content:"";width:22px;height:20px;border-radius:6px;background:linear-gradient(180deg,#ffd0e6,var(--pink));box-shadow:inset 0 -2px #0002}
-  .phone .keys{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:5px;border-radius:8px 8px 18px 18px;background:#a79ed3}
-  .phone .k{display:flex;align-items:baseline;justify-content:center;gap:3px;height:24px;border-radius:4px;background:linear-gradient(180deg,#fbfaff,#e2dcf6);box-shadow:inset 0 -2px #0002;color:#1a1033;line-height:24px}
-  .phone .k:nth-last-child(-n+3){border-radius:4px 4px 12px 12px}
-  .phone .k:nth-child(3n+2){background:linear-gradient(180deg,#ffe3f0,#ffc4df)}
-  .phone .k b{font-size:.95rem;font-weight:700}
-  .phone .k small{font-size:.55rem;font-weight:600;opacity:.7}
-
-  /* contact form */
-  .msg{margin-top:26px;padding:20px;border-radius:var(--radius);background:#ffffff0d;border:1px solid #ffffff26;max-width:520px;display:grid;gap:12px}
-  .msg h3{margin:0;font-size:1.2rem}
-  .field{display:grid;gap:6px;border:0;padding:0;margin:0}
-  .field label,.field legend{font-weight:500;font-size:.95rem}
-  .field input,.field textarea{font:inherit;color:var(--ink);background:#0b0826;border:1.5px solid #ffffff40;border-radius:12px;padding:12px;min-height:44px}
-  .field input:focus,.field textarea:focus{border-color:var(--butter)}
-  .field [aria-invalid="true"]{border-color:var(--pink)}
-  .err{margin:0;color:var(--pink);font-size:.9rem;font-weight:500}
-  .err:empty{display:none}
-  .err::before{content:"⚠ "}
-  .opt{display:flex;gap:8px;align-items:center;font-weight:400;min-height:32px}
-  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-  .form-status{margin:0;color:var(--butter)}
-  .msg .land{justify-self:start;border:0;font:inherit;font-weight:700;cursor:pointer}
-  .msg fieldset.field{gap:2px}
 
   /* selected work: mini planets */
   .work-strip{max-width:1200px;margin:28px auto 0;width:100%;min-width:0}
@@ -322,7 +267,7 @@
   <a class="brand" href="#start"><span class="brand-first">Tami</span><span class="brand-last"> Trevino</span> <span class="spark">✦</span></a>
   <nav class="actions" aria-label="Quick links">
     <span class="spy" id="spy"><span class="ind" aria-hidden="true"></span><a href="#work" data-nav="work" data-ico="work">Work</a><a href="about.html" data-ico="about">About</a></span>
-    <a class="cta" href="#contact" data-nav="contact" data-ico="contact">Contact</a>
+    <a class="cta" href="about.html#contact" data-nav="contact" data-ico="contact">Contact</a>
     <button class="switch" id="motionToggle" aria-pressed="true" type="button"><span class="track" aria-hidden="true"><span class="knob"></span></span><span>Animation<span class="state-txt"> <span id="motionState">on</span></span></span></button>
   </nav>
 </header>
@@ -474,35 +419,13 @@
       <div>
         <p class="year">NEXT STOP · YOUR TEAM?</p>
         <h2 id="h-contact">Let's build the next world.</h2>
-        <p><strong>Hiring?</strong> Request my resume and tell me about the role. I'll send a version tailored to it.<br><strong>Need something built?</strong> Websites, branding, social content, UGC: tell me about it.</p>
+        <p><strong>Hiring?</strong> Request my resume and I'll tailor it to the role.<br><strong>Need something built?</strong> Websites, branding, social content, UGC.</p>
         <div class="cta-row">
-          <a class="land" href="#message" data-resume>Request my resume</a>
-          <button class="pill primary" id="copyEmail" type="button" data-u="tami.trevino" data-d="proton.me">Copy email ⧉</button>
-          <a class="pill" href="https://www.linkedin.com/in/tamitrevino" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in a new tab)</span></a>
-          <a class="pill" href="#message">Message me</a>
+          <a class="land" href="about.html#contact">Say hi →</a>
+          <a class="pill" href="about.html?resume=1#contact">Request my resume</a>
         </div>
-        <p class="form-status" id="copyStatus" role="status" aria-live="polite"></p>
-        <!-- Spam-protected contact form: no public email address.
-             TODO: set action to a form service (e.g. Formspree / Web3Forms) and add its human-verification widget
-             (e.g. Cloudflare Turnstile or hCaptcha site key). The honeypot field below silently catches bots. -->
-        <form class="msg" id="message" action="" method="POST" novalidate>
-          <h3>Send me a message</h3>
-          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name"><p class="err" id="e-name"></p></div>
-          <div class="field"><label for="f-email">Your email</label><input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email"><p class="err" id="e-email"></p></div>
-          <fieldset class="field"><legend>I'm reaching out about</legend>
-            <label class="opt"><input type="radio" name="topic" value="hiring" checked> A job opening</label>
-            <label class="opt"><input type="radio" name="topic" value="project"> A project (website, branding, social, UGC)</label>
-          </fieldset>
-          <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4" required aria-describedby="e-msg"></textarea><p class="err" id="e-msg"></p></div>
-          <div class="hp" aria-hidden="true"><label for="f-web">Leave this empty</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
-          <div class="captcha" id="captcha"><!-- human-verification widget renders here --></div>
-          <button class="land" type="submit">Send message</button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-        </form>
       </div>
-      <div aria-hidden="true">
-        <div class="phone"><span class="stk mail" style="left:-34%;top:6%" aria-hidden="true"><b>✉</b>You've got mail!</span><div class="face"><div class="ear"></div><div class="bezel"><span class="mark">✦ TT ✦</span><div class="screen"><div class="status"><span class="bars"><i></i><i></i><i></i><i></i></span><span>12:00</span><span class="batt"></span></div><div class="sms" id="phoneSms">✉ 1 NEW MESSAGE<br>Let's build the<br>next world :)</div><div class="soft"><span id="softL">Reply</span><span id="softR">Menu</span></div></div></div><div class="nav"><span class="nk soft-l"></span><span class="dpad"></span><span class="nk soft-r"></span><span class="nk call">✆</span><span class="nk end">✆</span></div><div class="keys"><span class="k" data-k="1"><b>1</b><small>oo</small></span><span class="k" data-k="2"><b>2</b><small>abc</small></span><span class="k" data-k="3"><small>def</small><b>3</b></span><span class="k" data-k="4"><b>4</b><small>ghi</small></span><span class="k" data-k="5"><b>5</b><small>jkl</small></span><span class="k" data-k="6"><small>mno</small><b>6</b></span><span class="k" data-k="7"><b>7</b><small>pqrs</small></span><span class="k" data-k="8"><b>8</b><small>tuv</small></span><span class="k" data-k="9"><small>wxyz</small><b>9</b></span><span class="k" data-k="*"><b>*</b><small>+</small></span><span class="k" data-k="0"><b>0</b><small>␣</small></span><span class="k" data-k="#"><small>⇧</small><b>#</b></span></div></div></div></div>
-      </div>
+      <div class="planet-wrap" aria-hidden="true"><span class="planet3" data-p="gold" style="--spin:60s"></span><span class="stk mail" style="left:0;top:8%"><b>✉</b>You've got mail!</span></div>
     </div>
   </section>
 </main>
@@ -654,71 +577,11 @@
     if (e.key === 'PageUp' || (e.key === 'ArrowUp' && e.altKey)) { e.preventDefault(); go(-1); }
   });
 
-  // ---- contact form: honeypot + basic validation (service + human check to be connected)
-  const form = document.getElementById('message'), status = document.getElementById('formStatus');
-  // per-field errors, announced through aria-describedby
-  const rules = [
-    [form.name, 'e-name', el => el.value.trim() ? '' : 'Please enter your name.'],
-    [form.email, 'e-email', el => !el.value.trim() ? 'Please enter your email.' : el.validity.valid ? '' : 'Please enter a valid email, like name@company.com.'],
-    [form.message, 'e-msg', el => el.value.trim() ? '' : 'Please write a short message.'],
-  ];
-  function check([el, id, rule]) { const m = rule(el); document.getElementById(id).textContent = m; m ? el.setAttribute('aria-invalid', 'true') : el.removeAttribute('aria-invalid'); return !m; }
-  function checkAll() { return rules.map(check).every(Boolean); }
-  rules.forEach(r => { r[0].addEventListener('input', () => { if (r[0].getAttribute('aria-invalid')) check(r); }); r[0].addEventListener('blur', () => { if (r[0].value) check(r); }); });
-  form.addEventListener('submit', e => {
-    if (form.website.value) { e.preventDefault(); return; }               // bot filled the honeypot
-    if (!checkAll()) { e.preventDefault(); const n = form.querySelectorAll('[aria-invalid="true"]').length; status.textContent = n === 1 ? 'One field needs a fix.' : n + ' fields need a fix.'; form.querySelector('[aria-invalid="true"]').focus(); return; }
-    if (!form.getAttribute('action')) { e.preventDefault(); status.textContent = 'Thanks! The form is being connected. Please check back soon.'; }
-  });
-
-  // ---- copy-email: address is assembled only on click, so scrapers never see it in the page
-  const ce = document.getElementById('copyEmail'), cs = document.getElementById('copyStatus');
-  ce.addEventListener('click', async () => {
-    const addr = ce.dataset.u + '@' + ce.dataset.d;
-    try { await navigator.clipboard.writeText(addr); cs.textContent = 'Copied ' + addr + ' to your clipboard.'; ce.textContent = 'Copied ✓'; }
-    catch (e) { cs.textContent = 'Email: ' + addr; }
-    setTimeout(() => { ce.textContent = 'Copy email ⧉'; }, 2500);
-  });
-
-  // ---- "Request my resume": open the form pre-filled for a resume request
-  document.querySelectorAll('[data-resume]').forEach(a => a.addEventListener('click', () => {
-    const f = document.getElementById('message');
-    f.querySelector('input[value="hiring"]').checked = true;
-    if (!f.message.value) f.message.value = "Hi Tami, I'd love a copy of your resume. The role: ";
-    setTimeout(() => f.querySelector('#f-name').focus({ preventScroll: true }), 400);
-  }));
-
   addEventListener('resize', resize);
   reduce.addEventListener?.('change', ev => { try { if (localStorage.getItem('tt-motion') !== null) return; } catch (e) {} motion = !ev.matches; applyMotion(); });
   resize(); applyMotion();
 })();
 
-  // ---- the phone mirrors the contact form as people type
-  (() => {
-    const form = document.getElementById('message');
-    const sms = document.getElementById('phoneSms'), sl = document.getElementById('softL'), sr = document.getElementById('softR');
-    if (!sms) return;
-    const original = sms.innerHTML;
-    const esc = t => t.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-    const t9 = {}; ['0 ','1','2abc','3def','4ghi','5jkl','6mno','7pqrs','8tuv','9wxyz'].forEach(g => [...g].forEach(ch => t9[ch] = g[0]));
-    const keyFor = ch => /[0-9a-z ]/.test(ch) ? t9[ch] : ch === '#' ? '#' : '*';
-    const flash = ch => { if (document.documentElement.classList.contains('no-motion')) return; const k = document.querySelector('.phone .k[data-k="' + keyFor(ch.toLowerCase()) + '"]'); if (!k) return; k.classList.add('hit'); setTimeout(() => k.classList.remove('hit'), 160); };
-    function render() {
-      const name = form.name.value.trim(), msg = form.message.value, topic = form.topic.value === 'project' ? 'PROJECT' : 'JOB';
-      if (!name && !msg.trim()) { sms.classList.remove('live'); sms.innerHTML = original; sl.textContent = 'Reply'; sr.textContent = 'Menu'; return; }
-      const body = msg.length > 80 ? '…' + msg.slice(-80) : msg;
-      sms.innerHTML = '<div class="from"><span>' + esc((name || 'NEW MSG').slice(0, 12).toUpperCase()) + '</span><span class="tag">' + topic + '</span></div><div class="body"><span>' + esc(body) + '<span class="caret"></span></span></div>'; sms.classList.add('live');
-      sl.textContent = 'Clear'; sr.textContent = 'Send';
-    }
-    form.addEventListener('input', e => { if (e.data) flash(e.data.slice(-1)); render(); });
-    form.addEventListener('change', render);
-    form.addEventListener('submit', () => {
-      if (!form.checkValidity() || form.website.value) return;
-      sms.classList.remove('live');
-      if (!form.getAttribute('action')) { sms.innerHTML = '✉ SAVED<br>Sending opens<br>soon. Thanks!'; sl.textContent = 'Back'; sr.textContent = 'OK'; return; }
-      sms.innerHTML = '✉ SENDING<span class="caret"></span>'; sl.textContent = ''; sr.textContent = '';
-    });
-  })();
 </script>
 <script src="assets/planets.js"></script>
 <script src="assets/cursor.js"></script>

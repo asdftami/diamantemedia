@@ -25,6 +25,8 @@
                 glow: '#c86bff99', halo: '#e0a6ff' },
     sand:     { c: ['#8a5a3c', '#d8b48a', '#f5e6cf', '#c49a6c', '#efd8b8', '#a9764f', '#fbf0de'], bands: 10, swirl: .4, style: 'bands', tilt: -20, size: 14,
                 rings: [{ c: '#3b2a20', a: -20, w: 5, o: .8 }, { c: '#d8c3a5', a: -20, w: 2, o: .9, inset: 9 }], glow: '#d8c3a566' },
+    gold:     { c: ['#a8732a', '#f5c15c', '#fff1a6', '#ffe08a', '#fff8dc', '#e3a440', '#ffd27a'], bands: 6, swirl: .7, style: 'marble', tilt: 10, size: 13,
+                rings: [{ c: '#ffffff', a: 16, w: 3, o: .7 }, { c: '#ffb3d9', a: 16, w: 2, o: .8, inset: 10 }], moons: [{ c: '#ffb3d9', s: 8, r: -6, d: 26, at: 300 }], glow: '#ffd27a77' },
     aqua:     { c: ['#0d2a6b', '#1f5fb8', '#38c6d9', '#a8f0ff', '#2a86d6', '#0f3f91', '#7fe3f0'], bands: 6, swirl: .9, style: 'ridge', tilt: 0, size: 12,
                 glow: '#5fd8ff77' },
   };

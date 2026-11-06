@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/planets.css">
+<link rel="stylesheet" href="assets/contact.css">
 <style>
   :root{
     --space-0:#07051a;--space-1:#120c35;
@@ -97,9 +98,10 @@
   .label{font-family:VT323,monospace;font-size:1.2rem;letter-spacing:.12em;color:var(--butter);margin:0 0 10px}
   .clients{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
   .clients li{font-size:.92rem;padding:6px 14px;border-radius:999px;background:#ffffff12;border:1px solid #ffffff26}
-  .cta{text-align:center;padding:30px 0 0}
-  .cta p{color:var(--ink-dim);margin:0 0 14px}
-  .cta .btns{justify-content:center}
+  .contact-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,5vw,56px);align-items:center}
+  .contact p{color:var(--ink-dim);max-width:60ch}
+  .contact h3{font-size:1.2rem}
+  @media (max-width:820px){.contact-grid{grid-template-columns:1fr}.contact-phone{order:-1}}
 
   @media (max-width:820px){
     .hero,.who{grid-template-columns:1fr}
@@ -117,7 +119,7 @@
   <a class="brand" href="index.html">Tami Trevino <span>✦</span></a>
   <nav class="actions" aria-label="Quick links">
     <span class="spy"><a href="index.html#work" data-ico="work">Work</a><a href="about.html" aria-current="page" data-ico="about">About</a></span>
-    <a class="navcta" href="index.html#contact" data-ico="contact">Contact</a>
+    <a class="navcta" href="#contact" data-ico="contact">Contact</a>
   </nav>
 </header>
 
@@ -133,7 +135,7 @@
     </ul>
     <div class="btns">
       <a class="land" href="index.html#work">See my work →</a>
-      <a class="pill" href="index.html#contact">Say hi</a>
+      <a class="pill" href="#contact">Say hi</a>
     </div>
   </div>
   <div class="stage">
@@ -165,11 +167,38 @@
     </ul>
   </section>
 
-  <section class="cta" aria-label="Get in touch">
-    <p>Want the full story? It's on the timeline.</p>
-    <div class="btns">
-      <a class="land" href="index.html#origin">Take the journey →</a>
-      <a class="pill" href="index.html#message">Request my resume</a>
+  <section class="contact" id="contact" aria-labelledby="h-contact">
+    <div class="contact-grid">
+      <div>
+        <h2 id="h-contact">Let's build the next world.</h2>
+        <p><strong>Hiring?</strong> Request my resume and tell me about the role. I'll send a version tailored to it.<br><strong>Need something built?</strong> Websites, branding, social content, UGC: tell me about it.</p>
+        <div class="cta-row">
+          <a class="land" href="#message" data-resume>Request my resume</a>
+          <button class="pill primary" id="copyEmail" type="button" data-u="tami.trevino" data-d="proton.me">Copy email ⧉</button>
+          <a class="pill" href="https://www.linkedin.com/in/tamitrevino" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in a new tab)</span></a>
+          
+        </div>
+        <p class="form-status" id="copyStatus" role="status" aria-live="polite"></p>
+        <!-- Spam-protected contact form: no public email address.
+             TODO: set action to a form service (e.g. Formspree / Web3Forms) and add its human-verification widget
+             (e.g. Cloudflare Turnstile or hCaptcha site key). The honeypot field below silently catches bots. -->
+        <form class="msg" id="message" action="" method="POST" novalidate>
+          <h3>Send me a message</h3>
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name"><p class="err" id="e-name"></p></div>
+          <div class="field"><label for="f-email">Your email</label><input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email"><p class="err" id="e-email"></p></div>
+          <fieldset class="field"><legend>I'm reaching out about</legend>
+            <label class="opt"><input type="radio" name="topic" value="hiring" checked> A job opening</label>
+            <label class="opt"><input type="radio" name="topic" value="project"> A project (website, branding, social, UGC)</label>
+          </fieldset>
+          <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4" required aria-describedby="e-msg"></textarea><p class="err" id="e-msg"></p></div>
+          <div class="hp" aria-hidden="true"><label for="f-web">Leave this empty</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
+          <div class="captcha" id="captcha"><!-- human-verification widget renders here --></div>
+          <button class="land" type="submit">Send message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="contact-phone" aria-hidden="true"><div class="phone"><span class="stk mail" style="left:-34%;top:6%" aria-hidden="true"><b>✉</b>You've got mail!</span><div class="pface"><div class="ear"></div><div class="bezel"><span class="mark">✦ TT ✦</span><div class="screen"><div class="status"><span class="bars"><i></i><i></i><i></i><i></i></span><span>12:00</span><span class="batt"></span></div><div class="sms" id="phoneSms">✉ 1 NEW MESSAGE<br>Let's build the<br>next world :)</div><div class="soft"><span id="softL">Reply</span><span id="softR">Menu</span></div></div></div><div class="nav"><span class="nk soft-l"></span><span class="dpad"></span><span class="nk soft-r"></span><span class="nk call">✆</span><span class="nk end">✆</span></div><div class="keys"><span class="k" data-k="1"><b>1</b><small>oo</small></span><span class="k" data-k="2"><b>2</b><small>abc</small></span><span class="k" data-k="3"><small>def</small><b>3</b></span><span class="k" data-k="4"><b>4</b><small>ghi</small></span><span class="k" data-k="5"><b>5</b><small>jkl</small></span><span class="k" data-k="6"><small>mno</small><b>6</b></span><span class="k" data-k="7"><b>7</b><small>pqrs</small></span><span class="k" data-k="8"><b>8</b><small>tuv</small></span><span class="k" data-k="9"><small>wxyz</small><b>9</b></span><span class="k" data-k="*"><b>*</b><small>+</small></span><span class="k" data-k="0"><b>0</b><small>␣</small></span><span class="k" data-k="#"><small>⇧</small><b>#</b></span></div></div></div></div>
+      </div>
     </div>
   </section>
 </main>
@@ -182,6 +211,7 @@
 </script>
 <script src="assets/planets.js"></script>
 <script src="assets/cursor.js"></script>
+<script src="assets/contact.js"></script>
 <script src="assets/nav.js"></script>
 </body>
 </html>
