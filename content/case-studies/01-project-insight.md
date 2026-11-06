@@ -35,11 +35,11 @@ hero_image: "assets/project-insight/10-hifi-main-dashboard.png"
 
 ## The problem
 
-Computershare services mortgage loans on behalf of investors. To know how their portfolio was doing, an investor had to **email a request** for each data point. A stakeholder would spend **3–5 days** building spreadsheets and PDFs, then send them over FTP. The files were often too big for email and hard to read.
+Computershare services mortgage loans for investors. To check on a portfolio, investors **emailed a request** for each data point. A stakeholder spent **3–5 days** building spreadsheets and PDFs, sent over FTP, which were long and hard to read.
 
 > Investors wanted answers. They got homework.
 
-**How might we give investors insight into their portfolios in the clearest, most effective way?**
+**How might we give investors clear insight into their portfolios?**
 
 ![Before designing anything, I mapped what we didn't know, so we tested the riskiest guesses first.](../../assets/project-insight/01-assumption-map-desirability.png)
 
