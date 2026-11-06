@@ -64,3 +64,48 @@
       sms.innerHTML = '✉ SENDING<span class="caret"></span>'; sl.textContent = ''; sr.textContent = '';
     });
   })();
+
+/* The phone keypad works like a classic T9 phone (multi-tap): tap 2 once for a, twice for b...
+   Letters go into the Message box. 0 = space, * = delete, # = ABC/abc, soft keys: Clear / Send.
+   Each press gives a short phone beep. It's a pointer bonus; keyboard users type in the Message box as usual. */
+(() => {
+  const phone = document.querySelector('.contact .phone, .phone'), form = document.getElementById('message');
+  if (!phone || !form) return;
+  const box = form.message;
+  const MAP = { '1': ".,?!'1", '2': 'abc2', '3': 'def3', '4': 'ghi4', '5': 'jkl5', '6': 'mno6', '7': 'pqrs7', '8': 'tuv8', '9': 'wxyz9', '0': ' 0' };
+  let last = null, idx = 0, timer = null, upper = false, ctx = null;
+
+  function beep(freq = 1180) {
+    try {
+      ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+      const o = ctx.createOscillator(), g = ctx.createGain(), t = ctx.currentTime;
+      o.type = 'square'; o.frequency.value = freq;
+      g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.05, t + 0.005); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.08);
+      o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + 0.09);
+    } catch (e) {}
+  }
+  const changed = () => box.dispatchEvent(new Event('input', { bubbles: true }));
+  const commit = () => { last = null; idx = 0; clearTimeout(timer); };
+  function press(k) {
+    if (MAP[k]) {
+      const chars = MAP[k];
+      if (k === last) { idx = (idx + 1) % chars.length; box.value = box.value.slice(0, -1); }
+      else { commit(); last = k; idx = 0; }
+      let ch = chars[idx]; if (upper) ch = ch.toUpperCase();
+      box.value += ch; changed();
+      clearTimeout(timer); timer = setTimeout(commit, 900);
+      beep(1100 + (+k) * 30);
+    } else if (k === '*') { commit(); box.value = box.value.slice(0, -1); changed(); beep(900); }
+    else if (k === '#') { commit(); upper = !upper; phone.classList.toggle('caps', upper); beep(1500); }
+  }
+  phone.querySelectorAll('.k').forEach(el => {
+    el.style.cursor = 'pointer';
+    el.addEventListener('pointerdown', e => { e.preventDefault(); el.classList.add('hit'); setTimeout(() => el.classList.remove('hit'), 180); press(el.dataset.k); });
+    ['pointerup', 'pointerleave'].forEach(t => el.addEventListener(t, () => el.classList.remove('hit')));
+  });
+  const soft = (sel, fn) => { const el = phone.querySelector(sel); if (el) { el.style.cursor = 'pointer'; el.addEventListener('pointerdown', e => { e.preventDefault(); beep(1300); fn(); }); } };
+  soft('.nk.soft-l', () => { commit(); box.value = ''; changed(); });                 // Clear
+  soft('.nk.end', () => { commit(); box.value = ''; changed(); });
+  soft('.nk.soft-r', () => form.requestSubmit ? form.requestSubmit() : form.submit()); // Send
+  soft('.nk.call', () => form.requestSubmit ? form.requestSubmit() : form.submit());
+})();
