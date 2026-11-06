@@ -80,6 +80,6 @@ The goal: a site she could run without me.
 
 ## What I learned
 
-- **Professionalism keeps the work strong.** Every client relationship is different. I learned to keep feedback objective and decisions focused on the business goals, so the work stayed polished no matter the dynamic.
-- **Empower the client, then let go.** With a little guidance, a founder can confidently run her own site. I learned to hand off fully and let her make it her own once my part was done.
-- **A logo is only as strong as the system behind it.** I turned one mark into a complete visual identity, with fonts, colors, icons and branded buttons, so every page felt unmistakably like Parkfield.
+- **Professionalism keeps the work strong.** I keep feedback objective and decisions tied to business goals, whatever the dynamic.
+- **Empower the client, then let go.** With a little guidance, a founder can run her own site.
+- **A logo is only as strong as the system behind it.** Fonts, colors, icons and buttons made every page unmistakably Parkfield.
