@@ -38,7 +38,6 @@
     .dock .ico{width:22px;height:22px;margin:0}
     .dock a:active,.dock button:active{transform:scale(.94)}
     .dock a[aria-current]{background:#3a2a6e;color:#fff}
-    .dock a[aria-current]::after{content:"";position:absolute;bottom:4px;left:50%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#ffb3d9;box-shadow:0 0 8px #ffb3d9}
     .dock .sep{flex:0 0 1px;align-self:stretch;margin:8px 2px;background:#3a2a6e33}
     body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
   }`;
