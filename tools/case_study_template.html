@@ -115,10 +115,18 @@
   figure:hover img{transform:scale(1.02)}
   figure:hover .zoom-hint{color:var(--butter)}
   .zoom-hint{display:inline-block;margin:8px 6px 0;font-size:.8rem;font-weight:700;color:var(--tiffany);cursor:zoom-in}
-  dialog.zoom{max-width:96vw;max-height:94vh;padding:0;border:0;border-radius:16px;background:#0d0a26}
-  dialog.zoom::backdrop{background:#04031099}
-  dialog.zoom img{display:block;max-width:96vw;max-height:88vh;background:#fff}
-  dialog.zoom button{position:absolute;top:10px;right:10px;min-height:44px;padding:0 16px;border-radius:999px;border:0;background:var(--butter);color:#1a1033;font:inherit;font-weight:700;cursor:pointer}
+  dialog.zoom{max-width:min(96vw,1400px);max-height:96vh;padding:12px;border:1px solid #ffffff30;border-radius:18px;background:#0d0a26;color:var(--ink)}
+  dialog.zoom::backdrop{background:#040310d9}
+  .zoom-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+  .zoom-count{font-family:VT323,monospace;font-size:1.3rem;color:var(--butter);letter-spacing:.08em}
+  .zoom-stage{display:flex;align-items:center;gap:10px}
+  dialog.zoom img{display:block;min-width:0;max-width:calc(96vw - 140px);max-height:76vh;margin:0 auto;border-radius:10px;background:#fff}
+  dialog.zoom button{min-height:44px;padding:0 16px;border-radius:999px;border:0;background:var(--butter);color:#1a1033;font:inherit;font-weight:700;cursor:pointer;transition:background .2s,transform .2s}
+  dialog.zoom button:hover{background:var(--pink);transform:translateY(-2px)}
+  .zoom-nav{flex:0 0 44px;width:44px;padding:0!important;font-size:1.3rem!important}
+  .zoom-cap{margin:10px 4px 0;color:var(--ink-dim);text-align:center}
+  .zoom-keys{margin:4px 0 0;font-family:VT323,monospace;font-size:1.05rem;color:#b8afd8;text-align:center;letter-spacing:.06em}
+  @media (max-width:640px){dialog.zoom img{max-width:calc(96vw - 40px)}.zoom-stage{flex-wrap:wrap;justify-content:center}.zoom-stage img{order:-1;flex-basis:100%}.zoom-keys{display:none}}
   @media (max-width:420px){.pair .gallery{grid-template-columns:1fr}}
   .proto{display:grid;gap:12px;justify-items:start;margin:22px 0;width:min(1160px,calc(100vw - 32px));position:relative;left:50%;transform:translateX(-50%)}
   .proto iframe{width:100%;height:min(720px,80vh);border:1px solid var(--line);border-radius:var(--radius);background:#f4f4f4;box-shadow:0 18px 50px #0007}
@@ -192,19 +200,38 @@
   {{PREV}}
   {{NEXT}}
 </nav>
-<dialog class="zoom" aria-label="Enlarged image"><button type="button">Close ✕</button><img alt=""></dialog>
+<dialog class="zoom" aria-labelledby="zoomCap">
+  <div class="zoom-top"><span class="zoom-count" id="zoomCount" aria-live="polite"></span><button type="button" class="zoom-close">Close ✕</button></div>
+  <div class="zoom-stage">
+    <button type="button" class="zoom-nav prev" aria-label="Previous image">←</button>
+    <img alt="">
+    <button type="button" class="zoom-nav next" aria-label="Next image">→</button>
+  </div>
+  <p class="zoom-cap" id="zoomCap"></p>
+  <p class="zoom-keys" aria-hidden="true">← → to browse · Esc to close</p>
+</dialog>
 <script>
-(()=>{const d=document.querySelector('dialog.zoom'),big=d.querySelector('img');
-document.querySelectorAll('main.cs figure img').forEach(img=>{
-  img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label','Enlarge image: '+img.alt);
-  const open=()=>{big.src=img.src;big.alt=img.alt;d.showModal()};
-  img.addEventListener('click',open);
-  const h=document.createElement('span');h.className='zoom-hint';h.setAttribute('aria-hidden','true');h.textContent='⤢ Click to enlarge';h.addEventListener('click',open);
-  img.closest('figure').appendChild(h);
-  img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
-});
-d.querySelector('button').addEventListener('click',()=>d.close());
-d.addEventListener('click',e=>{if(e.target===d)d.close()});})();
+(()=>{
+  const d=document.querySelector('dialog.zoom'),big=d.querySelector('img'),cap=d.querySelector('#zoomCap'),count=d.querySelector('#zoomCount');
+  const imgs=[...document.querySelectorAll('main.cs figure img')];
+  let cur=0;
+  const show=i=>{cur=(i+imgs.length)%imgs.length;const im=imgs[cur];big.src=im.src;big.alt=im.alt;cap.textContent=im.alt;count.textContent=(cur+1)+' / '+imgs.length;};
+  const open=i=>{show(i);if(!d.open)d.showModal();d.querySelector(imgs.length>1?'.zoom-nav.next':'.zoom-close').focus();};
+  imgs.forEach((img,i)=>{
+    img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label','Enlarge image: '+img.alt);
+    img.addEventListener('click',()=>open(i));
+    img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i)}});
+    const h=document.createElement('span');h.className='zoom-hint';h.setAttribute('aria-hidden','true');h.textContent='⤢ Click to enlarge';h.addEventListener('click',()=>open(i));
+    img.closest('figure').appendChild(h);
+  });
+  if(imgs.length<2)d.querySelectorAll('.zoom-nav,.zoom-keys').forEach(b=>b.hidden=true);
+  d.querySelector('.prev').addEventListener('click',()=>show(cur-1));
+  d.querySelector('.next').addEventListener('click',()=>show(cur+1));
+  d.querySelector('.zoom-close').addEventListener('click',()=>d.close());
+  d.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();show(cur+1)}if(e.key==='ArrowLeft'){e.preventDefault();show(cur-1)}});
+  d.addEventListener('click',e=>{if(e.target===d)d.close()});
+  d.addEventListener('close',()=>{const im=imgs[cur];im.scrollIntoView({block:'center'});im.focus({preventScroll:true});});
+})();
 </script>
 <script src="../assets/planets.js"></script>
 <script src="../assets/cursor.js"></script>
