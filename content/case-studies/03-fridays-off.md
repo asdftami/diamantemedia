@@ -132,6 +132,13 @@ Every prompt is anchored to our style guide and a Notion library of real referen
 
 The website uses **curated supplier photography**; social uses AI editorial imagery, in one visual language.
 
+<div class="pair portrait" markdown="1">
+![Supplier photo: clean, but flat.](../../assets/fridays-off/renders/r01-match-holder-supplier.webp)
+![AI render: the same product, styled in our world.](../../assets/fridays-off/renders/r02-match-holder-render.webp)
+![Supplier photo.](../../assets/fridays-off/renders/r03-cups-supplier.webp)
+![AI render: warm light and a soft palette that match the brand.](../../assets/fridays-off/renders/r04-cups-render.webp)
+</div>
+
 <!-- Add: 6–9 tile Instagram grid screenshot once posted -->
 
 ---
