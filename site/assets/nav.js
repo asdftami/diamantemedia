@@ -32,6 +32,7 @@
   footer.site{position:relative;z-index:5;display:grid;justify-items:center;gap:14px;margin-top:40px;padding:34px max(16px,env(safe-area-inset-left,0px)) 30px;border-top:1px solid #ffffff1f;background:linear-gradient(180deg,transparent,#07051acc 40%);color:#d6cef0;text-align:center;font-family:"Space Grotesk",system-ui,sans-serif}
   footer.site .sig{margin:0;font-weight:700;color:#f7f3ff}footer.site .sig span{color:#ffb3d9}
   footer.site ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+  @media (max-width:560px){footer.site ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:min(340px,100%)}footer.site a{width:100%;justify-content:center}}
   footer.site a{position:relative;display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 16px;border-radius:999px;border:1.5px solid #ffffff33;background:#ffffff0d;color:#f7f3ff;text-decoration:none;font-weight:500;transition:transform .2s,border-color .2s,background .2s}
   footer.site a .ico{margin:0;width:18px;height:18px}
   footer.site a:hover{border-color:#ffb3d9;background:#ffb3d91f;transform:translateY(-2px)}
@@ -60,9 +61,9 @@
 
   const SOCIAL = [
     ['LinkedIn', 'https://www.linkedin.com/in/tamitrevino/', '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.2 1.5-2.2 2.9V21H9z"/></svg>'],
+    ['YouTube', 'https://www.youtube.com/@tamimakesstuff', '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-3.8 31 31 0 0 0-.4-3.8zM10 15.1V8.9l5.2 3.1z"/></svg>'],
     ['Instagram', 'https://www.instagram.com/TAMIMAKESSTUFF', '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg>'],
     ['TikTok', 'https://www.tiktok.com/@asdftami', '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.5 3c.4 2.2 1.8 3.6 4 3.9v3.2a7.4 7.4 0 0 1-4-1.3v6.4A6.2 6.2 0 1 1 10.3 9v3.3a3 3 0 1 0 3 3V3z"/></svg>'],
-    ['YouTube', 'https://www.youtube.com/@tamimakesstuff', '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-3.8 31 31 0 0 0-.4-3.8zM10 15.1V8.9l5.2 3.1z"/></svg>'],
   ];
   function footer() {
     if (document.querySelector('footer.site')) return;
