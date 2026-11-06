@@ -78,12 +78,6 @@ The goal: a site she could run without me.
 
 ---
 
-## Results
-
-- **Repeat trust:** two executives from the same company each came back to hire me for their next venture.
-- **Parkfield** got a brand and website that matched the modern, family-centered practice it was becoming, and served its Spanish-speaking patients at launch.
-- **Evolve** launched with a brand-compliant site its founder could manage on her own.
-
 ## What I learned
 
 - **Professionalism keeps the work strong.** Every client relationship is different. I learned to keep feedback objective and decisions focused on the business goals, so the work stayed polished no matter the dynamic.
