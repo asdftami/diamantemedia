@@ -153,4 +153,5 @@ A company-wide layoff shortly after launch meant I couldn't collect usage data.
 
 - **Research turns unknowns into solutions.** Proven patterns led me to the accordions and wizards that solved the clutter.
 - **Component libraries raise the bar.** Figma libraries got me to a polished, consistent look fast.
+- **Familiar patterns win.** Both A/B tests went to the layout people already know from everyday apps and email.
 - **Next time: a real handoff.** Specs, states and interaction notes, so developers don't have to guess.
