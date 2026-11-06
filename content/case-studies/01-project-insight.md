@@ -152,6 +152,7 @@ The designs were validated, and the data team was preparing the backend, when **
 
 ---
 
+<!-- HIDDEN until polished (Tami, Nov 6, 2026). Remove these comment markers to show it again.
 ## Revisited: Project Insight, reimagined with AI
 
 The dashboard never launched, and I knew it could be better. After leaving Computershare, while working at Jars, I rebuilt it on my own with AI to keep my UX muscles sharp and push the design further. Try it below: switch tabs, filters and views.
@@ -162,5 +163,7 @@ The dashboard never launched, and I knew it could be better. After leaving Compu
 </div>
 
 ---
+
+-->
 
 *Data shown is representative; client information has been anonymized to protect confidentiality.*

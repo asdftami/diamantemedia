@@ -184,5 +184,5 @@ Austin, TX · Worked through COVID while starting her Master's
 - LinkedIn PDF → compare against this file
 - About planet (from Tami's earlier Tami Makes Stuff about page)
 - Bond Centre "before" mockups (representative sample data)
-- Fridays-Off: add 3 AI renders to the content-engine section
+- Project Insight AI dashboard (rebuilt independently while at Jars): built and embedded at the end of the case study but **hidden** until polished; file in `site/prototypes/project-insight-dashboard.html`
 - Connect contact form; activate tamitrevino.com and host the site
