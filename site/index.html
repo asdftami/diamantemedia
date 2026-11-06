@@ -68,6 +68,7 @@
   .pass:hover,.pass:focus-visible{transform:translateY(-3px) rotate(-1.5deg);box-shadow:0 0 0 2px var(--pink),0 12px 32px #ffb3d955}
   .pass:hover .stub,.pass:focus-visible .stub{background:var(--pink)}
   .pass:hover .dest i,.pass:focus-visible .dest i{transform:translateX(6px)}
+  a.inline{color:var(--sky);text-decoration-thickness:1.5px;text-underline-offset:3px;transition:color .2s}a.inline:hover{color:var(--pink)}
   .readtime{font-size:.9rem;color:var(--ink-dim);white-space:nowrap}
   .pill[aria-pressed="false"] .dot{background:#888}
   .switch{position:relative;display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 4px;border:0;background:none;color:var(--ink-dim);font:inherit;font-size:.92rem;font-weight:500;cursor:pointer;white-space:nowrap;transition:color .2s}
@@ -366,8 +367,9 @@
       <div>
         <p class="year">2024 · THE MAKERS LAB</p>
         <h2 id="h-maker">Hands-on, too</h2>
-        <p>I host resin workshops for up to 15 people and share DIY builds on my YouTube channel, <em>Tami Makes Stuff</em>. Making by hand keeps my digital work grounded in real people.</p>
+        <p>I host resin workshops for up to 15 people and share DIY builds on my YouTube channel, <a class="inline" href="https://www.youtube.com/@tamimakesstuff" target="_blank" rel="noopener"><em>Tami Makes Stuff</em><span class="sr-only"> (opens in a new tab)</span></a>. Making by hand keeps my digital work grounded in real people.</p>
         <ul class="tags"><li>Workshops</li><li>Content Creation</li><li>Video</li></ul>
+        <div class="go-row"><a class="pass" href="https://www.youtube.com/@tamimakesstuff" target="_blank" rel="noopener"><span class="stub" aria-hidden="true">WATCH<b>▶</b></span><span class="dest">Tami Makes Stuff on YouTube <i aria-hidden="true">↗</i></span><span class="sr-only"> (opens in a new tab)</span></a></div>
       </div>
       <div class="planet-wrap" aria-hidden="true"><span class="planet3" data-p="opal" style="--spin:75s"></span><span class="stk spark" style="right:8%;top:6%;animation-delay:-2s">✦</span><span class="stk heart" style="left:4%;top:14%;font-size:1.8rem;animation-delay:-3s">♥</span></div>
     </div>
