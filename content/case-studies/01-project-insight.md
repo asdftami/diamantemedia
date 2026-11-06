@@ -143,11 +143,10 @@ The designs were validated, and the data team was preparing the backend, when **
 
 ---
 
-## What I'd do differently today
+## What I learned
 
-- **Start with a design system:** tokens, reusable components, and documented patterns, so the hand-off is dev-ready from day one. Nobody had taught me documentation then; I've since learned it.
-- **Document every decision as I go**, not after.
-- **Use AI to move faster.** I took this to high fidelity before AI design tools existed. Today I'd use AI to speed up synthesis, variations and prototyping, and spend that saved time with users.
+- **Start with a design system.** Tokens, reusable components and documented decisions make the handoff dev-ready from day one.
+- **Use AI to move faster.** I reached high fidelity before AI design tools existed. Today I'd use AI for synthesis, variations and prototyping, and spend the saved time with users.
 
 ---
 
