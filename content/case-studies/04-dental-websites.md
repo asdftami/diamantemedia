@@ -37,7 +37,7 @@ I worked my way from front desk to office manager at an Austin dental group and 
 ## Parkfield Dental: a modern brand for an established practice
 
 ### The problem
-My former VP of Operations bought an Austin dental practice that already had loyal patients, but its **branding and marketing felt dated**. He wanted the practice to look and feel like the modern, caring office it was becoming, without losing the families who already trusted it.
+The VP of Operations bought an established practice with loyal patients but **dated branding**. He wanted it to feel modern and caring without losing the families who already trusted it.
 
 ### What I designed
 **A new logo and visual identity, built from zero (Illustrator).** A geometric, single-line **tooth mark** paired with a clean, all-caps wordmark: precise like dentistry, open and friendly like family care.
