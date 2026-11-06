@@ -61,32 +61,36 @@ This was my first role in finance, so I learned mortgage servicing from scratch:
 
 **4. Making the user real.** I started with a **proto-persona**, *Corey Watts*, a 56-year-old banker built from our assumption map. After the interviews, I built a research-based persona, *Eduardo Reyes*, a head of asset management, and mapped his journey.
 
+<div class="pair wide" markdown="1">
 ![Proto-persona: Corey emailed for every data point, searched the old Investor Web, then decoded long spreadsheets into his own dashboards.](../../assets/project-insight/19-persona-corey-watts.png)
 ![Eduardo's journey showed where investors got stuck: loss-mitigation data was buried and hard to find.](../../assets/project-insight/22-journey-map-eduardo-reyes.png)
+</div>
 
 **5. Telling the story.** Two storyboards showed the experience we were building toward.
 
+<div class="pair wide" markdown="1">
 ![Panels 1–4: a new loan is added, and the investor logs in to see its impact.](../../assets/project-insight/20-storyboard-awareness-of-need.png)
 ![Panels 5–8: clear insight leads to more loans. That's the business case.](../../assets/project-insight/21-storyboard-data-driven-decisions.png)
+</div>
 
 ---
 
 ## Co-designing the dashboard
 
-I ran **in-person dashboarding sessions** with the stakeholder, the BSA and the project managers. We sketched on whiteboards what investors needed **at a glance** and what belonged one click deeper: delinquency, cashflow, escrow, entries and exits, and disasters.
+I ran **in-person whiteboard sessions** with the stakeholder, BSA and project managers. We sketched what investors needed **at a glance** and what belonged one click deeper: delinquency, cashflow, escrow, entries and exits, and disasters.
 
-One sticky note from those sessions changed the product:
+One sticky note changed the product:
 
 > *"Has my portfolio been impacted by natural disasters?"*
 
 <div class="pair" markdown="1">
-![This whiteboard sketch from our workshop became the main dashboard layout.](../../assets/project-insight/27-whiteboard-now-dashboard.jpg)
-![This sticky note from an investor question became the FEMA disaster map.](../../assets/project-insight/05-workshop-sticky-natural-disasters.jpg)
+![Our whiteboard sketch became the main dashboard.](../../assets/project-insight/27-whiteboard-now-dashboard.jpg)
+![This investor question became the FEMA disaster map.](../../assets/project-insight/05-workshop-sticky-natural-disasters.jpg)
 </div>
 
-I then mapped the full structure: every tab, every chart, and every drill-down.
+Then I mapped every tab, chart and drill-down.
 
-![The full map: 8 focused dashboards, each with its own drill-downs, organized so investors never hunt for data.](../../assets/project-insight/09-dashboard-flow-full-ia.png)
+![8 focused dashboards with drill-downs, so investors never hunt for data.](../../assets/project-insight/09-dashboard-flow-full-ia.png)
 
 ---
 

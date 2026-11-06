@@ -78,9 +78,18 @@
   .impact .impact-label{font-family:VT323,monospace;font-size:1.3rem;letter-spacing:.12em;text-transform:uppercase;color:var(--butter);margin:0 0 6px}
   .impact p{margin:0;font-size:clamp(1.12rem,1.8vw,1.3rem)!important;line-height:1.55;color:var(--ink)!important}
   main.cs .impact strong{color:var(--butter)}
-  .pair .gallery{grid-template-columns:1fr 1fr;max-width:620px;margin-left:auto;margin-right:auto}
-  .pair figure img{max-height:340px}
-  @media (max-width:560px){.pair .gallery{grid-template-columns:1fr}}
+  .pair .gallery{grid-template-columns:1fr 1fr;max-width:520px;margin-left:auto;margin-right:auto;gap:14px}
+  .pair figure img{max-height:220px}
+  .pair figcaption{font-size:.85rem}
+  .pair.wide .gallery{max-width:none}
+  .pair.wide figure img{max-height:300px}
+  figure img{cursor:zoom-in}
+  .zoom-hint{display:inline-block;margin:8px 6px 0;font-size:.8rem;font-weight:700;color:var(--tiffany);cursor:zoom-in}
+  dialog.zoom{max-width:96vw;max-height:94vh;padding:0;border:0;border-radius:16px;background:#0d0a26}
+  dialog.zoom::backdrop{background:#04031099}
+  dialog.zoom img{display:block;max-width:96vw;max-height:88vh;background:#fff}
+  dialog.zoom button{position:absolute;top:10px;right:10px;min-height:44px;padding:0 16px;border-radius:999px;border:0;background:var(--butter);color:#1a1033;font:inherit;font-weight:700;cursor:pointer}
+  @media (max-width:420px){.pair .gallery{grid-template-columns:1fr}}
   ol.learnings{list-style:none;counter-reset:l;padding:0;margin:20px 0 10px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
   ol.learnings li{counter-increment:l;position:relative;padding:18px 18px 18px 58px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);margin:0;line-height:1.55}
   ol.learnings li::before{content:counter(l);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;border:2px solid var(--pink);color:var(--pink);font-weight:700;font-size:.9rem;display:grid;place-items:center}
@@ -142,11 +151,11 @@
 <tbody>
 <tr>
 <td><strong>My role</strong></td>
-<td>Sole UX designer, from research through high-fidelity prototypes</td>
+<td>Sole UX designer, research → high-fidelity prototypes</td>
 </tr>
 <tr>
 <td><strong>Team</strong></td>
-<td>Project manager, business systems analyst (BSA), business stakeholder, 12–15 engineers</td>
+<td>Project manager, business systems analyst, stakeholder, 12–15 engineers</td>
 </tr>
 <tr>
 <td><strong>Timeline</strong></td>
@@ -154,7 +163,7 @@
 </tr>
 <tr>
 <td><strong>Tools</strong></td>
-<td>Figma (wireframes → hi-fi prototypes) · FigJam (assumption maps, flowcharts) · Airtable (interview + usability-test research repository) · Azure DevOps (backlog prioritization with the team)</td>
+<td>Figma · FigJam · Airtable · Azure DevOps</td>
 </tr>
 <tr>
 <td><strong>Users</strong></td>
@@ -164,46 +173,43 @@
 </table></div>
 <hr />
 <h2>The problem</h2>
-<p>Computershare services mortgage loans on behalf of investors. To know how their portfolio was doing, an investor had to <strong>email a request</strong> for each data point. A stakeholder would spend <strong>3–5 days</strong> building spreadsheets and PDFs, then send them over FTP. The files were often too big for email and hard to read.</p>
+<p>Computershare services mortgage loans for investors. To check on a portfolio, investors <strong>emailed a request</strong> for each data point. A stakeholder spent <strong>3–5 days</strong> building spreadsheets and PDFs, sent over FTP, which were long and hard to read.</p>
 <blockquote>
 <p>Investors wanted answers. They got homework.</p>
 </blockquote>
-<p><strong>How might we give investors insight into their portfolios in the clearest, most effective way?</strong></p>
-<div class="gallery"><figure><img src="../assets/project-insight/01-assumption-map-desirability.webp" alt="Before designing anything, I mapped what we didn't know, so we tested the riskiest guesses first." loading="lazy" decoding="async"><figcaption>Before designing anything, I mapped what we didn't know, so we tested the riskiest guesses first.</figcaption></figure></div>
+<p><strong>How might we give investors clear insight into their portfolios?</strong></p>
+<div class="gallery"><figure><img src="../assets/project-insight/01-assumption-map-desirability.webp" alt="I mapped our assumptions first, so we tested the riskiest guesses early." loading="lazy" decoding="async"><figcaption>I mapped our assumptions first, so we tested the riskiest guesses early.</figcaption></figure></div>
 <hr />
 <h2>My role</h2>
-<p>This was my first role in finance. I came from retail, service and healthcare operations, so I learned mortgage servicing from scratch: UPB, delinquency buckets, loss mitigation, escrow, HELOCs. I was the <strong>only designer</strong> on a 12–15 person team. I worked closely with:</p>
-<ul>
-<li><strong>The project manager</strong>, who ran the schedule and kept us moving</li>
-<li><strong>The business stakeholder</strong> who fielded investor requests</li>
-<li><strong>A business systems analyst</strong> who wrote SQL queries to pull the real data points into tables I could design from</li>
-<li><strong>The lead developer and engineering team</strong></li>
-</ul>
+<p>This was my first role in finance, so I learned mortgage servicing from scratch: UPB, delinquency buckets, loss mitigation, escrow and HELOCs. Our business systems analyst wrote SQL queries to pull the real data I designed from.</p>
 <hr />
 <h2>Discovery</h2>
-<p><strong>1. Mapping what we didn't know.</strong> I started with an assumption map: who the customers are, what problem they want solved, how they solve it today, and what could make this fail. Then I worked through the answers with my PM.</p>
-<p>I kept every interview note and usability-test finding in <strong>Airtable</strong>, so feedback could be tagged, compared across sessions and traced back to design decisions. Prioritized work went into the team's <strong>Azure DevOps</strong> backlog.</p>
-<p><strong>2. Talking to the people closest to the pain.</strong> I interviewed the stakeholder who received investor requests, then wrote interview questions that were passed to investors directly.</p>
-<p><strong>3. Reading the artifacts.</strong> I studied the spreadsheets and PDFs investors were receiving to learn what they actually asked for.</p>
-<p><strong>4. Making the user real.</strong> I built a persona, <em>Corey Watts</em>, a 56-year-old banker with a loan portfolio. His pain points: he had to email for every data point, he navigated all over the old Investor Web to find things, and the long spreadsheets he received had to be decoded and rebuilt into his own dashboards. I mapped a second user's journey: a head of asset management trying to isolate the loans in loss mitigation.</p>
-<div class="gallery"><figure><img src="../assets/project-insight/19-persona-corey-watts.webp" alt="Corey had to email for every data point, wait 3–5 days, then decode long spreadsheets and build his own dashboards to make sense of it." loading="lazy" decoding="async"><figcaption>Corey had to email for every data point, wait 3–5 days, then decode long spreadsheets and build his own dashboards to make sense of it.</figcaption></figure>
-<figure><img src="../assets/project-insight/22-journey-map-eduardo-reyes.webp" alt="Mapping a head of asset management's journey showed where investors got stuck: loss-mitigation data was buried and hard to find." loading="lazy" decoding="async"><figcaption>Mapping a head of asset management's journey showed where investors got stuck: loss-mitigation data was buried and hard to find.</figcaption></figure></div>
-<p><strong>5. Telling the story.</strong> Two storyboards showed the experience we were building toward. A new loan is onboarded, the investor checks how it affects their portfolio, and the insight leads them to onboard more loans.</p>
+<p><strong>1. Mapping what we didn't know.</strong> With my PM, I mapped our assumptions: who the customers are, what they need, how they cope today and what could make this fail. I logged every interview and test finding in <strong>Airtable</strong>, so feedback could be compared and traced to design decisions.</p>
+<p><strong>2. Talking to the people closest to the pain.</strong> I interviewed the stakeholder who handled investor requests and wrote questions for investors.</p>
+<p><strong>3. Reading the artifacts.</strong> I studied the spreadsheets and PDFs investors received to learn what they actually asked for.</p>
+<p><strong>4. Making the user real.</strong> I started with a <strong>proto-persona</strong>, <em>Corey Watts</em>, a 56-year-old banker built from our assumption map. After the interviews, I built a research-based persona, <em>Eduardo Reyes</em>, a head of asset management, and mapped his journey.</p>
+<div class="pair wide">
+<div class="gallery"><figure><img src="../assets/project-insight/19-persona-corey-watts.webp" alt="Proto-persona: Corey emailed for every data point, searched the old Investor Web, then decoded long spreadsheets into his own dashboards." loading="lazy" decoding="async"><figcaption>Proto-persona: Corey emailed for every data point, searched the old Investor Web, then decoded long spreadsheets into his own dashboards.</figcaption></figure>
+<figure><img src="../assets/project-insight/22-journey-map-eduardo-reyes.webp" alt="Eduardo's journey showed where investors got stuck: loss-mitigation data was buried and hard to find." loading="lazy" decoding="async"><figcaption>Eduardo's journey showed where investors got stuck: loss-mitigation data was buried and hard to find.</figcaption></figure></div>
+</div>
+<p><strong>5. Telling the story.</strong> Two storyboards showed the experience we were building toward.</p>
+<div class="pair wide">
 <div class="gallery"><figure><img src="../assets/project-insight/20-storyboard-awareness-of-need.webp" alt="Panels 1–4: a new loan is added, and the investor logs in to see its impact." loading="lazy" decoding="async"><figcaption>Panels 1–4: a new loan is added, and the investor logs in to see its impact.</figcaption></figure>
-<figure><img src="../assets/project-insight/21-storyboard-data-driven-decisions.webp" alt="Panels 5–8: clear insight leads the investor to onboard more loans. That's the business case." loading="lazy" decoding="async"><figcaption>Panels 5–8: clear insight leads the investor to onboard more loans. That's the business case.</figcaption></figure></div>
+<figure><img src="../assets/project-insight/21-storyboard-data-driven-decisions.webp" alt="Panels 5–8: clear insight leads to more loans. That's the business case." loading="lazy" decoding="async"><figcaption>Panels 5–8: clear insight leads to more loans. That's the business case.</figcaption></figure></div>
+</div>
 <hr />
 <h2>Co-designing the dashboard</h2>
-<p>I ran <strong>in-person dashboarding sessions</strong> with the stakeholder, the BSA and the project managers. We sketched on whiteboards what investors needed <strong>at a glance</strong> and what belonged one click deeper: delinquency, cashflow, escrow, entries and exits, and disasters.</p>
-<p>One sticky note from those sessions changed the product:</p>
+<p>I ran <strong>in-person whiteboard sessions</strong> with the stakeholder, BSA and project managers. We sketched what investors needed <strong>at a glance</strong> and what belonged one click deeper: delinquency, cashflow, escrow, entries and exits, and disasters.</p>
+<p>One sticky note changed the product:</p>
 <blockquote>
 <p><em>"Has my portfolio been impacted by natural disasters?"</em></p>
 </blockquote>
 <div class="pair">
-<div class="gallery"><figure><img src="../assets/project-insight/27-whiteboard-now-dashboard.webp" alt="This whiteboard sketch from our workshop became the main dashboard layout." loading="lazy" decoding="async"><figcaption>This whiteboard sketch from our workshop became the main dashboard layout.</figcaption></figure>
-<figure><img src="../assets/project-insight/05-workshop-sticky-natural-disasters.webp" alt="This sticky note from an investor question became the FEMA disaster map." loading="lazy" decoding="async"><figcaption>This sticky note from an investor question became the FEMA disaster map.</figcaption></figure></div>
+<div class="gallery"><figure><img src="../assets/project-insight/27-whiteboard-now-dashboard.webp" alt="Our whiteboard sketch became the main dashboard." loading="lazy" decoding="async"><figcaption>Our whiteboard sketch became the main dashboard.</figcaption></figure>
+<figure><img src="../assets/project-insight/05-workshop-sticky-natural-disasters.webp" alt="This investor question became the FEMA disaster map." loading="lazy" decoding="async"><figcaption>This investor question became the FEMA disaster map.</figcaption></figure></div>
 </div>
-<p>I then mapped the full structure: every tab, every chart, and every drill-down.</p>
-<div class="gallery"><figure><img src="../assets/project-insight/09-dashboard-flow-full-ia.webp" alt="The full map: 8 focused dashboards, each with its own drill-downs, organized so investors never hunt for data." loading="lazy" decoding="async"><figcaption>The full map: 8 focused dashboards, each with its own drill-downs, organized so investors never hunt for data.</figcaption></figure></div>
+<p>Then I mapped every tab, chart and drill-down.</p>
+<div class="gallery"><figure><img src="../assets/project-insight/09-dashboard-flow-full-ia.webp" alt="8 focused dashboards with drill-downs, so investors never hunt for data." loading="lazy" decoding="async"><figcaption>8 focused dashboards with drill-downs, so investors never hunt for data.</figcaption></figure></div>
 <hr />
 <h2>Testing: one dashboard wasn't enough</h2>
 <p>My first concept (<strong>Prototype A</strong>) was a single at-a-glance dashboard built around the data points we <em>assumed</em> mattered most.</p>
@@ -252,5 +258,19 @@
   <a class="pager" href="dental.html">← Previous planet<strong>Dental Brands &amp; Websites</strong></a>
   <a class="pager" href="bond-centre.html">Next planet →<strong>Bond Centre 2.0</strong></a>
 </nav>
+<dialog class="zoom" aria-label="Enlarged image"><button type="button" autofocus>Close ✕</button><img alt=""></dialog>
+<script>
+(()=>{const d=document.querySelector('dialog.zoom'),big=d.querySelector('img');
+document.querySelectorAll('main.cs figure img').forEach(img=>{
+  img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label','Enlarge image: '+img.alt);
+  const open=()=>{big.src=img.src;big.alt=img.alt;d.showModal()};
+  img.addEventListener('click',open);
+  const h=document.createElement('span');h.className='zoom-hint';h.setAttribute('aria-hidden','true');h.textContent='⤢ Click to enlarge';h.addEventListener('click',open);
+  img.closest('figure').appendChild(h);
+  img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
+});
+d.querySelector('button').addEventListener('click',()=>d.close());
+d.addEventListener('click',e=>{if(e.target===d)d.close()});})();
+</script>
 </body>
 </html>

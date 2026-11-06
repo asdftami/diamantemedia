@@ -78,9 +78,18 @@
   .impact .impact-label{font-family:VT323,monospace;font-size:1.3rem;letter-spacing:.12em;text-transform:uppercase;color:var(--butter);margin:0 0 6px}
   .impact p{margin:0;font-size:clamp(1.12rem,1.8vw,1.3rem)!important;line-height:1.55;color:var(--ink)!important}
   main.cs .impact strong{color:var(--butter)}
-  .pair .gallery{grid-template-columns:1fr 1fr;max-width:620px;margin-left:auto;margin-right:auto}
-  .pair figure img{max-height:340px}
-  @media (max-width:560px){.pair .gallery{grid-template-columns:1fr}}
+  .pair .gallery{grid-template-columns:1fr 1fr;max-width:520px;margin-left:auto;margin-right:auto;gap:14px}
+  .pair figure img{max-height:220px}
+  .pair figcaption{font-size:.85rem}
+  .pair.wide .gallery{max-width:none}
+  .pair.wide figure img{max-height:300px}
+  figure img{cursor:zoom-in}
+  .zoom-hint{display:inline-block;margin:8px 6px 0;font-size:.8rem;font-weight:700;color:var(--tiffany);cursor:zoom-in}
+  dialog.zoom{max-width:96vw;max-height:94vh;padding:0;border:0;border-radius:16px;background:#0d0a26}
+  dialog.zoom::backdrop{background:#04031099}
+  dialog.zoom img{display:block;max-width:96vw;max-height:88vh;background:#fff}
+  dialog.zoom button{position:absolute;top:10px;right:10px;min-height:44px;padding:0 16px;border-radius:999px;border:0;background:var(--butter);color:#1a1033;font:inherit;font-weight:700;cursor:pointer}
+  @media (max-width:420px){.pair .gallery{grid-template-columns:1fr}}
   ol.learnings{list-style:none;counter-reset:l;padding:0;margin:20px 0 10px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
   ol.learnings li{counter-increment:l;position:relative;padding:18px 18px 18px 58px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);margin:0;line-height:1.55}
   ol.learnings li::before{content:counter(l);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;border:2px solid var(--pink);color:var(--pink);font-weight:700;font-size:.9rem;display:grid;place-items:center}
@@ -220,5 +229,19 @@
   <a class="pager" href="../index.html#start">← Previous planet<strong>Back to the galaxy</strong></a>
   <a class="pager" href="project-insight.html">Next planet →<strong>Project Insight</strong></a>
 </nav>
+<dialog class="zoom" aria-label="Enlarged image"><button type="button" autofocus>Close ✕</button><img alt=""></dialog>
+<script>
+(()=>{const d=document.querySelector('dialog.zoom'),big=d.querySelector('img');
+document.querySelectorAll('main.cs figure img').forEach(img=>{
+  img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label','Enlarge image: '+img.alt);
+  const open=()=>{big.src=img.src;big.alt=img.alt;d.showModal()};
+  img.addEventListener('click',open);
+  const h=document.createElement('span');h.className='zoom-hint';h.setAttribute('aria-hidden','true');h.textContent='⤢ Click to enlarge';h.addEventListener('click',open);
+  img.closest('figure').appendChild(h);
+  img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
+});
+d.querySelector('button').addEventListener('click',()=>d.close());
+d.addEventListener('click',e=>{if(e.target===d)d.close()});})();
+</script>
 </body>
 </html>
