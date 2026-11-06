@@ -1,7 +1,7 @@
 # Tami Trevino: Career Context (Single Source of Truth)
 
 > Everything the resume, LinkedIn, portfolio and cover letters pull from. Public-safe: private details stay in `INTERVIEW_RAW_NOTES.md` and are **not** included here.
-> Last updated: November 4, 2026
+> Last updated: November 6, 2026
 
 ---
 
@@ -16,6 +16,10 @@
 *Every industry is a new world. I make each one beautiful, intuitive and accessible.*
 
 **Pillars:** Innovative · Aesthetic · Intuitive · **Accessible** (accessibility leads)
+
+**Experience:** 6+ years in design (since BFA, 2020). Say "in design," not "in product design."
+
+**Recruiter keywords (portfolio hero):** Product Designer · Fintech · Healthcare · E-commerce · B2B + B2C · Remote · Colorado
 
 **Superpower (her words):** "I'm really good at finding problems and building solutions and tools for solutions." She spots flaws, gaps and friction others miss, then fixes them.
 
@@ -159,15 +163,23 @@ Austin, TX · Worked through COVID while starting her Master's
 - **Motion:** warp-speed star streaks between planets. **Motion toggle + reduced-motion support** are required.
 - **Y2K:** the **Tamagotchi is the spaceship** (journey navigator); a **brick phone** is the contact card; pixel/LCD type (VT323) + Space Grotesk
 - **Primary audience:** hiring managers first (fast path to work + resume), freelance clients second ("Start a project")
-- Prototype: `site/index.html`
+- Homepage: "Selected work" mini-planets in the first screen; nav = Work · About · Resume · Contact + labeled Animation switch
+- Every case study opens with an **Impact** card and ends with **What I learned** cards in Tami's own words
+- Prototype: `site/index.html` · private preview: https://claude.ai/artifact/DCJRauUisN1iyz65DFo4qd
 
 ---
 
 ## 9. Contact policy
 
-- **No public email address** anywhere (spam). Visitors reach Tami through a **spam-protected contact form** (human verification + honeypot); she replies from her own email.
+- **Copy email button** (address assembled only on click, so it can't be scraped): **tami.trevino@proton.me**. Later, forward hello@tamitrevino.com (GoDaddy) to it.
+- **LinkedIn:** linkedin.com/in/tamitrevino
+- **Resume:** not downloadable; visitors **request it** through the contact form so Tami can tailor it to the role.
+- **Contact form:** spam-protected (honeypot + human check); still needs connecting to a form service.
 - Exact dates for the older/secondary roles are intentionally left off (they're not on LinkedIn or the portfolio).
 
 ## 10. Open items
 
 - LinkedIn PDF → compare against this file
+- About planet (from Tami's earlier Tami Makes Stuff about page)
+- Bond Centre "before" mockups (representative sample data)
+- Connect contact form; activate tamitrevino.com and host the site
