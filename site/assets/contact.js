@@ -105,17 +105,71 @@
     } catch (e) {}
   }
   ['touchend', 'click', 'keydown'].forEach(t => addEventListener(t, unlock, { passive: true }));
-  function beep(freq = 1180) {
+  // A real button press: a short plastic "tick" (filtered noise) with a tiny low thump, slightly varied per key.
+  let noiseBuf = null;
+  function audio() { ctx = ctx || new AC(); if (ctx.state !== 'running') ctx.resume(); return ctx; }
+  function noise(c) {
+    if (noiseBuf) return noiseBuf;
+    noiseBuf = c.createBuffer(1, c.sampleRate * 1.2, c.sampleRate);
+    const d = noiseBuf.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+    return noiseBuf;
+  }
+  function beep(freq = 1180) {               // name kept: every key press calls this
     if (!sound) return;
     try {
-      ctx = ctx || new AC();
-      if (ctx.state !== 'running') ctx.resume();
-      const o = ctx.createOscillator(), g = ctx.createGain(), t = ctx.currentTime;
-      o.type = 'square'; o.frequency.value = freq;
-      g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.09, t + 0.005); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.08);
-      o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + 0.09);
+      const c = audio(), t = c.currentTime;
+      const n = c.createBufferSource(); n.buffer = noise(c);
+      const bp = c.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = 2600 + (freq - 1200) * 1.5; bp.Q.value = 1.4;
+      const g = c.createGain(); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.5, t + 0.002); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.035);
+      n.connect(bp).connect(g).connect(c.destination); n.start(t, Math.random() * 0.5); n.stop(t + 0.04);
+      const o = c.createOscillator(), g2 = c.createGain(); o.type = 'sine'; o.frequency.setValueAtTime(190, t); o.frequency.exponentialRampToValueAtTime(90, t + 0.05);
+      g2.gain.setValueAtTime(0.0001, t); g2.gain.exponentialRampToValueAtTime(0.18, t + 0.003); g2.gain.exponentialRampToValueAtTime(0.0001, t + 0.06);
+      o.connect(g2).connect(c.destination); o.start(t); o.stop(t + 0.07);
     } catch (e) {}
   }
+  // Launch sound: an ignition rumble that rises into a whoosh, plus a little sparkle at the end.
+  function whoosh() {
+    if (!sound) return;
+    try {
+      const c = audio(), t = c.currentTime;
+      const n = c.createBufferSource(); n.buffer = noise(c);
+      const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.Q.value = 3; lp.frequency.setValueAtTime(250, t); lp.frequency.exponentialRampToValueAtTime(5000, t + 1.0);
+      const g = c.createGain(); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.35, t + 0.25); g.gain.exponentialRampToValueAtTime(0.0001, t + 1.15);
+      n.connect(lp).connect(g).connect(c.destination); n.start(t); n.stop(t + 1.2);
+      [1568, 2093, 2637].forEach((f, k) => {
+        const o = c.createOscillator(), og = c.createGain(), s = t + 0.95 + k * 0.08;
+        o.type = 'triangle'; o.frequency.value = f;
+        og.gain.setValueAtTime(0.0001, s); og.gain.exponentialRampToValueAtTime(0.08, s + 0.01); og.gain.exponentialRampToValueAtTime(0.0001, s + 0.25);
+        o.connect(og).connect(c.destination); o.start(s); o.stop(s + 0.3);
+      });
+    } catch (e) {}
+  }
+  // Message sent: a rocket carries the envelope from the phone up into space.
+  function launch() {
+    whoosh();
+    if (document.documentElement.classList.contains('no-motion') || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let r = phone.getBoundingClientRect();
+    if (r.bottom < 80 || r.top > innerHeight - 80) r = form.querySelector('button[type="submit"]').getBoundingClientRect(); // launch from what's on screen
+    const el = document.createElement('div'); el.className = 'rocket'; el.setAttribute('aria-hidden', 'true');
+    el.innerHTML = '<svg viewBox="0 0 64 120"><defs><linearGradient id="rkB" x1="0" x2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d9c9ff"/></linearGradient></defs>' +
+      '<path d="M32 4C46 18 50 40 48 70H16C14 40 18 18 32 4z" fill="url(#rkB)" stroke="#3a2a6e" stroke-width="3"/>' +
+      '<circle cx="32" cy="38" r="9" fill="#81d8d0" stroke="#3a2a6e" stroke-width="3"/>' +
+      '<path d="M16 54L4 78L16 74z M48 54L60 78L48 74z" fill="#ffb3d9" stroke="#3a2a6e" stroke-width="3" stroke-linejoin="round"/>' +
+      '<rect x="20" y="66" width="24" height="10" rx="3" fill="#3a2a6e"/>' +
+      '<g class="rk-flame"><path d="M22 76Q32 118 42 76z" fill="#fff1a6"/><path d="M26 76Q32 102 38 76z" fill="#ffffff"/></g></svg>' +
+      '<span class="rk-mail">✉</span>';
+    el.style.left = (r.left + r.width / 2 - 28) + 'px'; const y0 = Math.min(Math.max(r.top + r.height * 0.18, 120), innerHeight - 220); el.style.top = y0 + 'px';
+    document.body.appendChild(el);
+    for (let k = 0; k < 14; k++) {
+      const s = document.createElement('i'); s.className = 'rk-spark'; s.setAttribute('aria-hidden', 'true');
+      s.style.left = (r.left + r.width / 2 + (Math.random() - .5) * 60) + 'px'; s.style.top = (y0 + 90 + Math.random() * 40) + 'px';
+      s.style.setProperty('--dx', ((Math.random() - .5) * 160) + 'px'); s.style.setProperty('--dy', (60 + Math.random() * 120) + 'px'); s.style.animationDelay = (Math.random() * .35) + 's';
+      document.body.appendChild(s); setTimeout(() => s.remove(), 1600);
+    }
+    phone.classList.add('shake'); setTimeout(() => phone.classList.remove('shake'), 500);
+    setTimeout(() => el.remove(), 2200);
+  }
+  form.addEventListener('tt-sent', launch);
   const changed = () => box.dispatchEvent(new Event('input', { bubbles: true }));
   const commit = () => { last = null; idx = 0; clearTimeout(timer); };
   function press(k) {
