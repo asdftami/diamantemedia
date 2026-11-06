@@ -48,11 +48,11 @@ Bond Centre is where State of Israel Bond owners check their portfolio, update d
 
 | **Bondholders** | **Admins** |
 |---|---|
-| See what they own and what it's worth | Review submitted forms and documents |
+| See their bonds and value | Review submitted forms |
 | Download statements and tax forms | Approve or reject requests |
-| Update banking, address and communication preferences | Keep bondholders informed of the status |
+| Update banking, address and preferences | Keep bondholders informed |
 
-Designing for both meant every flow had two sides: what the bondholder does, and what the admin sees next.
+Every flow had two sides: what the bondholder does, and what the admin sees next.
 
 ---
 
