@@ -90,3 +90,5 @@ My re-check showed **6 of 8 brands** now findable, a visible scrollbar and the c
 
 - **Real-world use finds real problems.** Jars launched its website and app without an in-house UX designer. Frustrated customers showed us what was broken: features that didn't work, and online inventory that didn't match the store.
 - **User testing is crucial.** It shows how a product actually works for people, surfaces their pain points and leads to the right solutions.
+- **Speak the business's language.** Framing each issue around trust and conversion, with a priority and an owner team, made it easier to act on.
+- **Next time: partner from the start.** I'd agree on scope with the digital team first, so my findings feed straight into their roadmap.
