@@ -144,9 +144,9 @@ Hundreds of dropshipped products create mess: duplicate brands, duplicate catego
 
 ## Status and early feedback
 
-- **The store is live** at fridays-off.co. The social launch is underway.
-- In soft-launch previews, people **loved the aesthetic, the photography and the overall vibe**.
-- <!-- [metrics] Add after 30–60 days: visitors, email signups (Friday List), conversion rate, first orders, top post reach. -->
+The social launch is underway. In soft-launch previews, people **loved the aesthetic, the photography and the overall vibe**.
+
+<!-- [metrics] Add after 30–60 days: visitors, email signups (Friday List), conversion rate, first orders, top post reach. -->
 
 ---
 
