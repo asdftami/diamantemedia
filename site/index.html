@@ -40,13 +40,40 @@
     background:#07051acc;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #ffffff14}
   .brand{font-weight:700;letter-spacing:.02em;text-decoration:none;font-size:1.05rem}
   .brand .spark{color:var(--pink)}
-  nav.actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-  .pill{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #ffffff40;background:#ffffff10;color:var(--ink);text-decoration:none;font:inherit;font-weight:500;cursor:pointer;backdrop-filter:blur(6px)}
-  .pill:hover{border-color:var(--lilac);background:#ffffff1c}
+  nav.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  /* header: sliding "you are here" indicator */
+  .spy{position:relative;display:flex;gap:2px;align-items:center}
+  .spy a{position:relative;z-index:1;display:inline-flex;align-items:center;height:34px;padding:0 13px;border-radius:999px;color:var(--ink-dim);text-decoration:none;font-weight:500;transition:color .2s,background .2s}
+  .spy a:hover{color:var(--ink);background:#ffffff12}
+  .spy a[aria-current]{color:var(--ink)}
+  .spy .ind{position:absolute;z-index:0;top:50%;left:0;width:0;height:34px;transform:translateY(-50%);border-radius:999px;background:#ffffff16;border:1px solid #ffffff38;opacity:0;transition:left .35s cubic-bezier(.3,1.3,.5,1),width .35s,opacity .2s;pointer-events:none}
+  .spy .ind.on{opacity:1}
+  .spy .ind::after{content:"";position:absolute;left:50%;bottom:-7px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--pink);box-shadow:0 0 8px var(--pink)}
+  .cta{position:relative;display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 14px;border-radius:999px;background:var(--pink);color:#2a0d22;font-weight:700;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+  .cta:hover,.cta[aria-current]{background:var(--butter);transform:translateY(-2px);box-shadow:0 8px 22px #ffb3d966}
+  .cta .arr{transition:transform .2s}.cta:hover .arr{transform:translate(2px,-2px)}
+  /* lean buttons keep a 44px tap area */
+  .spy a::after,.cta::after,.pill::after,.land::after,.switch::after{content:"";position:absolute;left:0;right:0;top:50%;height:44px;transform:translateY(-50%)}
+  /* secondary buttons */
+  .pill{position:relative;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:999px;border:1.5px solid #ffffff40;background:#ffffff10;color:var(--ink);text-decoration:none;font:inherit;font-weight:500;cursor:pointer;backdrop-filter:blur(6px);transition:transform .2s,border-color .2s,background .2s,box-shadow .2s}
+  .pill:hover{border-color:var(--pink);background:#ffb3d91f;transform:translateY(-2px);box-shadow:0 8px 22px #ffb3d933}
   .pill.primary{background:var(--pink);color:#2a0d22;border-color:var(--pink);font-weight:700}
+  .pill.primary:hover{background:var(--butter);border-color:var(--butter)}
+  /* boarding pass: the planet buttons */
+  .go-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .pass{display:inline-flex;align-items:stretch;min-height:46px;border-radius:10px;overflow:hidden;background:var(--ink);color:#160e3a;text-decoration:none;box-shadow:0 0 0 1px #ffffff30;transition:transform .25s,box-shadow .25s}
+  .pass .stub{display:flex;flex-direction:column;justify-content:center;padding:0 14px;font-family:VT323,monospace;font-size:1rem;line-height:1;letter-spacing:.08em;background:var(--butter);border-right:2px dashed #160e3a55;transition:background .25s}
+  .pass .stub b{font-size:1.3rem;font-weight:400}
+  .pass .dest{display:flex;align-items:center;gap:10px;padding:0 16px;font-weight:700}
+  .pass .dest i{font-style:normal;transition:transform .25s}
+  .pass:hover,.pass:focus-visible{transform:translateY(-3px) rotate(-1.5deg);box-shadow:0 0 0 2px var(--pink),0 12px 32px #ffb3d955}
+  .pass:hover .stub,.pass:focus-visible .stub{background:var(--pink)}
+  .pass:hover .dest i,.pass:focus-visible .dest i{transform:translateX(6px)}
+  .readtime{font-size:.9rem;color:var(--ink-dim);white-space:nowrap}
   .pill[aria-pressed="false"] .dot{background:#888}
-  .switch{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px 0 10px;border-radius:999px;border:1.5px solid #ffffff40;background:#ffffff10;color:var(--ink);font:inherit;font-weight:500;cursor:pointer;backdrop-filter:blur(6px);white-space:nowrap}
-  .switch:hover{border-color:var(--lilac)}
+  .switch{position:relative;display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 4px;border:0;background:none;color:var(--ink-dim);font:inherit;font-size:.92rem;font-weight:500;cursor:pointer;white-space:nowrap;transition:color .2s}
+  .switch:hover{color:var(--ink)}
+  .switch:hover .track{box-shadow:0 0 0 3px #81d8d044}
   .switch .track{width:34px;height:20px;border-radius:999px;background:var(--tiffany);position:relative;transition:background .2s}
   .switch .knob{position:absolute;top:2px;left:16px;width:16px;height:16px;border-radius:50%;background:#fff;transition:left .2s}
   .switch[aria-pressed="false"] .track{background:#5d5878}
@@ -76,8 +103,8 @@
   .pillars li:nth-child(1){background:var(--pink)} .pillars li:nth-child(2){background:var(--lilac)}
   .pillars li:nth-child(3){background:var(--sky)} .pillars li:nth-child(4){background:var(--butter)}
   .cta-row{display:flex;flex-wrap:wrap;gap:10px}
-  .land{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border-radius:999px;background:var(--ink);color:#160e3a;font-weight:700;text-decoration:none}
-  .land:hover{background:var(--butter)}
+  .land{position:relative;display:inline-flex;align-items:center;gap:10px;height:42px;padding:0 20px;border-radius:999px;background:var(--ink);color:#160e3a;font-weight:700;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+  .land:hover{background:var(--butter);transform:translateY(-2px);box-shadow:0 10px 26px #fff1a655}
   .case-label{display:inline-block;font-family:VT323,monospace;font-size:1.2rem;color:#1a1033;background:var(--tiffany);padding:2px 10px;border-radius:6px;margin-bottom:12px}
 
   /* planets */
@@ -114,7 +141,10 @@
   .lcd .big{font-size:1.5rem}
   .keys{display:flex;justify-content:center;gap:10px;margin-top:10px}
   .key{width:40px;height:40px;border-radius:50%;border:0;background:var(--butter);color:#1a1033;font:700 .85rem "Space Grotesk",sans-serif;cursor:pointer;box-shadow:inset 0 -4px #0002}
-  .key:hover{background:#fff}
+  .key{transition:transform .15s,background .15s,box-shadow .15s}
+  .key:hover{background:#fff;transform:translateY(-2px);box-shadow:inset 0 -4px #0002,0 6px 14px #fff1a655}
+  .key:active{transform:translateY(1px)}
+  .brand .spark{display:inline-block;transition:transform .5s}.brand:hover .spark{transform:rotate(180deg) scale(1.3)}
   .flame{position:absolute;left:50%;bottom:-34px;width:34px;height:44px;transform:translateX(-50%) scaleY(.35);transform-origin:top;opacity:.0;
     background:radial-gradient(ellipse at 50% 20%,#fff 0 18%,var(--butter) 30%,var(--pink) 55%,var(--tiffany) 75%,transparent 78%);filter:blur(1px);transition:transform .3s,opacity .3s}
   .ship.docked{opacity:0;visibility:hidden;transform:translateY(30px)}
@@ -155,7 +185,12 @@
   .work-strip ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
   .work-strip li{display:flex}
   .work-strip a{flex:1;align-content:start;display:grid;justify-items:center;text-align:center;gap:6px;padding:18px 12px 16px;border-radius:var(--radius);background:#ffffff0b;border:1px solid #ffffff22;text-decoration:none;color:var(--ink);transition:transform .25s,border-color .25s,background .25s}
-  .work-strip a:hover,.work-strip a:focus-visible{transform:translateY(-4px);border-color:var(--pink);background:#ffffff14}
+  .work-strip a{position:relative}
+  .work-strip a::after{content:"→";position:absolute;top:12px;right:14px;color:var(--pink);font-weight:700;opacity:0;transform:translateX(-6px);transition:opacity .25s,transform .25s}
+  .work-strip a:hover,.work-strip a:focus-visible{transform:translateY(-6px);border-color:var(--pink);background:#ffb3d914;box-shadow:0 14px 34px #ffb3d933}
+  .work-strip a:hover::after,.work-strip a:focus-visible::after{opacity:1;transform:none}
+  .work-strip a:hover .planet.mini,.work-strip a:focus-visible .planet.mini{transform:scale(1.14);filter:drop-shadow(0 0 14px #ffffff55)}
+  .planet.mini{transition:transform .3s,filter .3s}
   .work-strip strong{font-size:1.02rem}
   .work-strip a > span:last-child{font-size:.88rem;color:var(--ink-dim)}
   .planet.mini{width:64px;height:64px;margin-bottom:6px;animation-duration:7s}
@@ -168,10 +203,12 @@
   /* motion off */
   .no-motion .planet,.no-motion .moon,.no-motion .ship-body{animation:none}
   .no-motion .ship.boost{transform:none} .no-motion .ship.boost .flame{opacity:0}
-  @media (prefers-reduced-motion: reduce){ .planet,.moon,.ship-body{animation:none} html{scroll-behavior:auto} }
+  .no-motion .pass:hover,.no-motion .pill:hover,.no-motion .land:hover,.no-motion .cta:hover,.no-motion .work-strip a:hover,.no-motion .key:hover{transform:none}
+  .no-motion .work-strip a:hover .planet.mini,.no-motion .pass:hover .dest i{transform:none}
+  @media (prefers-reduced-motion: reduce){ .planet,.moon,.ship-body{animation:none} html{scroll-behavior:auto} *{transition:none!important} .pass:hover,.pill:hover,.land:hover,.cta:hover,.work-strip a:hover,.key:hover,.work-strip a:hover .planet.mini{transform:none!important} }
   html{scroll-behavior:smooth}
 
-  @media (max-width:380px){ header.top{padding:10px 10px} .pill,.switch{font-size:.85rem} .pill{padding:0 10px} nav.actions{gap:4px} }
+  @media (max-width:380px){ header.top{padding:10px 10px} .spy a,.cta,.switch{font-size:.85rem} .spy a,.cta{padding:0 9px} nav.actions{gap:4px} }
   @media (max-width:820px){
     .stop-inner,.stop:nth-of-type(even) .stop-inner{grid-template-columns:1fr}
     .stop:nth-of-type(even) .planet-wrap{order:0}
@@ -186,14 +223,15 @@
     .keys{margin:0;flex:0 0 auto;gap:6px}
     .key{width:44px;height:44px}
     .brand{font-size:.95rem}
-    .pill{padding:0 12px}
     .pill .label-long{display:none}
     .hide-sm{display:none}
     .brand-last,.switch .state-txt{display:none}
     nav.actions{flex-wrap:nowrap}
     nav.actions{gap:6px}
-    .pill{padding:0 12px;font-size:.92rem}
-    .switch{padding:0 10px 0 8px;gap:6px;font-size:.92rem}
+    .spy a{padding:0 10px}
+    .spy a.hide-sm{display:none}
+    .cta{padding:0 12px}
+    .switch{padding:0 2px;gap:6px}
     .switch .track{width:30px;height:18px}.switch .knob{width:14px;height:14px}.switch[aria-pressed="true"] .knob{left:14px}
     .brand{white-space:nowrap}
     header.top{padding:10px 16px}
@@ -207,10 +245,8 @@
 <header class="top">
   <a class="brand" href="#start"><span class="brand-first">Tami</span><span class="brand-last"> Trevino</span> <span class="spark">✦</span></a>
   <nav class="actions" aria-label="Quick links">
-    <a class="pill" href="#work">Work</a>
-    <a class="pill hide-sm" href="#origin">About</a>
-    <a class="pill hide-sm" href="#message" data-resume>Resume</a>
-    <a class="pill primary" href="#contact">Contact</a>
+    <span class="spy" id="spy"><span class="ind" aria-hidden="true"></span><a href="#work" data-nav="work">Work</a><a class="hide-sm" href="#origin" data-nav="about">About</a><a class="hide-sm" href="#message" data-resume data-nav="resume">Resume</a></span>
+    <a class="cta" href="#contact" data-nav="contact">Contact <span class="arr" aria-hidden="true">↗</span></a>
     <button class="switch" id="motionToggle" aria-pressed="true" type="button"><span class="track" aria-hidden="true"><span class="knob"></span></span><span>Animation<span class="state-txt"> <span id="motionState">on</span></span></span></button>
   </nav>
 </header>
@@ -284,7 +320,7 @@
         <h2 id="h-dental">Dental Brands &amp; Websites</h2>
         <p>While earning my UX Master's, I worked at a dental group. Two of its executives later hired me to design brands and websites for their new ventures.</p>
         <ul class="tags"><li>Logo + Visual Identity</li><li>Squarespace</li><li>Bilingual EN/ES</li><li>Accessibility</li></ul>
-        <a class="land" href="case-studies/dental.html">Land on this planet →</a>
+        <div class="go-row"><a class="pass" href="case-studies/dental.html"><span class="stub" aria-hidden="true">CASE<b>01</b></span><span class="dest">Land on Dental Brands <i aria-hidden="true">→</i></span></a><span class="readtime"><span aria-hidden="true">◷ </span>2 min read</span></div>
       </div>
       <div class="planet-wrap" aria-hidden="true"><div class="planet p-dental"><div class="ring"></div><div class="moon"></div></div></div>
     </div>
@@ -298,7 +334,7 @@
         <h2 id="h-insight">Project Insight</h2>
         <p>Investors waited 3–5 days for data. As the sole designer on a 12–15 person team, I designed self-serve dashboards, including a FEMA disaster map, and tested them with 5 investors.</p>
         <ul class="tags"><li>Research</li><li>Data Viz</li><li>Usability Testing</li><li>Figma</li></ul>
-        <a class="land" href="case-studies/project-insight.html">Land on this planet →</a>
+        <div class="go-row"><a class="pass" href="case-studies/project-insight.html"><span class="stub" aria-hidden="true">CASE<b>02</b></span><span class="dest">Land on Project Insight <i aria-hidden="true">→</i></span></a><span class="readtime"><span aria-hidden="true">◷ </span>4 min read</span></div>
       </div>
       <div class="planet-wrap" aria-hidden="true"><div class="planet p-insight"><div class="ring"></div><div class="moon"></div></div></div>
     </div>
@@ -312,7 +348,7 @@
         <h2 id="h-bond">Bond Centre 2.0</h2>
         <p>I turned a cluttered bond portal into a guided experience for bondholders and admins: split navigation, wizards and inline uploads. Shipped to production.</p>
         <ul class="tags"><li>Redesign</li><li>Navigation Testing</li><li>Responsive</li><li>Shipped</li></ul>
-        <a class="land" href="case-studies/bond-centre.html">Land on this planet →</a>
+        <div class="go-row"><a class="pass" href="case-studies/bond-centre.html"><span class="stub" aria-hidden="true">CASE<b>03</b></span><span class="dest">Land on Bond Centre 2.0 <i aria-hidden="true">→</i></span></a><span class="readtime"><span aria-hidden="true">◷ </span>3 min read</span></div>
       </div>
       <div class="planet-wrap" aria-hidden="true"><div class="planet p-bond"><div class="ring"></div><div class="moon"></div></div></div>
     </div>
@@ -350,7 +386,7 @@
         <h2 id="h-fridays">Fridays-Off</h2>
         <p>A luxury lifestyle and home goods brand I built from zero: identity, a 460+ product Shopify store, accessibility from day one and an AI content engine.</p>
         <ul class="tags"><li>Founder</li><li>Brand</li><li>E-Commerce</li><li>AI Workflows</li></ul>
-        <a class="land" href="case-studies/fridays-off.html">Land on this planet →</a>
+        <div class="go-row"><a class="pass" href="case-studies/fridays-off.html"><span class="stub" aria-hidden="true">CASE<b>04</b></span><span class="dest">Land on Fridays-Off <i aria-hidden="true">→</i></span></a><span class="readtime"><span aria-hidden="true">◷ </span>4 min read</span></div>
       </div>
       <div class="planet-wrap" aria-hidden="true"><div class="planet p-fridays"><div class="ring"></div><div class="moon"></div></div></div>
     </div>
@@ -498,6 +534,19 @@
     if (!motion) { cancelAnimationFrame(raf); raf = null; }
   }
 
+  // ---- header: slide the "you are here" highlight
+  const spy = document.getElementById('spy'), ind = spy.querySelector('.ind');
+  function placeInd() {
+    const a = spy.querySelector('a[aria-current]');
+    if (!a || a.offsetParent === null) { ind.classList.remove('on'); return; }
+    ind.style.left = a.offsetLeft + 'px'; ind.style.width = a.offsetWidth + 'px'; ind.classList.add('on');
+  }
+  function setNav(key) {
+    document.querySelectorAll('nav.actions [data-nav]').forEach(a => a.dataset.nav === key ? a.setAttribute('aria-current', 'location') : a.removeAttribute('aria-current'));
+    placeInd();
+  }
+  addEventListener('resize', placeInd);
+
   // ---- which stop are we on? update the Nokia LCD and kick the warp
   let current = 0;
   const io = new IntersectionObserver(entries => {
@@ -507,6 +556,7 @@
       if (i !== current) { current = i; target = 1; boost(); }
       lcdYear.textContent = e.target.dataset.year; lcdName.textContent = e.target.dataset.name;
       document.getElementById('ship').classList.toggle('docked', i === 0);
+      setNav(i === 0 ? null : i <= 3 ? 'about' : i < stops.length - 1 ? 'work' : 'contact');
     });
   }, { threshold: .55 });
   stops.forEach(s => io.observe(s));

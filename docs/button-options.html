@@ -1,0 +1,186 @@
+<title>Button Directions</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=VT323&display=swap" rel="stylesheet">
+<style>
+/* Layout: one stacked board per direction; each shows the header nav, the planet CTA and the tags beside them for contrast. Single dark theme, matching the portfolio. */
+:root{
+  --space-0:#07051a;--space-1:#120c35;--card:#ffffff0b;--line:#ffffff22;
+  --ink:#f7f3ff;--dim:#d6cef0;--ink-dark:#160e3a;
+  --pink:#ffb3d9;--lilac:#c9b6ff;--butter:#fff1a6;--sky:#a8d8ff;--tiffany:#81d8d0;
+  --sans:"Space Grotesk",system-ui,sans-serif;--pixel:VT323,ui-monospace,monospace;
+  color-scheme:dark;
+}
+body{margin:0;background:radial-gradient(900px 600px at 80% 0%,#2a1b6e55,transparent 60%),linear-gradient(180deg,var(--space-1),var(--space-0) 50%);background-color:var(--space-0);color:var(--ink);font:16px/1.5 var(--sans);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 60px}
+.wrap{max-width:980px;margin:0 auto;display:grid;gap:22px}
+h1{font-size:clamp(1.6rem,3.5vw,2.2rem);margin:0;text-wrap:balance}
+.intro{color:var(--dim);margin:0;max-width:62ch}
+.board{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:18px;display:grid;gap:16px;min-width:0}
+.board header{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.board h2{margin:0;font-size:1.15rem}
+.letter{font-family:var(--pixel);font-size:1.35rem;color:var(--ink-dark);background:var(--tiffany);padding:0 8px;border-radius:5px}
+.board.now .letter{background:#5d5878;color:var(--ink)}
+.why{margin:0;color:var(--dim);font-size:.92rem;flex-basis:100%}
+.stage{display:grid;gap:18px;padding:16px;border-radius:12px;background:#07051acc;border:1px solid #ffffff14;min-width:0}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-weight:700}.brand span{color:var(--pink)}
+.nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tags li{font-size:.85rem;padding:6px 12px;border-radius:999px;background:#ffffff12;border:1px solid #ffffff26}
+.cap{font-family:var(--pixel);font-size:1.05rem;color:var(--butter);letter-spacing:.08em;text-transform:uppercase;margin:0}
+a,button{font:inherit;color:inherit;text-decoration:none;cursor:pointer}
+:focus-visible{outline:3px solid var(--butter);outline-offset:3px;border-radius:6px}
+/* every lean control keeps a 44px tap area with an invisible hit box */
+.hit{position:relative}.hit::after{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;transform:translateY(-50%)}
+
+/* NOW: current */
+.now .pill{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #ffffff40;background:#ffffff10;font-weight:500}
+.now .pill.primary{background:var(--pink);color:#2a0d22;border-color:var(--pink);font-weight:700}
+.now .sw{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px 0 10px;border-radius:999px;border:1.5px solid #ffffff40;background:#ffffff10;border-style:solid;font-weight:500}
+.now .land{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border-radius:999px;background:var(--ink);color:var(--ink-dark);font-weight:700}
+.track{width:30px;height:18px;border-radius:999px;background:var(--tiffany);position:relative;display:inline-block}
+.track::after{content:"";position:absolute;top:2px;left:14px;width:14px;height:14px;border-radius:50%;background:#fff}
+
+/* A: editorial links */
+.a .lnk{padding:2px 2px;font-weight:500;background:linear-gradient(var(--pink),var(--pink)) left 100%/0 2px no-repeat;transition:background-size .25s}
+.a .lnk:hover,.a .lnk:focus-visible{background-size:100% 2px}
+.a .lnk.primary{color:var(--pink);font-weight:700;background-size:100% 2px}
+.a .sw{display:inline-flex;align-items:center;gap:8px;background:none;border:0;padding:0;font-size:.9rem;color:var(--dim)}
+.a .go{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem;border-bottom:2px solid var(--pink);padding-bottom:3px}
+.a .go i{font-style:normal;transition:transform .25s}.a .go:hover i{transform:translateX(5px)}
+
+/* B: LCD keys */
+.b .key{display:inline-flex;align-items:center;height:32px;padding:0 12px;border-radius:5px;border:1.5px solid #ffffff38;font-family:var(--pixel);font-size:1.2rem;letter-spacing:.06em;text-transform:uppercase;line-height:1;box-shadow:0 2px 0 #ffffff1f}
+.b .key:hover{border-color:var(--tiffany);color:var(--tiffany)}
+.b .key.primary{background:var(--butter);color:var(--ink-dark);border-color:var(--butter);box-shadow:0 3px 0 #b8a85a}
+.b .key:active{transform:translateY(2px);box-shadow:none}
+.b .lcd{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 10px;border-radius:5px;background:#a9c48a;color:#1b2a12;font-family:var(--pixel);font-size:1.15rem;letter-spacing:.06em;border:0;box-shadow:inset 0 0 0 2px #0002}
+.b .go{display:inline-flex;align-items:center;gap:10px;height:38px;padding:0 16px;border-radius:5px;background:var(--butter);color:var(--ink-dark);font-family:var(--pixel);font-size:1.35rem;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 3px 0 #b8a85a}
+
+/* C: orbit */
+.c .lnk{font-weight:500;color:var(--dim);display:inline-flex;align-items:center;gap:6px;padding:2px 4px}
+.c .lnk[aria-current]{color:var(--ink)}.c .lnk[aria-current]::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--pink);box-shadow:0 0 8px var(--pink)}
+.c .lnk:hover{color:var(--ink)}
+.c .primary{display:inline-flex;align-items:center;height:34px;padding:0 14px;border-radius:999px;background:linear-gradient(90deg,var(--pink),var(--lilac));color:var(--ink-dark);font-weight:700}
+.c .sw{display:inline-flex;align-items:center;gap:8px;background:none;border:0;padding:0;font-size:.9rem;color:var(--dim)}
+.c .go{display:inline-flex;align-items:center;gap:12px;font-weight:700}
+.c .orb{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 32% 28%,#fff9,transparent 40%),var(--lilac);color:var(--ink-dark);box-shadow:0 0 18px #c9b6ff66;transition:transform .3s}
+.c .go:hover .orb{transform:rotate(-30deg) scale(1.08)}
+
+/* D: split capsule */
+.d .seg{display:inline-flex;border:1px solid #ffffff2e;border-radius:10px;overflow:hidden;background:#ffffff08}
+.d .seg a{padding:6px 12px;font-weight:500;font-size:.95rem;border-right:1px solid #ffffff1a}
+.d .seg a:last-child{border-right:0}.d .seg a:hover{background:#ffffff14}
+.d .seg a.primary{background:var(--pink);color:#2a0d22;font-weight:700}
+.d .sw{display:inline-flex;align-items:center;gap:8px;background:none;border:0;padding:0;font-size:.9rem;color:var(--dim)}
+.d .go{display:inline-flex;align-items:stretch;height:38px;border-radius:10px;overflow:hidden;font-weight:700}
+.d .go span{display:flex;align-items:center;padding:0 14px;background:var(--ink);color:var(--ink-dark)}
+.d .go b{display:grid;place-items:center;width:38px;background:var(--pink);color:#2a0d22;transition:width .25s}
+.d .go:hover b{width:48px}
+
+/* shared: sliding "you are here" indicator */
+.spy{position:relative;display:flex;gap:4px;align-items:center}
+.spy a{position:relative;z-index:1;padding:6px 12px;font-weight:500;color:var(--dim);border-radius:999px;transition:color .2s}
+.spy a[aria-current],.spy a:hover{color:var(--ink)}
+.spy .ind{position:absolute;z-index:0;top:50%;height:32px;transform:translateY(-50%);border-radius:999px;background:#ffffff16;border:1px solid #ffffff30;transition:left .3s cubic-bezier(.3,1.3,.5,1),width .3s;pointer-events:none}
+.spy .ind::after{content:"";position:absolute;left:50%;bottom:-6px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--pink);box-shadow:0 0 8px var(--pink)}
+.cta-solid{display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 14px;border-radius:999px;background:var(--pink);color:#2a0d22;font-weight:700}
+.cta-solid:hover{background:var(--butter)}
+.sw2{display:inline-flex;align-items:center;gap:8px;background:none;border:0;padding:0;font-size:.9rem;color:var(--dim)}
+.sw2 .ico{font-size:1rem}
+
+/* E: Orbit+ */
+.e .go{display:inline-flex;align-items:center;gap:12px;height:44px;padding:0 8px 0 6px;border-radius:999px;background:#ffffff0f;border:1px solid #ffffff30;font-weight:700;transition:border-color .2s,background .2s}
+.e .go:hover{border-color:var(--lilac);background:#ffffff18}
+.e .go .orb{width:32px;height:32px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff9,transparent 40%),var(--lilac);box-shadow:0 0 14px #c9b6ff66}
+.e .go .arr{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--ink-dark);transition:transform .25s}
+.e .go:hover .arr{transform:translateX(3px)}
+.e .meta{font-size:.85rem;color:var(--dim)}
+
+/* F: boarding pass */
+.f .pass{display:inline-flex;align-items:stretch;height:46px;border-radius:10px;overflow:hidden;background:var(--ink);color:var(--ink-dark);box-shadow:0 0 0 1px #ffffff30}
+.f .pass .from{display:flex;flex-direction:column;justify-content:center;padding:0 14px;font-family:var(--pixel);font-size:1rem;line-height:1;letter-spacing:.08em;background:var(--butter);border-right:2px dashed #160e3a55}
+.f .pass .from b{font-size:1.25rem;font-weight:400}
+.f .pass .to{display:flex;align-items:center;gap:10px;padding:0 16px;font-weight:700}
+.f .pass .to i{font-style:normal;transition:transform .25s}
+.f .pass:hover .to i{transform:translateX(5px)}
+.f .pass:hover{box-shadow:0 0 0 2px var(--pink),0 0 22px #ffb3d955}
+
+/* G: command bar */
+.g .cmd{display:inline-flex;align-items:center;gap:2px;padding:4px;border-radius:999px;background:#ffffff0d;border:1px solid #ffffff26;backdrop-filter:blur(8px)}
+.g .cmd a{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:999px;font-weight:500;color:var(--dim)}
+.g .cmd a:hover,.g .cmd a[aria-current]{background:#ffffff18;color:var(--ink)}
+.g .cmd a .ic{font-size:.95rem;opacity:.85}
+.g .cmd a.cta-solid{color:#2a0d22}
+.g .go{display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 18px;border-radius:999px;background:var(--butter);color:var(--ink-dark);font-weight:700;box-shadow:0 0 24px #fff1a633}
+.g .go:hover{background:var(--pink)}
+.g .ghost{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--sky);border-bottom:1.5px solid #a8d8ff66;padding-bottom:2px}
+.g .ghost:hover{color:var(--butter);border-color:var(--butter)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:520px){.bar{flex-direction:column;align-items:flex-start}}
+</style>
+
+<div class="wrap">
+  <h1>Leaner buttons: stronger directions</h1>
+  <p class="intro">Each direction shows the header (Work · About · Resume · Contact + Animation), the "Land on this planet" button, and the tags underneath, so you can see that buttons and tags no longer look alike. Every option keeps a full 44px tap area for accessibility, even when the button looks thinner. Hover and tab through them to try it. C stays for reference; E, F and G push it further.</p>
+
+  <section class="board now" aria-label="Current">
+    <header><span class="letter">NOW</span><h2>Current</h2><p class="why">44–48px tall, fully rounded. Same shape as the tags, so they compete.</p></header>
+    <div class="stage">
+      <div class="bar"><span class="brand">Tami Trevino <span>✦</span></span>
+        <nav class="nav" aria-label="Current nav"><a class="pill" href="#">Work</a><a class="pill" href="#">About</a><a class="pill" href="#">Resume</a><a class="pill primary" href="#">Contact</a><button class="sw" type="button" aria-pressed="true">Animation <span class="track"></span></button></nav></div>
+      <div class="row"><a class="land" href="#">Land on this planet →</a></div>
+      <ul class="tags"><li>Research</li><li>Data Viz</li><li>Usability Testing</li><li>Figma</li></ul>
+    </div>
+  </section>
+
+
+
+  <section class="board c" aria-label="Option C">
+    <header><span class="letter">C</span><h2>Orbit</h2><p class="why">Nav as quiet text, with a glowing pink dot marking where you are. Contact is a slim gradient capsule. The planet button becomes a small glowing planet with an arrow that tilts on hover.</p></header>
+    <div class="stage">
+      <div class="bar"><span class="brand">Tami Trevino <span>✦</span></span>
+        <nav class="nav" aria-label="Option C nav" style="gap:14px"><a class="lnk hit" href="#" aria-current="page">Work</a><a class="lnk hit" href="#">About</a><a class="lnk hit" href="#">Resume</a><a class="primary hit" href="#">Contact</a><button class="sw hit" type="button" aria-pressed="true">Animation <span class="track"></span></button></nav></div>
+      <div class="row"><a class="go hit" href="#"><span class="orb" aria-hidden="true">→</span>Land on this planet</a></div>
+      <ul class="tags"><li>Research</li><li>Data Viz</li><li>Usability Testing</li><li>Figma</li></ul>
+    </div>
+  </section>
+
+
+  <section class="board e" aria-label="Option E">
+    <header><span class="letter">E</span><h2>Orbit+</h2><p class="why">C made clearer. A soft highlight slides to whichever section you're on (click Work, About, Resume to see it move). Contact is solid pink so it's obviously the main action. The planet button tells you where you're going and how long it takes.</p></header>
+    <div class="stage">
+      <div class="bar"><span class="brand">Tami Trevino <span>✦</span></span><nav class="nav" aria-label="Option E nav" style="gap:14px"><span class="spy"><span class="ind" aria-hidden="true"></span><a class="hit" href="#" aria-current="page">Work</a><a class="hit" href="#">About</a><a class="hit" href="#">Resume</a></span><a class="cta-solid hit" href="#">Contact <span aria-hidden="true">↗</span></a><button class="sw2 hit" type="button" aria-pressed="true"><span class="ico" aria-hidden="true">✦</span>Animation <span class="track"></span></button></nav></div>
+      <div class="row"><a class="go hit" href="#"><span class="orb" aria-hidden="true"></span>View case study<span class="arr" aria-hidden="true">→</span></a><span class="meta">Bond Centre 2.0 · 3 min read</span></div>
+      <ul class="tags"><li>Research</li><li>Data Viz</li><li>Usability Testing</li><li>Figma</li></ul>
+    </div>
+  </section>
+
+  <section class="board f" aria-label="Option F">
+    <header><span class="letter">F</span><h2>Boarding pass</h2><p class="why">The strongest tie to your journey. The planet button is a slim ticket: a butter stub with the case number, a dashed tear line, and the destination by name. Unmistakable as a button, and the name tells people exactly where it goes. Same sliding nav as E.</p></header>
+    <div class="stage">
+      <div class="bar"><span class="brand">Tami Trevino <span>✦</span></span><nav class="nav" aria-label="Option F nav" style="gap:14px"><span class="spy"><span class="ind" aria-hidden="true"></span><a class="hit" href="#" aria-current="page">Work</a><a class="hit" href="#">About</a><a class="hit" href="#">Resume</a></span><a class="cta-solid hit" href="#">Contact <span aria-hidden="true">↗</span></a><button class="sw2 hit" type="button" aria-pressed="true"><span class="ico" aria-hidden="true">✦</span>Animation <span class="track"></span></button></nav></div>
+      <div class="row"><a class="pass hit" href="#"><span class="from">CASE<b>03</b></span><span class="to">Land on Bond Centre 2.0 <i aria-hidden="true">→</i></span></a></div>
+      <ul class="tags"><li>Research</li><li>Data Viz</li><li>Usability Testing</li><li>Figma</li></ul>
+    </div>
+  </section>
+
+  <section class="board g" aria-label="Option G">
+    <header><span class="letter">G</span><h2>Command bar</h2><p class="why">The most app-like. The whole nav lives in one slim glass bar with small icons, and Contact sits inside it as the solid button. Each planet gets one bright primary button and a quieter link beside it (live site, prototype), so the main action is never in doubt.</p></header>
+    <div class="stage">
+      <div class="bar"><span class="brand">Tami Trevino <span>✦</span></span>
+        <nav class="nav" aria-label="Option G nav" style="gap:14px"><span class="cmd"><a class="hit" href="#" aria-current="page"><span class="ic" aria-hidden="true">◎</span>Work</a><a class="hit" href="#"><span class="ic" aria-hidden="true">☺</span>About</a><a class="hit" href="#"><span class="ic" aria-hidden="true">▤</span>Resume</a><a class="cta-solid hit" href="#">Contact</a></span><button class="sw2 hit" type="button" aria-pressed="true"><span class="ico" aria-hidden="true">✦</span>Animation <span class="track"></span></button></nav></div>
+      <div class="row"><a class="go hit" href="#">Read the case study <span aria-hidden="true">→</span></a><a class="ghost hit" href="#">Live site <span aria-hidden="true">↗</span></a></div>
+      <ul class="tags"><li>Research</li><li>Data Viz</li><li>Usability Testing</li><li>Figma</li></ul>
+    </div>
+  </section>
+</div>
+<script>document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));
+function place(sp){const a=sp.querySelector('a[aria-current]')||sp.querySelector('a'),i=sp.querySelector('.ind');i.style.left=a.offsetLeft+'px';i.style.width=a.offsetWidth+'px';}
+document.querySelectorAll('.spy').forEach(sp=>{place(sp);sp.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{sp.querySelectorAll('a').forEach(x=>x.removeAttribute('aria-current'));a.setAttribute('aria-current','page');place(sp);}));});
+document.querySelectorAll('.g .cmd a:not(.cta-solid)').forEach(a=>a.addEventListener('click',()=>{a.parentNode.querySelectorAll('a').forEach(x=>x.removeAttribute('aria-current'));a.setAttribute('aria-current','page');}));
+window.addEventListener('resize',()=>document.querySelectorAll('.spy').forEach(place));
+document.fonts&&document.fonts.ready.then(()=>document.querySelectorAll('.spy').forEach(place));
+</script>
