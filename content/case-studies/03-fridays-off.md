@@ -60,22 +60,23 @@ We designed the brand together. Then:
 
 ## 1. The brand: quiet luxury
 
-**Research first.** We studied how **Louis Vuitton** and leading premium lifestyle brands present products online, then borrowed the best patterns: lots of whitespace, editorial photography, and calm, confident type.
+**Research first.** We studied **Louis Vuitton** and premium lifestyle brands, then borrowed their best patterns: whitespace, editorial photography and calm type.
 
-**The identity**
-- **Mark:** a circle around an "ff" ligature that works as a logo, a stamp and a repeating pattern
-- **Name styling:** **Fridays-Off**, with a capital F and a capital O. The hyphen stays, and on merch, "F-Off" becomes a wink.
+- **Mark:** an "ff" ligature in a circle that works as a logo, stamp and pattern
+- **Name:** **Fridays-Off**, with a capital F and O. On merch, "F-Off" becomes a wink.
 - **Tagline:** *unwind & recharge*
-- **Type:** Montserrat (main and bold), Poppins (secondary)
-- **Palette:** warm neutrals that read as luxury
+- **Type:** Montserrat + Poppins
+- **Palette:** four warm neutrals
 
 | Cream | Sand | Espresso | Near-black |
 |---|---|---|---|
 | `#F5F3EF` | `#D8C3A5` | `#3B2A20` | `#1A1A1A` |
 
-![One small system (four colors, two typefaces, one monogram) keeps every touchpoint consistent.](../../assets/fridays-off/01-brand-guide.png)
-![The "ff" mark and tagline work on light and dark, from the website to merch.](../../assets/fridays-off/03-logo-lockup-light-tagline.jpg)
-![The monogram doubles as a pattern, proving the brand scales beyond the screen.](../../assets/fridays-off/02-van-mockup-ai.jpg)
+<div class="pair wide trio" markdown="1">
+![Four colors, two typefaces, one monogram.](../../assets/fridays-off/01-brand-guide.png)
+![The mark works on light and dark.](../../assets/fridays-off/03-logo-lockup-light-tagline.jpg)
+![The monogram doubles as a pattern.](../../assets/fridays-off/02-van-mockup-ai.jpg)
+</div>
 
 ---
 
