@@ -50,13 +50,13 @@ My former VP of Operations bought an Austin dental practice that already had loy
 - **Clear paths for patients:** a single, simple navigation row, plus a "Visit us" section with hours, phone number and map
 - **Responsive:** designed to work just as well on a phone
 
-![Parkfield Dental logo](../../assets/dental/parkfield/portfolio/p01-logo.png)
-![Homepage hero](../../assets/dental/parkfield/portfolio/p02-hero.png)
-![Our approach and custom service icons](../../assets/dental/parkfield/portfolio/p03-approach-services.png)
-![Patient testimonial](../../assets/dental/parkfield/portfolio/p04-testimonial.png)
-![Visit us: hours, phone and map](../../assets/dental/parkfield/portfolio/p05-visit-us.png)
-![Booking call to action](../../assets/dental/parkfield/portfolio/p06-cta-band.png)
-![Parkfield on mobile](../../assets/dental/parkfield/portfolio/p07-mobile-hero.png)
+![A single-line tooth mark: precise like dentistry, friendly like family care.](../../assets/dental/parkfield/portfolio/p01-logo.png)
+![A real family moment and one clear action: Book an Appointment, always one tap away.](../../assets/dental/parkfield/portfolio/p02-hero.png)
+![Custom line icons echo the logo, so the brand feels consistent from mark to menu.](../../assets/dental/parkfield/portfolio/p03-approach-services.png)
+![Patient voices up front build trust before anyone picks up the phone.](../../assets/dental/parkfield/portfolio/p04-testimonial.png)
+![Hours, phone and map in one place answer the top patient questions without a call.](../../assets/dental/parkfield/portfolio/p05-visit-us.png)
+![Every scroll ends with the same clear next step: schedule an appointment.](../../assets/dental/parkfield/portfolio/p06-cta-band.png)
+![Built for phones, where most patients search for a dentist.](../../assets/dental/parkfield/portfolio/p07-mobile-hero.png)
 
 ### Designed for the whole community
 Austin has a large Latino community, and many patients only speak Spanish. At launch, I built the site with a **site-wide English/Spanish translator**, so every page (services, insurance, booking) could be read in the patient's own language. I also designed for **accessibility**: readable type, strong contrast, and clear, consistent buttons.
