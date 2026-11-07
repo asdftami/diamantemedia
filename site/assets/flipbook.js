@@ -5,8 +5,12 @@
   const opener = document.getElementById('douxOpen');
   if (!opener) return;
   const PAGES = Array.from({ length: 12 }, (_, i) => 'assets/utrgv/doux/doux-' + String(i + 1).padStart(2, '0') + '.webp');
-  const LABELS = ['Front and back cover', 'Table of contents', 'What does indie mean today? Sound, Style, Spirit', 'Indie, continued', 'Rise: model-singer Camille on the rise', 'Music and fashion', 'The evolution of glam rock', 'What is Big Fashion?', 'Explore pop fashion', 'Epiphone: 140 years of sound', "What's your style? quiz", 'Banks'];
+  const LABELS = ['Front cover', 'Table of contents', 'What does indie mean today? Sound, Style, Spirit', 'Indie, continued', 'Rise: model-singer Camille on the rise', 'Music and fashion', 'The evolution of glam rock', 'What is Big Fashion?', 'Explore pop fashion', 'Epiphone: 140 years of sound', "What's your style? quiz", 'Banks'];
   PAGES.forEach(src => { const i = new Image(); i.src = src; });   // preload so turns are smooth
+  // The first image is the cover wrap: right half = front cover (pink), left half = back cover (blue).
+  const STATES = [{ p: 0, half: 'r', label: 'Front cover' }]
+    .concat(PAGES.slice(1).map((_, k) => ({ p: k + 1, label: LABELS[k + 1] })))
+    .concat([{ p: 0, half: 'l', label: 'Back cover' }]);
 
   const d = document.createElement('dialog');
   d.className = 'mag'; d.setAttribute('aria-labelledby', 'magTitle');
@@ -20,25 +24,34 @@
         leaf = d.querySelector('.mag-leaf'), front = d.querySelector('.mag-front'), back = d.querySelector('.mag-back'),
         count = d.querySelector('.mag-count'), prev = d.querySelector('.prev'), next = d.querySelector('.next');
   let cur = 0, busy = false;
-  const bg = (el, i) => { el.style.backgroundImage = 'url(' + PAGES[i] + ')'; };
+  const bg = (el, p) => { el.style.backgroundImage = 'url(' + PAGES[p] + ')'; };
   const still = () => document.documentElement.classList.contains('no-motion') || matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function show(i) {
-    cur = i; bg(base, i); left.style.backgroundImage = ''; leaf.hidden = true;
-    book.setAttribute('role', 'img'); book.setAttribute('aria-label', 'DOUX Magazine, ' + LABELS[i]);
-    count.textContent = 'Spread ' + (i + 1) + ' of ' + PAGES.length + ' · ' + LABELS[i];
-    prev.disabled = i === 0; next.disabled = i === PAGES.length - 1;
+    const st = STATES[i];
+    cur = i; bg(base, st.p); left.style.backgroundImage = ''; leaf.hidden = true;
+    base.className = 'mag-base' + (st.half ? ' single ' + st.half : '');
+    book.classList.toggle('closed', !!st.half);
+    book.setAttribute('role', 'img'); book.setAttribute('aria-label', 'DOUX Magazine, ' + st.label);
+    count.textContent = st.half ? st.label : 'Pages ' + (i * 2) + '–' + (i * 2 + 1) + ' · ' + st.label;
+    if (document.activeElement && document.activeElement.disabled) (i === 0 ? next : prev).focus();
+    prev.disabled = i === 0; next.disabled = i === STATES.length - 1;
   }
   function turn(dir) {
     const to = cur + dir;
-    if (busy || to < 0 || to >= PAGES.length) return;
+    if (busy || to < 0 || to >= STATES.length) return;
     if (still()) { show(to); return; }
     busy = true;
+    if (STATES[cur].half || STATES[to].half) {        // opening or closing the magazine
+      flip(); base.classList.add(dir > 0 ? 'open-out' : 'open-in');
+      setTimeout(() => { show(to); base.classList.add(dir > 0 ? 'open-in2' : 'open-out2'); setTimeout(() => { base.classList.remove('open-in2', 'open-out2'); busy = false; }, 360); }, 340);
+      return;
+    }
+    const a = STATES[cur].p, b = STATES[to].p;
     // forward: left half of current stays, base shows next; leaf = current right half (front) / next left half (back)
     // backward: mirror of that
     leaf.className = 'mag-leaf ' + (dir > 0 ? 'fwd' : 'bwd');
-    if (dir > 0) { bg(base, to); bg(left, cur); bg(front, cur); bg(back, to); }
-    else { bg(base, to); bg(left, cur); bg(front, cur); bg(back, to); }
+    bg(base, b); bg(left, a); bg(front, a); bg(back, b);
     left.className = 'mag-left ' + (dir > 0 ? 'keep-l' : 'keep-r');
     leaf.hidden = false; void leaf.offsetWidth; leaf.classList.add('go');
     flip();
@@ -62,11 +75,12 @@
   book.addEventListener('click', e => { const r = book.getBoundingClientRect(); turn(e.clientX - r.left > r.width / 2 ? 1 : -1); });
   d.querySelector('.mag-close').addEventListener('click', () => d.close());
   d.addEventListener('click', e => { if (e.target === d) d.close(); });
-  d.addEventListener('keydown', e => {
+  document.addEventListener('keydown', e => {
+    if (!d.open) return;
     if (e.key === 'ArrowRight') { e.preventDefault(); turn(1); }
     if (e.key === 'ArrowLeft') { e.preventDefault(); turn(-1); }
     if (e.key === 'Home') { e.preventDefault(); show(0); }
-    if (e.key === 'End') { e.preventDefault(); show(PAGES.length - 1); }
+    if (e.key === 'End') { e.preventDefault(); show(STATES.length - 1); }
   });
   let sx = null;
   book.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, { passive: true });

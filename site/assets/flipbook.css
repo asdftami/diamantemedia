@@ -32,3 +32,14 @@ dialog.mag button:disabled{opacity:.35;cursor:default;background:#fff1a6}
 .mag-count{margin:0;min-width:0;text-align:center;color:#d6cef0;font-size:.95rem}
 .mag-hint{margin:6px 0 0;text-align:center;font-family:VT323,monospace;font-size:1.05rem;letter-spacing:.06em;color:#b8afd8}
 @media (max-width:640px){.mag-hint{display:none}.mag-count{font-size:.85rem}}
+/* closed magazine: a single cover page, centered */
+.mag-base.single{left:25%!important;right:25%!important;background-size:200% 100%!important;box-shadow:0 20px 50px #000a;transform-origin:0 50%}
+.mag-base.single.r{background-position:100% 0}
+.mag-base.single.l{background-position:0 0;transform-origin:100% 50%}
+.mag-book.closed{box-shadow:none}
+.mag-book.closed .mag-spine{display:none}
+.mag-base.open-out{transition:transform .34s ease-in,opacity .34s;transform:rotateY(-70deg);opacity:.2}
+.mag-base.open-in{transition:transform .34s ease-in,opacity .34s;transform:rotateY(70deg);opacity:.2}
+.mag-base.open-in2{animation:magin .36s ease-out}
+.mag-base.open-out2{animation:magin .36s ease-out}
+@keyframes magin{from{opacity:.2;transform:scale(.96)}to{opacity:1;transform:none}}
