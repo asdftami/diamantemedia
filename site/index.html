@@ -243,7 +243,7 @@
   .bfa-open i{font-style:normal;transition:transform .2s}
   .bfa-open:hover{border-color:var(--pink)!important;color:var(--pink)!important}.bfa-open:hover i{transform:translateX(4px)}
 
-  .bfa{margin:4px 0 18px;max-width:560px}
+  .bfa{margin:4px 0 18px;max-width:560px;display:flex;flex-wrap:wrap;gap:10px}
   .bfa-h{font-family:VT323,monospace;font-size:1.1rem;letter-spacing:.12em;color:var(--butter);margin:0 0 8px}
   .bfa-row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
   .bfa-row li{display:flex}
@@ -305,6 +305,7 @@
   }
 </style>
 <link rel="stylesheet" href="assets/planets.css">
+<link rel="stylesheet" href="assets/flipbook.css">
 </head>
 <body>
 <a class="skip" href="#work">Skip the journey: go to my work</a>
@@ -372,8 +373,8 @@
         <p>I traded pre-dental for graphic design and earned my BFA a semester early. I led 5 designers as editor-in-chief of <a class="inline" href="https://www.youtube.com/channel/UCzMvjvTz2uzrQExGYtOVKNg" target="_blank" rel="noopener">OMG! RGV<span class="sr-only"> (opens in a new tab)</span></a> and designed for <a class="inline" href="https://myrgv.com/category/publications/the-monitor/" target="_blank" rel="noopener">The Monitor<span class="sr-only"> (opens in a new tab)</span></a>'s media team.</p>
         <p class="mini-links"><a href="https://www.youtube.com/channel/UCzMvjvTz2uzrQExGYtOVKNg" target="_blank" rel="noopener">▶ OMG! RGV interviews ↗<span class="sr-only"> (opens in a new tab)</span></a><a href="https://x.com/OmgRgv/status/1314725741414830080" target="_blank" rel="noopener">OMG! RGV on X ↗<span class="sr-only"> (opens in a new tab)</span></a><a href="https://myrgv.com/category/publications/the-monitor/" target="_blank" rel="noopener">The Monitor ↗<span class="sr-only"> (opens in a new tab)</span></a></p>
         <p class="also"><strong>Also in 2019:</strong> on a team of 3, I co-designed the logo for <a class="inline" href="https://cadravo.com" target="_blank" rel="noopener">Cadravo<span class="sr-only"> (opens in a new tab)</span></a>, a B2B cloud communications startup, with its CEO, designed the site's hero banner and pop-up graphics, and grew its social media from zero.</p>
-        <div class="bfa"><button type="button" class="bfa-thumb bfa-open" data-i="0" data-label="Open my BFA work: 6 images">FROM MY BFA <span class="bfa-n">6 pieces</span><i aria-hidden="true">→</i></button></div>
-        <script type="application/json" id="bfa-data">[{"src": "assets/utrgv/doux-cover.webp", "alt": "DOUX Magazine: front and back cover of a 22-page editorial magazine"}, {"src": "assets/utrgv/doux-rise.webp", "alt": "DOUX Magazine spread: \"Rise,\" a feature on a rising model-singer, with oversized type over a portrait"}, {"src": "assets/utrgv/doux-sound-style-spirit.webp", "alt": "DOUX Magazine spread: \"Sound Style Spirit,\" broken-grid type mixed with music photography"}, {"src": "assets/utrgv/fiux-2018-poster.webp", "alt": "FIUX 2018 call-for-entries poster, designed with Lauren Morris: bold geometric shards in pink and aqua"}, {"src": "assets/utrgv/honey-bees-infographic.webp", "alt": "\"Do you know Honey Bees?\" infographic: a low-poly-style bee illustration with honey production charts by country"}, {"src": "assets/utrgv/omg-rgv-website.webp", "alt": "OMG! RGV website (2019): homepage with events calendar and local spots, plus the Meet the Team page. I led the magazine and built the site."}]</script>
+        <div class="bfa"><button type="button" class="bfa-thumb bfa-open" data-i="0" data-label="Open my BFA work: 3 images">FROM MY BFA <span class="bfa-n">3 pieces</span><i aria-hidden="true">→</i></button><button type="button" class="bfa-open" id="douxOpen" aria-haspopup="dialog">DOUX MAGAZINE <span class="bfa-n">Flip through</span><i aria-hidden="true">📖</i></button></div>
+        <script type="application/json" id="bfa-data">[{"src": "assets/utrgv/fiux-2018-poster.webp", "alt": "FIUX 2018 call-for-entries poster, designed with Lauren Morris: bold geometric shards in pink and aqua"}, {"src": "assets/utrgv/honey-bees-infographic.webp", "alt": "\"Do you know Honey Bees?\" infographic: a low-poly-style bee illustration with honey production charts by country"}, {"src": "assets/utrgv/omg-rgv-website.webp", "alt": "OMG! RGV website (2019): homepage with events calendar and local spots, plus the Meet the Team page. I led the magazine and built the site."}]</script>
         <ul class="tags" aria-label="Skills from this era"><li>Graphic Design</li><li>Editorial Leadership</li><li>Web Build</li><li>Video Editing</li></ul>
       </div>
       <div class="planet-wrap" aria-hidden="true"><span class="planet3" data-p="rose" style="--spin:70s"></span><span class="stk floppy" style="left:2%;bottom:8%"></span></div>
@@ -675,6 +676,7 @@
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && win.classList.contains('max')) { setMax(false); bMax.focus(); } });
 })();
 </script>
+<script src="assets/flipbook.js"></script>
 <script src="assets/planets.js"></script>
 <script src="assets/cursor.js"></script>
 <script src="assets/nav.js"></script>
