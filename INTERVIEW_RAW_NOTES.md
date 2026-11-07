@@ -7,7 +7,7 @@
 - Born **May 29, 1993** in **Monterrey, Nuevo León, Mexico**. "I had a wonderful growing up."
 - Grandmother owned a **bilingual school** in downtown Monterrey (name roughly "International Bilingual Institute of Monterrey"; exact name TBD).
 - Tami attended from **kindergarten to about 2nd/3rd grade**.
-- Parents worked at the school: "school chefs" (to confirm: chefs, or staff/administrators?). Mom taught geography/world; dad was a PE coach of some sort.
+- Parents worked at the school: "school chefs" (to confirm: chefs, or staff/administrators?). Mom taught geography/world; dad was NOT a PE coach (corrected): part-time dentist with his office attached to the school; ran the lunch store with mom between patients.
 - All her cousins went there too, so she grew up with "family all around me."
 - Around **age 9**, the family was getting evicted from their home in Mexico. Tami thinks the school jobs may not have brought in enough money; unsure of the reason.
 - Dad was also a **dentist** in Mexico (in addition to the school), but business wasn't booming; dental work isn't a priority when people don't have much money.
@@ -779,3 +779,12 @@ Context (Tami): self-initiated audits done while working the retail floor. The c
 - Bond Centre: 09-BEFORE-old-welcome-page is the OLD welcome page (Tami, Nov 7). The new one is 08; its lorem ipsum paragraph was cropped out for the portfolio (08b).
 - FIUX 2018 poster: collaboration with Lauren Morris (credit shown).
 - ⚠️ Standing rule (Tami, Nov 7, 2026): ALWAYS be concise. Short answers, one thing at a time, no long lists.
+
+## Grandma's school, Monterrey (Tami, in her words, condensed)
+- Four parts: big gym with bleachers (PE); open-air area with a "little house" in the back where kids set up their stuff, napped when sick or after dad pulled a tooth; little kitchen/store where parents sold food (soda machine, chips, snacks); lime tree in the back ("epic").
+- Kindergarten: morning trips to the sinks to brush teeth. Dad's dental office faced the street, connected to the school.
+- South courtyard: morning flag ceremony; stairs up to junior high/high school. First floor = K–elementary.
+- Cousins everywhere, saw them at recess. Parents fed her lunch, could grab anything from the store.
+- Aunts were teachers. Aunt Marcela (math, her favorite subject): fractions with oranges and saltine crackers; chalk + meter rulers on the courtyard floor with cousins. Mom taught geography. Grandma in her office with another aunt (history). Uncles there too. "Literally a family business… everyone there felt like family."
+- After school: mom sat with them until homework was done; no play until finished.
+- K–3rd grade there. Moved to the US at 9, skipped 4th, started 5th grade ESL.
