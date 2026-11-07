@@ -27,7 +27,7 @@
         count = d.querySelector('.mag-count'), prev = d.querySelector('.prev'), next = d.querySelector('.next');
   let cur = 0, busy = false;
   const bg = (el, p) => { el.style.backgroundImage = 'url(' + PAGES[p] + ')'; };
-  const still = () => document.documentElement.classList.contains('no-motion') || matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const still = () => document.documentElement.classList.contains('no-motion');   // the Animation switch already starts off when the device asks for reduced motion
 
   function show(i) {
     const st = STATES[i];

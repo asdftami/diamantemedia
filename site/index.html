@@ -271,7 +271,7 @@
   .no-motion .ship.boost{transform:none} .no-motion .ship.boost .flame{opacity:0}
   .no-motion .pass:hover,.no-motion .pill:hover,.no-motion .land:hover,.no-motion .cta:hover,.no-motion .work-strip a:hover,.no-motion .key:hover{transform:none}
   .no-motion .work-strip a:hover .planet.mini,.no-motion .pass:hover .dest i{transform:none}
-  @media (prefers-reduced-motion: reduce){ .planet,.moon,.ship-body{animation:none} html{scroll-behavior:auto} *{transition:none!important} .pass:hover,.pill:hover,.land:hover,.cta:hover,.work-strip a:hover,.key:hover,.work-strip a:hover .planet.mini{transform:none!important} }
+  @media (prefers-reduced-motion: reduce){ .planet,.moon,.ship-body{animation:none} html{scroll-behavior:auto} html.no-motion *{transition:none!important} .pass:hover,.pill:hover,.land:hover,.cta:hover,.work-strip a:hover,.key:hover,.work-strip a:hover .planet.mini{transform:none!important} }
   html{scroll-behavior:smooth}
 
   @media (max-width:380px){ header.top{padding:10px 10px} .spy a,.cta,.switch{font-size:.85rem} .spy a,.cta{padding:0 9px} nav.actions{gap:4px} }
@@ -307,7 +307,7 @@
 </style>
 <link rel="stylesheet" href="assets/planets.css?v=2">
 <link rel="stylesheet" href="assets/flipbook.css?v=6">
-<link rel="stylesheet" href="assets/folds.css?v=2">
+<link rel="stylesheet" href="assets/folds.css?v=3">
 </head>
 <body>
 <a class="skip" href="#work">Skip the journey: go to my work</a>
@@ -666,8 +666,8 @@
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && win.classList.contains('max')) { setMax(false); bMax.focus(); } });
 })();
 </script>
-<script src="assets/flipbook.js?v=4"></script>
-<script src="assets/folds.js?v=4"></script>
+<script src="assets/flipbook.js?v=5"></script>
+<script src="assets/folds.js?v=5"></script>
 <script src="assets/planets.js?v=2"></script>
 <script src="assets/cursor.js?v=2"></script>
 <script src="assets/nav.js?v=2"></script>

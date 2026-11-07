@@ -42,7 +42,7 @@
   const stage = d.querySelector('.fold-stage'), sheet = d.querySelector('.fold-sheet'), title = d.querySelector('#foldTitle'),
         count = d.querySelector('.mag-count'), prev = d.querySelector('.prev'), next = d.querySelector('.next');
   let piece = null, step = 0, panels = [], opener = null, tuck;
-  const still = () => document.documentElement.classList.contains('no-motion') || matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const still = () => document.documentElement.classList.contains('no-motion');   // the Animation switch already starts off when the device asks for reduced motion
 
   function face(src, cls) { const f = document.createElement('div'); f.className = 'fold-face ' + cls; f.style.backgroundImage = 'url(' + P + src + '.webp)'; return f; }
   function build(key) {
