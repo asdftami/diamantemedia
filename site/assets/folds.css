@@ -20,5 +20,6 @@ dialog.fold-dlg button:disabled{opacity:.35;cursor:default;background:#fff1a6}
 .tri .fold-panel.leaf-l{left:auto;right:100%;transform-origin:100% 50%;z-index:2}
 .tri .fold-panel.leaf-r{left:100%;transform-origin:0 50%;z-index:1}
 .tri .leaf-l .fold-face{transform:translateZ(3px)}.tri .leaf-l .fold-face.back{transform:rotateY(180deg) translateZ(3px)}
+.fold-panel.tucked>.fold-face{visibility:hidden}
 .no-motion .fold-sheet,.no-motion .fold-panel{transition:none}
 @media (prefers-reduced-motion: reduce){.fold-sheet,.fold-panel{transition:none}}

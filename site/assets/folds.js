@@ -9,11 +9,14 @@
       // front faces (left→right when open) and their backs; the back of the cover is the mailer
       front: ['runaway-a1', 'runaway-a2', 'runaway-a3', 'runaway-a4'], back: ['runaway-b4', 'runaway-b3', 'runaway-b2', 'runaway-b1'],
       steps: [
-        { label: 'Folded · Cover', fold: [0, 178, -178, 178] },
-        { label: 'Unfolding', fold: [0, 0, 178, -178] },
-        { label: 'Unfolding', fold: [0, 0, 0, 178] },
+        { label: 'Folded · Cover', fold: [0, 179.6, -179.6, 179.6] },
+        { label: 'Unfolding', fold: [0, 0, 179.6, -179.6] },
+        { label: 'Unfolding', fold: [0, 0, 0, 179.6] },
         { label: 'Open · Inside', fold: [0, 0, 0, 0] },
-        { label: 'Flipped · Back side', fold: [0, 0, 0, 0], flip: true },
+        { label: 'Back · Folded (mailer)', fold: [0, -179.6, 179.6, -179.6], flip: true },
+        { label: 'Back · Unfolding', fold: [0, 0, -179.6, 179.6], flip: true },
+        { label: 'Back · Unfolding', fold: [0, 0, 0, -179.6], flip: true },
+        { label: 'Open · Back side', fold: [0, 0, 0, 0], flip: true },
       ],
     },
     cadravo: {
@@ -38,7 +41,8 @@
   document.body.appendChild(d);
   const stage = d.querySelector('.fold-stage'), sheet = d.querySelector('.fold-sheet'), title = d.querySelector('#foldTitle'),
         count = d.querySelector('.mag-count'), prev = d.querySelector('.prev'), next = d.querySelector('.next');
-  let piece = null, step = 0, panels = [], opener = null;
+  let piece = null, step = 0, panels = [], opener = null, tuck;
+  const still = () => document.documentElement.classList.contains('no-motion') || matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function face(src, cls) { const f = document.createElement('div'); f.className = 'fold-face ' + cls; f.style.backgroundImage = 'url(' + P + src + '.webp)'; return f; }
   function build(key) {
@@ -68,10 +72,14 @@
   function apply() {
     const s = piece.steps[step];
     panels.forEach((p, k) => { p.style.transform = 'rotateY(' + s.fold[k] + 'deg)'; });
+    // panels tucked under the stack: hide their faces once the fold settles, so no edges peek through
+    clearTimeout(tuck); panels.forEach(p => p.classList.remove('tucked'));
+    if (!piece.trifold) tuck = setTimeout(() => panels.forEach((p, k) => p.classList.toggle('tucked', k > 0 && s.fold.slice(1, k + 1).some(f => f !== 0))), still() ? 0 : 820);
     // keep what is visible centered in the stage
     let shift = 0;
     if (!piece.trifold) { const open = s.fold.findIndex((f, k) => k > 0 && f !== 0); const visible = open === -1 ? piece.panels : open; shift = (piece.panels - visible) / 2; }
     else if (step === 1) shift = 0.5;
+    if (s.flip) shift = -shift;   // flipped: the folded stack sits on the right
     sheet.style.transform = 'translateX(calc(' + shift + ' * var(--pw)))' + (s.flip ? ' rotateY(180deg)' : '');
     count.textContent = s.label;
     prev.disabled = step === 0; next.disabled = step === piece.steps.length - 1;
