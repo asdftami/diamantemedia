@@ -7,7 +7,7 @@ dialog.mag::backdrop{background:#040310e6}
 dialog.mag button{min-height:44px;padding:0 16px;border-radius:999px;border:0;background:#fff1a6;color:#1a1033;font:inherit;font-weight:700;cursor:pointer}
 dialog.mag button:hover{background:#ffb3d9}
 dialog.mag button:disabled{opacity:.35;cursor:default;background:#fff1a6}
-.mag-book{position:relative;width:100%;aspect-ratio:1296/882;max-height:72vh;margin:0 auto;perspective:4200px;cursor:pointer;border-radius:6px;box-shadow:0 30px 70px #000c}
+.mag-book{position:relative;width:100%;aspect-ratio:1260/846;max-height:72vh;margin:0 auto;perspective:4200px;cursor:pointer;border-radius:6px;box-shadow:0 30px 70px #000c}
 .mag-book > div{position:absolute;inset:0;background-size:100% 100%;background-repeat:no-repeat}
 .mag-left{pointer-events:none}
 .mag-left.keep-l{clip-path:inset(0 50% 0 0)}
@@ -27,15 +27,14 @@ dialog.mag button:disabled{opacity:.35;cursor:default;background:#fff1a6}
 .mag-leaf.bwd.go{animation:magbwd .75s cubic-bezier(.45,.05,.3,1) forwards}
 @keyframes magfwd{from{transform:rotateY(0)}to{transform:rotateY(-180deg)}}
 @keyframes magbwd{from{transform:rotateY(0)}to{transform:rotateY(180deg)}}
-.mag-bar{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:12px}
-.mag-nav{width:44px;padding:0!important;font-size:1.3rem!important}
+.mag-bar{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:10px;margin-top:12px}
+.mag-nav{width:44px;height:44px;min-height:44px!important;padding:0!important;font-size:1.2rem!important;flex:none}
 .mag-count{margin:0;min-width:0;text-align:center;color:#d6cef0;font-size:.95rem}
 .mag-hint{margin:6px 0 0;text-align:center;font-family:VT323,monospace;font-size:1.05rem;letter-spacing:.06em;color:#b8afd8}
 @media (max-width:640px){.mag-hint{display:none}.mag-count{font-size:.85rem}}
 /* closed magazine: a single cover page, centered */
-.mag-base.single{left:25%!important;right:25%!important;background-size:200% 100%!important;box-shadow:0 20px 50px #000a;transform-origin:0 50%}
-.mag-base.single.r{background-position:100% 0}
-.mag-base.single.l{background-position:0 0;transform-origin:100% 50%}
+.mag-base.single{top:0;bottom:0;left:0!important;right:0!important;margin:0 auto;height:100%;width:auto;aspect-ratio:594/774;background-size:100% 100%!important;background-position:0 0!important;border-radius:3px;box-shadow:0 20px 50px #000a;transform-origin:0 50%}
+.mag-base.single.l{transform-origin:100% 50%}
 .mag-book.closed{box-shadow:none}
 .mag-book.closed .mag-spine{display:none}
 .mag-base.open-out{transition:transform .34s ease-in,opacity .34s;transform:rotateY(-70deg);opacity:.2}

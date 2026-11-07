@@ -8,6 +8,8 @@
   const LABELS = ['Front cover', 'Table of contents', 'What does indie mean today? Sound, Style, Spirit', 'Indie, continued', 'Rise: model-singer Camille on the rise', 'Music and fashion', 'The evolution of glam rock', 'What is Big Fashion?', 'Explore pop fashion', 'Epiphone: 140 years of sound', "What's your style? quiz", 'Banks'];
   PAGES.forEach(src => { const i = new Image(); i.src = src; });   // preload so turns are smooth
   // The first image is the cover wrap: right half = front cover (pink), left half = back cover (blue).
+  const COVERS = { r: 'assets/utrgv/doux/doux-cover-front.webp', l: 'assets/utrgv/doux/doux-cover-back.webp' };   // cropped, no white margin
+  Object.values(COVERS).forEach(src => { const i = new Image(); i.src = src; });
   const STATES = [{ p: 0, half: 'r', label: 'Front cover' }]
     .concat(PAGES.slice(1).map((_, k) => ({ p: k + 1, label: LABELS[k + 1] })))
     .concat([{ p: 0, half: 'l', label: 'Back cover' }]);
@@ -29,7 +31,8 @@
 
   function show(i) {
     const st = STATES[i];
-    cur = i; bg(base, st.p); left.style.backgroundImage = ''; leaf.hidden = true;
+    cur = i; left.style.backgroundImage = ''; leaf.hidden = true;
+    base.style.backgroundImage = 'url(' + (st.half ? COVERS[st.half] : PAGES[st.p]) + ')';
     base.className = 'mag-base' + (st.half ? ' single ' + st.half : '');
     book.classList.toggle('closed', !!st.half);
     book.setAttribute('role', 'img'); book.setAttribute('aria-label', 'DOUX Magazine, ' + st.label);
