@@ -42,3 +42,5 @@ dialog.mag button:disabled{opacity:.35;cursor:default;background:#fff1a6}
 .mag-base.open-in2{animation:magin .36s ease-out}
 .mag-base.open-out2{animation:magin .36s ease-out}
 @keyframes magin{from{opacity:.2;transform:scale(.96)}to{opacity:1;transform:none}}
+.mag-close{white-space:nowrap;flex:none}
+@media (max-width:640px){.mag-title{font-size:1.15rem}.mag-title span{display:block;font-size:.8rem}}
