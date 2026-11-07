@@ -5,7 +5,7 @@
   const P = 'assets/folds/';
   const PIECES = {
     runaway: {
-      title: 'The Runaway', sub: '· Z-fold brochure', ratio: 740 / 760, panels: 4,
+      title: 'The Runaway', sub: '· Z-fold brochure', ratio: 740 / 774, panels: 4,
       // front faces (left→right when open) and their backs; the back of the cover is the mailer
       front: ['runaway-a1', 'runaway-a2', 'runaway-a3', 'runaway-a4'], back: ['runaway-b4', 'runaway-b3', 'runaway-b2', 'runaway-b1'],
       steps: [
@@ -20,7 +20,7 @@
       ],
     },
     cadravo: {
-      title: 'Cadravo Communications', sub: '· Trifold brochure', ratio: 660 / 1000, panels: 3, trifold: true,
+      title: 'Cadravo Communications', sub: '· Trifold brochure', ratio: 500 / 1150, panels: 3, trifold: true,
       // inside I1 I2 I3; outside: cover (O3) is the back of I1, back cover (O2) behind I2, flap (O1) behind I3
       front: ['cadravo-i1', 'cadravo-i2', 'cadravo-i3'], back: ['cadravo-o3', 'cadravo-o2', 'cadravo-o1'],
       steps: [

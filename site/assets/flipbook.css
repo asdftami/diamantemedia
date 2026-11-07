@@ -7,7 +7,7 @@ dialog.mag::backdrop{background:#040310e6}
 dialog.mag button{min-height:44px;padding:0 16px;border-radius:999px;border:0;background:#fff1a6;color:#1a1033;font:inherit;font-weight:700;cursor:pointer}
 dialog.mag button:hover{background:#ffb3d9}
 dialog.mag button:disabled{opacity:.35;cursor:default;background:#fff1a6}
-.mag-book{position:relative;width:100%;aspect-ratio:1260/846;max-height:72vh;margin:0 auto;perspective:4200px;cursor:pointer;border-radius:6px;box-shadow:0 30px 70px #000c}
+.mag-book{position:relative;width:min(100%,calc(72vh * 1260 / 846));aspect-ratio:1260/846;margin:0 auto;perspective:4200px;cursor:pointer;border-radius:6px;box-shadow:0 30px 70px #000c}
 .mag-book > div{position:absolute;inset:0;background-size:100% 100%;background-repeat:no-repeat}
 .mag-left{pointer-events:none}
 .mag-left.keep-l{clip-path:inset(0 50% 0 0)}
