@@ -6,9 +6,9 @@
 <title>About · Tami Trevino</title>
 <meta name="description" content="Tami Trevino (she/they): bilingual product designer, maker and founder. Every industry is a new world.">
 <script>try{if(localStorage.getItem('tt-motion')==='off')document.documentElement.classList.add('no-motion')}catch(e){}</script>
-<link rel="stylesheet" href="assets/fonts/fonts.css">
-<link rel="stylesheet" href="assets/planets.css">
-<link rel="stylesheet" href="assets/contact.css">
+<link rel="stylesheet" href="assets/fonts/fonts.css?v=2">
+<link rel="stylesheet" href="assets/planets.css?v=2">
+<link rel="stylesheet" href="assets/contact.css?v=2">
 <style>
   :root{
     --space-0:#07051a;--space-1:#120c35;
@@ -222,9 +222,9 @@
   };
   setHint(); document.addEventListener('tt-motion', setHint);
 </script>
-<script src="assets/planets.js"></script>
-<script src="assets/cursor.js"></script>
-<script src="assets/contact.js"></script>
+<script src="assets/planets.js?v=2"></script>
+<script src="assets/cursor.js?v=2"></script>
+<script src="assets/contact.js?v=2"></script>
 <script>
   document.querySelectorAll('a[href="about.html"], a[href="/about"], a[href="about"]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); history.replaceState(null, '', 'about.html'); scrollTo({ top: 0, behavior: 'smooth' }); }));
   // the menu shows where you are: About up top, Contact once the contact section is on screen
@@ -235,6 +235,6 @@
     else { aboutLink.setAttribute('aria-current', 'page'); contactLink.removeAttribute('aria-current'); }
   }, { rootMargin: '-45% 0px -45% 0px' }).observe(document.getElementById('contact'));
 </script>
-<script src="assets/nav.js"></script>
+<script src="assets/nav.js?v=2"></script>
 </body>
 </html>
