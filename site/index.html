@@ -237,7 +237,12 @@
   .no-motion .stk{animation:none}
   @media (prefers-reduced-motion: reduce){.stk{animation:none}}
   @media (max-width:820px){.stk.spark,.stk.heart{display:none}.stk.floppy{width:50px;height:50px}}
-  /* "From my BFA" mini gallery on the UTRGV stop */
+  /* "From my BFA": one button that opens the viewer */
+  .bfa-open{display:inline-flex!important;align-items:center;gap:10px;width:auto!important;height:auto!important;padding:9px 16px!important;border-radius:999px!important;border:1.5px solid #fff1a666!important;background:#fff1a612!important;font-family:VT323,monospace!important;font-size:1.2rem!important;letter-spacing:.1em;color:var(--butter)!important;cursor:pointer!important}
+  .bfa-open .bfa-n{font-family:"Space Grotesk",sans-serif;font-size:.85rem;letter-spacing:0;color:var(--ink-dim)}
+  .bfa-open i{font-style:normal;transition:transform .2s}
+  .bfa-open:hover{border-color:var(--pink)!important;color:var(--pink)!important}.bfa-open:hover i{transform:translateX(4px)}
+
   .bfa{margin:4px 0 18px;max-width:560px}
   .bfa-h{font-family:VT323,monospace;font-size:1.1rem;letter-spacing:.12em;color:var(--butter);margin:0 0 8px}
   .bfa-row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
@@ -367,7 +372,7 @@
         <p>I traded pre-dental for graphic design and earned my BFA a semester early. I led 5 designers as editor-in-chief of <a class="inline" href="https://www.youtube.com/channel/UCzMvjvTz2uzrQExGYtOVKNg" target="_blank" rel="noopener">OMG! RGV<span class="sr-only"> (opens in a new tab)</span></a> and designed for <a class="inline" href="https://myrgv.com/category/publications/the-monitor/" target="_blank" rel="noopener">The Monitor<span class="sr-only"> (opens in a new tab)</span></a>'s media team.</p>
         <p class="mini-links"><a href="https://www.youtube.com/channel/UCzMvjvTz2uzrQExGYtOVKNg" target="_blank" rel="noopener">▶ OMG! RGV interviews ↗<span class="sr-only"> (opens in a new tab)</span></a><a href="https://x.com/OmgRgv/status/1314725741414830080" target="_blank" rel="noopener">OMG! RGV on X ↗<span class="sr-only"> (opens in a new tab)</span></a><a href="https://myrgv.com/category/publications/the-monitor/" target="_blank" rel="noopener">The Monitor ↗<span class="sr-only"> (opens in a new tab)</span></a></p>
         <p class="also"><strong>Also in 2019:</strong> on a team of 3, I co-designed the logo for <a class="inline" href="https://cadravo.com" target="_blank" rel="noopener">Cadravo<span class="sr-only"> (opens in a new tab)</span></a>, a B2B cloud communications startup, with its CEO, designed the site's hero banner and pop-up graphics, and grew its social media from zero.</p>
-        <div class="bfa" aria-labelledby="bfa-h"><p class="bfa-h" id="bfa-h">FROM MY BFA</p><ul class="bfa-row"><li><button type="button" class="bfa-thumb" data-i="0"><img src="assets/utrgv/doux-cover-thumb.webp" alt="" loading="lazy"><span class="bfa-t">DOUX Magazine</span><span class="bfa-s">3 Spreads · With Jovanna Mireles</span></button></li><li><button type="button" class="bfa-thumb" data-i="3"><img src="assets/utrgv/fiux-2018-poster-thumb.webp" alt="" loading="lazy"><span class="bfa-t">FIUX 2018 poster</span><span class="bfa-s">Call For Entries · With Lauren Morris</span></button></li><li><button type="button" class="bfa-thumb" data-i="4"><img src="assets/utrgv/honey-bees-infographic-thumb.webp" alt="" loading="lazy"><span class="bfa-t">Honey Bees infographic</span><span class="bfa-s">Low-Poly Illustration · Data Viz</span></button></li><li><button type="button" class="bfa-thumb" data-i="5"><img src="assets/utrgv/wave-sculpture-thumb.webp" alt="" loading="lazy"><span class="bfa-t">Wave sculpture</span><span class="bfa-s">Cut Styrofoam · Acrylic Paint</span></button></li></ul></div>
+        <div class="bfa"><button type="button" class="bfa-thumb bfa-open" data-i="0" data-label="Open my BFA work: 6 images">FROM MY BFA <span class="bfa-n">6 pieces</span><i aria-hidden="true">→</i></button></div>
         <script type="application/json" id="bfa-data">[{"src": "assets/utrgv/doux-cover.webp", "alt": "DOUX Magazine: front and back cover of a 22-page editorial magazine"}, {"src": "assets/utrgv/doux-rise.webp", "alt": "DOUX Magazine spread: \"Rise,\" a feature on a rising model-singer, with oversized type over a portrait"}, {"src": "assets/utrgv/doux-sound-style-spirit.webp", "alt": "DOUX Magazine spread: \"Sound Style Spirit,\" broken-grid type mixed with music photography"}, {"src": "assets/utrgv/fiux-2018-poster.webp", "alt": "FIUX 2018 call-for-entries poster, designed with Lauren Morris: bold geometric shards in pink and aqua"}, {"src": "assets/utrgv/honey-bees-infographic.webp", "alt": "\"Do you know Honey Bees?\" infographic: a low-poly-style bee illustration with honey production charts by country"}, {"src": "assets/utrgv/wave-sculpture.webp", "alt": "Blue and white wave sculpture: hand-cut Styrofoam painted with acrylic, for a studio art class"}]</script>
         <ul class="tags" aria-label="Skills from this era"><li>Graphic Design</li><li>Editorial Leadership</li><li>Web Build</li><li>Video Editing</li></ul>
       </div>
@@ -641,7 +646,7 @@
   let cur = 0, opener = null;
   const show = i => { cur = (i + data.length) % data.length; big.src = data[cur].src; big.alt = data[cur].alt; cap.textContent = data[cur].alt; count.textContent = (cur + 1) + ' / ' + data.length; };
   document.querySelectorAll('.bfa-thumb').forEach(b => {
-    b.setAttribute('aria-label', 'Enlarge: ' + data[+b.dataset.i].alt);
+    b.setAttribute('aria-label', b.dataset.label || ('Enlarge: ' + data[+b.dataset.i].alt));
     b.addEventListener('click', () => { opener = b; show(+b.dataset.i); d.showModal(); d.querySelector('.zoom-nav.next').focus(); });
   });
   d.querySelector('.prev').addEventListener('click', () => show(cur - 1));
