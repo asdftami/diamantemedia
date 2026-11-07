@@ -1,0 +1,24 @@
+/* Z-fold and trifold viewers (share the flipbook's header/bar styles) */
+dialog.fold-dlg{width:min(96vw,1200px);max-height:96vh;padding:14px;border:1px solid #ffffff30;border-radius:18px;background:#0d0a26;color:#f7f3ff;overflow:hidden}
+dialog.fold-dlg::backdrop{background:#040310e6}
+dialog.fold-dlg button{min-height:44px;padding:0 16px;border-radius:999px;border:0;background:#fff1a6;color:#1a1033;font:inherit;font-weight:700;cursor:pointer}
+dialog.fold-dlg button:hover{background:#ffb3d9}
+dialog.fold-dlg button:disabled{opacity:.35;cursor:default;background:#fff1a6}
+/* panel width: as wide as fits the open sheet, and no taller than the screen allows */
+.fold-dlg{--pw:min(calc((min(96vw,1200px) - 40px) / var(--n)), calc(62vh * var(--ratio)))}
+.fold-stage{position:relative;height:calc(var(--pw) / var(--ratio) + 20px);display:grid;place-items:center;perspective:2600px;cursor:pointer;overflow:visible}
+.fold-sheet{position:relative;width:calc(var(--pw) * var(--n));height:calc(var(--pw) / var(--ratio));transform-style:preserve-3d;transition:transform .8s cubic-bezier(.45,.05,.3,1)}
+.fold-panel{position:absolute;top:0;width:var(--pw);height:100%;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.45,.05,.3,1)}
+.fold-face{position:absolute;inset:0;background-size:100% 100%;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 10px 30px #0008}
+.fold-face.back{transform:rotateY(180deg)}
+.fold-face.front::after,.fold-face.back::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0000001a,transparent 12%,transparent 88%,#0000001a);pointer-events:none}
+/* accordion: first panel at the left, each next panel hinged on the previous panel's right edge */
+.fold-panel.acc{left:0;transform-origin:0 50%}
+.fold-panel.acc.hinged{left:100%}
+/* trifold: middle panel in the center, leaves hinged on its edges */
+.tri .fold-panel.mid{left:var(--pw)}
+.tri .fold-panel.leaf-l{left:auto;right:100%;transform-origin:100% 50%;z-index:2}
+.tri .fold-panel.leaf-r{left:100%;transform-origin:0 50%;z-index:1}
+.tri .leaf-l .fold-face{transform:translateZ(3px)}.tri .leaf-l .fold-face.back{transform:rotateY(180deg) translateZ(3px)}
+.no-motion .fold-sheet,.no-motion .fold-panel{transition:none}
+@media (prefers-reduced-motion: reduce){.fold-sheet,.fold-panel{transition:none}}
